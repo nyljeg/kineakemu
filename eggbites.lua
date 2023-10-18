@@ -1,9 +1,9 @@
 if (game.PlaceId==13127800756) then 
 local v0=loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
 ;local v1=v0:MakeWindow({
-Name="NovaZ Hub | Arm Wrestling Simualtor",
+Name="Arm Wrestling Simualtor",
 HidePremium=false,
-IntroText="NovaZ Join the Discord",
+IntroText="Join the Discord",
 SaveConfig=true,
 ConfigFolder="NovaZConfig"});
 local v2=false;
