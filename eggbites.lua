@@ -64,7 +64,22 @@ local v56=false;
 local v57=false;
 local world5=false;
 local world6=false;
-
+local trex=true;
+local herbivore=true;
+local pterodactyl=true;
+local mystic=true;
+local dinofossil=true;
+local gem=true;
+local w5NPC1=false;
+local w5NPC2=false;
+local w5NPC3=false;
+local w5NPC4=false;
+local w5NPC5=false;
+local w6NPC1=false;
+local w6NPC2=false;
+local w6NPC3=false;
+local w6NPC4=false;
+local w6NPC5=false;
 
 
 --Function
@@ -582,6 +597,152 @@ end
 end 
 end);
 
+spawn(function()
+while task.wait() do 
+if trex then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("TRex",{},false);
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if herbivore then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Herbivore",{},false);
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if pterodactyl then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Pterodactyl",{},false);
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if mystic then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Mystic",{},false);
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if dinofossil then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("DinoFossil",{},false);
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if gem then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Gem",{},false);
+else 
+end 
+end 
+end);
+
+ spawn(function()
+while task.wait() do 
+if w5NPC1 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Dino",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Primal.Table,"5");
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if w5NPC2 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Dino",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Dino.Table,"5");
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if w5NPC3 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Archeologist",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Archeologist.Table,"5");
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if w5NPC4 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("TribeLeader",workspace.Zones["5"].Interactables.ArmWrestling.NPC.TribeLeader.Table,"5");
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if w5NPC5 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Mammoth",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Mammoth.Table,"5");
+else 
+end 
+end 
+end);
+
+ spawn(function()
+while task.wait() do 
+if w6NPC1 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Orinthian",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Orinthian.Table,"6");
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if w6NPC2 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Spaceboy",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Spaceboy.Table,"6");
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if w6NPC3 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("DemonSlayer",workspace.Zones["6"].Interactables.ArmWrestling.NPC.DemonSlayer.Table,"6");
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if w6NPC4 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Ud'zal",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Ud'zal.Table,"6");
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if w6NPC5 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Cybernetic",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Cybernetic.Table,"6");
+else 
+end 
+end 
+end);
+
+
+  
   
 --Make Tab
 
@@ -856,6 +1017,78 @@ Callback=function(v96)
 v47=v96;
 end});
 
+v60:AddLabel("WORLD 5 NPC");
+v60:AddToggle({
+Name="Primal",
+Default=false,
+Callback=function(value)
+w5NPC1=value;
+end});
+
+v60:AddToggle({
+Name="Dino",
+Default=false,
+Callback=function(value)
+w5NPC2=value;
+end});
+
+v60:AddToggle({
+Name="Archeologist",
+Default=false,
+Callback=function(value)
+w5NPC3=value;
+end});
+
+v60:AddToggle({
+Name="Tribe Leader",
+Default=false,
+Callback=function(value)
+w5NPC4=value;
+end});
+
+v60:AddToggle({
+Name="Mammoth",
+Default=false,
+Callback=function(value)
+w5NPC5=value;
+end});
+
+v60:AddLabel("WORLD 6 NPC");
+v60:AddToggle({
+Name="Orinthian",
+Default=false,
+Callback=function(value)
+w6NPC1=value;
+end});
+
+v60:AddToggle({
+Name="Spaceboy",
+Default=false,
+Callback=function(value)
+w6NPC2=value;
+end});
+
+v60:AddToggle({
+Name="Demon Slayer",
+Default=false,
+Callback=function(value)
+w6NPC3=value;
+end});
+
+v60:AddToggle({
+Name="Ud'zan",
+Default=false,
+Callback=function(value)
+w6NPC4=value;
+end});
+
+v60:AddToggle({
+Name="Cybernetic",
+Default=false,
+Callback=function(value)
+w6NPC5=value;
+end});
+
 v61:AddLabel("HALLOWEEN! ");
 v61:AddToggle({
 Name="Auto Tomb Halloween",
@@ -968,6 +1201,50 @@ Name="Nuclear Egg",
 Default=false,
 Callback=function(v112)
 v53=v112;
+end});
+
+ v59:AddLabel("WORLD 5 EGGS");
+v59:AddToggle({
+Name="T-Rex Egg",
+Default=false,
+Callback=function(value)
+trex=value;
+end});
+
+v59:AddToggle({
+Name="Herbivore Egg",
+Default=false,
+Callback=function(value)
+herbivore=value;
+end});
+
+v59:AddToggle({
+Name="Pterodactyl Egg",
+Default=false,
+Callback=function(value)
+pterodactyl=value;
+end});
+
+v59:AddToggle({
+Name="Mystic Egg",
+Default=false,
+Callback=function(value)
+mystic=value;
+end})
+
+v59:AddLabel("WORLD 5 EGGS");
+v59:AddToggle({
+Name="Dino Fossil Egg",
+Default=false,
+Callback=function(value)
+dinofossil=value;
+end});
+
+v59:AddToggle({
+Name="Gem Egg",
+Default=false,
+Callback=function(value)
+gem=value;
 end});
 
 v59:AddLabel("EVENT EGGS");
