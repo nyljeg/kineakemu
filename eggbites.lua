@@ -62,6 +62,9 @@ local v54=false;
 local v55=false;
 local v56=false;
 local v57=false;
+local world5=false;
+local world6=false;
+
 
 
 --Function
@@ -561,7 +564,25 @@ end
 end 
 end);
 
+spawn(function()
+while task.wait() do 
+if world5 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["5"].Interactables.Teleports.Locations.DinoWorld);
+else 
+end 
+end 
+end);
 
+spawn(function()
+while task.wait() do 
+if world6 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["6"].Interactables.Teleports.Locations.VoidWorld);
+else 
+end 
+end 
+end);
+
+  
 --Make Tab
 
 local v58=v1:MakeTab({
@@ -986,7 +1007,19 @@ Callback=function(v117)
 v57=v117;
 end});
 
+v62:AddToggle({
+Name="World 5",
+Default=false,
+Callback=function(v118)
+world5=v118;
+end});
 
+v62:AddToggle({
+Name="World 6",
+Default=false,
+Callback=function(v119)
+world6=v119;
+end});
 
 
 end 
