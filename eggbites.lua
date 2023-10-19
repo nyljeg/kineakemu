@@ -1,6 +1,6 @@
 if (game.PlaceId==13127800756) then 
-local v0=loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
-;local v1=v0:MakeWindow({
+local v0=loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))();
+local v1=v0:MakeWindow({
 Name="NYLJEG Hub | Arm Wrestling Simualtor",
 HidePremium=false,
 IntroText="Nyljeg Library",
