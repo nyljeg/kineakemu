@@ -654,7 +654,7 @@ end);
  spawn(function()
 while task.wait() do 
 if w5NPC1 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Dino",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Primal.Table,"5");
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Primal",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Primal.Table,"5");
 else 
 end 
 end 
