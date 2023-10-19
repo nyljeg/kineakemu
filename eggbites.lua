@@ -1,9 +1,9 @@
 if (game.PlaceId==13127800756) then 
 local v0=loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
 ;local v1=v0:MakeWindow({
-Name="Arm Wrestling Simualtor",
+Name="NYLJEG Hub | Arm Wrestling Simualtor",
 HidePremium=false,
-IntroText="Join the Discord",
+IntroText="Nyljeg Library",
 SaveConfig=true,
 ConfigFolder="nyljegLib"});
 local v2=false;
@@ -1231,8 +1231,7 @@ Default=false,
 Callback=function(value)
 mystic=value;
 end})
-
-v59:AddLabel("WORLD 5 EGGS");
+ 
 v59:AddToggle({
 Name="Dino Fossil Egg",
 Default=false,
