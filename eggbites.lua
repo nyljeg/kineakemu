@@ -70,6 +70,10 @@ local pterodactyl=false;
 local mystic=false;
 local dinofossil=false;
 local gem=false;
+local void=false;
+local nebula=false;
+local wormhole=false;
+local star=false;
 local w5NPC1=false;
 local w5NPC2=false;
 local w5NPC3=false;
@@ -741,7 +745,38 @@ end
 end 
 end);
 
+spawn(function()
+while task.wait() do 
+if void then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Void",{},false);
+else 
+end 
+end 
 
+spawn(function()
+while task.wait() do 
+if nebula then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Nebula",{},false);
+else 
+end 
+end 
+
+spawn(function()
+while task.wait() do 
+if wormhole then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Worm Hole",{},false);
+else 
+end 
+end 
+
+spawn(function()
+while task.wait() do 
+if star then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Star",{},false);
+else 
+end 
+end 
+end);
   
   
 --Make Tab
@@ -1245,6 +1280,36 @@ Default=false,
 Callback=function(value)
 gem=value;
 end});
+
+v59:AddLabel("WORLD 6 EGGS");
+v59:AddToggle({
+Name="Void Egg",
+Default=false,
+Callback=function(value)
+void=value;
+end});
+
+v59:AddToggle({
+Name="Nebula Egg",
+Default=false,
+Callback=function(value)
+nebula=value;
+end});
+
+v59:AddToggle({
+Name="Worm Hole Egg",
+Default=false,
+Callback=function(value)
+wormhole=value;
+end});
+
+v59:AddToggle({
+Name="Star Egg",
+Default=false,
+Callback=function(value)
+star=value;
+end})      
+       
 
 v59:AddLabel("EVENT EGGS");
 v59:AddToggle({
