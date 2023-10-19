@@ -726,7 +726,7 @@ end);
 spawn(function()
 while task.wait() do 
 if w6NPC4 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Ud'zal",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Ud'zal.Table,"6");
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Udzal",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Udzal.Table,"6");
 else 
 end 
 end 
