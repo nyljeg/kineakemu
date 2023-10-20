@@ -783,7 +783,7 @@ end);
 spawn(function()
 while task.wait() do 
 if  holloweenT then
-game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones.HolloweenEvent.Interactables.Teleports.Locations.Holloween);
+game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild["sleitnick_knit@1.4.7"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones.HolloweenEvent.Interactables.Teleports.Locations.Holloween);
 else
 end
 end
