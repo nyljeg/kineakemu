@@ -764,7 +764,7 @@ end
 spawn(function()
 while task.wait() do 
 if wormhole then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Worm Hole",{},false);
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("WormHole",{},false);
 else 
 end 
 end 
