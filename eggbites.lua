@@ -84,7 +84,7 @@ local w6NPC2=false;
 local w6NPC3=false;
 local w6NPC4=false;
 local w6NPC5=false;
-
+local holloweenT=false;
 
 --Function
 
@@ -779,7 +779,16 @@ else
 end 
 end 
 end);
-  
+
+spawn(function()
+while task.wait() do 
+if  holloweenT then
+game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones.HolloweenEvent.Interactables.Teleports.Locations.Holloween);
+else
+end
+end
+end);
+ 
   
 --Make Tab
 
@@ -1364,6 +1373,13 @@ Callback=function(v119)
 world6=v119;
 end});
 
+v62:AddToggle({
+Name="Holloween Event",
+Default=false,
+Callback=function(value)
+holloweenT=value;
+end});
 
+ 
 end 
 OrionLib:Init();
