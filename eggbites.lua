@@ -752,14 +752,15 @@ game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].kni
 else 
 end 
 end 
-
+  end);
 spawn(function()
 while task.wait() do 
 if nebula then 
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Nebula",{},false);
 else 
 end 
-end 
+end
+    end);
 
 spawn(function()
 while task.wait() do 
@@ -768,6 +769,7 @@ game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].kni
 else 
 end 
 end 
+end);
 
 spawn(function()
 while task.wait() do 
