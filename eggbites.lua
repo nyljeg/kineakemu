@@ -84,7 +84,7 @@ local w6NPC2=false;
 local w6NPC3=false;
 local w6NPC4=false;
 local w6NPC5=false;
-
+local holloweenT=false;
 
  
 --Function
@@ -781,33 +781,40 @@ end
 end 
 end);
 
-
+spawn(function()
+while task.wait() do 
+if holloweenT then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones.HolloweenWorld.Interactables.Teleports.Locations.HolloweenWorld);
+else 
+end 
+end 
+end);
  
   
---Make Tab
+--Main Tab
 
 local v58=v1:MakeTab({
-Name="Auto",
+Name="Auto Fight",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v59=v1:MakeTab({
-Name="Eggs",
+Name="Auto Hatched Eggs",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v60=v1:MakeTab({
-Name="NPCTab",
+Name="Auto Fight NPCs",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v61=v1:MakeTab({
-Name="HalloweenTab",
+Name="HalloweenEggs",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v62=v1:MakeTab({
-Name="TeleportTab",
+Name="Teleport",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
@@ -1367,6 +1374,12 @@ Callback=function(v119)
 world6=v119;
 end});
 
+ v62:AddToggle({
+Name="HolloweenWorld",
+Default=false,
+Callback=function(value)
+holloweenT=value;
+end});
 
 
  
