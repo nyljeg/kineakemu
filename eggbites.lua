@@ -923,6 +923,24 @@ local dislist = {"=[ Zone 1 ]=","Earth","Icy","Blackhole","Lava","=[ Zone 2 ]=",
  
 
 --Label & Toogle
+v59:AddLabel("Auto Delete List");
+v59:AddToggle({
+  Name = "Auto Hatch [Auto Save Deleted Pet List]",
+  Default = false,
+  Callback = function(Value)
+  _G.Balls = Value
+    while wait() do
+      if _G.Balls == false then break end
+	  if _G.AutoDeleteWithTable[_G.Egg] == nil then
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.Egg,DeleteFuckingPet)
+	 _G.AutoDeleteWithTable[_G.Egg] = DeleteFuckingPet
+	else
+        game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.Egg,_G.AutoDeleteWithTable[_G.Egg])
+	end
+      end
+  end    
+});
+	
 
 v59:AddLabel("WORLD 1 EGGS");
 v59:AddToggle({
@@ -987,25 +1005,6 @@ Default=false,
 Callback=function(v76)
 v32=v76;
 end});
-
-v59:AddLabel("Auto Delete List");
-v59:AddToggle({
-  Name = "Auto Hatch [Auto Save Deleted Pet List]",
-  Default = false,
-  Callback = function(Value)
-  _G.Balls = Value
-    while wait() do
-      if _G.Balls == false then break end
-	  if _G.AutoDeleteWithTable[_G.Egg] == nil then
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.Egg,DeleteFuckingPet)
-	 _G.AutoDeleteWithTable[_G.Egg] = DeleteFuckingPet
-	else
-        game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.Egg,_G.AutoDeleteWithTable[_G.Egg])
-	end
-      end
-  end    
-});
- 
  
 v59:AddLabel("WORLD 2 EGGS");
 v59:AddToggle({
