@@ -85,6 +85,9 @@ local w6NPC3=false;
 local w6NPC4=false;
 local w6NPC5=false;
 local holloweenT=false;
+ local ghost=false;
+ local pump=false;
+ local tot=false;
 
  
 --Function
@@ -789,7 +792,31 @@ game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_k
     end
 end 
 end);
- 
+
+spawn(function()
+while task.wait() do 
+if pump then 
+game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["PumpkinService"]["RE"]["onDamagePumpkin"]:FireServer(i);
+else
+end
+end
+end);
+
+ spawn(function()
+while task.wait() do 
+if ghost then 	game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["PedestrianService"]["RE"]["onDamagePedestrian"]:FireServer(i);
+else
+end
+end
+end);
+
+ spawn(function()
+while task.wait() do 
+if tot then 	game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["TrickOrTreatService"]["RE"]["onTrickOrTreat"]:FireServer(i);
+else
+end
+end
+end);
   
 --Main Tab
 
@@ -818,6 +845,10 @@ Name="Teleport",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
+local autosmash=v1:MakeTab({
+Name="Auto Farm Halloween",
+Icon="rbxassetid://4483345998",
+PremiumOnly=false});
 
 --Toogle
 
@@ -1381,6 +1412,26 @@ Callback=function(value)
 holloweenT=value;
 end});
 
+ autosmash:AddToggle({
+Name="Auto Pump",
+Default=false,
+Callback=function(value)
+pump=value;
+end});
+
+autosmash:AddToggle({
+Name="Auto Ghost",
+Default=false,
+Callback=function(value)
+ghost=value;
+end});
+
+autosmash:AddToggle({
+Name="Treat or treak",
+Default=false,
+Callback=function(value)
+tot=value;
+end});
 
  
 end 
