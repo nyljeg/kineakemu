@@ -920,11 +920,25 @@ v6=v67;end});
 
  --Delete pet List
 v59:AddParagraph("New Feature","open the egg and choose the pet you want to choose for deletion");
-	
-local egg={};	
-local dislist = {"=[ Zone 1 ]=","Earth","Icy","Blackhole","Lava","=[ Zone 2 ]=","Molten","Crystal","Solar","Ice","Burning","Moon","=[ Zone 3 ]=","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","=[ Zone 4 ]=","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","=[ Zone 5 ]=","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","=[ Aqua Event ]=","Shark","Crab","Jellyfish","=[ Limited Egg ]=","[ Has Ended ]"};
- 
 
+local ReplicatedStorage = game:GetService("ReplicatedStorage")	
+local egg={};	
+	
+function AddTable(Table_V,LocalName)
+for _,v in pairs(Table_V:GetChildren()) do
+    table.insert(LocalName,v.Name)
+end
+end
+
+function GetText(str)
+	return str.Text
+end
+
+
+
+	
+AddTable(ReplicatedStorage.Eggs,egg)
+local dislist = {"=[ Zone 1 ]=","Earth","Icy","Blackhole","Lava","=[ Zone 2 ]=","Molten","Crystal","Solar","Ice","Burning","Moon","=[ Zone 3 ]=","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","=[ Zone 4 ]=","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","=[ Zone 5 ]=","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","=[ Aqua Event ]=","Shark","Crab","Jellyfish","=[ Limited Egg ]=","[ Has Ended ]"};
 --Label & Toogle
 v59:AddDropdown({
    Name = "Select EGG",
