@@ -85,9 +85,64 @@ local w6NPC3=false;
 local w6NPC4=false;
 local w6NPC5=false;
 local holloweenT=false;
- local ghost=false;
- local pump=false;
- local tot=false;
+ 
+
+
+
+
+
+ 
+ --Others
+_G.AutoDeleteWithTable = {
+   Earth = nil,
+   Icy = nil,
+   Blackhole = nil,
+   Lava = nil,
+   Molten = nil,
+   Crystal = nil,
+   Solar = nil,
+   Ice = nil,
+   Burning = nil,
+   Moon = nil,
+   Coconut = nil,
+   Palm = nil,
+   Treasure = nil,
+   Poseidon = nil,
+   KingFish = nil,
+   Clam = nil,
+   Rust = nil,
+   Widget = nil,
+   Atom = nil,
+   Nuclear = nil,
+   Mutant = nil,
+   Iridescent = nil,
+   TRex = nil,
+   Herbivore = nil,
+   Pterodactyl = nil,
+   Gem = nil,
+   DinoFossil = nil,
+   Mystic = nil,
+   Shark = nil,
+   Crab = nil,
+   Jellyfish = nil,
+   Limited = nil
+}
+
+local DeleteFuckingPet = nil
+local mt = getrawmetatable(game);
+setreadonly(mt,false)
+local namecall = mt.__namecall
+
+mt.__namecall = newcclosure(function(self, ...)
+	local Method = getnamecallmethod()
+	local Args = {...}
+
+	if Method == 'InvokeServer' and self.Name == 'purchaseEgg' then
+        DeleteFuckingPet = Args[2]
+end
+	return namecall(self, ...) 
+end)
+
 
  
 --Function
@@ -793,30 +848,7 @@ game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_k
 end 
 end);
 
-spawn(function()
-while task.wait() do 
-if pump then 
-game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["PumpkinService"]["RE"]["onDamagePumpkin"]:FireServer(i);
-else
-end
-end
-end);
 
- spawn(function()
-while task.wait() do 
-if ghost then 	game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["PedestrianService"]["RE"]["onDamagePedestrian"]:FireServer(i);
-else
-end
-end
-end);
-
- spawn(function()
-while task.wait() do 
-if tot then 	game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["TrickOrTreatService"]["RE"]["onTrickOrTreat"]:FireServer(i);
-else
-end
-end
-end);
   
 --Main Tab
 
@@ -886,6 +918,9 @@ Default=false,
 Callback=function(v67)
 v6=v67;end});
 
+ --Delete pet List
+local dislist = {"=[ Zone 1 ]=","Earth","Icy","Blackhole","Lava","=[ Zone 2 ]=","Molten","Crystal","Solar","Ice","Burning","Moon","=[ Zone 3 ]=","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","=[ Zone 4 ]=","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","=[ Zone 5 ]=","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","=[ Aqua Event ]=","Shark","Crab","Jellyfish","=[ Limited Egg ]=","[ Has Ended ]"}
+ 
 
 --Label & Toogle
 
@@ -953,6 +988,25 @@ Callback=function(v76)
 v32=v76;
 end});
 
+v59:AddLabel("Auto Delete List");
+v59:AddToggle({
+  Name = "Auto Hatch [Auto Save Deleted Pet List]",
+  Default = false,
+  Callback = function(Value)
+  _G.Balls = Value
+    while wait() do
+      if _G.Balls == false then break end
+	  if _G.AutoDeleteWithTable[_G.Egg] == nil then
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.Egg,DeleteFuckingPet)
+	 _G.AutoDeleteWithTable[_G.Egg] = DeleteFuckingPet
+	else
+        game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.Egg,_G.AutoDeleteWithTable[_G.Egg])
+	end
+      end
+  end    
+});
+ 
+ 
 v59:AddLabel("WORLD 2 EGGS");
 v59:AddToggle({
 Name="Crystal Egg",
