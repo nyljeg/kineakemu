@@ -1,7 +1,7 @@
 if (game.PlaceId==13127800756) then 
 local v0=loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))();
 local v1=v0:MakeWindow({
-Name="Nyljeg Hub | Arm Wrestling Simualtor",
+Name="Nyljeg Hub | Arm Wrestling Simulator",
 HidePremium=false,
 IntroText="Nyljeg Library",
 SaveConfig=true,
@@ -85,7 +85,9 @@ local w6NPC3=false;
 local w6NPC4=false;
 local w6NPC5=false;
 local holloweenT=false;
-
+local pump=false;
+local ghost=false;
+local tot=false;
 
 
 
@@ -848,6 +850,35 @@ game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_k
 end 
 end);
 
+spawn(function()
+while task.wait() do 
+if pump then 
+game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.PumpkinService.RE.onDamagePumpkin:FireServer(i);
+else
+				end
+			end
+		end);
+
+spawn(function()
+while task.wait() do 
+if ghost then 
+game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7.").knit.Services.PedestrianService.RE.onDamagePedestrian:FireServer(i);
+else
+end
+end
+end);
+									
+spawn(function()
+while task.wait() do 
+if tot then 				
+game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TrickOrTreatService.RE.onTrickOrTreat:FireServer(i);
+else
+end
+end
+end);
+
+
+	
 
   
 --Main Tab
