@@ -87,7 +87,7 @@ local w6NPC5=false;
 local holloweenT=false;
 local pump=false;
 local ghost=false;
-
+local _G.trickortreat=true;
 
 
 
@@ -853,9 +853,9 @@ while task.wait() do
 if pump then 
 game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.PumpkinService.RE.onDamagePumpkin:FireServer(i);
 else
-				end
-			end
-		end);
+end
+end
+end);
 
 spawn(function()
 while task.wait() do 
@@ -866,7 +866,16 @@ end
 end
 end);
 									
-
+spawn(function()
+while _G.trickortreat == true do
+    for i,v in pairs(game:GetService("Workspace").Zones.HalloweenWorld.Interactables.TrickOrTreat:GetChildren()) do
+        if v.BillboardGui.Frame.Title.Text == "TRICK OR TREAT!" then
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+            game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("TrickOrTreatService"):WaitForChild("RE"):WaitForChild("onTrickOrTreat"):FireServer(v.Name)
+        end
+    end
+    wait(10)
+end);
 
 	
 
@@ -1527,8 +1536,8 @@ end});
 autosmash:AddToggle({
 Name="Treat or treak",
 Default=false,
-Callback=function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/nyljeg/kineakemu/main/TOT.lua)();
+Callback=function(value)
+_G.trickortreat=value;
 end});
 
  
