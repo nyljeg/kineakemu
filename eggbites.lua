@@ -87,8 +87,9 @@ local w6NPC5=false;
 local holloweenT=false;
 local pump=false;
 local ghost=false;
-local _G.trickortreat=true;
-
+local craft=false;
+local daily=false;
+local rebirth=false;
 
 
  
@@ -849,41 +850,41 @@ end
 end);
 
 spawn(function()
-while task.wait() do 
-if pump then 
-game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.PumpkinService.RE.onDamagePumpkin:FireServer(i);
+while task.wait() do
+if craft then
+game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.PetService.RF.craft:InvokeServer(MasterCraft,true);
 else
 end
 end
 end);
 
 spawn(function()
-while task.wait() do 
-if ghost then 
-game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7.").knit.Services.PedestrianService.RE.onDamagePedestrian:FireServer(i);
+while task.wait() do
+if daily then
+game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.DailyRewardService.RE.onClaimReward:FireServer();
 else
 end
 end
 end);
-									
+
 spawn(function()
-while _G.trickortreat == true do
-    for i,v in pairs(game:GetService("Workspace").Zones.HalloweenWorld.Interactables.TrickOrTreat:GetChildren()) do
-        if v.BillboardGui.Frame.Title.Text == "TRICK OR TREAT!" then
-            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
-            game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("TrickOrTreatService"):WaitForChild("RE"):WaitForChild("onTrickOrTreat"):FireServer(v.Name)
-        end
-    end
-    wait(10)
+while task.wait()
+if rebirth then
+game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.RebirthService.RE.onRebirthRequest:FireServer();
+else
+end
+end
 end);
 
-	
+					
+------------------
+local gift={1,2,3,4,5,6,7,8,9,10,11,12,13,14}
+local MasterCraft = petIndex[math.random(1, #petIndex)]	
 
-  
 --Main Tab
 
 local v58=v1:MakeTab({
-Name="Auto Fight",
+Name="Farm",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
@@ -904,11 +905,6 @@ PremiumOnly=false});
 
 local v62=v1:MakeTab({
 Name="Teleport",
-Icon="rbxassetid://4483345998",
-PremiumOnly=false});
-
-local autosmash=v1:MakeTab({
-Name="Auto Farm Halloween",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
@@ -947,6 +943,40 @@ Name="Auto LuckyDraw",
 Default=false,
 Callback=function(v67)
 v6=v67;end});
+
+v58:AddToggle({
+Name="Auto Craft",
+Default=false,
+Callback=function(value)
+craft=value;
+end});
+
+v58:AddToggle({
+Name="Auto Claim Daily Log-in",
+Default=false,
+Callback=function(value)
+daily=value;
+end});
+
+v58:AddToggle({
+Name="Auto Rebirth",
+Default=false,
+Callback=function(value)
+rebirth=value;
+end});
+
+v58:AddToggle({
+Name="Auto Claim Gift",
+Default=false,
+option=gift,			
+Callback=function(value)
+local gifts=value;
+if gifts then
+	game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("gifts");				
+end});
+	
+	
+	
 
  --Delete pet List
 v59:AddParagraph("New Feature","open the egg and choose the pet you want to choose for deletion");
@@ -1517,27 +1547,6 @@ Name="HolloweenWorld",
 Default=false,
 Callback=function(value)
 holloweenT=value;
-end});
-
- autosmash:AddToggle({
-Name="Auto Pump",
-Default=false,
-Callback=function(value)
-pump=value;
-end});
-
-autosmash:AddToggle({
-Name="Auto Ghost",
-Default=false,
-Callback=function(value)
-ghost=value;
-end});
-
-autosmash:AddToggle({
-Name="Treat or treak",
-Default=false,
-Callback=function(value)
-_G.trickortreat=value;
 end});
 
  
