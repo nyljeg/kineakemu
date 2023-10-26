@@ -1,7 +1,7 @@
 if (game.PlaceId==13127800756) then 
 local v0=loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))();
 local v1=v0:MakeWindow({
-Name="NYLJEG Hub | Arm Wrestling Simualtor",
+Name="Nyljeg Hub | Arm Wrestling Simualtor",
 HidePremium=false,
 IntroText="Nyljeg Library",
 SaveConfig=true,
@@ -937,7 +937,7 @@ end
 
 
 	
-AddTable(ReplicatedStorage.Eggs,egg)
+AddTable(ReplicatedStorage.Egg,egg)
 local dislist = {"=[ Zone 1 ]=","Earth","Icy","Blackhole","Lava","=[ Zone 2 ]=","Molten","Crystal","Solar","Ice","Burning","Moon","=[ Zone 3 ]=","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","=[ Zone 4 ]=","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","=[ Zone 5 ]=","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","=[ Aqua Event ]=","Shark","Crab","Jellyfish","=[ Limited Egg ]=","[ Has Ended ]"};
 --Label & Toogle
 v59:AddDropdown({
