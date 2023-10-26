@@ -87,8 +87,6 @@ local w6NPC5=false;
 local holloweenT=false;
 local pump=false;
 local ghost=false;
-local tot=false;
-
 
 
 
@@ -868,14 +866,6 @@ end
 end
 end);
 									
-spawn(function()
-while task.wait() do 
-if tot then 				
-game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TrickOrTreatService.RE.onTrickOrTreat:FireServer(i);
-else
-end
-end
-end);
 
 
 	
@@ -1537,8 +1527,8 @@ end});
 autosmash:AddToggle({
 Name="Treat or treak",
 Default=false,
-Callback=function(value)
-tot=value;
+Callback=function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/nyljeg/kineakemu/main/TOT.lua)();
 end});
 
  
