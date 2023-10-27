@@ -87,10 +87,8 @@ local w6NPC5=false;
 local holloweenT=false;
 local pump=false;
 local ghost=false;
-local craft=false;
 local daily=false;
 local rebirth=false;
-local MasterCraft = petIndex[math.random(1, #petIndex)]	
 
 
  
@@ -852,15 +850,6 @@ end);
 
 spawn(function()
 while task.wait() do
-if craft then
-game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.PetService.RF.craft:InvokeServer(MasterCraft,true);
-else
-end
-end
-end);
-
-spawn(function()
-while task.wait() do
 if daily then
 game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.DailyRewardService.RE.onClaimReward:FireServer();
 else
@@ -944,13 +933,6 @@ Callback=function(v67)
 v6=v67;end});
 
 v58:AddToggle({
-Name="Auto Craft",
-Default=false,
-Callback=function(value)
-craft=value;
-end});
-
-v58:AddToggle({
 Name="Auto Claim Daily Log-in",
 Default=false,
 Callback=function(value)
@@ -962,19 +944,7 @@ Name="Auto Rebirth",
 Default=false,
 Callback=function(value)
 rebirth=value;
-end});
-
-v58:AddToggle({
-Name="Auto Claim Gift",
-Default=false,
-option=gift,			
-Callback=function(value)
-local gifts=value;
-if gifts then
-	game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("gifts");				
-end});
-	
-	
+end});	
 	
 
  --Delete pet List
