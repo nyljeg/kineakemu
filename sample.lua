@@ -15,7 +15,7 @@ local list={Earth,Icy,Blackhole,Lava,Molten,Crystal,Solar,Ice,Burning,Moon,Cocon
 
 --main tab
 local eggs=v1:MakeTab({
-Name="Auto Fight",
+Name="🥚 Eggs",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
