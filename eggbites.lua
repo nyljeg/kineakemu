@@ -120,10 +120,10 @@ _G.AutoDeleteWithTable = {
    Gem = nil,
    DinoFossil = nil,
    Mystic = nil,
-   Void=nil,
-   Nebula=nil,
-   WormHole=nil,
-   Star=nil,	
+   Void = nil,
+   Nebula = nil,
+   WormHole = nil,
+   Star = nil,	
    Shark = nil,
    Crab = nil,
    Jellyfish = nil,
@@ -140,7 +140,7 @@ mt.__namecall = newcclosure(function(self, ...)
 	local Args = {...}
 
 	if Method == 'InvokeServer' and self.Name == 'purchaseEgg' then
-        DeleteFuckingPet = Args[2]
+        DeleteFuckingPet = Args[1]
 end
 	return namecall(self, ...) 
 end)
