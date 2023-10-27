@@ -85,8 +85,6 @@ local w6NPC3=false;
 local w6NPC4=false;
 local w6NPC5=false;
 local holloweenT=false;
-local pump=false;
-local ghost=false;
 local daily=false;
 local rebirth=false;
 
@@ -851,7 +849,7 @@ end);
 spawn(function()
 while task.wait() do
 if daily then
-game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.DailyRewardService.RE.onClaimReward:FireServer();
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.DailyRewardService.RE.onClaimReward:FireServer();
 else
 end
 end
@@ -860,7 +858,7 @@ end);
 spawn(function()
 while task.wait()
 if rebirth then
-game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.RebirthService.RE.onRebirthRequest:FireServer();
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.RebirthService.RE.onRebirthRequest:FireServer();
 else
 end
 end
