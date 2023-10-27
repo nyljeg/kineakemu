@@ -90,6 +90,7 @@ local ghost=false;
 local craft=false;
 local daily=false;
 local rebirth=false;
+local MasterCraft = petIndex[math.random(1, #petIndex)]	
 
 
  
@@ -878,8 +879,6 @@ end);
 
 					
 ------------------
-local gift={1,2,3,4,5,6,7,8,9,10,11,12,13,14}
-local MasterCraft = petIndex[math.random(1, #petIndex)]	
 
 --Main Tab
 
