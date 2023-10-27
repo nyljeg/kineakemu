@@ -85,8 +85,7 @@ local w6NPC3=false;
 local w6NPC4=false;
 local w6NPC5=false;
 local holloweenT=false;
-local daily=false;
-local rebirth=false;
+
 
 
  
@@ -850,23 +849,6 @@ game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_k
 end 
 end);
 
-spawn(function()
-while task.wait() do
-if daily then
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.DailyRewardService.RE.onClaimReward:FireServer();
-else
-end
-end
-end);
-
-spawn(function()
-while task.wait()
-if rebirth then
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.RebirthService.RE.onRebirthRequest:FireServer();
-else
-end
-end
-end);
 
 					
 ------------------
@@ -934,19 +916,7 @@ Default=false,
 Callback=function(v67)
 v6=v67;end});
 
-v58:AddToggle({
-Name="Auto Claim Daily Log-in",
-Default=false,
-Callback=function(value)
-daily=value;
-end});
 
-v58:AddToggle({
-Name="Auto Rebirth",
-Default=false,
-Callback=function(value)
-rebirth=value;
-end});	
 	
 
  --Delete pet List
