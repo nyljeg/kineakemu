@@ -8,10 +8,6 @@ SaveConfig=true,
 ConfigFolder="nyljegLib"});
 
 
-local list={Earth,Icy,Blackhole,Lava,Molten,Crystal,Solar,Ice,Burning,Moon,Coconut,Palm,Treasure,Poseidon,KingFish,Clam,Rust,Widget,Atom,Nuclear,Mutant,Iridescent,TRex,Herbivore,Pterodactyl,Gem,DinoFossil,Mystic,Void,Nebula,WormHole,Star,Limited}
-
-
-
 
 
 --main tab
@@ -28,13 +24,13 @@ PremiumOnly=false});
 eggs:AddDropdown({
  Name = "Select EGG",
  Default = "Earth",
-Options = list,
+Options = {Earth,Icy,Blackhole,Lava,Molten,Crystal,Solar,Ice,Burning,Moon,Coconut,Palm,Treasure,Poseidon,KingFish,Clam,Rust,Widget,Atom,Nuclear,Mutant,Iridescent,TRex,Herbivore,Pterodactyl,Gem,DinoFossil,Mystic,Void,Nebula,WormHole,Star,Limited},
    Callback = function(Value)
      _G.BuyEggs = Value
   end    
 })
 
-eggs:AddButton({
+eggs:AddToggle({
   Name = "Buy Eggs",
   Callback = function()
    game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("_G.BuyEggs",{},false)
