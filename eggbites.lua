@@ -85,7 +85,6 @@ local w6NPC3=false;
 local w6NPC4=false;
 local w6NPC5=false;
 local holloweenT=false;
-local G.trickortreat = true
 
 
  
@@ -147,17 +146,6 @@ end)
 
  
 --Function
-spawn(function()
-while _G.trickortreat == true do
-    for i,v in pairs(game:GetService("Workspace").Zones.HalloweenWorld.Interactables.TrickOrTreat:GetChildren()) do
-        if v.BillboardGui.Frame.Title.Text == "TRICK OR TREAT!" then
-            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
-            game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("TrickOrTreatService"):WaitForChild("RE"):WaitForChild("onTrickOrTreat"):FireServer(v.Name)
-        end
-    end
-    wait(10)
-end);
-	
 
 spawn(function()
 while task.wait() do 
@@ -927,12 +915,6 @@ Default=false,
 Callback=function(v67)
 v6=v67;end});
 
-v58:AddToggle({
-Name="Treak Or Treak",
-Default=true,
-Callback=function(value)
-G.trickortreat=value;
-end});
 
 	
 
