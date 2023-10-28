@@ -85,7 +85,7 @@ local w6NPC3=false;
 local w6NPC4=false;
 local w6NPC5=false;
 local holloweenT=false;
-
+local world7=false;
 
  
  --Others
@@ -847,7 +847,15 @@ game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_k
     end
 end 
 end);
-
+	
+spawn(function()
+while task.wait() do 
+if world7 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["7"].Interactables.Teleports.Locations.SpaceCenter);
+else 
+end 
+end 
+end);
 
 					
 ------------------
@@ -1509,7 +1517,14 @@ Callback=function(v119)
 world6=v119;
 end});
 
- v62:AddToggle({
+v62:AddToggle({
+Name="World 7",
+Default=false,
+Callback=function(value)
+world7=value;
+end});	
+
+v62:AddToggle({
 Name="HolloweenWorld",
 Default=false,
 Callback=function(value)
