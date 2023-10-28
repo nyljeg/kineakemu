@@ -909,6 +909,33 @@ Callback=function(v66)
 v5=v66;
 end});
 
+v58:AddLabel("Buy Crate");
+v58:AddDropdown({
+   Name = "Select Crate",
+   Default = "Rust",
+   Options = {"Rust","Silver","Gold","Diamond","Emerald","Platinum"},
+   Callback = function(Value)
+     _G.BuyCrateSkins = Value
+  end    
+})
+
+v58:AddDropdown({
+   Name = "Select Amount",
+   Default = "1",
+   Options = {"1","10","100"},
+   Callback = function(Value)
+     _G.AmountCrate = Value
+  end    
+})
+
+v58:AddButton({
+  Name = "Buy Crate",
+  Callback = function()
+   game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ArmsService.RF.PurchaseCrates:InvokeServer(tostring(_G.BuyCrateSkins) .. "Crate",_G.AmountCrate)
+end
+});
+
+	
 v58:AddToggle({
 Name="Auto LuckyDraw",
 Default=false,
