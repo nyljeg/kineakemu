@@ -24,7 +24,7 @@ PremiumOnly=false});
 eggs:AddDropdown({
  Name = "Select EGG",
  Default = "Earth",
-Options = {Earth,Icy,Blackhole,Lava,Molten,Crystal,Solar,Ice,Burning,Moon,Coconut,Palm,Treasure,Poseidon,KingFish,Clam,Rust,Widget,Atom,Nuclear,Mutant,Iridescent,TRex,Herbivore,Pterodactyl,Gem,DinoFossil,Mystic,Void,Nebula,WormHole,Star,Limited},
+Options = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","WormHole","Star","Limited"},
    Callback = function(Value)
      _G.BuyEggs = Value
   end    
