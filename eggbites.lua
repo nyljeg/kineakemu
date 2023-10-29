@@ -1090,7 +1090,7 @@ v58:AddDropdown({
   end    
 })
 
-v58:AddToggle({
+v58:AddButton({
   Name = "Buy Crate",
   Callback = function()
    game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ArmsService.RF.PurchaseCrates:InvokeServer(tostring(_G.BuyCrateSkins) .. "Crate",_G.AmountCrate)
