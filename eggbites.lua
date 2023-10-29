@@ -991,8 +991,50 @@ Name="Foods🍏🍄🦴",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
+local event=v1:MakeTab({
+Name = "Event Eggs",
+Icon="rbxassetid://4483345998",
+PremiumOnly=false});
 
+
+	
 --Toogle
+event:AddDropdown({
+   Name = "Number of previous hatches on eggs",
+   Default = "1",
+   Options = {"1","3","8"},
+   Callback = function(Value)
+     _G.AmountPrevEggs = Value
+   end    
+});
+
+event:AddToggle({
+  Name = "Auto Claim Event Egg",
+  Default = false,
+  Callback = function(Value)
+  _G.Event_AV3 = Value
+    while wait() do
+      if _G.Event_AV3 == false then break end
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.EventService.RF.ClaimEgg:InvokeServer()
+      end
+  end    
+});
+
+event:AddToggle({
+  Name = "Auto Hatch Previous Eggs",
+  Default = false,
+  Callback = function(Value)
+  _G.PrevEgg = Value
+    while wait() do
+      if _G.PrevEgg == false then break end
+	game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.EventService.RF.ClaimEgg:InvokeServer(tonumber(_G.AmountPrevEggs),true)
+    end
+end
+});
+
+
+
+	
 food:AddSlider({
 Name = "Food Amount",
 Min = 0,
