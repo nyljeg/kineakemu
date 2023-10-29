@@ -33,7 +33,7 @@ Options = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Bu
 eggs:AddToggle({
   Name = "Buy Eggs",
   Callback = function()
-   game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("_G.BuyEggs",{},false)
+   game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.BuyEggs,{},false)
 end
 })
   
