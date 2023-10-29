@@ -993,6 +993,43 @@ PremiumOnly=false});
 	
 
 --Toogle
+food:AddSlider({
+Name = "Food Amount",
+Min = 0,
+Max = 1000,
+Default = 1,
+Color = Color3.fromRGB(255,255,255),
+Increment = 1,
+ValueName = "Food",
+Callback = function(Value)
+ _G._FoodUses = Value
+ end    
+});
+
+food:AddToggle({
+   Name = "Use Mushroom",
+   Default = false,
+   Callback = function(Value)
+     _G._Mushroom = Value
+	while wait() do
+		if _G._Mushroom == false then break end
+			game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer("Mushroom",tonumber(_G._FoodUses))		
+	end
+  end    
+});
+
+food:AddToggle({
+   Name = "Use Green Apple",
+   Default = false,
+   Callback = function(Value)
+     _G._Green_Apple = Value
+	while wait() do
+		if _G._Green_Apple == false then break end
+			game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer("GreenApple",tonumber(_G._FoodUses))
+	end
+  end    
+});
+	
 
 v58:AddToggle({
 Name="Auto Click",
