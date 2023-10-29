@@ -86,9 +86,6 @@ local w6NPC4=false;
 local w6NPC5=false;
 local holloweenT=false;
 local world7=false;
-local food1=false;
-local food2=false;
-local food3=false;
 local w7NPC1=false;
 local w7NPC2=false;
 local w7NPC3=false;
@@ -869,33 +866,6 @@ game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].kni
 else 
 end 
 end 
-end);
-
-spawn(function()
-while task.wait() do 
-if food1 then 
-game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer("GreenApple",tonumber(_G.masarap));
-else
-end
-end
-end);
-
-spawn(function()
-while task.wait() do 
-if food2 then 
-game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer("Mushroom",tonumber(_G.masarap));
-else
-end
-end
-end);
-
-spawn(function()
-while task.wait() do 
-if food3 then 
-game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer("GodlyBone",tonumber(_G.masarap));
-else
-end
-end
 end);
 
 spawn(function()
@@ -1728,39 +1698,6 @@ Callback=function(value)
 holloweenT=value;
 end});
 
-food:AddSlider({
-   Name = "Food Amount",
-   Min = 0,
-   Max = 1000,
-   Default = 1,
-   Color = Color3.fromRGB(255,255,255),
-   Increment = 1,
-   ValueName = "Food",
-   Callback = function(Value)
-     _G.masarap = Value
-  end    
-})	
-
-food:AddToggle({
-Name="Use Green Apple",
-Default=false,
-Callback=function(value)
-food1=value;
-end});
-	
-food:AddToggle({
-Name="Use Mushroom",
-Default=false,
-Callback=function(value)
-food2=value;
-end});
-	
-food:AddToggle({
-Name="Use Godly Bone",
-Default=false,
-Callback=function(value)
-food3=value;
-end});
 	
  
 end 
