@@ -1029,6 +1029,18 @@ food:AddToggle({
 	end
   end    
 });
+
+food:AddToggle({
+   Name = "Use Godly Bone",
+   Default = false,
+   Callback = function(Value)
+     _G._Green_Apple = Value
+	while wait() do
+		if _G._Green_Apple == false then break end
+			game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer("GodlyBone",tonumber(_G._FoodUses))
+	end
+  end    
+});
 	
 
 v58:AddToggle({
