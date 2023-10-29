@@ -86,7 +86,21 @@ local w6NPC4=false;
 local w6NPC5=false;
 local holloweenT=false;
 local world7=false;
+local food1;false;
+local food2=false;
+local food3=false;
+local w7NPC1=false;
+local w7NPC2=false;
+local w7NPC3=false;
+local w7NPC4=false;
+local w7NPC5=false;
+local meteor=false;
+local cyberpunk=false;
+local deepsea=false;
+local rocket=false;
 
+
+	
  
  --Others
 _G.AutoDeleteWithTable = {
@@ -857,7 +871,122 @@ end
 end 
 end);
 
-					
+spawn(function()
+while task.wait() do 
+if food1 then 
+game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer("GreenApple",tonumber(_G._FoodUses));
+else
+end
+end
+end);
+
+spawn(function()
+while task.wait() do 
+if food2 then 
+game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer("Mushroom",tonumber(_G._FoodUses));
+else
+end
+end
+end);
+
+spawn(function()
+while task.wait() do 
+if food3 then 
+game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer("GodlyBone",tonumber(_G._FoodUses));
+else
+end
+end
+end);
+
+spawn(function()
+while task.wait() do 
+if w7NPC1 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("RocketRider",workspace.Zones["7"].Interactables.ArmWrestling.NPC.RocketRider.Table,"7");
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if w7NPC2 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("MissileMaven",workspace.Zones["7"].Interactables.ArmWrestling.NPC.MissileMaven.Table,"7");
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if w7NPC3 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("LairGuardian",workspace.Zones["7"].Interactables.ArmWrestling.NPC.LairGuardian.Table,"7");
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if w7NPC4 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("NovaNomad",workspace.Zones["7"].Interactables.ArmWrestling.NPC.NovaNomad.Table,"7");
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if w6NPC5 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("DrPropulsion",workspace.Zones["7"].Interactables.ArmWrestling.NPC.DrPropulsion.Table,"7");
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if meteor then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Meteor",{},false);
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if cyberpunk then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Cyberpunk",{},false);
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if deepsea then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Deepsea",{},false);
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if rocket then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Rocket",{},false);
+else 
+end 
+end 
+end);	
+
+
+
+
+
+
+
+
+	
 ------------------
 
 --Main Tab
@@ -886,6 +1015,12 @@ local v62=v1:MakeTab({
 Name="Teleport",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
+
+local food=v1:MakeTab({
+Name="Foods🍏🍄🦴",
+Icon="rbxassetid://4483345998",
+PremiumOnly=false});
+	
 
 --Toogle
 
@@ -936,7 +1071,7 @@ v58:AddDropdown({
   end    
 })
 
-v58:AddButton({
+v58:AddToggle({
   Name = "Buy Crate",
   Callback = function()
    game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ArmsService.RF.PurchaseCrates:InvokeServer(tostring(_G.BuyCrateSkins) .. "Crate",_G.AmountCrate)
@@ -950,8 +1085,6 @@ Default=false,
 Callback=function(v67)
 v6=v67;end});
 
-
-	
 
  --Delete pet List
 v59:AddParagraph("New Feature","open the egg and choose the pet you want to choose for deletion");
@@ -1279,6 +1412,42 @@ Callback=function(value)
 w6NPC5=value;
 end});
 
+v60:AddLabel("WORLD 7 NPC");
+v60:AddToggle({
+Name="Rocket Rider",
+Default=false,
+Callback=function(value)
+w7NPC1=value;
+end});
+
+v60:AddToggle({
+Name="Missile Maven",
+Default=false,
+Callback=function(value)
+w7NPC2=value;
+end});
+
+v60:AddToggle({
+Name="Nova Nomad",
+Default=false,
+Callback=function(value)
+w7NPC3=value;
+end});
+
+v60:AddToggle({
+Name="Lair Guardian",
+Default=false,
+Callback=function(value)
+w7NPC4=value;
+end});
+
+v60:AddToggle({
+Name="Dr Propulsion",
+Default=false,
+Callback=function(value)
+w7NPC5=value;
+end});
+
 v61:AddLabel("HALLOWEEN! ");
 v61:AddToggle({
 Name="Auto Tomb Halloween",
@@ -1463,8 +1632,36 @@ Name="Star Egg",
 Default=false,
 Callback=function(value)
 star=value;
-end})      
-       
+end});
+	
+v59:AddLabel("WORLD 7 EGGS");
+v59:AddToggle({
+Name="Meteor Egg",
+Default=false,
+Callback=function(value)
+meteor=value;
+end});
+
+v59:AddToggle({
+Name="Cyberpunk Egg",
+Default=false,
+Callback=function(value)
+cyberpunk=value;
+end});
+
+v59:AddToggle({
+Name="Deepsea Egg",
+Default=false,
+Callback=function(value)
+deepsea=value;
+end});
+
+v59:AddToggle({
+Name="Rocket Egg",
+Default=false,
+Callback=function(value)
+rocket=value;
+end})
 
 v59:AddLabel("EVENT EGGS");
 v59:AddToggle({
@@ -1531,6 +1728,27 @@ Callback=function(value)
 holloweenT=value;
 end});
 
+food:AddToggle({
+Name="Green Apple",
+Default=false,
+Callback=function(value)
+food1=value;
+end});
+	
+food:AddToggle({
+Name="Mushroom",
+Default=false,
+Callback=function(value)
+food2=value;
+end});
+	
+food:AddToggle({
+Name="Godly Bone",
+Default=false,
+Callback=function(value)
+food3=value;
+end});
+	
  
 end 
 OrionLib:Init();
