@@ -1728,22 +1728,35 @@ Callback=function(value)
 holloweenT=value;
 end});
 
+food:AddSlider({
+   Name = "Food Amount",
+   Min = 0,
+   Max = 1000,
+   Default = 1,
+   Color = Color3.fromRGB(255,255,255),
+   Increment = 1,
+   ValueName = "Food",
+   Callback = function(Value)
+     _G._FoodUses = Value
+  end    
+})
+	
 food:AddToggle({
-Name="Green Apple",
+Name="Use Green Apple",
 Default=false,
 Callback=function(value)
 food1=value;
 end});
 	
 food:AddToggle({
-Name="Mushroom",
+Name="Use Mushroom",
 Default=false,
 Callback=function(value)
 food2=value;
 end});
 	
 food:AddToggle({
-Name="Godly Bone",
+Name="Use Godly Bone",
 Default=false,
 Callback=function(value)
 food3=value;
