@@ -6,8 +6,17 @@ HidePremium=false,
 IntroText="Nyljeg Library",
 SaveConfig=true,
 ConfigFolder="nyljegLib"});
+local click=false;
 
-
+   
+spawn(function()
+while task.wait() do 
+if click then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ToolService.RE.onClick:FireServer();
+else 
+end 
+end 
+end);
 
 
 --main tab
@@ -22,8 +31,15 @@ Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 
-
 --tab
+NPC:AddToggle:{
+Name = "Auto Click ↙️",
+Default = false,
+Callback = function(value)
+click = value
+end
+})
+   
 NPC:AddDropdown({
    Name = "World 1 NPC",
    Default = "Bully",
