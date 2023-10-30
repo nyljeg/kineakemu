@@ -15,6 +15,7 @@ local world5=false;
 local world6=false;
 local world7=false;
 local halloweenT=false;
+local foods=false;
 
 
    
@@ -103,6 +104,10 @@ end);
 
 
 --main tab
+local farm=v1:MakeTb({
+Name="🏝️Farm"",
+Icon="rbxassetid://4483345998",
+
 local eggs=v1:MakeTab({
 Name="🥚 Eggs",
 Icon="rbxassetid://4483345998",
@@ -118,8 +123,113 @@ Name="🤖 Auto NPC",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
+ local food=v1:MakeTab({
+ Name="🍏🍄🦴 Food",
+ Icon="rbxassetid://4483345998",
+ PremiumOnly=false});
+
 
 --tab
+farm:AddToggle({
+  Name = "Auto Click",
+  Default = false,
+  Callback = function(Value)
+  _G.Click = Value
+    while wait() do
+      if _G.Click == false then break end
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ToolService.RE.onClick:FireServer()
+      end
+  end    
+})
+
+farm:AddToggle({
+  Name = "Auto Spin",
+  Default = false,
+  Callback = function(Value)
+  _G.Spin = Value
+    while wait() do
+      if _G.Spin == false then break end
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.SpinService.RE.onSpinRequest:FireServer()
+      end
+  end    
+})
+
+farm:AddToggle({
+  Name = "Auto Rebirth",
+  Default = false,
+  Callback = function(Value)
+  _G.Rbr = Value
+    while wait() do
+      if _G.Rbr == false then break end
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.RebirthService.RE.onRebirthRequest:FireServer()
+      end
+  end    
+})
+
+farm:AddToggle({
+  Name = "Auto Claim Gift",
+  Default = false,
+  Callback = function(Value)
+  _G.Gift = Value
+    while wait() do
+      if _G.Gift == false then break end
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("1")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("2")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("3")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("4")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("5")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("6")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("7")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("8")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("9")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("10")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("11")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("12")
+	 game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("13")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("14")
+      end
+  end    
+})
+
+farm:AddToggle({
+  Name = "Auto spin lucky draw [Blueprint]",
+  Default = false,
+  Callback = function(Value)
+  _G.blueprint = Value
+    while wait() do
+      if _G.blueprint == false then break end
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.BlueprintService.RF.LuckyDraw:InvokeServer(false)
+      end
+  end    
+})
+
+farm:AddToggle({
+  Name = "Auto spin daily lucky draw [Blueprint]",
+  Default = false,
+  Callback = function(Value)
+  _G.dailyblueprint = Value
+    while wait() do
+      if _G.dailyblueprint == false then break end
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.BlueprintService.RF.LuckyDraw:InvokeServer(true)
+      end
+  end    
+})
+
+farm:AddToggle({
+  Name = "Auto Claim Daily Login",
+  Default = false,
+  Callback = function(Value)
+  _G.dailylogin = Value
+    while wait() do
+      if _G.dailylogin == false then break end
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.DailyRewardService.RE.onClaimReward:FireServer()
+      end
+  end    
+})
+
+
+
+         
 NPC:AddToggle:{
 Name = "Auto Click ↙️",
 Default = false,
@@ -352,7 +462,38 @@ holloweenT=value;
 end});
 
 
+food:AddSlider({
+   Name = "Food Amount",
+   Min = 0,
+   Max = 1000,
+   Default = 1,
+   Color = Color3.fromRGB(255,255,255),
+   Increment = 1,
+   ValueName = "Food",
+   Callback = function(Value)
+     _G._FoodUses = Value
+  end    
+})
+food:AddDropdown({
+Name = "Pick Food",
+Default = "1",
+ Options = {"GreenApple","Mushroom","GodlyBone"},
+ Callback = function(Value)
+  _G.foody = Value
+  end    
+})
 
+food:AddToggle({
+   Name = "Use Food",
+   Default = false,
+   Callback = function(Value)
+     foods = Value
+	while wait() do
+		if foods == false then break end
+			game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer(_G.foody,tonumber(_G._FoodUses))		
+	end
+  end    
+})
 
 
 end
