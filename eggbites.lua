@@ -97,62 +97,8 @@ local deepsea=false;
 local rocket=false;
 
 
-	
- 
- --Others
-_G.AutoDeleteWithTable = {
-   Earth = nil,
-   Icy = nil,
-   Blackhole = nil,
-   Lava = nil,
-   Molten = nil,
-   Crystal = nil,
-   Solar = nil,
-   Ice = nil,
-   Burning = nil,
-   Moon = nil,
-   Coconut = nil,
-   Palm = nil,
-   Treasure = nil,
-   Poseidon = nil,
-   KingFish = nil,
-   Clam = nil,
-   Rust = nil,
-   Widget = nil,
-   Atom = nil,
-   Nuclear = nil,
-   Mutant = nil,
-   Iridescent = nil,
-   TRex = nil,
-   Herbivore = nil,
-   Pterodactyl = nil,
-   Gem = nil,
-   DinoFossil = nil,
-   Mystic = nil,
-   Void = nil,
-   Nebula = nil,
-   WormHole = nil,
-   Star = nil,	
-   Shark = nil,
-   Crab = nil,
-   Jellyfish = nil,
-   Limited = nil
-}
 
-local DeleteFuckingPet = nil
-local mt = getrawmetatable(game);
-setreadonly(mt,false)
-local namecall = mt.__namecall
 
-mt.__namecall = newcclosure(function(self, ...)
-	local Method = getnamecallmethod()
-	local Args = {...}
-
-	if Method == 'InvokeServer' and self.Name == 'purchaseEgg' then
-        DeleteFuckingPet = Args[1]
-end
-	return namecall(self, ...) 
-end)
 
 
  
@@ -1138,62 +1084,12 @@ v58:AddButton({
    game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ArmsService.RF.PurchaseCrates:InvokeServer(tostring(_G.BuyCrateSkins) .. "Crate",_G.AmountCrate)
 end
 });
-
 	
 v58:AddToggle({
 Name="Auto LuckyDraw",
 Default=false,
 Callback=function(v67)
 v6=v67;end});
-
-
- --Delete pet List
-v59:AddParagraph("New Feature","open the egg and choose the pet you want to choose for deletion");
-
-local ReplicatedStorage = game:GetService("ReplicatedStorage")	
-local egg={};	
-	
-function AddTable(Table_V,LocalName)
-for _,v in pairs(Table_V:GetChildren()) do
-    table.insert(LocalName,v.Name)
-end
-end
-
-function GetText(str)
-	return str.Text
-end
-
-
-
-	
-AddTable(ReplicatedStorage.Eggs,egg)
-local dislist = {"=[ Zone 1 ]=","Earth","Icy","Blackhole","Lava","=[ Zone 2 ]=","Molten","Crystal","Solar","Ice","Burning","Moon","=[ Zone 3 ]=","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","=[ Zone 4 ]=","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","=[ Zone 5 ]=","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","=[ Zone 6 ]=","Void","Nebula","WormHole","Star","=[ Aqua Event ]=","Shark","Crab","Jellyfish","=[ Limited Egg ]=","[ Has Ended ]"};
---Label & Toogle
-v59:AddDropdown({
-   Name = "Select EGG",
-   Default = "Earth",
-   Options = egg,
-   Callback = function(Value)
-     _G.Egg = Value
-   end    
-});
-	
-v59:AddToggle({
-  Name = "Auto Hatch [Auto Save Deleted Pet List]",
-  Default = false,
-  Callback = function(Value)
-  _G.Balls = Value
-    while wait() do
-      if _G.Balls == false then break end
-	  if _G.AutoDeleteWithTable[_G.Egg] == nil then
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.Egg,DeleteFuckingPet)
-	 _G.AutoDeleteWithTable[_G.Egg] = DeleteFuckingPet
-	else
-        game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.Egg,_G.AutoDeleteWithTable[_G.Egg])
-	end
-      end
-  end    
-});
 
 v59:AddLabel("WORLD 1 EGGS");
 v59:AddToggle({
@@ -1733,56 +1629,56 @@ v23=v113;
 end});
 
 v62:AddLabel("TELEPORT");
-v62:AddToggle({
+v62:AddButton({
 Name="World 1",
 Default=false,
 Callback=function(v114)
 v55=v114;
 end});
 
-v62:AddToggle({
+v62:AddButton({
 Name="World 2",
 Default=false,
 Callback=function(v115)
 v54=v115;
 end});
 
-v62:AddToggle({
+v62:AddButton({
 Name="World 3",
 Default=false,
 Callback=function(v116)
 v56=v116;
 end});
 
-v62:AddToggle({
+v62:AddButton({
 Name="World 4",
 Default=false,
 Callback=function(v117)
 v57=v117;
 end});
 
-v62:AddToggle({
+v62:AddButton({
 Name="World 5",
 Default=false,
 Callback=function(v118)
 world5=v118;
 end});
 
-v62:AddToggle({
+v62:AddButton({
 Name="World 6",
 Default=false,
 Callback=function(v119)
 world6=v119;
 end});
 
-v62:AddToggle({
+v62:AddButton({
 Name="World 7",
 Default=false,
 Callback=function(value)
 world7=value;
 end});	
 
-v62:AddToggle({
+v62:AddButton({
 Name="HolloweenWorld",
 Default=false,
 Callback=function(value)
