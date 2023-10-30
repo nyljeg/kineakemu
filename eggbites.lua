@@ -1629,56 +1629,56 @@ v23=v113;
 end});
 
 v62:AddLabel("TELEPORT");
-v62:AddButton({
+v62:AddToggle({
 Name="World 1",
 Default=false,
 Callback=function(v114)
 v55=v114;
 end});
 
-v62:AddButton({
+v62:AddToggle({
 Name="World 2",
 Default=false,
 Callback=function(v115)
 v54=v115;
 end});
 
-v62:AddButton({
+v62:AddToggle({
 Name="World 3",
 Default=false,
 Callback=function(v116)
 v56=v116;
 end});
 
-v62:AddButton({
+v62:AddToggle({
 Name="World 4",
 Default=false,
 Callback=function(v117)
 v57=v117;
 end});
 
-v62:AddButton({
+v62:AddToggle({
 Name="World 5",
 Default=false,
 Callback=function(v118)
 world5=v118;
 end});
 
-v62:AddButton({
+v62:AddToggle({
 Name="World 6",
 Default=false,
 Callback=function(v119)
 world6=v119;
 end});
 
-v62:AddButton({
+v62:AddToggle({
 Name="World 7",
 Default=false,
 Callback=function(value)
 world7=value;
 end});	
 
-v62:AddButton({
+v62:AddToggle({
 Name="HolloweenWorld",
 Default=false,
 Callback=function(value)
