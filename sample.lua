@@ -15,7 +15,6 @@ local world5=false;
 local world6=false;
 local world7=false;
 local halloweenT=false;
-local foods=false;
 
 
    
