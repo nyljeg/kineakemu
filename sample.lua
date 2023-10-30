@@ -7,7 +7,17 @@ IntroText="Nyljeg Library",
 SaveConfig=true,
 ConfigFolder="nyljegLib"});
 local click=false;
+local world1=false;
+local world2=false;
+local world3=false;
+local world4=false;
+local world5=false;
+local world6=false;
+local world7=false;
+local halloweenT=false;
 
+
+   
    
 spawn(function()
 while task.wait() do 
@@ -17,11 +27,89 @@ else
 end 
 end 
 end);
+   
+spawn(function()
+while task.wait() do 
+if world1 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["1"].Interactables.Teleports.Locations.BackToSchool);
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if world2 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["2"].Interactables.Teleports.Locations.Futuristic);
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if world3 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["3"].Interactables.Teleports.Locations.Beach);
+else
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if world4 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["4"].Interactables.Teleports.Locations.NuclearBunker);
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if world5 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["5"].Interactables.Teleports.Locations.DinoWorld);
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if world6 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["6"].Interactables.Teleports.Locations.VoidWorld);
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if world7 then 
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["7"].Interactables.Teleports.Locations.SpaceCenter);
+else 
+end 
+end 
+end);
+
+spawn(function()
+while task.wait() do 
+if holloweenT then 
+game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones.HalloweenWorld.Interactables.Teleports.Locations.Halloween);
+    else
+    end
+end 
+end);
+   
 
 
 --main tab
 local eggs=v1:MakeTab({
 Name="🥚 Eggs",
+Icon="rbxassetid://4483345998",
+PremiumOnly=false});
+
+local tp=v1:MakeTab({
+Name="✈️ Teleport",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
@@ -186,8 +274,8 @@ NPC:AddToggle({
       end
   end    
 })
- 
- 
+
+
 eggs:AddDropdown({
  Name = "Select EGG",
  Default = "Earth",
@@ -204,7 +292,67 @@ eggs:AddToggle({
 end
 })
   
-   
+
+
+tp:AddLabel("TELEPORT");
+tp:AddButton({
+Name="World 1",
+Default=false,
+Callback=function(value)
+world1=value;
+end});
+
+tp:AddButton({
+Name="World 2",
+Default=false,
+Callback=function(value)
+world2=value;
+end});
+
+tp:AddButton({
+Name="World 3",
+Default=false,
+Callback=function(v116)
+world3=value;
+end});
+
+tp:AddButton({
+Name="World 4",
+Default=false,
+Callback=function(v117)
+world4=value;
+end});
+
+tp:AddButton({
+Name="World 5",
+Default=false,
+Callback=function(value)
+world5=value;
+end});
+
+tp:AddButton({
+Name="World 6",
+Default=false,
+Callback=function(value)
+world6=value;
+end});
+
+tp:AddButton({
+Name="World 7",
+Default=false,
+Callback=function(value)
+world7=value;
+end});
+
+tp:AddButton({
+Name="HolloweenWorld",
+Default=false,
+Callback=function(value)
+holloweenT=value;
+end});
+
+
+
 
 
 end
