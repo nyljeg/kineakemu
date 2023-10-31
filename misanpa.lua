@@ -614,24 +614,6 @@ end);
 
 spawn(function()
 while task.wait() do 
-if world5 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["5"].Interactables.Teleports.Locations.DinoWorld);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if world6 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["6"].Interactables.Teleports.Locations.VoidWorld);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
 if trex then 
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("TRex",{},false);
 else 
@@ -809,15 +791,6 @@ end
 end 
 end);
 	
-spawn(function()
-while task.wait() do 
-if world7 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["7"].Interactables.Teleports.Locations.SpaceCenter);
-else 
-end 
-end 
-end);
-
 spawn(function()
 while task.wait() do 
 if w7NPC1 then 
