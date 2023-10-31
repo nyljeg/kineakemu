@@ -1021,6 +1021,7 @@ while wait() do
 		if ewan == false then break end
    game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ArmsService.RF.PurchaseCrates:InvokeServer(tostring(_G.BuyCrateSkins) .. "Crate",_G.AmountCrate)
 end
+			end
 });
 
 
