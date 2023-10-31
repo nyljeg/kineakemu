@@ -1,3 +1,7 @@
+local msg = Instance.new("Message",workspace)
+msg.Text = "Made By Elmer Mangio"
+wait(5.8)
+msg:Destroy()
 if (game.PlaceId==13127800756) then 
 local v0=loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))();
 local v1=v0:MakeWindow({
