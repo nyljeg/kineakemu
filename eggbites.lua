@@ -1029,7 +1029,7 @@ food:AddToggle({
      _G._Godly_Bone = Value
 	while wait() do
 		if _G._Godly_Bone == false then break end
-			game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer("Godlybone",tonumber(_G._FoodUses))
+			game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer("GodlyBones",tonumber(_G._FoodUses))
 	end
   end    
 });
