@@ -1416,6 +1416,17 @@ v26=v99;
 end});
 
 v61:AddToggle({
+Name="Treat or Treak",
+Default=false,
+Callback=function(value)
+_G.tot = value
+ while wait() do
+if _G.tot == false then break end
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("TrickOrTreatService"):WaitForChild("RE"):WaitForChild("onTrickOrTreat"):FireServer(v.Name);
+end
+end})
+	
+v61:AddToggle({
 Name="Auto Cauldron Halloween",
 Default=false,
 Callback=function(v100)
