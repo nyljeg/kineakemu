@@ -14,7 +14,6 @@ local v2=false;
 local v3=false;
 local v4=false;
 local v5=false;
-local v6=false;
 local v7=false;
 local v8=false;
 local v9=false;
@@ -223,15 +222,6 @@ spawn(function()
 while task.wait() do 
 if v43 then 
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Barbarian",workspace.Zones["4"].Interactables.ArmWrestling.NPC.Barbarian.Table,"4");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v6 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.BlueprintService.RF.LuckyDraw:InvokeServer(false);
 else 
 end 
 end 
@@ -1007,16 +997,87 @@ v58:AddDropdown({
 
 v58:AddButton({
   Name = "Buy Crate",
-  Callback = function()
+  Callback = function(value)
+_G.crates = value
+  while wait() do
+   if _G.crates == false then break end
    game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ArmsService.RF.PurchaseCrates:InvokeServer(tostring(_G.BuyCrateSkins) .. "Crate",_G.AmountCrate)
+end
 end
 });
 	
 v58:AddToggle({
-Name="Auto LuckyDraw",
-Default=false,
-Callback=function(v67)
-v6=v67;end});
+  Name = "Auto Reb",
+  Default = false,
+  Callback = function(Value)
+  _G.Rbr = Value
+    while wait() do
+      if _G.Rbr == false then break end
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.RebirthService.RE.onRebirthRequest:FireServer()
+      end
+  end    
+})
+
+v58:AddToggle({
+  Name = "Auto Claim Gift",
+  Default = false,
+  Callback = function(Value)
+  _G.Gift = Value
+    while wait() do
+      if _G.Gift == false then break end
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("1")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("2")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("3")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("4")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("5")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("6")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("7")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("8")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("9")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("10")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("11")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("12")
+	 game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("13")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TimedRewardService.RE.onClaim:FireServer("14")
+      end
+  end    
+})
+
+v58:AddToggle({
+  Name = "Auto spin lucky draw [Blueprint]",
+  Default = false,
+  Callback = function(Value)
+  _G.blueprint = Value
+    while wait() do
+      if _G.blueprint == false then break end
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.BlueprintService.RF.LuckyDraw:InvokeServer(false)
+      end
+  end    
+})
+
+v58:AddToggle({
+  Name = "Auto spin daily lucky draw [Blueprint]",
+  Default = false,
+  Callback = function(Value)
+  _G.dailyblueprint = Value
+    while wait() do
+      if _G.dailyblueprint == false then break end
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.BlueprintService.RF.LuckyDraw:InvokeServer(true)
+      end
+  end    
+})
+
+v58:AddToggle({
+  Name = "Auto Claim Daily Login",
+  Default = false,
+  Callback = function(Value)
+  _G.dailylogin = Value
+    while wait() do
+      if _G.dailylogin == false then break end
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.DailyRewardService.RE.onClaimReward:FireServer()
+      end
+  end    
+})
 
 v59:AddLabel("WORLD 1 EGGS");
 v59:AddToggle({
