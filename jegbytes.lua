@@ -387,7 +387,8 @@ Default="Bully",
 Option = w1list,
 Callback = function(value)
 _G.w1name = value
-
+end})
+				
 v60:AddToggle({
 Name="Auto Fight NPC",
 Default=false,
@@ -406,7 +407,8 @@ Default="ScrapTrader",
 Option = w2list,
 Callback = function(value)
 _G.w2name = value
-
+end})
+				
 v60:AddToggle({
 Name="Auto Fight NPC",
 Default=false,
@@ -425,7 +427,8 @@ Default="CocoNut",
 Option = w3list,
 Callback = function(value)
 _G.w3name = value
-
+end})
+				
 v60:AddToggle({
 Name="Auto Fight NPC",
 Default=false,
@@ -444,7 +447,8 @@ Default="Barbarian",
 Option = w4list,
 Callback = function(value)
 _G.w4name = value
-
+end})
+				
 v60:AddToggle({
 Name="Auto Fight NPC",
 Default=false,
@@ -463,7 +467,8 @@ Default="Primal",
 Option = w5list,
 Callback = function(value)
 _G.w5name = value
-
+end})
+				
 v60:AddToggle({
 Name="Auto Fight NPC",
 Default=false,
@@ -482,7 +487,8 @@ Default="Orinthian",
 Option = w6list,
 Callback = function(value)
 _G.w6name = value
-
+end})
+	
 v60:AddToggle({
 Name="Auto Fight NPC",
 Default=false,
@@ -501,7 +507,8 @@ Default="RocketRider",
 Option = w7list,
 Callback = function(value)
 _G.w7name = value
-
+end})
+				
 v60:AddToggle({
 Name="Auto Fight NPC",
 Default=false,
