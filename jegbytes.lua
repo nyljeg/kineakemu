@@ -1414,17 +1414,6 @@ Default=false,
 Callback=function(v99)
 v26=v99;
 end});
-
-v61:AddToggle({
-Name="Treat or Treak",
-Default=false,
-Callback=function(value)
-_G.tot = value
- while wait() do
-if _G.tot == false then break end
-	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("TrickOrTreatService"):WaitForChild("RE"):WaitForChild("onTrickOrTreat"):FireServer(v.Name);
-end
-end})
 	
 v61:AddToggle({
 Name="Auto Cauldron Halloween",
@@ -1432,6 +1421,13 @@ Default=false,
 Callback=function(v100)
 v27=v100;
 end});
+
+v61:AddToggle({
+Name="Treat or Treak",
+Default=false,
+Callback=function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/nyljeg/kineakemu/main/TOT.lua"))()
+end})	
 
 v59:AddLabel("WORLD 3 EGGS");
 v59:AddToggle({
