@@ -1679,7 +1679,7 @@ testlang:AddToggle({
              if _G.hegg == false then break end
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.EggName,{},false);
 end 
-end);
+end
 });	
 
 
