@@ -995,7 +995,7 @@ v58:AddDropdown({
   end    
 })
 
-v58:AddButton({
+v58:AddToggle({
   Name = "Buy Crate",
   Callback = function(value)
 _G.crates = value
@@ -1007,7 +1007,7 @@ end
 });
 	
 v58:AddToggle({
-  Name = "Auto Reb",
+  Name = "Auto Rebirth",
   Default = false,
   Callback = function(Value)
   _G.Rbr = Value
