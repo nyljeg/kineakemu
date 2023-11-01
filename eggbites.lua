@@ -856,7 +856,7 @@ end);
 
 spawn(function()
 while task.wait() do 
-if w6NPC5 then 
+if w7NPC5 then 
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("DrPropulsion",workspace.Zones["7"].Interactables.ArmWrestling.NPC.DrPropulsion.Table,"7");
 else 
 end 
