@@ -19,91 +19,11 @@ local v24=false;
 local v25=false;
 local v26=false;
 local v27=false;
-local v28=false;
-local v29=false;
-local v30=false;
-local v31=false;
-local v32=false;
-local v33=false;
-local v34=false;
-local v35=false;
-local v36=false;
-local v37=false;
-local v38=false;
-local v39=false;
-local v40=false;
-local v41=false;
-local v42=false;
-local v43=false;
-local v44=false;
-local v45=false;
-local v46=false;
-local v47=false;
-local w5NPC1=false;
-local w5NPC2=false;
-local w5NPC3=false;
-local w5NPC4=false;
-local w5NPC5=false;
-local w6NPC1=false;
-local w6NPC2=false;
-local w6NPC3=false;
-local w6NPC4=false;
-local w6NPC5=false;
-local w7NPC1=false;
-local w7NPC2=false;
-local w7NPC3=false;
-local w7NPC4=false;
-local w7NPC5=false;
-
 
 
 
  
 --Function
-spawn(function()
-while task.wait() do 
-if v47 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("MutantKing",workspace.Zones["4"].Interactables.ArmWrestling.NPC.MutantKing.Table,"4");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v46 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Bulk",workspace.Zones["4"].Interactables.ArmWrestling.NPC.Bulk.Table,"4");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v45 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Enforcer",workspace.Zones["4"].Interactables.ArmWrestling.NPC.Enforcer.Table,"4");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v44 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Hazmat",workspace.Zones["4"].Interactables.ArmWrestling.NPC.Hazmat.Table,"4");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v43 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Barbarian",workspace.Zones["4"].Interactables.ArmWrestling.NPC.Barbarian.Table,"4");
-else 
-end 
-end 
-end);
 
 spawn(function()
 while task.wait() do 
@@ -114,145 +34,11 @@ end
 end 
 end);
 
-spawn(function()
-while task.wait() do 
-if v42 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("KrakenBoss",workspace.Zones["3"].Interactables.ArmWrestling.NPC.KrakenBoss.Table,"3");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v41 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("FriendlyShark",workspace.Zones["3"].Interactables.ArmWrestling.NPC.FriendlyShark.Table,"3");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v40 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("MermaidKing",workspace.Zones["3"].Interactables.ArmWrestling.NPC.MermaidKing.Table,"3");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v39 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("FatPirate",workspace.Zones["3"].Interactables.ArmWrestling.NPC.FatPirate.Table,"3");
-else 
-end 
-end 
-end);
 
 spawn(function()
 while task.wait() do 
 if v23 then 
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EventService.RF.ClaimEgg:InvokeServer();
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v38 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("CocoNut",workspace.Zones["3"].Interactables.ArmWrestling.NPC.CocoNut.Table,"3");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v37 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("RogueAi",workspace.Zones["2"].Interactables.ArmWrestling.NPC.RogueAi.Table,"2");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v36 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("RipperDoc",workspace.Zones["2"].Interactables.ArmWrestling.NPC.RipperDoc.Table,"2");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v35 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("SlicerAssassin",workspace.Zones["2"].Interactables.ArmWrestling.NPC.SlicerAssassin.Table,"2");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v34 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("CyberCop",workspace.Zones["2"].Interactables.ArmWrestling.NPC.CyberCop.Table,"2");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v33 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("ScrapTrader",workspace.Zones["2"].Interactables.ArmWrestling.NPC.ScrapTrader.Table,"2");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v32 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Champion",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Champion.Table,"1");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v31 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("MafiaBoss",workspace.Zones["1"].Interactables.ArmWrestling.NPC.MafiaBoss.Table,"1");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v30 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("GymRat",workspace.Zones["1"].Interactables.ArmWrestling.NPC.GymRat.Table,"1");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v29 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Teacher",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Teacher.Table,"1");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v28 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Bully",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Bully.Table,"1");
 else 
 end 
 end 
@@ -275,142 +61,6 @@ else
 end 
 end 
 end);
-
- spawn(function()
-while task.wait() do 
-if w5NPC1 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Primal",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Primal.Table,"5");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w5NPC2 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Dino",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Dino.Table,"5");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w5NPC3 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Archeologist",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Archeologist.Table,"5");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w5NPC4 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("TribeLeader",workspace.Zones["5"].Interactables.ArmWrestling.NPC.TribeLeader.Table,"5");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w5NPC5 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Mammoth",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Mammoth.Table,"5");
-else 
-end 
-end 
-end);
-
- spawn(function()
-while task.wait() do 
-if w6NPC1 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Orinthian",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Orinthian.Table,"6");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w6NPC2 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Spaceboy",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Spaceboy.Table,"6");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w6NPC3 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("DemonSlayer",workspace.Zones["6"].Interactables.ArmWrestling.NPC.DemonSlayer.Table,"6");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w6NPC4 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Udzal",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Udzal.Table,"6");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w6NPC5 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Cybernetic",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Cybernetic.Table,"6");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w7NPC1 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("RocketRider",workspace.Zones["7"].Interactables.ArmWrestling.NPC.RocketRider.Table,"7");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w7NPC2 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("MissileMaven",workspace.Zones["7"].Interactables.ArmWrestling.NPC.MissileMaven.Table,"7");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w7NPC3 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("LairGuardian",workspace.Zones["7"].Interactables.ArmWrestling.NPC.LairGuardian.Table,"7");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w7NPC4 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("NovaNomad",workspace.Zones["7"].Interactables.ArmWrestling.NPC.NovaNomad.Table,"7");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w7NPC5 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("DrPropulsion",workspace.Zones["7"].Interactables.ArmWrestling.NPC.DrPropulsion.Table,"7");
-else 
-end 
-end 
-end);
-
 
 
 
@@ -735,256 +385,138 @@ Callback=function(v64)
 v3=v64;
 end});
 	
-v60:AddLabel("WORLD 1 NPC");
-v60:AddToggle({
-Name="Auto Bully",
-Default=false,
-Callback=function(v72)
-v28=v72;
-end});
+local w1list = {Bully,Teacher,GymRat,MafiaBoss,Champion}
+v60:AddDropdown({
+Name="World 1 NPC",
+Default="Bully",
+Option = w1list,
+Callback = function(value)
+_G.w1name = value
 
 v60:AddToggle({
-Name="Auto Teacher",
-Default=false,
-Callback=function(v73)
-v29=v73;
-end});
-
-v60:AddToggle({
-Name="Auto GymRat",
-Default=false,
-Callback=function(v74)
-v30=v74;
-end});
-
-v60:AddToggle({
-Name="Auto MafiaBoss",
-Default=false,
-Callback=function(v75)
-v31=v75;
-end});
-
-v60:AddToggle({
-Name="Auto Champion",
-Default=false,
-Callback=function(v76)
-v32=v76;
-end});
-
-v60:AddLabel("WORLD 2 NPC");
-v60:AddToggle({
-Name="Auto ScrapTrader",
-Default=false,
-Callback=function(v82)
-v33=v82;
-end});
-
-v60:AddToggle({
-Name="Auto CyberCop",
-Default=false,
-Callback=function(v83)
-v34=v83;
-end});
-
-v60:AddToggle({
-Name="Auto CyberAssassin",
-Default=false,
-Callback=function(v84)
-v35=v84;
-end});
-
-v60:AddToggle({
-Name="Auto RipperDoc",
-Default=false,
-Callback=function(v85)
-v36=v85;
-end});
-
-v60:AddToggle({
-Name="Auto RogueAi",
-Default=false,
-Callback=function(v86)
-v37=v86;
-end});
-
-v60:AddLabel("WORLD 3 NPC");
-v60:AddToggle({
-Name="Auto CocoNut",
-Default=false,
-Callback=function(v87)
-v38=v87;
-end});
-
-v60:AddToggle({
-Name="Auto FatPirate",
-Default=false,
-Callback=function(v88)
-v39=v88;
-end});
-
-v60:AddToggle({
-Name="Auto MermaidKing",
-Default=false,
-Callback=function(v89)
-v40=v89;
-end});
-
-v60:AddToggle({
-Name="Auto FriendlyShark",
-Default=false,
-Callback=function(v90)
-v41=v90;
-end});
-
-v60:AddToggle({
-Name="Auto KrakenBoss",
-Default=false,
-Callback=function(v91)
-v42=v91;
-end});
-
-v60:AddLabel("WORLD 4 NPC");
-v60:AddToggle({
-Name="Auto Barbarian",
-Default=false,
-Callback=function(v92)
-v43=v92;end});
-
-v60:AddToggle({
-Name="Auto Hazmat",
-Default=false,
-Callback=function(v93)
-v44=v93;
-end});
-
-v60:AddToggle({
-Name="Auto Enforcer",
-Default=false,
-Callback=function(v94)
-v45=v94;
-end});
-
-v60:AddToggle({
-Name="Auto Bulk",
-Default=false,
-Callback=function(v95)
-v46=v95;
-end});
-
-v60:AddToggle({
-Name="Auto MutantKing",
-Default=false,
-Callback=function(v96)
-v47=v96;
-end});
-
-v60:AddLabel("WORLD 5 NPC");
-v60:AddToggle({
-Name="Primal",
+Name="Auto Fight NPC",
 Default=false,
 Callback=function(value)
-w5NPC1=value;
+_G.w1npc = value
+    while wait() do
+     if _G.w1npc == false then break end
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("_G.w1name",workspace.Zones["1"].Interactables.ArmWrestling.NPC._G.w1name.Table,"1");
+end
 end});
 
-v60:AddToggle({
-Name="Dino",
-Default=false,
-Callback=function(value)
-w5NPC2=value;
-end});
+local w2list = {ScrapTrader,CyberCop,CyberAssassin,RipperDoc,RogueAi}
+v60:AddDropdown({
+Name="World 2 NPC",
+Default="ScrapTrader",
+Option = w2list,
+Callback = function(value)
+_G.w2name = value
 
 v60:AddToggle({
-Name="Archeologist",
+Name="Auto Fight NPC",
 Default=false,
 Callback=function(value)
-w5NPC3=value;
+_G.w2npc = value
+    while wait() do
+     if _G.w2npc == false then break end
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("_G.w2name",workspace.Zones["2"].Interactables.ArmWrestling.NPC._G.w2name.Table,"2");
+end
 end});
 
-v60:AddToggle({
-Name="Tribe Leader",
-Default=false,
-Callback=function(value)
-w5NPC4=value;
-end});
+local w3list = {CocoNut,FatPirate,MermaidKing,FriendlyShark,KrakenBoss}
+v60:AddDropdown({
+Name="World 3 NPC",
+Default="CocoNut",
+Option = w3list,
+Callback = function(value)
+_G.w3name = value
 
 v60:AddToggle({
-Name="Mammoth",
+Name="Auto Fight NPC",
 Default=false,
 Callback=function(value)
-w5NPC5=value;
+_G.w3npc = value
+    while wait() do
+     if _G.w3npc == false then break end
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("_G.w3name",workspace.Zones["3"].Interactables.ArmWrestling.NPC._G.w3name.Table,"3");
+end
 end});
 
-v60:AddLabel("WORLD 6 NPC");
-v60:AddToggle({
-Name="Orinthian",
-Default=false,
-Callback=function(value)
-w6NPC1=value;
-end});
+local w4list = {Barbarian,Hazmat,Enforcer,Bulk,MutantKing}
+v60:AddDropdown({
+Name="World 4 NPC",
+Default="Barbarian",
+Option = w4list,
+Callback = function(value)
+_G.w4name = value
 
 v60:AddToggle({
-Name="Spaceboy",
+Name="Auto Fight NPC",
 Default=false,
 Callback=function(value)
-w6NPC2=value;
+_G.w4npc = value
+    while wait() do
+     if _G.w4npc == false then break end
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("_G.w4name",workspace.Zones["4"].Interactables.ArmWrestling.NPC._G.w4name.Table,"4");
+end
 end});
 
-v60:AddToggle({
-Name="Demon Slayer",
-Default=false,
-Callback=function(value)
-w6NPC3=value;
-end});
+local w5list = {Primal,Dino,Archeologist,TribeLeader,Mammoth}
+v60:AddDropdown({
+Name="World 5 NPC",
+Default="Primal",
+Option = w5list,
+Callback = function(value)
+_G.w5name = value
 
 v60:AddToggle({
-Name="Ud'zan",
+Name="Auto Fight NPC",
 Default=false,
 Callback=function(value)
-w6NPC4=value;
-end});
+_G.w5npc = value
+    while wait() do
+     if _G.w5npc == false then break end
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("_G.w5name",workspace.Zones["5"].Interactables.ArmWrestling.NPC._G.w5name.Table,"5");
+end
+end});													
+
+local w6list = {Orinthian,Spaceboy,DemonSlayer,Udzal,Cybernetic}
+v60:AddDropdown({
+Name="World 6 NPC",
+Default="Orinthian",
+Option = w6list,
+Callback = function(value)
+_G.w6name = value
 
 v60:AddToggle({
-Name="Cybernetic",
+Name="Auto Fight NPC",
 Default=false,
 Callback=function(value)
-w6NPC5=value;
+_G.w6npc = value
+    while wait() do
+     if _G.w6npc == false then break end
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("_G.w6name",workspace.Zones["6"].Interactables.ArmWrestling.NPC._G.w6name.Table,"6");
+end
 end});
 
-v60:AddLabel("WORLD 7 NPC");
-v60:AddToggle({
-Name="Rocket Rider",
-Default=false,
-Callback=function(value)
-w7NPC1=value;
-end});
+local w7list = {RocketRider,MissileMaven,LairGuardian,NovaNomad,DrPropulsion}
+v60:AddDropdown({
+Name="World 7 NPC",
+Default="RocketRider",
+Option = w7list,
+Callback = function(value)
+_G.w7name = value
 
 v60:AddToggle({
-Name="Missile Maven",
+Name="Auto Fight NPC",
 Default=false,
 Callback=function(value)
-w7NPC2=value;
-end});
-
-v60:AddToggle({
-Name="Nova Nomad",
-Default=false,
-Callback=function(value)
-w7NPC3=value;
-end});
-
-v60:AddToggle({
-Name="Lair Guardian",
-Default=false,
-Callback=function(value)
-w7NPC4=value;
-end});
-
-v60:AddToggle({
-Name="Dr Propulsion",
-Default=false,
-Callback=function(value)
-w7NPC5=value;
-end});
+_G.w7npc = value
+    while wait() do
+     if _G.w7npc == false then break end
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("_G.w7name",workspace.Zones["7"].Interactables.ArmWrestling.NPC._G.w7name.Table,"7");
+end
+end});																
 	
 v59:AddLabel("EVENT EGGS");
 v59:AddToggle({
