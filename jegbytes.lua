@@ -13,12 +13,7 @@ ConfigFolder="nyljegLib"});
 local v2=false;
 local v3=false;
 local v4=false;
-local v7=false;
 local v23=false;
-local v24=false;
-local v25=false;
-local v26=false;
-local v27=false;
 
 
 
