@@ -103,10 +103,16 @@ Name = "Event Eggs 🥚",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
-locat pot=v1:Maketab({
+local pot=v1:Maketab({
 Name = "Potion's 🧪",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
+
+local tot=v1:MakeTab({
+Name = "Halloween Event 🎃",
+Icon="rbxassetid://4483345998",
+PremiumOnly=false});
+	
 	
 --Toogle
 crate:AddDropdown({
@@ -637,8 +643,41 @@ pot:AddToggle({
   end    
 })
 
+tot:AddToggle({
+   Name = "Auto Trick Or Treat",
+   Default = false,
+   Callback = function(Value)
+     _G._ToT = Value
+	while wait() do
+		if _G._ToT == false then break end
+		  game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.TrickOrTreatService.RE.onTrickOrTreat:FireServer(i)
+	end
+  end    
+})
 
+tot:AddToggle({
+   Name = "Auto Ghost / Pedestrian",
+   Default = false,
+   Callback = function(Value)
+     _G._demon = Value
+	while wait() do
+		if _G._demon == false then break end
+		  game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.PedestrianService.RE.onDamagePedestrian:FireServer(i)
+	end
+  end    
+})
 
+tot:AddToggle({
+   Name = "Auto Pumpkin",
+   Default = false,
+   Callback = function(Value)
+     _G._pumpkin = Value
+	while wait() do
+		if _G._pumpkin == false then break end
+		  game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.PumpkinService.RE.onDamagePumpkin:FireServer(i)
+	end
+  end
+})
 
 	
 
