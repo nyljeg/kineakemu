@@ -1664,7 +1664,7 @@ end});
 testlang:AddDropdown({
    Name = "Choose your Egg",
    Default = "Tomb",
-   Options = {"Tomb","Ectoplasmic","Bewitched","Cauldron"},
+   Options = {"=[ HOLLOWEEN EGGS ]=","Tomb","Ectoplasmic","Bewitched","Cauldron"},
    Callback = function(Value)
      _G.EggName = Value
    end    
