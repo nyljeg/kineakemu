@@ -1,5 +1,5 @@
-_G.trickortreat = true
-while _G.trickortreat == true do
+_G.trickortreat = false
+while _G.trickortreat == false do
     for i,v in pairs(game:GetService("Workspace").Zones.HalloweenWorld.Interactables.TrickOrTreat:GetChildren()) do
         if v.BillboardGui.Frame.Title.Text == "TRICK OR TREAT!" then
             game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
