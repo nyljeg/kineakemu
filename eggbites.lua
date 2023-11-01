@@ -15,26 +15,7 @@ local v3=false;
 local v4=false;
 local v5=false;
 local v7=false;
-local v8=false;
-local v9=false;
-local v10=false;
-local v11=false;
-local v12=false;
-local v13=false;
-local v14=false;
-local v15=false;
-local v16=false;
-local v17=false;
-local v18=false;
-local v19=false;
-local v20=false;
-local v21=false;
-local v22=false;
 local v23=false;
-local v24=false;
-local v25=false;
-local v26=false;
-local v27=false;
 local v28=false;
 local v29=false;
 local v30=false;
@@ -55,22 +36,6 @@ local v44=false;
 local v45=false;
 local v46=false;
 local v47=false;
-local v48=false;
-local v49=false;
-local v50=false; 
-local v51=false;
-local v52=false;
-local v53=false;
-local trex=false;
-local herbivore=false;
-local pterodactyl=false;
-local mystic=false;
-local dinofossil=false;
-local gem=false;
-local void=false;
-local nebula=false;
-local wormhole=false;
-local star=false;
 local w5NPC1=false;
 local w5NPC2=false;
 local w5NPC3=false;
@@ -86,11 +51,6 @@ local w7NPC2=false;
 local w7NPC3=false;
 local w7NPC4=false;
 local w7NPC5=false;
-local meteor=false;
-local cyberpunk=false;
-local deepsea=false;
-local rocket=false;
-
 
 
 
@@ -98,33 +58,6 @@ local rocket=false;
 
  
 --Function
-
-spawn(function()
-while task.wait() do 
-if v27 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Cauldron",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v26 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Bewitched",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v25 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Ectoplasmic",{},false);
-else 
-end 
-end 
-end);
 
 spawn(function()
 while task.wait() do 
@@ -157,60 +90,6 @@ spawn(function()
 while task.wait() do 
 if v44 then 
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Hazmat",workspace.Zones["4"].Interactables.ArmWrestling.NPC.Hazmat.Table,"4");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v53 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Nuclear",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while taskk.wait() do 
-if v52 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Mutant",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v51 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Iridescent",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v50 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Atom",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v49 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Widget",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v48 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Rust",{},false);
 else 
 end 
 end 
@@ -290,71 +169,8 @@ end);
 
 spawn(function()
 while task.wait() do 
-if v22 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Poseidon",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v21 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("KingFish",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v20 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Clam",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v19 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Treasure",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v18 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Palm",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v17 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Coconut",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
 if v38 then 
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("CocoNut",workspace.Zones["3"].Interactables.ArmWrestling.NPC.CocoNut.Table,"3");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v24 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Tomb",{},false);
 else 
 end 
 end 
@@ -407,51 +223,6 @@ end);
 
 spawn(function()
 while task.wait() do 
-if v16 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Ice",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v15 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Moon",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v14 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Solar",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v13 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Molten",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v12 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Crystal",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
 if v32 then 
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Champion",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Champion.Table,"1");
 else 
@@ -497,42 +268,6 @@ end);
 
 spawn(function()
 while task.wait() do 
-if v11 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Blackhole",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v10 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Lava",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v9 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Icy",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v8 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Earth",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
 if v2 then 
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ToolService.RE.onClick:FireServer();
 else 
@@ -544,60 +279,6 @@ spawn(function()
 while task.wait() do 
 if v3 then 
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onClickRequest:FireServer();
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if trex then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("TRex",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if herbivore then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Herbivore",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if pterodactyl then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Pterodactyl",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if mystic then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Mystic",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if dinofossil then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("DinoFossil",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if gem then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Gem",{},false);
 else 
 end 
 end 
@@ -692,41 +373,6 @@ else
 end 
 end 
 end);
-
-spawn(function()
-while task.wait() do 
-if void then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Void",{},false);
-else 
-end 
-end 
-  end);
-spawn(function()
-while task.wait() do 
-if nebula then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Nebula",{},false);
-else 
-end 
-end
-    end);
-
-spawn(function()
-while task.wait() do 
-if wormhole then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("WormHole",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if star then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Star",{},false);
-else 
-end 
-end 
-end);
 	
 spawn(function()
 while task.wait() do 
@@ -773,41 +419,6 @@ end
 end 
 end);
 
-spawn(function()
-while task.wait() do 
-if meteor then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Meteor",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if cyberpunk then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Cyberpunk",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if deepsea then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Deepsea",{},false);
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if rocket then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer("Rocket",{},false);
-else 
-end 
-end 
-end);	
 
 
 
@@ -822,27 +433,22 @@ end);
 --Main Tab
 
 local v58=v1:MakeTab({
-Name="Farm",
+Name="Farm 🧺",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v59=v1:MakeTab({
-Name="Auto Hatched Eggs",
+Name="Egg List 🥚",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v60=v1:MakeTab({
-Name="Auto Fight NPCs",
-Icon="rbxassetid://4483345998",
-PremiumOnly=false});
-
-local v61=v1:MakeTab({
-Name="HalloweenEggs",
+Name="Auto NPC 🤖",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v62=v1:MakeTab({
-Name="Teleport",
+Name="Teleport 🌐",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
@@ -852,7 +458,7 @@ Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
 local event=v1:MakeTab({
-Name = "Event Eggs",
+Name = "Event Eggs 🥚",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
@@ -1063,34 +669,28 @@ v58:AddToggle({
   end    
 })
 
-
-v59:AddLabel("WORLD 1 EGGS");
-v59:AddToggle({
-Name="Earth Egg",
-Default=false,
-Callback=function(v68)
-v8=v68;end});
-
-v59:AddToggle({
-Name="Icy Egg",
-Default=false,
-Callback=function(v69)
-v9=v69;
-end});
+local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket","Shark","Crab","Jellyfish","Tomb","Ectoplasmic","Bewitched","Cauldron"}
+v59:AddLabel("All Egg List, Event Egg's Aren't Included");
+v59:AddDropdown({
+   Name = "Choose your Egg",
+   Default = "Tomb",
+   Options = egglist,
+   Callback = function(Value)
+     _G.EggName = Value
+   end    
+});
 
 v59:AddToggle({
-Name="Lava Egg",
-Default=false,
-Callback=function(v70)
-v10=v70;
-end});
-
-v59:AddToggle({
-Name="Blackhole Egg",
-Default=false,
-Callback=function(v71)
-v11=v71;
-end});
+   Name = "Open Egg",
+   Default = false,
+   Callback = function(Value)
+     _G.hegg = Value
+	while wait() do		
+             if _G.hegg == false then break end
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.EggName,{},false);
+end 
+end
+});
 
 v60:AddLabel("WORLD 1 NPC");
 v60:AddToggle({
@@ -1126,42 +726,6 @@ Name="Auto Champion",
 Default=false,
 Callback=function(v76)
 v32=v76;
-end});
- 
-v59:AddLabel("WORLD 2 EGGS");
-v59:AddToggle({
-Name="Crystal Egg",
-Default=false,
-Callback=function(v77)
-v12=v77;
-end});
-
-v59:AddToggle({
-Name="Molton Egg",
-Default=false,
-Callback=function(v78)
-v13=v78;
-end});
-
-v59:AddToggle({
-Name="Solar Egg",
-Default=false,
-Callback=function(v79)
-v14=v79;
-end});
-
-v59:AddToggle({
-Name="Moon Egg",
-Default=false,
-Callback=function(v80)
-v15=v80;
-end});
-
-v59:AddToggle({
-Name="Ice Egg",
-Default=false,
-Callback=function(v81)
-v16=v81;
 end});
 
 v60:AddLabel("WORLD 2 NPC");
@@ -1377,221 +941,6 @@ Default=false,
 Callback=function(value)
 w7NPC5=value;
 end});
-
-v61:AddLabel("HALLOWEEN! ");
-v61:AddToggle({
-Name="Auto Tomb Halloween",
-Default=false,
-Callback=function(v97)
-v24=v97;
-end});
-
-v61:AddToggle({
-Name="Auto Ectoplasmic Halloween",
-Default=false,
-Callback=function(v98)
-v25=v98;
-end});
-
-v61:AddToggle({
-Name="Auto Bewitched Halloween",
-Default=false,
-Callback=function(v99)
-v26=v99;
-end});
-
-v61:AddToggle({
-Name="Auto Cauldron Halloween",
-Default=false,
-Callback=function(v100)
-v27=v100;
-end});
-
-v59:AddLabel("WORLD 3 EGGS");
-v59:AddToggle({
-Name="Coconut Egg",
-Default=false,
-Callback=function(v101)
-v17=v101;
-end});
-
-v59:AddToggle({
-Name="Palm Egg",
-Default=false,
-Callback=function(v102)
-v18=v102;
-end});
-
-v59:AddToggle({
-Name="Treasure Egg",
-Default=false,
-Callback=function(v103)
-v19=v103;
-end});
-
-v59:AddToggle({
-Name="Clam Egg",
-Default=false,
-Callback=function(v104)
-v20=v104;
-end});
-
-v59:AddToggle({
-Name="KingFish Egg",
-Default=false,
-Callback=function(v105)
-v21=v105;
-end});
-
-v59:AddToggle({
-Name="Poseidon Egg",
-Default=false,
-Callback=function(v106)
-v22=v106;
-end});
-
-v59:AddLabel("World 4 EGGS");
-v59:AddToggle({Name="Rust Egg",
-Default=false,
-Callback=function(v107)
-v48=v107;
-end});
-
-v59:AddToggle({
-Name="Widget Egg",
-Default=false,
-Callback=function(v108)
-v49=v108;
-end});
-
-v59:AddToggle({
-Name="Atom Egg",
-Default=false,
-Callback=function(v109)
-v50=v109;
-end});
-
-v59:AddToggle({
-Name="Inridescent Egg",
-Default=false,
-Callback=function(v110)
-v51=v110;
-end});
-
-v59:AddToggle({
-Name="Mutant Egg",
-Default=false,
-Callback=function(v111)
-v52=v111;
-end});
-
-v59:AddToggle({
-Name="Nuclear Egg",
-Default=false,
-Callback=function(v112)
-v53=v112;
-end});
-
- v59:AddLabel("WORLD 5 EGGS");
-v59:AddToggle({
-Name="T-Rex Egg",
-Default=false,
-Callback=function(value)
-trex=value;
-end});
-
-v59:AddToggle({
-Name="Herbivore Egg",
-Default=false,
-Callback=function(value)
-herbivore=value;
-end});
-
-v59:AddToggle({
-Name="Pterodactyl Egg",
-Default=false,
-Callback=function(value)
-pterodactyl=value;
-end});
-
-v59:AddToggle({
-Name="Mystic Egg",
-Default=false,
-Callback=function(value)
-mystic=value;
-end})
- 
-v59:AddToggle({
-Name="Dino Fossil Egg",
-Default=false,
-Callback=function(value)
-dinofossil=value;
-end});
-
-v59:AddToggle({
-Name="Gem Egg",
-Default=false,
-Callback=function(value)
-gem=value;
-end});
-
-v59:AddLabel("WORLD 6 EGGS");
-v59:AddToggle({
-Name="Void Egg",
-Default=false,
-Callback=function(value)
-void=value;
-end});
-
-v59:AddToggle({
-Name="Nebula Egg",
-Default=false,
-Callback=function(value)
-nebula=value;
-end});
-
-v59:AddToggle({
-Name="Worm Hole Egg",
-Default=false,
-Callback=function(value)
-wormhole=value;
-end});
-
-v59:AddToggle({
-Name="Star Egg",
-Default=false,
-Callback=function(value)
-star=value;
-end});
-	
-v59:AddLabel("WORLD 7 EGGS");
-v59:AddToggle({
-Name="Meteor Egg",
-Default=false,
-Callback=function(value)
-meteor=value;
-end});
-
-v59:AddToggle({
-Name="Cyberpunk Egg",
-Default=false,
-Callback=function(value)
-cyberpunk=value;
-end});
-
-v59:AddToggle({
-Name="Deepsea Egg",
-Default=false,
-Callback=function(value)
-deepsea=value;
-end});
-
-v59:AddToggle({
-Name="Rocket Egg",
-Default=false,
-Callback=function(value)
-rocket=value;
-end})
 
 v59:AddLabel("EVENT EGGS");
 v59:AddToggle({
