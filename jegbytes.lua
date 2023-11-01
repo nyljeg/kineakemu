@@ -434,22 +434,22 @@ end);
 --Main Tab
 
 local v58=v1:MakeTab({
-Name="Farm",
+Name="Farm 🧺",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v59=v1:MakeTab({
-Name="🥚 Egg List",
+Name="Egg List 🥚",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v60=v1:MakeTab({
-Name="Auto Fight NPCs",
+Name="Auto NPC 🤖",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v62=v1:MakeTab({
-Name="Teleport",
+Name="Teleport 🌐",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
@@ -459,7 +459,7 @@ Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
 local event=v1:MakeTab({
-Name = "Event Eggs",
+Name = "Event Eggs 🥚",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
@@ -664,9 +664,30 @@ v58:AddToggle({
       end
   end    
 })
+	
+local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket","Shark","Crab","Jellyfish","Tomb","Ectoplasmic","Bewitched","Cauldron"}
+v59:AddLabel("All Egg List, Event Egg's Aren't Included");
+v59:AddDropdown({
+   Name = "Choose your Egg",
+   Default = "Tomb",
+   Options = egglist,
+   Callback = function(Value)
+     _G.EggName = Value
+   end    
+});
 
-v59:AddLabel("WORLD 1 EGGS");
-
+v59:AddToggle({
+   Name = "Open Egg",
+   Default = false,
+   Callback = function(Value)
+     _G.hegg = Value
+	while wait() do		
+             if _G.hegg == false then break end
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.EggName,{},false);
+end 
+end
+});	
+	
 v60:AddLabel("WORLD 1 NPC");
 v60:AddToggle({
 Name="Auto Bully",
@@ -702,9 +723,6 @@ Default=false,
 Callback=function(v76)
 v32=v76;
 end});
- 
-v59:AddLabel("WORLD 2 EGGS");
-
 
 v60:AddLabel("WORLD 2 NPC");
 v60:AddToggle({Name="Auto ScrapTrader",
@@ -919,28 +937,6 @@ Default=false,
 Callback=function(value)
 w7NPC5=value;
 end});
-
-local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket","Shark","Crab","Jellyfish","Tomb","Ectoplasmic","Bewitched","Cauldron"}
-v59:AddDropdown({
-   Name = "Choose your Egg",
-   Default = "Tomb",
-   Options = egglist,
-   Callback = function(Value)
-     _G.EggName = Value
-   end    
-});
-
-v59:AddToggle({
-   Name = "Open Egg",
-   Default = false,
-   Callback = function(Value)
-     _G.hegg = Value
-	while wait() do		
-             if _G.hegg == false then break end
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.EggName,{},false);
-end 
-end
-});	
 	
 v59:AddLabel("EVENT EGGS");
 v59:AddToggle({
