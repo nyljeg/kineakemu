@@ -106,7 +106,8 @@ end);
 local farm=v1:MakeTb({
 Name="🏝️Farm"",
 Icon="rbxassetid://4483345998",
-
+PremiumOnly=false});
+	
 local eggs=v1:MakeTab({
 Name="🥚 Eggs",
 Icon="rbxassetid://4483345998",
@@ -389,15 +390,19 @@ eggs:AddDropdown({
  Name = "Select EGG",
  Default = "Earth",
 Options = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","WormHole","Star","Limited"},
-   Callback = function(Value)
-     _G.BuyEggs = Value
+   Callback = function(value)
+_G.BuyEggs = value
   end    
 })
 
 eggs:AddToggle({
   Name = "Buy Eggs",
-  Callback = function()
+  Callback = function(value)
+_G.eggname = value
+while wait() do
+if _G.eggname == false then break end
    game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.BuyEggs,{},false)
+end
 end
 })
   
