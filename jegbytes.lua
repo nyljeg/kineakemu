@@ -434,7 +434,7 @@ Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local crate=v1:MakeTab({
-Name="Buy & Open Crates 🗝️",
+Name="Buy/Open Crates 🗝️",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
@@ -480,8 +480,12 @@ crate:AddDropdown({
 
 crate:AddButton({
   Name = "Buy Crate",
-  Callback = function()
+  Callback = function(value)
+   _G.buycrate = value
+	while wait() do
+    if _G.buycrate == false then break end
    game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ArmsService.RF.PurchaseCrates:InvokeServer(tostring(_G.BuyCrateSkins) .. "Crate",_G.AmountCrate)
+end
 end
 })
 -----------------
@@ -588,13 +592,6 @@ Name="Auto Click",
 Default=false,
 Callback=function(v63)
 v2=v63;
-end});
-
-v58:AddToggle({
-Name="Auto Click Battle",
-Default=false,
-Callback=function(v64)
-v3=v64;
 end});
 
 v58:AddToggle({
@@ -711,7 +708,7 @@ local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ic
 v59:AddLabel("All Egg List, Event Egg's Aren't Included");
 v59:AddDropdown({
    Name = "Choose your Egg",
-   Default = "Tomb",
+   Default = "Earth",
    Options = egglist,
    Callback = function(Value)
      _G.EggName = Value
@@ -729,6 +726,14 @@ game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].kni
 end 
 end
 });	
+
+v60:AddLabel("No Need Gamepass");	
+v60:AddToggle({
+Name="Auto Click Battle",
+Default=false,
+Callback=function(v64)
+v3=v64;
+end});
 	
 v60:AddLabel("WORLD 1 NPC");
 v60:AddToggle({
@@ -767,7 +772,8 @@ v32=v76;
 end});
 
 v60:AddLabel("WORLD 2 NPC");
-v60:AddToggle({Name="Auto ScrapTrader",
+v60:AddToggle({
+Name="Auto ScrapTrader",
 Default=false,
 Callback=function(v82)
 v33=v82;
