@@ -1660,7 +1660,7 @@ game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_k
 end});
 
 	
- local egglist = {"Tomb","Ectoplasmic","Bewitched","Cauldron"}
+ local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket","Shark","Crab","Jellyfish","Tomb","Ectoplasmic","Bewitched","Cauldron"}
 testlang:AddDropdown({
    Name = "Choose your Egg",
    Default = "Tomb",
