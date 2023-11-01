@@ -1660,11 +1660,11 @@ game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_k
 end});
 
 	
- 
+ local egglist = {"Tomb","Ectoplasmic","Bewitched","Cauldron"}
 testlang:AddDropdown({
    Name = "Choose your Egg",
    Default = "Tomb",
-   Options = {"=[ HOLLOWEEN EGGS ]=","Tomb","Ectoplasmic","Bewitched","Cauldron"},
+   Options = egglist,
    Callback = function(Value)
      _G.EggName = Value
    end    
