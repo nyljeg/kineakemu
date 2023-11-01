@@ -859,9 +859,9 @@ Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local testlang=v1:MakeTab({
-Name = "Holloween Eggs v2",
-Icon = "rbxassetid://4483345998",
-PremiumOnly = false});
+Name="Holloween Eggs v2",
+Icon="rbxassetid://4483345998",
+PremiumOnly=false});
 
 	
 --Toogle
@@ -1664,7 +1664,7 @@ end});
 testlang:AddDropdown({
    Name = "Choose your Egg",
    Default = "Tomb",
-   Options = {"=[ Holloween Eggs]=","Tomb","Ectoplasmic","Bewitched","Cauldron"},
+   Options = {"Tomb","Ectoplasmic","Bewitched","Cauldron"},
    Callback = function(Value)
      _G.EggName = Value
    end    
@@ -1674,15 +1674,13 @@ testlang:AddToggle({
    Name = "Open Egg",
    Default = false,
    Callback = function(Value)
-     hegg = Value
+     _G.hegg = Value
 	while wait() do		
-     if hegg == false then break end
+             if _G.hegg == false then break end
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.EggName,{},false);
 end 
 end);
 });	
-
-
 
 
 
