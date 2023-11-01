@@ -103,8 +103,8 @@ end);
 
 
 --main tab
-local farm=v1:MakeTb({
-Name="🏝️Farm"",
+local farm=v1:MakeTab({
+Name="🏝️Farm",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
