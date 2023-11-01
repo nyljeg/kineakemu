@@ -1661,7 +1661,7 @@ end});
 
 	
  
-testinglang:AddDropdown({
+testlang:AddDropdown({
    Name = "Choose your Egg",
    Default = "Tomb",
    Options = {"=[ Holloween Eggs]=","Tomb","Ectoplasmic","Bewitched","Cauldron"},
@@ -1670,7 +1670,7 @@ testinglang:AddDropdown({
    end    
 });
 
-testing lang:AddToggle({
+testlang:AddToggle({
    Name = "Open Egg",
    Default = false,
    Callback = function(Value)
