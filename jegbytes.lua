@@ -13,7 +13,6 @@ ConfigFolder="nyljegLib"});
 local v2=false;
 local v3=false;
 local v4=false;
-local v5=false;
 local v7=false;
 local v23=false;
 local v24=false;
@@ -101,15 +100,6 @@ spawn(function()
 while task.wait() do 
 if v43 then 
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Barbarian",workspace.Zones["4"].Interactables.ArmWrestling.NPC.Barbarian.Table,"4");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v5 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmsService.RF.RollAllCratesForPlayer:InvokeServer();
 else 
 end 
 end 
@@ -443,6 +433,11 @@ Name="Egg List 🥚",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
+local crate=v1:MakeTab({
+Name="Buy & Open Crates 🗝️",
+Icon="rbxassetid://4483345998",
+PremiumOnly=false});
+
 local v60=v1:MakeTab({
 Name="Auto NPC 🤖",
 Icon="rbxassetid://4483345998",
@@ -465,6 +460,60 @@ PremiumOnly=false});
 
 	
 --Toogle
+crate:AddDropdown({
+   Name = "Select Crate",
+   Default = "Rust",
+   Options = {"Rust","Silver","Gold","Diamond","Emerald","Platinum"},
+   Callback = function(Value)
+     _G.BuyCrateSkins = Value
+  end    
+})
+
+crate:AddDropdown({
+   Name = "Select Amount",
+   Default = "1",
+   Options = {"1","10","100"},
+   Callback = function(Value)
+     _G.AmountCrate = Value
+  end    
+})
+
+crate:AddButton({
+  Name = "Buy Crate",
+  Callback = function()
+   game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ArmsService.RF.PurchaseCrates:InvokeServer(tostring(_G.BuyCrateSkins) .. "Crate",_G.AmountCrate)
+end
+})
+-----------------
+crate:AddDropdown({
+   Name = "Select Crate",
+   Default = "Rust",
+   Options = {"Rust","Silver","Gold","Diamond","Emerald","platinum"},
+   Callback = function(Value)
+     _G.CrateSkins = Value
+  end    
+})
+
+crate:AddToggle({
+  Name = "Auto Roll Crate",
+  Default = false,
+  Callback = function(Value)
+  _G.RollSelectedCrate = Value
+    while wait() do
+      if _G.RollSelectedCrate == false then break end
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ArmsService.RF.RollArmCrateForPlayer:InvokeServer(tostring(_G.CrateSkins) .. "Crate")
+      end
+  end    
+})
+
+crate:AddButton({
+  Name = "Roll All Crates",
+  Callback = function()
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ArmsService.RF.RollAllCratesForPlayer:InvokeServer()
+  end    
+})
+
+	
 event:AddDropdown({
    Name = "Number of previous hatches on eggs",
    Default = "1",
@@ -553,13 +602,6 @@ Name="Auto Spin",
 Default=false,
 Callback=function(v65)
 v4=v65;
-end});
-
-v58:AddToggle({
-Name="Auto Crates",
-Default=false,
-Callback=function(v66)
-v5=v66;
 end});
 
 v58:AddLabel("Buy Crate");
