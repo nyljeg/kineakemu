@@ -895,6 +895,14 @@ end
 });
 
 
+food:AddDropdown({
+   Name = "Pick A food",
+   Default = "Mushroom",
+   Options = {"Mushroom","GreenApple","GodlyBones"},
+   Callback = function(Value)
+     _G.foodname = Value
+   end    
+});
 
 	
 food:AddSlider({
@@ -914,39 +922,13 @@ food:AddToggle({
    Name = "Use Mushroom",
    Default = false,
    Callback = function(Value)
-     _G._Mushroom = Value
+     foods = Value
 	while wait() do
-		if _G._Mushroom == false then break end
-			game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer("Mushroom",tonumber(_G._FoodUses))		
+		if foods == false then break end
+			game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer(_G.foodname,tonumber(_G._FoodUses))		
 	end
   end    
-});
-
-food:AddToggle({
-   Name = "Use Green Apple",
-   Default = false,
-   Callback = function(Value)
-     _G._Green_Apple = Value
-	while wait() do
-		if _G._Green_Apple == false then break end
-			game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer("GreenApple",tonumber(_G._FoodUses))
-	end
-  end    
-});
-
-food:AddToggle({
-   Name = "Use Godly Bones",
-   Default = false,
-   Callback = function(Value)
-     _G._Godly_Bones = Value
-	while wait() do
-		if _G._Godly_Bones == false then break end
-			game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("sleitnick_knit@1.4.7")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer("GodlyBones",tonumber(_G._FoodUses))
-	end
-  end    
-});
-
-	
+});	
 
 v58:AddToggle({
 Name="Auto Click",
@@ -1421,13 +1403,6 @@ Default=false,
 Callback=function(v100)
 v27=v100;
 end});
-
-v61:AddToggle({
-Name="Treat or Treak",
-Default=false,
-Callback=function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/nyljeg/kineakemu/main/TOT.lua"))()
-end})	
 
 v59:AddLabel("WORLD 3 EGGS");
 v59:AddToggle({
