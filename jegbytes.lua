@@ -478,7 +478,7 @@ crate:AddDropdown({
   end    
 })
 
-crate:AddButton({
+crate:AddToggle({
   Name = "Buy Crate",
   Callback = function(value)
    _G.buycrate = value
@@ -630,18 +630,6 @@ _G.crates = value
 end
 end
 });
-	
-v58:AddToggle({
-  Name = "Auto Rebirth",
-  Default = false,
-  Callback = function(Value)
-  _G.Rbr = Value
-    while wait() do
-      if _G.Rbr == false then break end
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.RebirthService.RE.onRebirthRequest:FireServer()
-      end
-  end    
-})
 
 v58:AddToggle({
   Name = "Auto Claim Gift",
@@ -700,6 +688,18 @@ v58:AddToggle({
     while wait() do
       if _G.dailylogin == false then break end
          game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.DailyRewardService.RE.onClaimReward:FireServer()
+      end
+  end    
+})
+
+v58:AddToggle({
+  Name = "Auto Rebirth",
+  Default = false,
+  Callback = function(Value)
+  _G.Rbr = Value
+    while wait() do
+      if _G.Rbr == false then break end
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.RebirthService.RE.onRebirthRequest:FireServer()
       end
   end    
 })
