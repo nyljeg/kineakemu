@@ -670,10 +670,9 @@ v58:AddToggle({
 })
 
 local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket","Shark","Crab","Jellyfish","Tomb","Ectoplasmic","Bewitched","Cauldron"}
-v59:AddLabel("All Egg List, Event Egg's Aren't Included");
 v59:AddDropdown({
    Name = "Choose your Egg",
-   Default = "Tomb",
+   Default = "Earth",
    Options = egglist,
    Callback = function(Value)
      _G.EggName = Value
