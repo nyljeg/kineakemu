@@ -327,7 +327,7 @@ v58:AddToggle({
   end    
 })
 
-local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket","Shark","Crab","Jellyfish","Spartan","GreekMoster","Roman","Greek","Tomb","Ectoplasmic","Bewitched","Cauldron"}
+local egglist = {"Event","Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket","Shark","Crab","Jellyfish","Spartan","GreekMoster","Roman","Greek","Tomb","Ectoplasmic","Bewitched","Cauldron"}
 v59:AddDropdown({
    Name = "Choose your Egg",
    Default = "Earth",
@@ -348,6 +348,7 @@ game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].kni
 end 
 end
 });
+	
 local w1list = {Bully,Teacher,GymRat,MafiaBoss,Champion}
 v60:AddDropdown({
 Name="World 1 NPC",
