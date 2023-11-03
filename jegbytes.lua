@@ -360,34 +360,44 @@ v60:AddDropdown({
 v60:Addtoggle({
   Name = "Auto Fight",
   Callback = function()
-     if _G.NPC_LIST == "Bully" then	
+while wait() do
+     if _G.NPC_LIST == "Bully" then break end
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Bully",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Bully.Table,"1");
 end
-if _G.NPC_LIST == "Teacher" then	
+	while wait() do			
+if _G.NPC_LIST == "Teacher" then break end
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Teacher",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Teacher.Table,"1");
 end
-if _G.NPC_LIST == "GymRat" then	
+	while wait() do			
+if _G.NPC_LIST == "GymRat" then	 break end
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("GymRat",workspace.Zones["1"].Interactables.ArmWrestling.GymRat.Table,"1");
 end
-if _G.NPC_LIST == "MafiaBoss" then	
+	while wait() do			
+if _G.NPC_LIST == "MafiaBoss" then break end
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("MafiaBoss",workspace.Zones["1"].Interactables.ArmWrestling.NPC.MafiaBoss.Table,"1");
 end
-if _G.NPC_LIST == "Champion" then	
+		while wait() do
+if _G.NPC_LIST == "Champion" then break end
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Champion",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Champion.Table,"1");
 end
-     if _G.NPC_LIST == "ScrapTrader" then	
+	while wait() do			
+     if _G.NPC_LIST == "ScrapTrader" then break end
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("ScrapTrader",workspace.Zones["2"].Interactables.ArmWrestling.NPC.ScrapTrader.Table,"2");
      end
-     if _G.NPC_LIST == "CyberCop" then	
+	while wait() do			
+     if _G.NPC_LIST == "CyberCop" then	break end
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("CyberCop",workspace.Zones["2"].Interactables.ArmWrestling.NPC.CyberCop.Table,"2");
     end
-     if _G.NPC_LIST == "CyberAssassin" then	
+	while wait() do
+     if _G.NPC_LIST == "CyberAssassin" then break end
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("CyberAssassin",workspace.Zones["2"].Interactables.ArmWrestling.NPC.CyberAssassin.Table,"2");
      end
-     if _G.NPC_LIST == "RipperDoc" then
+		while wait() do		
+     if _G.NPC_LIST == "RipperDoc" then break end
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("RipperDoc",workspace.Zones["2"].Interactables.ArmWrestling.NPC.RipperDoc.Table,"2");
 end
-     if _G.NPC_LIST == "RogueAi" then	
+	while wait() do			
+     if _G.NPC_LIST == "RogueAi" then break end
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("RogueAi",workspace.Zones["2"].Interactables.ArmWrestling.NPC.RogueAi.Table,"2");
      end
   end    
