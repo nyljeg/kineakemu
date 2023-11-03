@@ -460,7 +460,7 @@ PremiumOnly=false});
 	
 --Toogle
 event:AddDropdown({
-   Name = "Number of previous hatches on eggs",
+   Name = "Amount Of Eggs",
    Default = "1",
    Options = {"1","3","8"},
    Callback = function(Value)
