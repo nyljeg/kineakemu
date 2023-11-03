@@ -347,53 +347,26 @@ end
 end
 });
 
-local npclist = {BULLY,TEACHER,GYMRAT,MAFIABOSS,CHAMPION,SCRAPTRADER,CYEBERCOP,CYBERASSASSIN,REAPERDOC,ROGUEAI}
+local w1list = {Bully,Teacher,GymRat,MafiaBoss,Champion}
 v60:AddDropdown({
-   Name = "Select NPC",
-   Default = "BULLY",
-   Options = npclist,
-   Callback = function(Value)
-     _G.NPC_LIST = Value
-  end    
-})
+Name="World 1 NPC",
+Default="Bully",
+Option = w1list,
+Callback = function(value)
+_G.w1name = value
+end})
+				
+v60:AddToggle({
+Name="Auto Fight NPC",
+Default=false,
+Callback=function(value)
+_G.w1npc = value
+    while wait() do
+     if _G.w1npc == false then break end
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("_G.w1name",workspace.Zones["1"].Interactables.ArmWrestling.NPC._G.w1name.Table,"1");
+end
+end});
 	
-v60:Addtoggle({
-  Name = "Auto Fight",
-  Default = false,
-  Callback = function()
-     if _G.NPC_LIST == "BULLY" then
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Bully",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Bully.Table,"1");
-end		
-if _G.NPC_LIST == "TEACHER" then
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Teacher",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Teacher.Table,"1");
-end			
-if _G.NPC_LIST == "GYMRAT" then
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("GymRat",workspace.Zones["1"].Interactables.ArmWrestling.GymRat.Table,"1");
-end		
-if _G.NPC_LIST == "MAFIABOSS" then
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("MafiaBoss",workspace.Zones["1"].Interactables.ArmWrestling.NPC.MafiaBoss.Table,"1");
-end
-if _G.NPC_LIST == "CHAMPION" then
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Champion",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Champion.Table,"1");
-end		
-     if _G.NPC_LIST == "SCRAPTRADER" then
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("ScrapTrader",workspace.Zones["2"].Interactables.ArmWrestling.NPC.ScrapTrader.Table,"2");
-end		
-     if _G.NPC_LIST == "CYBERCOP" then
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("CyberCop",workspace.Zones["2"].Interactables.ArmWrestling.NPC.CyberCop.Table,"2");
-end
-     if _G.NPC_LIST == "CYBERASSASSIN" then
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("CyberAssassin",workspace.Zones["2"].Interactables.ArmWrestling.NPC.CyberAssassin.Table,"2");
-end	
-     if _G.NPC_LIST == "RIPPERDOC" then
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("RipperDoc",workspace.Zones["2"].Interactables.ArmWrestling.NPC.RipperDoc.Table,"2");
-end		
-     if _G.NPC_LIST == "ROGUEAI" then
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("RogueAi",workspace.Zones["2"].Interactables.ArmWrestling.NPC.RogueAi.Table,"2");
-     end
-  end    
-})	
-
 v60:AddLabel("No Need Gamepass");	
 v60:AddToggle({
 Name="Auto Click Battle",
@@ -402,7 +375,6 @@ Callback=function(v64)
 v3=v64;
 end});
 	
-
 
 v59:AddLabel("EVENT EGGS");
 v59:AddToggle({
