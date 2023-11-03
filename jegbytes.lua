@@ -14,7 +14,6 @@ local v2=false;
 local v3=false;
 local v4=false;
 local v5=false;
-local v7=false;
 local v23=false;
 
 
@@ -42,18 +41,6 @@ else
 end 
 end 
 end);
-
-
-spawn(function()
-while task.wait() do 
-if v23 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EventService.RF.ClaimEgg:InvokeServer();
-else 
-end 
-end 
-end);
-
-
 
 spawn(function()
 while task.wait() do 
@@ -356,6 +343,7 @@ Default = Bully,
 Options = w1list,
 Callback = function(value)
 w1name = value
+w1names = value
 end});
 				
 v60:AddToggle({
@@ -365,9 +353,9 @@ Callback=function(value)
 nnnpppccc = value
 while wait() do
 	if nnnpppccc == false then break end
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("w1name",workspace.Zones["1"].Interactables.ArmWrestling.NPC.w1name.Table,"1");
-			end
-			end});
+game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("w1name",workspace.Zones["1"].Interactables.ArmWrestling.NPC.w1names.Table,"1");
+end
+end});
 	
 v60:AddLabel("No Need Gamepass");	
 v60:AddToggle({
@@ -375,15 +363,6 @@ Name="Auto Click Battle",
 Default=false,
 Callback=function(v64)
 v3=v64;
-end});
-	
-
-v59:AddLabel("EVENT EGGS");
-v59:AddToggle({
-Name="Event Egg",
-Default=false,
-Callback=function(v113)
-v23=v113;
 end});
 
 v62:AddLabel("TELEPORT");
