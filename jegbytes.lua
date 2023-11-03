@@ -346,11 +346,11 @@ game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].kni
 end 
 end
 });
-
+local w1list = {Bully,Teacher,GymRat,MafiaBoss,Champion}
 v60:AddDropdown({
 Name="World 1 NPC",
-Default = Bully,
-Option = {Bully,Teacher,GymRat,MafiaBoss,Champion},
+Default = "Bully",
+Options = w1list,
 Callback = function(value)
 w1name = value
 end});
@@ -358,9 +358,13 @@ end});
 v60:AddToggle({
 Name="Auto Fight NPC",
 Default=false,
-Callback=function()
+Callback=function(value)
+nnnpppccc = value
+while wait() do
+	if nnnpppccc == false then break end
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("w1name",workspace.Zones["1"].Interactables.ArmWrestling.NPC.w1name.Table,"1");
-end});
+			end
+			end});
 	
 v60:AddLabel("No Need Gamepass");	
 v60:AddToggle({
