@@ -118,7 +118,7 @@ Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local pot=v1:MakeTab({
-Name = "Event Eggs 🥚",
+Name = "Potions",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
@@ -452,31 +452,23 @@ pot:AddDropdown({
   end    
 })
 	
- pot:AddToggle({
+ pot:AddButton({
   Name = "Use Selected Boost",
   Default = false,
-  Callback = function(Value)
-  _G.UseBoost = Value
-    while wait() do
-      if _G.UseBoost == false then break end
+  Callback = function()
          game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.BoostService.RE.useBoost:FireServer(_G.BoostPoison)
-      end
   end    
 })
 
-pot:AddToggle({
+pot:AddButton({
   Name = "Use All Boost",
   Default = false,
-  Callback = function(Value)
-  _G.UseAllBoost = Value
-    while wait() do
-      if _G.UseAllBoost == false then break end
+  Callback = function()
          game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.BoostService.RE.useBoost:FireServer("Luck")
          game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.BoostService.RE.useBoost:FireServer("Golden")
          game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.BoostService.RE.useBoost:FireServer("Void")
          game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.BoostService.RE.useBoost:FireServer("Wins")
-      end
-  end    
+end
 })
 
 	
