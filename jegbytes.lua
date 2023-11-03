@@ -139,7 +139,7 @@ event:AddToggle({
   _G.Event_AV3 = Value
     while wait() do
       if _G.Event_AV3 == false then break end
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.EventService.RF.ClaimEgg:InvokeServer()
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.EventService.RF.ClaimEgg:InvokeServer(_G.AmountPrevEggs)
       end
   end    
 });
