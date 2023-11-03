@@ -325,7 +325,7 @@ v58:AddToggle({
   end    
 })
 
-local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket","Shark","Crab","Jellyfish","Tomb","Ectoplasmic","Bewitched","Cauldron"}
+local egglist = {"Limited Egg","Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket","Shark","Crab","Jellyfish","Tomb","Ectoplasmic","Bewitched","Cauldron"}
 v59:AddDropdown({
    Name = "Choose your Egg",
    Default = "Earth",
@@ -349,21 +349,17 @@ end
 
 v60:AddDropdown({
 Name="World 1 NPC",
-Default = "Bully",
+Default = Bully,
 Option = {Bully,Teacher,GymRat,MafiaBoss,Champion},
 Callback = function(value)
 w1name = value
-end})
+end});
 				
 v60:AddToggle({
 Name="Auto Fight NPC",
 Default=false,
-Callback=function(value)
-_G.w1npc = value
-    while wait() do
-     if _G.w1npc == false then break end
+Callback=function()
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("w1name",workspace.Zones["1"].Interactables.ArmWrestling.NPC.w1name.Table,"1");
-end
 end});
 	
 v60:AddLabel("No Need Gamepass");	
