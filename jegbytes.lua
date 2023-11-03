@@ -79,37 +79,37 @@ Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local crate=v1:MakeTab({
-Name="Buy/Open Crates 🗝️",
+Name="Buy/Open Crates",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v60=v1:MakeTab({
-Name="Auto NPC 🤖",
+Name="Auto NPC",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v62=v1:MakeTab({
-Name="Teleport 🌐",
+Name="Teleport",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local food=v1:MakeTab({
-Name="Foods🍏🍄🦴",
+Name="Foods",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
 local event=v1:MakeTab({
-Name = "Event Eggs 🥚",
+Name = "Event Eggs",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local pot=v1:Maketab({
-Name = "Potion's 🧪",
+Name = "Potions",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local tot=v1:MakeTab({
-Name = "Halloween Event 🎃",
+Name = "Halloween Event",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
