@@ -20,7 +20,6 @@ local v23=false;
 
 
 
-
  
 --Function
 
@@ -325,7 +324,7 @@ v58:AddToggle({
   end    
 })
 
-local egglist = {"Limited Egg","Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket","Shark","Crab","Jellyfish","Tomb","Ectoplasmic","Bewitched","Cauldron"}
+local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket","Shark","Crab","Jellyfish","Tomb","Ectoplasmic","Bewitched","Cauldron"}
 v59:AddDropdown({
    Name = "Choose your Egg",
    Default = "Earth",
@@ -349,7 +348,7 @@ end
 local w1list = {Bully,Teacher,GymRat,MafiaBoss,Champion}
 v60:AddDropdown({
 Name="World 1 NPC",
-Default = "Bully",
+Default = Bully,
 Options = w1list,
 Callback = function(value)
 w1name = value
