@@ -321,7 +321,7 @@ v58:AddToggle({
         local MasterCraft = petIndex[math.random(1, #petIndex)]
         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.PetService.RF.craft:InvokeServer(MasterCraft,true)
       end
-  end
+  end});
 	
 v58:AddToggle({
   Name = "Auto spin lucky draw [Blueprint]",
