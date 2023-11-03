@@ -433,36 +433,40 @@ end);
 --Main Tab
 
 local v58=v1:MakeTab({
-Name="Farm 🧺",
+Name="Farm",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v59=v1:MakeTab({
-Name="Egg List 🥚",
+Name="Egg List",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v60=v1:MakeTab({
-Name="Auto NPC 🤖",
+Name="Auto NPC",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v62=v1:MakeTab({
-Name="Teleport 🌐",
+Name="Teleport",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local food=v1:MakeTab({
-Name="Foods🍏🍄🦴",
+Name="Foods",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
 local event=v1:MakeTab({
-Name = "Event Eggs 🥚",
+Name = "Event Eggs",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
-
+local pot=v1:MakeTab({
+Name = "Potions",
+Icon="rbxassetid://4483345998",
+PremiumOnly=false});
+	
 	
 --Toogle
 event:AddDropdown({
@@ -669,7 +673,7 @@ v58:AddToggle({
   end    
 })
 
-local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket","Shark","Crab","Jellyfish","Tomb","Ectoplasmic","Bewitched","Cauldron"}
+local egglist = {"Event","Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket","Shark","Crab","Jellyfish","Spartan","GreekMoster","Roman","Greek","Tomb","Ectoplasmic","Bewitched","Cauldron"}
 v59:AddDropdown({
    Name = "Choose your Egg",
    Default = "Earth",
@@ -1005,6 +1009,35 @@ Default=false,
 Callback=function()
 game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones.HalloweenWorld.Interactables.Teleports.Locations.Halloween);
 end});
+
+pot:AddDropdown({
+   Name = "Select Boost",
+   Default = "Wins",
+   Options = {"Wins","Luck","Golden","Void"},
+   Callback = function(Value)
+     _G.BoostPoison = Value
+  end    
+})
+	
+ pot:AddButton({
+  Name = "Use Selected Boost",
+  Default = false,
+  Callback = function()
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.BoostService.RE.useBoost:FireServer(_G.BoostPoison)
+  end    
+})
+
+pot:AddButton({
+  Name = "Use All Boost",
+  Default = false,
+  Callback = function()
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.BoostService.RE.useBoost:FireServer("Luck")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.BoostService.RE.useBoost:FireServer("Golden")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.BoostService.RE.useBoost:FireServer("Void")
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.BoostService.RE.useBoost:FireServer("Wins")
+end
+})
+
 
 	
  
