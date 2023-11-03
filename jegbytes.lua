@@ -443,6 +443,7 @@ Callback=function()
 game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones.HalloweenWorld.Interactables.Teleports.Locations.Halloween);
 end});
 
+	--[[
 pot:AddDropdown({
    Name = "Select Boost",
    Default = "Wins",
@@ -478,7 +479,7 @@ pot:AddToggle({
       end
   end    
 })
-
+]]--
 	
  
 end 
