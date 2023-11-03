@@ -347,7 +347,7 @@ end
 end
 });
 
-local npclist = false
+local npclist = {}
 v60:AddDropdown({
    Name = "Select NPC",
    Default = "Bully",
@@ -359,6 +359,7 @@ v60:AddDropdown({
 	
 v60:Addtoggle({
   Name = "Auto Fight",
+  Default = false,
   Callback = function()
      if _G.NPC_LIST == "Bully" then
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Bully",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Bully.Table,"1");
