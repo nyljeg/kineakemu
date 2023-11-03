@@ -15,7 +15,6 @@ local v3=false;
 local v4=false;
 local v5=false;
 local v7=false;
-local v23=false;
 local v28=false;
 local v29=false;
 local v30=false;
@@ -153,15 +152,6 @@ spawn(function()
 while task.wait() do 
 if v39 then 
 game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("FatPirate",workspace.Zones["3"].Interactables.ArmWrestling.NPC.FatPirate.Table,"3");
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v23 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.EventService.RF.ClaimEgg:InvokeServer();
 else 
 end 
 end 
@@ -485,7 +475,7 @@ event:AddToggle({
   _G.Event_AV3 = Value
     while wait() do
       if _G.Event_AV3 == false then break end
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.EventService.RF.ClaimEgg:InvokeServer()
+         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.EventService.RF.ClaimEgg:InvokeServer(tonumber(_G.AmountPrevEggs),false)
       end
   end    
 });
@@ -943,14 +933,6 @@ Name="Dr Propulsion",
 Default=false,
 Callback=function(value)
 w7NPC5=value;
-end});
-
-v59:AddLabel("EVENT EGGS");
-v59:AddToggle({
-Name="Event Egg",
-Default=false,
-Callback=function(v113)
-v23=v113;
 end});
 
 v62:AddLabel("TELEPORT");
