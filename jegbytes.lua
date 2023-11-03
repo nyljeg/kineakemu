@@ -83,11 +83,6 @@ Name="Buy/Open Crates",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
-local v60=v1:MakeTab({
-Name="Auto NPC",
-Icon="rbxassetid://4483345998",
-PremiumOnly=false});
-
 local v62=v1:MakeTab({
 Name="Teleport",
 Icon="rbxassetid://4483345998",
@@ -390,153 +385,14 @@ end
 end
 });	
 
-v60:AddLabel("No Need Gamepass");	
-v60:AddToggle({
+v58:AddToggle({
 Name="Auto Click Battle",
 Default=false,
 Callback=function(v64)
 v3=v64;
 end});
 	
-local w1list = {Bully,Teacher,GymRat,MafiaBoss,Champion}
-v60:AddDropdown({
-Name="World 1 NPC",
-Default="Bully",
-Option = w1list,
-Callback = function(value)
-_G.w1name = value
-end})
-				
-v60:AddToggle({
-Name="Auto Fight NPC",
-Default=false,
-Callback=function(value)
-_G.w1npc = value
-    while wait() do
-     if _G.w1npc == false then break end
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("_G.w1name",workspace.Zones["1"].Interactables.ArmWrestling.NPC._G.w1name.Table,"1");
-end
-end});
-
-local w2list = {ScrapTrader,CyberCop,CyberAssassin,RipperDoc,RogueAi}
-v60:AddDropdown({
-Name="World 2 NPC",
-Default="ScrapTrader",
-Option = w2list,
-Callback = function(value)
-_G.w2name = value
-end})
-				
-v60:AddToggle({
-Name="Auto Fight NPC",
-Default=false,
-Callback=function(value)
-_G.w2npc = value
-    while wait() do
-     if _G.w2npc == false then break end
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("_G.w2name",workspace.Zones["2"].Interactables.ArmWrestling.NPC._G.w2name.Table,"2");
-end
-end});
-
-local w3list = {CocoNut,FatPirate,MermaidKing,FriendlyShark,KrakenBoss}
-v60:AddDropdown({
-Name="World 3 NPC",
-Default="CocoNut",
-Option = w3list,
-Callback = function(value)
-_G.w3name = value
-end})
-				
-v60:AddToggle({
-Name="Auto Fight NPC",
-Default=false,
-Callback=function(value)
-_G.w3npc = value
-    while wait() do
-     if _G.w3npc == false then break end
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("_G.w3name",workspace.Zones["3"].Interactables.ArmWrestling.NPC._G.w3name.Table,"3");
-end
-end});
-
-local w4list = {Barbarian,Hazmat,Enforcer,Bulk,MutantKing}
-v60:AddDropdown({
-Name="World 4 NPC",
-Default="Barbarian",
-Option = w4list,
-Callback = function(value)
-_G.w4name = value
-end})
-				
-v60:AddToggle({
-Name="Auto Fight NPC",
-Default=false,
-Callback=function(value)
-_G.w4npc = value
-    while wait() do
-     if _G.w4npc == false then break end
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("_G.w4name",workspace.Zones["4"].Interactables.ArmWrestling.NPC._G.w4name.Table,"4");
-end
-end});
-
-local w5list = {Primal,Dino,Archeologist,TribeLeader,Mammoth}
-v60:AddDropdown({
-Name="World 5 NPC",
-Default="Primal",
-Option = w5list,
-Callback = function(value)
-_G.w5name = value
-end})
-				
-v60:AddToggle({
-Name="Auto Fight NPC",
-Default=false,
-Callback=function(value)
-_G.w5npc = value
-    while wait() do
-     if _G.w5npc == false then break end
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("_G.w5name",workspace.Zones["5"].Interactables.ArmWrestling.NPC._G.w5name.Table,"5");
-end
-end});													
-
-local w6list = {Orinthian,Spaceboy,DemonSlayer,Udzal,Cybernetic}
-v60:AddDropdown({
-Name="World 6 NPC",
-Default="Orinthian",
-Option = w6list,
-Callback = function(value)
-_G.w6name = value
-end})
-	
-v60:AddToggle({
-Name="Auto Fight NPC",
-Default=false,
-Callback=function(value)
-_G.w6npc = value
-    while wait() do
-     if _G.w6npc == false then break end
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("_G.w6name",workspace.Zones["6"].Interactables.ArmWrestling.NPC._G.w6name.Table,"6");
-end
-end});
-
-local w7list = {RocketRider,MissileMaven,LairGuardian,NovaNomad,DrPropulsion}
-v60:AddDropdown({
-Name="World 7 NPC",
-Default="RocketRider",
-Option = w7list,
-Callback = function(value)
-_G.w7name = value
-end})
-				
-v60:AddToggle({
-Name="Auto Fight NPC",
-Default=false,
-Callback=function(value)
-_G.w7npc = value
-    while wait() do
-     if _G.w7npc == false then break end
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("_G.w7name",workspace.Zones["7"].Interactables.ArmWrestling.NPC._G.w7name.Table,"7");
-end
-end});																
+														
 	
 v59:AddLabel("EVENT EGGS");
 v59:AddToggle({
