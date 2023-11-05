@@ -2,10 +2,10 @@ local msg = Instance.new("Message",workspace)
 msg.Text = "Made By Elmer Mangio"
 wait(5.8)
 msg:Destroy()
-if (game.PlaceId==13127800756) then 
+if (game.PlaceId==14236123211) then 
 local v0=loadstring(game:HttpGet("https://raw.githubusercontent.com/nyljeg/pslibrary/main/punchLibrary.lua"))();
 local v1=v0:MakeWindow({
-Name="Elmer Hub | Arm Wrestle Simulator",
+Name="Elmer Hub | Punch Simulator",
 HidePremium=false,
 IntroText="Elmer Library",
 SaveConfig=true,
