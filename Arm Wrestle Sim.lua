@@ -451,7 +451,16 @@ S102:AddButton({
      end
      if _G.zone_TP == "5" then
         TPType(_G.TP_TYPE,CFrame.new(-10305,-4,-1417))
-      end
+      game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["5"].Interactables.Teleports.Locations.Dino)
+     end
+	if _G.zone_TP == "6" then
+        TPType(_G.TP_TYPE,CFrame.new(-10461,4,-612))
+	game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["6"].Interactables.Teleports.Locations.Void)
+     end
+	if _G.zone_TP == "7" then
+        TPType(_G.TP_TYPE,CFrame.new(-10564,-4,-717))
+	game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["7"].Interactables.Teleports.Locations.SpaceCenter)
+     end
      if _G.zone_TP == "GreekEvent" then
         TPType(_G.TP_TYPE,CFrame.new(9500, 12, 125))
 	game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones.GreekEvent.Interactables.Teleports.Locations.Greek)
