@@ -50,4 +50,4 @@ end
 
 
 end
-OrionLib:Inet();
+OrionLib:Init();
