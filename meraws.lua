@@ -448,15 +448,15 @@ S102:AddButton({
 	game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["4"].Interactables.Teleports.Locations.NuclearBunker)
      end
      if _G.zone_TP == "5" then
-        TPType(_G.TP_TYPE,CFrame.new(-10305,-4,-1417))
+        TPType(_G.TP_TYPE,CFrame.new(-10305,10,-1417))
       game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["5"].Interactables.Teleports.Locations.Dino)
      end
 	if _G.zone_TP == "6" then
-        TPType(_G.TP_TYPE,CFrame.new(-10461,4,-612))
+        TPType(_G.TP_TYPE,CFrame.new(-10461,4,-12612))
 	game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["6"].Interactables.Teleports.Locations.Void)
      end
 	if _G.zone_TP == "7" then
-        TPType(_G.TP_TYPE,CFrame.new(-10564,-4,-717))
+        TPType(_G.TP_TYPE,CFrame.new(-10564,-4,-18717))
 	game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.4.7").knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["7"].Interactables.Teleports.Locations.SpaceCenter)
      end
      if _G.zone_TP == "GreekEvent" then
