@@ -437,7 +437,7 @@ Name="Auto NPC",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
-local v62=v1:MakeTab({
+local teleport=v1:MakeTab({
 Name="Teleport",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
@@ -460,7 +460,7 @@ PremiumOnly=false});
 	
 --Toogle
 event:AddDropdown({
-   Name = "Amount Of Eggs",
+   Name = "Number of previous hatches on eggs",
    Default = "1",
    Options = {"1","3","8"},
    Callback = function(Value)
@@ -474,8 +474,8 @@ event:AddToggle({
   Callback = function(Value)
   _G.Event_AV3 = Value
     while wait() do
-      if _G.Event_AV3 == false then break end
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.EventService.RF.ClaimEgg:InvokeServer(tonumber(_G.AmountPrevEggs),false)
+      if _G.Event_AV3 == false then break end       
+ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EventService"):WaitForChild("RF"):WaitForChild("ClaimEgg"):InvokeServer(tonumber(_G.AmountPrevEggs),false)
       end
   end    
 });
@@ -487,7 +487,7 @@ event:AddToggle({
   _G.PrevEgg = Value
     while wait() do
       if _G.PrevEgg == false then break end
-	game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.EventService.RF.ClaimEgg:InvokeServer(tonumber(_G.AmountPrevEggs),true)
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EventService"):WaitForChild("RF"):WaitForChild("ClaimEgg"):InvokeServer(tonumber(_G.AmountPrevEggs),true)
     end
 end
 });
@@ -609,23 +609,24 @@ v58:AddToggle({
   _G.Gift = Value
     while wait() do
       if _G.Gift == false then break end
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.TimedRewardService.RE.onClaim:FireServer("1")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.TimedRewardService.RE.onClaim:FireServer("2")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.TimedRewardService.RE.onClaim:FireServer("3")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.TimedRewardService.RE.onClaim:FireServer("4")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.TimedRewardService.RE.onClaim:FireServer("5")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.TimedRewardService.RE.onClaim:FireServer("6")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.TimedRewardService.RE.onClaim:FireServer("7")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.TimedRewardService.RE.onClaim:FireServer("8")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.TimedRewardService.RE.onClaim:FireServer("9")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.TimedRewardService.RE.onClaim:FireServer("10")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.TimedRewardService.RE.onClaim:FireServer("11")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.TimedRewardService.RE.onClaim:FireServer("12")
-	 game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.TimedRewardService.RE.onClaim:FireServer("13")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.TimedRewardService.RE.onClaim:FireServer("14")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("1")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("2")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("3")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("4")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("5")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("6")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("7")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("8")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("9")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("10")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("11")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("12")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("13")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("14")
       end
   end    
 })
+
 
 v58:AddToggle({
   Name = "Auto spin lucky draw [Blueprint]",
@@ -680,7 +681,7 @@ v59:AddToggle({
      _G.hegg = Value
 	while wait() do		
              if _G.hegg == false then break end
-game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.EggService.RF.purchaseEgg:InvokeServer(_G.EggName,{},false);
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(_G.EggName,{},false);
 end 
 end
 });
@@ -936,60 +937,54 @@ w7NPC5=value;
 end});
 
 v62:AddLabel("TELEPORT");
-v62:AddButton({
+v62:Adteleport:AddLabel("TELEPORT");
+teleport:AddButton({
 Name="World 1",
 Default=false,
 Callback=function()
-game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["1"].Interactables.Teleports.Locations.BackToSchool);
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("BackToSchool"))
 end});
 
-v62:AddButton({
+teleport:AddButton({
 Name="World 2",
 Default=false,
 Callback=function()
-game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["2"].Interactables.Teleports.Locations.Futuristic);
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("2"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("Futuristic"))
 end});
 
-v62:AddButton({
+teleport:AddButton({
 Name="World 3",
 Default=false,
 Callback=function()
-game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["3"].Interactables.Teleports.Locations.Beach);
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("3"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("Beach"))
 end});
 
-v62:AddButton({
+teleport:AddButton({
 Name="World 4",
 Default=false,
 Callback=function()
-game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["4"].Interactables.Teleports.Locations.NuclearBunker);
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("4"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("NuclearBunker"))
 end});
 
-v62:AddButton({
+teleport:AddButton({
 Name="World 5",
 Default=false,
 Callback=function()
-game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["5"].Interactables.Teleports.Locations.DinoWorld);
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("5"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("DinoWorld"))
 end});
 
-v62:AddButton({
+teleport:AddButton({
 Name="World 6",
 Default=false,
 Callback=function()
-game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["6"].Interactables.Teleports.Locations.VoidWorld);
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("6"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("VoidWorld"))
 end});
 
-v62:AddButton({
+teleport:AddButton({
 Name="World 7",
 Default=false,
 Callback=function()
-game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones["7"].Interactables.Teleports.Locations.SpaceCenter);
-end});	
-
-v62:AddButton({
-Name="HolloweenWorld",
-Default=false,
-Callback=function()
-game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.ZoneService.RE.teleport:FireServer(workspace.Zones.HalloweenWorld.Interactables.Teleports.Locations.Halloween);
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("7"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("SpaceCenter"))
 end});
 
 pot:AddDropdown({
