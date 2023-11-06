@@ -61,7 +61,7 @@ local w7NPC5=false;
 spawn(function()
 while task.wait() do 
 if v47 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("MutantKing",workspace.Zones["4"].Interactables.ArmWrestling.NPC.MutantKing.Table,"4");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("MutantKing",workspace.Zones["4"].Interactables.ArmWrestling.NPC.MutantKing.Table,"4");
 else 
 end 
 end 
@@ -70,7 +70,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v46 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Bulk",workspace.Zones["4"].Interactables.ArmWrestling.NPC.Bulk.Table,"4");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Bulk",workspace.Zones["4"].Interactables.ArmWrestling.NPC.Bulk.Table,"4");
 else 
 end 
 end 
@@ -79,7 +79,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v45 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Enforcer",workspace.Zones["4"].Interactables.ArmWrestling.NPC.Enforcer.Table,"4");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Enforcer",workspace.Zones["4"].Interactables.ArmWrestling.NPC.Enforcer.Table,"4");
 else 
 end 
 end 
@@ -88,7 +88,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v44 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Hazmat",workspace.Zones["4"].Interactables.ArmWrestling.NPC.Hazmat.Table,"4");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Hazmat",workspace.Zones["4"].Interactables.ArmWrestling.NPC.Hazmat.Table,"4");
 else 
 end 
 end 
@@ -97,7 +97,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v43 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Barbarian",workspace.Zones["4"].Interactables.ArmWrestling.NPC.Barbarian.Table,"4");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Barbarian",workspace.Zones["4"].Interactables.ArmWrestling.NPC.Barbarian.Table,"4");
 else 
 end 
 end 
@@ -106,7 +106,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v5 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmsService.RF.RollAllCratesForPlayer:InvokeServer();
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmsService.RF.RollAllCratesForPlayer:InvokeServer();
 else 
 end 
 end 
@@ -115,7 +115,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v4 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.SpinService.RE.onSpinRequest:FireServer();
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.SpinService.RE.onSpinRequest:FireServer();
 else 
 end 
 end 
@@ -124,7 +124,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v42 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("KrakenBoss",workspace.Zones["3"].Interactables.ArmWrestling.NPC.KrakenBoss.Table,"3");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("KrakenBoss",workspace.Zones["3"].Interactables.ArmWrestling.NPC.KrakenBoss.Table,"3");
 else 
 end 
 end 
@@ -133,7 +133,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v41 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("FriendlyShark",workspace.Zones["3"].Interactables.ArmWrestling.NPC.FriendlyShark.Table,"3");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("FriendlyShark",workspace.Zones["3"].Interactables.ArmWrestling.NPC.FriendlyShark.Table,"3");
 else 
 end 
 end 
@@ -142,7 +142,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v40 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("MermaidKing",workspace.Zones["3"].Interactables.ArmWrestling.NPC.MermaidKing.Table,"3");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("MermaidKing",workspace.Zones["3"].Interactables.ArmWrestling.NPC.MermaidKing.Table,"3");
 else 
 end 
 end 
@@ -151,7 +151,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v39 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("FatPirate",workspace.Zones["3"].Interactables.ArmWrestling.NPC.FatPirate.Table,"3");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("FatPirate",workspace.Zones["3"].Interactables.ArmWrestling.NPC.FatPirate.Table,"3");
 else 
 end 
 end 
@@ -160,7 +160,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v38 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("CocoNut",workspace.Zones["3"].Interactables.ArmWrestling.NPC.CocoNut.Table,"3");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("CocoNut",workspace.Zones["3"].Interactables.ArmWrestling.NPC.CocoNut.Table,"3");
 else 
 end 
 end 
@@ -169,7 +169,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v37 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("RogueAi",workspace.Zones["2"].Interactables.ArmWrestling.NPC.RogueAi.Table,"2");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("RogueAi",workspace.Zones["2"].Interactables.ArmWrestling.NPC.RogueAi.Table,"2");
 else 
 end 
 end 
@@ -178,7 +178,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v36 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("RipperDoc",workspace.Zones["2"].Interactables.ArmWrestling.NPC.RipperDoc.Table,"2");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("RipperDoc",workspace.Zones["2"].Interactables.ArmWrestling.NPC.RipperDoc.Table,"2");
 else 
 end 
 end 
@@ -187,7 +187,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v35 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("SlicerAssassin",workspace.Zones["2"].Interactables.ArmWrestling.NPC.SlicerAssassin.Table,"2");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("SlicerAssassin",workspace.Zones["2"].Interactables.ArmWrestling.NPC.SlicerAssassin.Table,"2");
 else 
 end 
 end 
@@ -196,7 +196,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v34 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("CyberCop",workspace.Zones["2"].Interactables.ArmWrestling.NPC.CyberCop.Table,"2");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("CyberCop",workspace.Zones["2"].Interactables.ArmWrestling.NPC.CyberCop.Table,"2");
 else 
 end 
 end 
@@ -205,7 +205,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v33 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("ScrapTrader",workspace.Zones["2"].Interactables.ArmWrestling.NPC.ScrapTrader.Table,"2");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("ScrapTrader",workspace.Zones["2"].Interactables.ArmWrestling.NPC.ScrapTrader.Table,"2");
 else 
 end 
 end 
@@ -214,7 +214,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v32 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Champion",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Champion.Table,"1");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Champion",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Champion.Table,"1");
 else 
 end 
 end 
@@ -223,7 +223,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v31 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("MafiaBoss",workspace.Zones["1"].Interactables.ArmWrestling.NPC.MafiaBoss.Table,"1");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("MafiaBoss",workspace.Zones["1"].Interactables.ArmWrestling.NPC.MafiaBoss.Table,"1");
 else 
 end 
 end 
@@ -232,7 +232,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v30 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("GymRat",workspace.Zones["1"].Interactables.ArmWrestling.NPC.GymRat.Table,"1");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("GymRat",workspace.Zones["1"].Interactables.ArmWrestling.NPC.GymRat.Table,"1");
 else 
 end 
 end 
@@ -241,7 +241,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v29 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Teacher",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Teacher.Table,"1");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Teacher",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Teacher.Table,"1");
 else 
 end 
 end 
@@ -250,7 +250,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v28 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Bully",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Bully.Table,"1");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Bully",workspace.Zones["1"].Interactables.ArmWrestling.NPC.Bully.Table,"1");
 else 
 end 
 end 
@@ -259,7 +259,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v2 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ToolService.RE.onClick:FireServer();
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ToolService.RE.onClick:FireServer();
 else 
 end 
 end 
@@ -268,7 +268,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v3 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onClickRequest:FireServer();
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onClickRequest:FireServer();
 else 
 end 
 end 
@@ -277,7 +277,7 @@ end);
  spawn(function()
 while task.wait() do 
 if w5NPC1 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Primal",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Primal.Table,"5");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Primal",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Primal.Table,"5");
 else 
 end 
 end 
@@ -286,7 +286,7 @@ end);
 spawn(function()
 while task.wait() do 
 if w5NPC2 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Dino",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Dino.Table,"5");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Dino",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Dino.Table,"5");
 else 
 end 
 end 
@@ -295,7 +295,7 @@ end);
 spawn(function()
 while task.wait() do 
 if w5NPC3 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Archeologist",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Archeologist.Table,"5");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Archeologist",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Archeologist.Table,"5");
 else 
 end 
 end 
@@ -304,7 +304,7 @@ end);
 spawn(function()
 while task.wait() do 
 if w5NPC4 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("TribeLeader",workspace.Zones["5"].Interactables.ArmWrestling.NPC.TribeLeader.Table,"5");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("TribeLeader",workspace.Zones["5"].Interactables.ArmWrestling.NPC.TribeLeader.Table,"5");
 else 
 end 
 end 
@@ -313,7 +313,7 @@ end);
 spawn(function()
 while task.wait() do 
 if w5NPC5 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Mammoth",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Mammoth.Table,"5");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Mammoth",workspace.Zones["5"].Interactables.ArmWrestling.NPC.Mammoth.Table,"5");
 else 
 end 
 end 
@@ -322,7 +322,7 @@ end);
  spawn(function()
 while task.wait() do 
 if w6NPC1 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Orinthian",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Orinthian.Table,"6");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Orinthian",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Orinthian.Table,"6");
 else 
 end 
 end 
@@ -331,7 +331,7 @@ end);
 spawn(function()
 while task.wait() do 
 if w6NPC2 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Spaceboy",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Spaceboy.Table,"6");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Spaceboy",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Spaceboy.Table,"6");
 else 
 end 
 end 
@@ -340,7 +340,7 @@ end);
 spawn(function()
 while task.wait() do 
 if w6NPC3 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("DemonSlayer",workspace.Zones["6"].Interactables.ArmWrestling.NPC.DemonSlayer.Table,"6");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("DemonSlayer",workspace.Zones["6"].Interactables.ArmWrestling.NPC.DemonSlayer.Table,"6");
 else 
 end 
 end 
@@ -349,7 +349,7 @@ end);
 spawn(function()
 while task.wait() do 
 if w6NPC4 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Udzal",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Udzal.Table,"6");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Udzal",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Udzal.Table,"6");
 else 
 end 
 end 
@@ -358,7 +358,7 @@ end);
 spawn(function()
 while task.wait() do 
 if w6NPC5 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Cybernetic",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Cybernetic.Table,"6");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("Cybernetic",workspace.Zones["6"].Interactables.ArmWrestling.NPC.Cybernetic.Table,"6");
 else 
 end 
 end 
@@ -367,7 +367,7 @@ end);
 spawn(function()
 while task.wait() do 
 if w7NPC1 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("RocketRider",workspace.Zones["7"].Interactables.ArmWrestling.NPC.RocketRider.Table,"7");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("RocketRider",workspace.Zones["7"].Interactables.ArmWrestling.NPC.RocketRider.Table,"7");
 else 
 end 
 end 
@@ -376,7 +376,7 @@ end);
 spawn(function()
 while task.wait() do 
 if w7NPC2 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("MissileMaven",workspace.Zones["7"].Interactables.ArmWrestling.NPC.MissileMaven.Table,"7");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("MissileMaven",workspace.Zones["7"].Interactables.ArmWrestling.NPC.MissileMaven.Table,"7");
 else 
 end 
 end 
@@ -385,7 +385,7 @@ end);
 spawn(function()
 while task.wait() do 
 if w7NPC3 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("LairGuardian",workspace.Zones["7"].Interactables.ArmWrestling.NPC.LairGuardian.Table,"7");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("LairGuardian",workspace.Zones["7"].Interactables.ArmWrestling.NPC.LairGuardian.Table,"7");
 else 
 end 
 end 
@@ -394,7 +394,7 @@ end);
 spawn(function()
 while task.wait() do 
 if w7NPC4 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("NovaNomad",workspace.Zones["7"].Interactables.ArmWrestling.NPC.NovaNomad.Table,"7");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("NovaNomad",workspace.Zones["7"].Interactables.ArmWrestling.NPC.NovaNomad.Table,"7");
 else 
 end 
 end 
@@ -403,7 +403,7 @@ end);
 spawn(function()
 while task.wait() do 
 if w7NPC5 then 
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("DrPropulsion",workspace.Zones["7"].Interactables.ArmWrestling.NPC.DrPropulsion.Table,"7");
+game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("DrPropulsion",workspace.Zones["7"].Interactables.ArmWrestling.NPC.DrPropulsion.Table,"7");
 else 
 end 
 end 
