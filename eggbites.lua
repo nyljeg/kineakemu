@@ -1034,15 +1034,11 @@ end
 })
 
 
-		
-local toolzone = {1,2,3,4,5,6,7}
-local barbellslist = {"Tier1","Tier2","Tier3","Tier4","Tier5","Tier6","Tier7","Tier8","Tier9","Tier10","Tier11","Tier12","Tier13","Tier14","Tier15","Tier16","Tier17","Tier18","Tier19","Tier20","Tier21"}
-
 tools:AddLabel("Barbells");
 tools:AddDropdown({
    Name = "Zone",
    Default = "1",
-   Options = toolzone,
+   Options = {1,2,3,4,5,6,7},
    Callback = function(Value)
      _G.barbellzone = Value
    end    
@@ -1051,7 +1047,7 @@ tools:AddDropdown({
 tools:AddDropdown({
    Name = "Tier",
    Default = "Tier1",
-   Options = barbellslist,
+   Options = {"Tier1","Tier2","Tier3","Tier4","Tier5","Tier6","Tier7","Tier8","Tier9","Tier10","Tier11","Tier12","Tier13","Tier14","Tier15","Tier16","Tier17","Tier18","Tier19","Tier20","Tier21"},
    Callback = function(Value)
      _G.barbelltier = Value
    end    
