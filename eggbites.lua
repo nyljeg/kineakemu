@@ -79,7 +79,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v45 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Enfocer",workspace:WaitForChild("Zones"):WaitForChild("4"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Enfocer"):WaitForChild("Table"),"4")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Enforcer",workspace:WaitForChild("Zones"):WaitForChild("4"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Enforcer"):WaitForChild("Table"),"4")
 else 
 end 
 end 
@@ -106,7 +106,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v5 then 
-game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmsService.RF.RollAllCratesForPlayer:InvokeServer();
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmsService"):WaitForChild("RF"):WaitForChild("RollAllCratesForPlayer"):InvokeServer()
 else 
 end 
 end 
@@ -496,7 +496,7 @@ end
 
 
 
-	
+--[[	
 food:AddDropdown({
    Name = "Pick A food",
    Default = "GreenApple",
@@ -527,12 +527,12 @@ food:AddToggle({
      foods = Value
 	while wait() do
 		if foods == false then break end
-			game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("knit")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer(_G.foodname,tonumber(_G._FoodUses))		
+			game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmsService"):WaitForChild("RF"):WaitForChild("PurchaseCrates"):InvokeServer(_G._FoodUses))		
 	end
   end    
 });
 
-	
+]]--
 
 v58:AddToggle({
 Name="Auto Click",
@@ -587,7 +587,7 @@ v58:AddToggle({
 _G.crates = value
   while wait() do
 	if _G.crates == false then break end
-   game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.ArmsService.RF.PurchaseCrates:InvokeServer(tostring(_G.BuyCrateSkins) .. "Crate",_G.AmountCrate)
+   game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmsService"):WaitForChild("RF"):WaitForChild("PurchaseCrates"):InvokeServer(tostring(_G.BuyCrateSkins) .. "Crate",_G.AmountCrate)
 end
 end
 });
@@ -1009,7 +1009,7 @@ pot:AddDropdown({
   Name = "Use Selected Boost",
   Default = false,
   Callback = function()
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.BoostService.RE.useBoost:FireServer(_G.BoostPoison)
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("BoostService"):WaitForChild("RE"):WaitForChild("useBoost"):FireServer(_G.BoostPoison)
   end    
 })
 
@@ -1017,10 +1017,10 @@ pot:AddButton({
   Name = "Use All Boost",
   Default = false,
   Callback = function()
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.BoostService.RE.useBoost:FireServer("Luck")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.BoostService.RE.useBoost:FireServer("Golden")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.BoostService.RE.useBoost:FireServer("Void")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.BoostService.RE.useBoost:FireServer("Wins")
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("BoostService"):WaitForChild("RE"):WaitForChild("useBoost"):FireServer("Luck")
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("BoostService"):WaitForChild("RE"):WaitForChild("useBoost"):FireServer("Golden")
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("BoostService"):WaitForChild("RE"):WaitForChild("useBoost"):FireServer("Void")
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("BoostService"):WaitForChild("RE"):WaitForChild("useBoost"):FireServer("Wins")
 end
 })
 
