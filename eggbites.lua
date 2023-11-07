@@ -527,7 +527,7 @@ food:AddToggle({
      foods = Value
 	while wait() do
 		if foods == false then break end
-	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("SnackService"):WaitForChild("RF"):WaitForChild("redeemSnack"):InvokeServer(_G._FoodUses)	
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("SnackService"):WaitForChild("RF"):WaitForChild("redeemSnack"):InvokeServer(_G.foodname,_G._FoodUses)	
 	end
   end    
 });
