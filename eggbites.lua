@@ -259,7 +259,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v2 then 
-game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ToolService.RE.onClick:FireServer();
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onClick"):FireServer();
 else 
 end 
 end 
@@ -661,7 +661,7 @@ v58:AddToggle({
   _G.dailyblueprint = Value
     while wait() do
       if _G.dailyblueprint == false then break end
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.BlueprintService.RF.LuckyDraw:InvokeServer(true)
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("BlueprintService"):WaitForChild("RF"):WaitForChild("LuckyDraw"):InvokeServer(true)
       end
   end    
 })
@@ -672,9 +672,8 @@ v58:AddToggle({
   Callback = function(Value)
   _G.dailylogin = Value
     while wait() do
-      if _G.dailylogin == false then break end
-         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("DailyRewardService"):WaitForChild("RE"):WaitForChild("onClaimReward"):FireServer()
-      end
+      if _G.dailylogin == false then break endgame:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("DailyRewardService"):WaitForChild("RE"):WaitForChild("onClaimReward"):FireServer()
+       end
   end    
 })
 
