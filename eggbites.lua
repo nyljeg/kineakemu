@@ -115,11 +115,11 @@ end);
 spawn(function()
 while task.wait() do 
 if v4 then 
-game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.SpinService.RE.onSpinRequest:FireServer();
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("getOwned"):InvokeServer(game:GetService("Players").LocalPlayer);
 else 
 end 
 end 
-end);
+end);	
 
 spawn(function()
 while task.wait() do 
@@ -659,7 +659,7 @@ v58:AddToggle({
   _G.dailylogin = Value
     while wait() do
       if _G.dailylogin == false then break end
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.DailyRewardService.RE.onClaimReward:FireServer()
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("DailyRewardService"):WaitForChild("RE"):WaitForChild("onClaimReward"):FireServer()
       end
   end    
 })
