@@ -259,7 +259,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v2 then 
-game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ToolService.RE.onClick:FireServer();
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onClick"):FireServer();
 else 
 end 
 end 
@@ -268,7 +268,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v3 then 
-game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onClickRequest:FireServer();
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onClickRequest"):FireServer();
 else 
 end 
 end 
@@ -403,13 +403,15 @@ end);
 spawn(function()
 while task.wait() do 
 if w7NPC5 then 
-game:GetService("ReplicatedStorage").Packages._Index["knit"].knit.Services.ArmWrestleService.RE.onEnterNPCTable:FireServer("DrPropulsion",workspace.Zones["7"].Interactables.ArmWrestling.NPC.DrPropulsion.Table,"7");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("RocketRider",workspace:WaitForChild("Zones"):WaitForChild("7"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("RocketRider"):WaitForChild("Table"),"7")
 else 
 end 
 end 
 end);
 
 
+
+	
 
 
 
