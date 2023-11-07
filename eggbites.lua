@@ -187,7 +187,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v35 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("CyberAssassin",workspace:WaitForChild("Zones"):WaitForChild("2"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("CyberAssassin"):WaitForChild("Table"),"2")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("SlicerAssassin",workspace:WaitForChild("Zones"):WaitForChild("2"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("CyberAssassin"):WaitForChild("Table"),"2")
 else 
 end 
 end 
@@ -496,7 +496,7 @@ end
 
 
 
---[[	
+
 food:AddDropdown({
    Name = "Pick A food",
    Default = "GreenApple",
@@ -527,12 +527,11 @@ food:AddToggle({
      foods = Value
 	while wait() do
 		if foods == false then break end
-			game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmsService"):WaitForChild("RF"):WaitForChild("PurchaseCrates"):InvokeServer(_G._FoodUses))		
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("SnackService"):WaitForChild("RF"):WaitForChild("redeemSnack"):InvokeServer(_G._FoodUses))		
 	end
   end    
 });
 
-]]--
 
 v58:AddToggle({
 Name="Auto Click",
@@ -637,10 +636,18 @@ v58:AddToggle({
   _G.blueprint = Value
     while wait() do
       if _G.blueprint == false then break end
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.BlueprintService.RF.LuckyDraw:InvokeServer(false)
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("BlueprintService"):WaitForChild("RF"):WaitForChild("LuckyDraw"):InvokeServer(false)
       end
   end    
 })
+
+
+local args = {
+    [1] = false
+}
+
+
+
 
 v58:AddToggle({
   Name = "Auto spin daily lucky draw [Blueprint]",
@@ -649,7 +656,7 @@ v58:AddToggle({
   _G.dailyblueprint = Value
     while wait() do
       if _G.dailyblueprint == false then break end
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.BlueprintService.RF.LuckyDraw:InvokeServer(true)
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("BlueprintService"):WaitForChild("RF"):WaitForChild("LuckyDraw"):InvokeServer(true)
       end
   end    
 })
