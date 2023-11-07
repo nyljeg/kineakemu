@@ -458,7 +458,7 @@ Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local tools=v1:MakeTab({
-Name = "Potions",
+Name = "Tools",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});	
 	
@@ -1018,7 +1018,7 @@ pot:AddDropdown({
   Name = "Use Selected Boost",
   Default = false,
   Callback = function()
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.BoostService.RE.useBoost:FireServer(_G.BoostPoison)
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("BoostService"):WaitForChild("RE"):WaitForChild("useBoost"):FireServer(_G.BoostPoison)
   end    
 })
 
@@ -1026,13 +1026,15 @@ pot:AddButton({
   Name = "Use All Boost",
   Default = false,
   Callback = function()
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.BoostService.RE.useBoost:FireServer("Luck")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.BoostService.RE.useBoost:FireServer("Golden")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.BoostService.RE.useBoost:FireServer("Void")
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.BoostService.RE.useBoost:FireServer("Wins")
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("BoostService"):WaitForChild("RE"):WaitForChild("useBoost"):FireServer("Luck")
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("BoostService"):WaitForChild("RE"):WaitForChild("useBoost"):FireServer("Golden")
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("BoostService"):WaitForChild("RE"):WaitForChild("useBoost"):FireServer("Void")
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("BoostService"):WaitForChild("RE"):WaitForChild("useBoost"):FireServer("Wins")
 end
 })
 
+
+		
 local toolzone = {1,2,3,4,5,6,7}
 local barbellslist = {"Tier1","Tier2","Tier3","Tier4","Tier5","Tier6","Tier7","Tier8","Tier9","Tier10","Tier11","Tier12","Tier13","Tier14","Tier15","Tier16","Tier17","Tier18","Tier19","Tier20","Tier21"}
 
@@ -1067,71 +1069,6 @@ tools:AddToggle({
   end    
 });
 
-local gripslist = {"1Kg","2Kg","3Kg","4Kg","5Kg","10Kg","15Kg","20Kg","25Kg","50Kg","100Kg","250Kg","300Kg","350Kg","400Kg","450Kg","500Kg","600Kg","700Kg","800Kg","900Kg","1000Kg","1250Kg","1500Kg","5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg","50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg","350000Kg","375000Kg","400000Kg","425000Kg","450000Kg","475000Kg","500000Kg","525000Kg","550000Kg","575000Kg","600000Kg","625000Kg","650000Kg","675000Kg","700000Kg","725000Kg","750000Kg","775000Kg","800000Kg","825000Kg","850000Kg","875000Kg","900000Kg","925000Kg","875000Kg","900000Kg","925000Kg","950000Kg","975000Kg","1000000Kg","1025000Kg","1050000Kg","1075000Kg","1100000","1125000Kg","1150000Kg"}
-
-tools:AddLabel("Grips");
-tools:AddDropdown({
-   Name = "Zone",
-   Default = "1",
-   Options = toolzone,
-   Callback = function(Value)
-     _G.gripzone = Value
-   end    
-});
-
-tools:AddDropdown({
-   Name = "Grips",
-   Default = "1Kg",
-   Options = gripslist,
-   Callback = function(Value)
-     _G.griptier = Value
-   end    
-});
-
-tools:AddToggle({
-   Name = "Equip Grips",
-   Default = false,
-   Callback = function(Value)
-     dump = Value
-	while wait() do
-		if dump == false then break end		
-	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer(unpack(_G.gripzone,"Grips",_G.griptier)
-	end
-  end    
-});
-
-local dumbellslist = {"1Kg","2Kg","3Kg","4Kg","5Kg","10Kg","15Kg","20Kg","25Kg","50Kg","100Kg","250Kg","300Kg","400Kg","500Kg","650Kg","800Kg","1000Kg","1500Kg","2000Kg","2500kg","300Kg","3500Kg","4000Kg","5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg","50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg","350000Kg","375000Kg","400000Kg","425000Kg","450000Kg","475000Kg","500000Kg","525000Kg","550000Kg","575000Kg","600000Kg","625000Kg","650000Kg","675000Kg","700000Kg","725000Kg","750000Kg","775000Kg","800000Kg","825000Kg","850000Kg","875000Kg","900000Kg","925000Kg","}
-
-tools:AddLabel("Dumbells");
-tools:AddDropdown({
-   Name = "Zone",
-   Default = "1",
-   Options = toolzone,
-   Callback = function(Value)
-     _G.dumbzone = Value
-   end    
-});
-
-tools:AddDropdown({
-   Name = "Grips",
-   Default = "1Kg",
-   Options = dumbellslist,
-   Callback = function(Value)
-     _G.dumbtier = Value
-   end    
-});
-
-tools:AddToggle({
-   Name = "Equip Dumbell",
-   Default = false,
-   Callback = function(Value)
-     lump = Value
-	while wait() do
-		if lump == false then break end		
-	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer(unpack(_G.dumbzone,"Grips",_G.dumbtier)
-	end
-  end    
-});
 
 
 
