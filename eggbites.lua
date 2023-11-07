@@ -525,10 +525,12 @@ food:AddToggle({
      foods = Value
 	while wait() do
 		if foods == false then break end
-			game:GetService("ReplicatedStorage")["Packages"]["_Index"]:FindFirstChild("knit")["knit"]["Services"]["SnackService"]["RF"]["redeemSnack"]:InvokeServer(_G.foodname,tonumber(_G._FoodUses))		
+			game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("SnackService"):WaitForChild("RF"):WaitForChild("redeemSnack"):InvokeServer(_G.foodname,tonumber(_G._FoodUses))
 	end
   end    
 });
+
+
 
 	
 
@@ -585,7 +587,7 @@ v58:AddToggle({
 _G.crates = value
   while wait() do
 	if _G.crates == false then break end
-   game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.ArmsService.RF.PurchaseCrates:InvokeServer(tostring(_G.BuyCrateSkins) .. "Crate",_G.AmountCrate)
+   game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmsService"):WaitForChild("RF"):WaitForChild("PurchaseCrates"):InvokeServer(tostring(_G.BuyCrateSkins) .. "Crate",_G.AmountCrate)
 end
 end
 });
@@ -601,6 +603,18 @@ v58:AddToggle({
       end
   end    
 })
+
+
+local args = {
+    [1] = "PlatinumCrate",
+    [2] = "100"
+}
+
+
+	
+
+
+	
 
 v58:AddToggle({
   Name = "Auto Claim Gift",
