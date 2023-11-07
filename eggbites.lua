@@ -672,7 +672,8 @@ v58:AddToggle({
   Callback = function(Value)
   _G.dailylogin = Value
     while wait() do
-      if _G.dailylogin == false then break endgame:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("DailyRewardService"):WaitForChild("RE"):WaitForChild("onClaimReward"):FireServer()
+      if _G.dailylogin == false then break end
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("DailyRewardService"):WaitForChild("RE"):WaitForChild("onClaimReward"):FireServer()
        end
   end    
 })
