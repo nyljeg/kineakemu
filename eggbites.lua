@@ -641,14 +641,6 @@ v58:AddToggle({
   end    
 })
 
-
-local args = {
-    [1] = false
-}
-
-
-
-
 v58:AddToggle({
   Name = "Auto spin daily lucky draw [Blueprint]",
   Default = false,
@@ -673,7 +665,7 @@ v58:AddToggle({
   end    
 })
 
-local egglist = {"Event","Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket","Shark","Crab","Jellyfish","Spartan","GreekMoster","Roman","Greek","Tomb","Ectoplasmic","Bewitched","Cauldron"}
+local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket"}
 v59:AddDropdown({
    Name = "Choose your Egg",
    Default = "Earth",
@@ -994,14 +986,6 @@ Default=false,
 Callback=function()
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("7"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("SpaceCenter"))
 end});
-
-teleport:AddButton({
-Name="Holloween World",
-Default=false,
-Callback=function()
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("HolloweenWorld"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("Holloween"))
-end});
-
 	
 pot:AddDropdown({
    Name = "Select Boost",
