@@ -457,11 +457,6 @@ Name = "Potions",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
-local tools=v1:MakeTab({
-Name = "Tools",
-Icon="rbxassetid://4483345998",
-PremiumOnly=false});	
-	
 	
 --Toogle
 event:AddDropdown({
@@ -1033,37 +1028,6 @@ pot:AddButton({
 end
 })
 
-
-tools:AddLabel("Barbells");
-tools:AddDropdown({
-   Name = "Zone",
-   Default = "1",
-   Options = {1,2,3,4,5,6,7},
-   Callback = function(Value)
-     _G.barbellzone = Value
-   end    
-});
-
-tools:AddDropdown({
-   Name = "Tier",
-   Default = "Tier1",
-   Options = {"Tier1","Tier2","Tier3","Tier4","Tier5","Tier6","Tier7","Tier8","Tier9","Tier10","Tier11","Tier12","Tier13","Tier14","Tier15","Tier16","Tier17","Tier18","Tier19","Tier20","Tier21"},
-   Callback = function(Value)
-     _G.barbelltier = Value
-   end    
-});
-
-tools:AddToggle({
-   Name = "Equip Barbell",
-   Default = false,
-   Callback = function(Value)
-     bump = Value
-	while wait() do
-		if bump == false then break end		
-	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(_G.barbellzone,"Barbells",_G.barbelltier)	
-	end
-  end    
-});
 
 
 
