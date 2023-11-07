@@ -187,7 +187,7 @@ end);
 spawn(function()
 while task.wait() do 
 if v35 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("SlicerAssassin",workspace:WaitForChild("Zones"):WaitForChild("2"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("CyberAssassin"):WaitForChild("Table"),"2")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("SlicerAssassin",workspace:WaitForChild("Zones"):WaitForChild("2"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("SlicerAssassin"):WaitForChild("Table"),"2")
 else 
 end 
 end 
@@ -527,7 +527,7 @@ food:AddToggle({
      foods = Value
 	while wait() do
 		if foods == false then break end
-	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("SnackService"):WaitForChild("RF"):WaitForChild("redeemSnack"):InvokeServer(_G._FoodUses))		
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("SnackService"):WaitForChild("RF"):WaitForChild("redeemSnack"):InvokeServer(_G._FoodUses)	
 	end
   end    
 });
