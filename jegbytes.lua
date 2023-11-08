@@ -1037,11 +1037,11 @@ pot:AddButton({
 end
 })
 
-local zone3table = {"Zone3Table1","Zone3Table2","Zone3Table3","Zone3Table4"}
-table:AddDropdown ({
+table:AddLabel("ZONE3 TABLES");
+table:AddDropdown({
 Name = "Zone3",
 Default = "Zone3Table1",
-Options = zone3table,
+Options = {"Zone3Table1","Zone3Table2","Zone3Table3","Zone3Table4"},
 Callback = function(value)
 _G.zone3 = value
 end})
