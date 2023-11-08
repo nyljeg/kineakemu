@@ -459,11 +459,6 @@ Name = "Potions",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
-local table=v1:MakeTab({
-Name = "PVP",
-Icon="rbxassetid://4483345998",
-PremiumOnly=false});
-
 	
 --Toogle
 event:AddDropdown({
@@ -1037,22 +1032,7 @@ pot:AddButton({
 end
 })
 
-table:AddLabel("ZONE3 TABLES");
-table:AddDropdown({
-Name = "Zone3",
-Default = "Zone3Table1",
-Options = {"Zone3Table1","Zone3Table2","Zone3Table3","Zone3Table4"},
-Callback = function(value)
-_G.zone3 = value
-end})
 
-table:AddButton({
-Name = "Enter Table",
-Default = false,
-Callback = function()
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterTable"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("3"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("PVP"):WaitForChild(_G.zone3)
-end
-})
 	
  
 end 
