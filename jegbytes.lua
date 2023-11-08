@@ -591,17 +591,6 @@ end
 end
 });
 	
-v58:AddToggle({
-  Name = "Auto Rebirth",
-  Default = false,
-  Callback = function(Value)
-  _G.Rbr = Value
-    while wait() do
-      if _G.Rbr == false then break end
-         game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("knit").knit.Services.RebirthService.RE.onRebirthRequest:FireServer()
-      end
-  end    
-})
 
 v58:AddToggle({
   Name = "Auto Claim Gift",
@@ -664,6 +653,34 @@ v58:AddToggle({
       end
   end    
 })
+  
+  v58:AddToggle({
+  Name = "Auto Rebirth",
+  Default = false,
+  Callback = function(Value)
+  _G.Rbr = Value
+    while wait() do
+      if _G.Rbr == false then break end
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("RebirthService"):WaitForChild("RE"):WaitForChild("onRebirthRequest"):FireServer()
+      end
+  end    
+})
+
+v58:AddToggle({
+  Name = "Auto Super Rebirth",
+  Default = false,
+  Callback = function(Value)
+  _G.Rbr = Value
+    while wait() do
+      if _G.Rbr == false then break end
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("RebirthService"):WaitForChild("RE"):WaitForChild("onSuperRebirth"):FireServer()
+  end
+  end    
+})
+
+
+
+			
 
 local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket"}
 v59:AddDropdown({
