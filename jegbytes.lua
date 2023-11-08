@@ -257,7 +257,7 @@ end
 end);
 
 spawn(function()
-while task.wait() do 
+while task.wait(0) do 
 if v2 then 
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onClick"):FireServer();
 else 
@@ -266,7 +266,7 @@ end
 end);
 
 spawn(function()
-while task.wait() do 
+while task.wait(0) do 
 if v3 then 
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onClickRequest"):FireServer();
 else 
@@ -680,7 +680,7 @@ v59:AddToggle({
    Default = false,
    Callback = function(Value)
      _G.hegg = Value
-	while wait() do		
+	while wait(0) do		
              if _G.hegg == false then break end
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(_G.EggName,{},false);
 end 
