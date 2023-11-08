@@ -427,8 +427,6 @@ end);
 local v58=v1:MakeTab({
 Name="Farm",
 Icon="rbxassetid://4483345998",
-TextSize = 20;			
-TextColor = Color3.fromRGB(0,16,176);			
 PremiumOnly=false});
 
 local v59=v1:MakeTab({
@@ -1051,7 +1049,7 @@ end})
 table:AddButton({
 Name = "Enter Table",
 Default = false,
-Callback =fanction()
+Callback = function()
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterTable"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("3"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("PVP"):WaitForChild(_G.zone3)
 end
 })
