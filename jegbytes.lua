@@ -427,6 +427,8 @@ end);
 local v58=v1:MakeTab({
 Name="Farm",
 Icon="rbxassetid://4483345998",
+TextSize = 20;			
+TextColor = Color3.fromRGB(0,16,176);			
 PremiumOnly=false});
 
 local v59=v1:MakeTab({
