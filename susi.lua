@@ -96,7 +96,7 @@ GetKeyButton.Parent = frame
 --------------------------------------------------------------------------
 SubmitButton.MouseButton1Click:Connect(function()
     local KeySystem = KeySystem.Text
-    if KeySystem == "Your Key" then   
+    if KeySystem == "JegPogi" then   
 screenGui:Destroy()
 
 --Your Script
@@ -105,5 +105,5 @@ screenGui:Destroy()
 end)
 
 GetKeyButton.MouseButton1Click:Connect(function()
- setclipboard("Paste here your link to get the key") 
+ setclipboard("https://raw.githubusercontent.com/nyljeg/kineakemu/main/sample.lua") 
 end) 
