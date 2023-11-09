@@ -100,7 +100,8 @@ SubmitButton.MouseButton1Click:Connect(function()
 screenGui:Destroy()
 
 --Your Script
-  
+loadstring(game:HttpGet("https://scriptblox.com/raw/Arm-Wrestle-Simulator-KEYLESS-9159"))()
+            
   end
 end)
 
