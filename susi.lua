@@ -14,7 +14,7 @@ title.Size = UDim2.new(1, 0, 0, 20)
 title.Position = UDim2.new(0, 0, 0, -20)
 title.Text = "🔑Key System🔑"
 title.TextColor3 = Color3.new(1, 1, 1)
-title.BackgroundColor3 = Color3.new(0, 0, 1)
+title.BackgroundColor3 = Color3.new(0, 0, 0)
 title.Parent = frame
 
 local dragging
@@ -73,7 +73,9 @@ KeySystem.Parent = frame
 local SubmitButton = Instance.new("TextButton")
 SubmitButton.Size = UDim2.new(0.5, 0, 0.5, 0)
 SubmitButton.Position = UDim2.new(0, 0, 0.5, 0)
-SubmitButton.Text = "Enter"
+SubmitButton.Text = "Submit"
+SubmitButton.TextColor3 = Color3.new(1, 1, 1)
+SubmitButton.BackgroundColor = Color3.new(0, 0, 0)
 SubmitButton.Parent = frame
 
 local CloseButton = Instance.new("TextButton")
@@ -81,7 +83,7 @@ CloseButton.Size = UDim2.new(0, 20, 0, 20)
 CloseButton.Position = UDim2.new(1, -20, 0, 0)
 CloseButton.Text = "X"
 CloseButton.TextColor3 = Color3.new(1, 1, 1)
-CloseButton.BackgroundColor3 = Color3.new(0, 0, 1)
+CloseButton.BackgroundColor3 = Color3.new(1, 0, 0)
 CloseButton.Parent = frame
 
 CloseButton.MouseButton1Click:Connect(function()
@@ -90,8 +92,10 @@ end)
 
 local GetKeyButton = Instance.new("TextButton")
 GetKeyButton.Size = UDim2.new(0.5, 0, 0.5, 0)
-GetKeyButton.Position = UDim2.new(0.5, 0, 0.5, 0)
-GetKeyButton.Text = "Get/Copy Key Link"
+GetKeyButton.Position = UDim2.new(0, 0, 0.5, 0)
+GetKeyButton.Text = "Get/Copy Key"
+GetKeyButton.TextColor3 = Color3.new(1, 1, 1)
+GetKeyButton.BackgroundColor = Color3.new(0, 0, 0)
 GetKeyButton.Parent = frame
 --------------------------------------------------------------------------
 SubmitButton.MouseButton1Click:Connect(function()
