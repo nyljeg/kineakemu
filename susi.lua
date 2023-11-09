@@ -14,7 +14,7 @@ title.Size = UDim2.new(1, 0, 0, 20)
 title.Position = UDim2.new(0, 0, 0, -20)
 title.Text = "🔑Key System🔑"
 title.TextColor3 = Color3.new(1, 1, 1)
-title.BackgroundColor3 = Color3.new(0, 0, 0)
+title.BackgroundColor3 = Color3.new(7, 1, 254)
 title.Parent = frame
 
 local dragging
@@ -64,9 +64,9 @@ local KeySystem = Instance.new("TextBox")
 KeySystem.Size = UDim2.new(1, 0, 0.5, 0)
 KeySystem.Position = UDim2.new(0, 0, 0, 0)
 KeySystem.Text = "Enter the Key"
-KeySystem.TextColor3 = Color3.new(0, 0, 0)
+KeySystem.TextColor3 = Color3.new(175, 0, 0)
 KeySystem.BackgroundTransparency = 0.5
-KeySystem.BackgroundColor3 = Color3.new(1, 1, 1)
+KeySystem.BackgroundColor3 = Color3.new(7, 1, 254)
 KeySystem.TextWrapped = true
 KeySystem.Parent = frame
 
@@ -81,7 +81,7 @@ CloseButton.Size = UDim2.new(0, 20, 0, 20)
 CloseButton.Position = UDim2.new(1, -20, 0, 0)
 CloseButton.Text = "X"
 CloseButton.TextColor3 = Color3.new(1, 1, 1)
-CloseButton.BackgroundColor3 = Color3.new(1, 0, 0)
+CloseButton.BackgroundColor3 = Color3.new(7, 1, 254)
 CloseButton.Parent = frame
 
 CloseButton.MouseButton1Click:Connect(function()
