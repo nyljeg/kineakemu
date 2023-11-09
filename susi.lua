@@ -73,7 +73,7 @@ KeySystem.Parent = frame
 local SubmitButton = Instance.new("TextButton")
 SubmitButton.Size = UDim2.new(0.5, 0, 0.5, 0)
 SubmitButton.Position = UDim2.new(0, 0, 0.5, 0)
-SubmitButton.Text = "Submit"
+SubmitButton.Text = "Enter"
 SubmitButton.Parent = frame
 
 local CloseButton = Instance.new("TextButton")
@@ -91,7 +91,7 @@ end)
 local GetKeyButton = Instance.new("TextButton")
 GetKeyButton.Size = UDim2.new(0.5, 0, 0.5, 0)
 GetKeyButton.Position = UDim2.new(0.5, 0, 0.5, 0)
-GetKeyButton.Text = "Get Key"
+GetKeyButton.Text = "Get/Copy Key Link"
 GetKeyButton.Parent = frame
 --------------------------------------------------------------------------
 SubmitButton.MouseButton1Click:Connect(function()
