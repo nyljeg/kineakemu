@@ -678,7 +678,116 @@ v58:AddToggle({
   end    
 })
 
+v58:AddToggle({
+  Name = "Auto Gold",
+  Default = false,
+  Callback = function(Value)
+  _G.GoldPet = Value
+    while wait() do
+      if _G.GoldPet == false then break end
+        local PatchGold = petIndex[math.random(1, #petIndex)]
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("goldify"):InvokeServer({PatchGold,PatchGold,PatchGold,PatchGold,PatchGold})
+     end
+  end    
+})
 
+v58:AddToggle({
+  Name = "Auto Craft",
+  Default = false,
+  Callback = function(Value)
+  _G.Crafter = Value
+    while wait() do
+      if _G.Crafter == false then break end
+        local MasterCraft = petIndex[math.random(1, #petIndex)]
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("craft"):InvokeServer(MasterCraft,false,true)
+      end
+  end    
+})
+
+v58:AddToggle({
+  Name = "Auto Void Pet",
+  Default = false,
+  Callback = function(Value)
+  _G.Void = Value
+    while wait() do
+      if _G.Void == false then break end
+        local MasterVoid = petIndex[math.random(1, #petIndex)]
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetVoidService"):WaitForChild("RE"):WaitForChild("onCraftToVoid"):FireServer(MasterVoid,false,true)
+      end
+  end    
+})
+
+v58:AddToggle({
+  Name = "Auto Mutate Pet",
+  Default = false,
+  Callback = function(Value)
+  _G.mutate = Value
+    while wait() do
+      if _G.mutate == false then break end
+        local MasterMutate = petIndex[math.random(1, #petIndex)]
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetCombineService"):WaitForChild("RF"):WaitForChild("mutate"):InvokeServer(MasterMutate,{})
+      end
+  end    
+})
+
+v58:AddToggle({
+  Name = "Auto Cure Pet",
+  Default = false,
+  Callback = function(Value)
+  _G.cure = Value
+    while wait() do
+      if _G.cure == false then break end
+        local MasterCure = petIndex[math.random(1, #petIndex)]
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetCombineService"):WaitForChild("RF"):WaitForChild("cure"):InvokeServer(MasterCure)
+      end
+  end    
+})
+
+v58:AddToggle({
+  Name = "Auto Slime [Goliath Pet Only]",
+  Default = false,
+  Callback = function(Value)
+  _G.slime = Value
+    while wait() do
+      if _G.slime == false then break end
+        local MasterSlime = petIndex[math.random(1, #petIndex)]
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("slimify"):InvokeServer(MasterSlime)
+      end
+  end    
+})
+
+v58:AddLabel("GOLIATH");
+T4:AddDropdown({
+Name = " Slot",
+Default = "Slot1",
+Options = {"Slot1","Slot2","Slot3"},
+Callback = function(value)
+_G.slotlist = value
+end});
+
+v58:AddToggle({
+  Name = "Auto Goliath Pet [Huge Only]",
+  Default = false,
+  Callback = function(Value)
+  _G.goliath = Value
+    while wait() do
+      if _G.goliath == false then break end
+        local MasterGoliath = petIndex[math.random(1, #petIndex)]
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetGoliathService"):WaitForChild("RE"):WaitForChild("onPurchase"):FireServer(MasterGoliath,_G.slotlist)
+      end
+  end    
+})
+
+v58:AddToggle({
+Name = "Auto Claim Goliath",
+Default = false,
+Callback = function(value)
+_G.Gclaim = value
+while wait() do
+if _G.Gclaim == false then break end
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetGoliathService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer()
+end
+end});
 
 			
 
