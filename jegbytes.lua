@@ -1005,7 +1005,7 @@ end});
 teleport:AddDropdown({
     Name = "Teleport To",
     Default = "Zone 1",
-    Options = { "Zone 1","Zone 2","Zone 3","Zone 4","Zone 5","Zone 6","Zone7}
+    Options = { "Zone 1","Zone 2","Zone 3","Zone 4","Zone 5","Zone 6","Zone 7"}
 Callback = function(Value)
 if Value == "Zone 1" then
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("BackToSchool"))
