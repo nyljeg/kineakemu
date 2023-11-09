@@ -4,9 +4,9 @@ local screenGui = Instance.new("ScreenGui")
 screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 local frame = Instance.new("Frame")
-frame.Size = UDim2.new(0, 200, 0, 100)
+frame.Size = UDim2.new(0, 300, 0, 100)
 frame.Position = UDim2.new(0.5, -100, 0.5, -50)
-frame.BackgroundColor3 = Color3.new(1, 1, 1)
+frame.BackgroundColor3 = Color3.new(0, 0, 1)
 frame.Parent = screenGui
 
 local title = Instance.new("TextLabel")
@@ -14,7 +14,7 @@ title.Size = UDim2.new(1, 0, 0, 20)
 title.Position = UDim2.new(0, 0, 0, -20)
 title.Text = "🔑Key System🔑"
 title.TextColor3 = Color3.new(1, 1, 1)
-title.BackgroundColor3 = Color3.new(7, 1, 254)
+title.BackgroundColor3 = Color3.new(0, 0, 1)
 title.Parent = frame
 
 local dragging
@@ -64,9 +64,9 @@ local KeySystem = Instance.new("TextBox")
 KeySystem.Size = UDim2.new(1, 0, 0.5, 0)
 KeySystem.Position = UDim2.new(0, 0, 0, 0)
 KeySystem.Text = "Enter the Key"
-KeySystem.TextColor3 = Color3.new(175, 0, 0)
+KeySystem.TextColor3 = Color3.new(1, 1, 1)
 KeySystem.BackgroundTransparency = 0.5
-KeySystem.BackgroundColor3 = Color3.new(7, 1, 254)
+KeySystem.BackgroundColor3 = Color3.new(0, 0, 1)
 KeySystem.TextWrapped = true
 KeySystem.Parent = frame
 
@@ -81,7 +81,7 @@ CloseButton.Size = UDim2.new(0, 20, 0, 20)
 CloseButton.Position = UDim2.new(1, -20, 0, 0)
 CloseButton.Text = "X"
 CloseButton.TextColor3 = Color3.new(1, 1, 1)
-CloseButton.BackgroundColor3 = Color3.new(7, 1, 254)
+CloseButton.BackgroundColor3 = Color3.new(0, 0, 1)
 CloseButton.Parent = frame
 
 CloseButton.MouseButton1Click:Connect(function()
@@ -100,7 +100,8 @@ SubmitButton.MouseButton1Click:Connect(function()
 screenGui:Destroy()
 
 --Your Script
-loadstring(game:HttpGet("https://scriptblox.com/raw/Arm-Wrestle-Simulator-KEYLESS-9159"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/nyljeg/kineakemu/main/eggbites.lua"))()
+
             
   end
 end)
