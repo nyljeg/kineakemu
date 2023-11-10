@@ -1029,6 +1029,7 @@ pot:AddButton({
 end
 })
 
+v59:AddParagraph("REMEMBER:\n\nZone1 = Tier1,Tier2,Tier3\nZone2 = Tier4,Tier5,Tier6\nZone3 = Tier7,Tier8,Tier9\nZone4 = Tier10,Tier11,Tier12\nZone5 = NOT AVAILABLE\nZone6 = Tier16,Tier17,Tier18\nZone7 = Tier19,Tier20,Tier21")
 v59:AddDropdown({
    Name = "Zone",
    Default = "1",
@@ -1041,7 +1042,7 @@ v59:AddDropdown({
 v59:AddDropdown({
    Name = "Tier",
    Default = "Tier1",
-   Options = {"Tier1","Tier2","Tier3","Tier4","Tier5","Tier6","Tier7","Tier8","Tier9","Tier10","Tier11","Tier12","Tier13","Tier14","Tier15","Tier16","Tier17","Tier18","Tier19","Tier20","Tier21"},
+   Options = {"Tier1","Tier2","Tier3","Tier4","Tier5","Tier6","Tier7","Tier8","Tier9","Tier10","Tier11","Tier12","Tier16","Tier17","Tier18","Tier19","Tier20","Tier21"},
    Callback = function(Value)
      _G.barbelltier = Value
    end    
