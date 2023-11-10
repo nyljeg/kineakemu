@@ -1064,8 +1064,7 @@ tools:AddButton({
    Name = "Equip Barbell",
    Default = false,
    Callback = function()
-     game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(_G.barbellzone,"Barbells",_G.barbelltier)	
-	end
+     game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(_G.barbellzone,"Barbells",_G.barbelltier);
   end    
 });
 	
