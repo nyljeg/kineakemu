@@ -64,9 +64,9 @@ local KeySystem = Instance.new("TextBox")
 KeySystem.Size = UDim2.new(1, 0, 0.5, 0)
 KeySystem.Position = UDim2.new(0, 0, 0, 0)
 KeySystem.Text = "Enter the Key"
-KeySystem.TextColor3 = Color3.new(1, 1, 1)
+KeySystem.TextColor3 = Color3.new(1, 0, 0)
 KeySystem.BackgroundTransparency = 0.5
-KeySystem.BackgroundColor3 = Color3.new(0, 0, 1)
+KeySystem.BackgroundColor3 = Color3.new(1, 1, 1)
 KeySystem.TextWrapped = true
 KeySystem.Parent = frame
 
@@ -74,7 +74,7 @@ local SubmitButton = Instance.new("TextButton")
 SubmitButton.Size = UDim2.new(0.5, 0, 0.5, 0)
 SubmitButton.Position = UDim2.new(0, 0, 0.5, 0)
 SubmitButton.Text = "Submit"
-SubmitButton.TextColor3 = Color3.new(1, 1, 1)
+SubmitButton.TextColor3 = Color3.new(0, 1, 0)
 SubmitButton.BackgroundColor3 = Color3.new(0, 0, 0)
 SubmitButton.Parent = frame
 
@@ -94,7 +94,7 @@ local GetKeyButton = Instance.new("TextButton")
 GetKeyButton.Size = UDim2.new(0.5, 0, 0.5, 0)
 GetKeyButton.Position = UDim2.new(0.5, 0, 0.5, 0)
 GetKeyButton.Text = "Get/Copy Key"
-GetKeyButton.TextColor3 = Color3.new(1, 1, 1)
+GetKeyButton.TextColor3 = Color3.new(0, 1, 0)
 GetKeyButton.BackgroundColor3 = Color3.new(0, 0, 0)
 GetKeyButton.Parent = frame
 --------------------------------------------------------------------------
