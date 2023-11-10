@@ -13,7 +13,7 @@ local title = Instance.new("TextLabel")
 title.Size = UDim2.new(1, 0, 0, 20)
 title.Position = UDim2.new(0, 0, 0, -20)
 title.Text = "🔑Key System🔑"
-title.TextColor3 = Color3.new(1, 1, 1)
+title.TextColor3 = Color3.new(0, 1, 0)
 title.BackgroundColor3 = Color3.new(0, 0, 0)
 title.Parent = frame
 
