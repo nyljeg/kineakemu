@@ -75,7 +75,7 @@ SubmitButton.Size = UDim2.new(0.5, 0, 0.5, 0)
 SubmitButton.Position = UDim2.new(0, 0, 0.5, 0)
 SubmitButton.Text = "Submit"
 SubmitButton.TextColor3 = Color3.new(1, 1, 1)
-SubmitButton.BackgroundColor = Color3.new(0, 0, 0)
+SubmitButton.BackgroundColor3 = Color3.new(0, 0, 0)
 SubmitButton.Parent = frame
 
 local CloseButton = Instance.new("TextButton")
@@ -95,7 +95,7 @@ GetKeyButton.Size = UDim2.new(0.5, 0, 0.5, 0)
 GetKeyButton.Position = UDim2.new(0, 0, 0.5, 0)
 GetKeyButton.Text = "Get/Copy Key"
 GetKeyButton.TextColor3 = Color3.new(1, 1, 1)
-GetKeyButton.BackgroundColor = Color3.new(0, 0, 0)
+GetKeyButton.BackgroundColor3 = Color3.new(0, 0, 0)
 GetKeyButton.Parent = frame
 --------------------------------------------------------------------------
 SubmitButton.MouseButton1Click:Connect(function()
