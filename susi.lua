@@ -111,5 +111,5 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/nyljeg/kineakemu/main
 end)
 
 GetKeyButton.MouseButton1Click:Connect(function()
- setclipboard("https://raw.githubusercontent.com/nyljeg/kineakemu/main/sample.lua") 
+ setclipboard("https://link-center.net/1003806/download-elmerhub-key1") 
 end) 
