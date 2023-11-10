@@ -4,7 +4,7 @@ local screenGui = Instance.new("ScreenGui")
 screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 local frame = Instance.new("Frame")
-frame.Size = UDim2.new(0, 300, 0, 100)
+frame.Size = UDim2.new(0, 200, 0, 100)
 frame.Position = UDim2.new(0.5, -100, 0.5, -50)
 frame.BackgroundColor3 = Color3.new(0, 0, 1)
 frame.Parent = screenGui
@@ -92,7 +92,7 @@ end)
 
 local GetKeyButton = Instance.new("TextButton")
 GetKeyButton.Size = UDim2.new(0.5, 0, 0.5, 0)
-GetKeyButton.Position = UDim2.new(0, 0, 0.5, 0)
+GetKeyButton.Position = UDim2.new(0.5, 0, 0.5, 0)
 GetKeyButton.Text = "Get/Copy Key"
 GetKeyButton.TextColor3 = Color3.new(1, 1, 1)
 GetKeyButton.BackgroundColor3 = Color3.new(0, 0, 0)
