@@ -1029,7 +1029,7 @@ pot:AddButton({
 end
 })
 
-v59:AddParagraph("REMEMBER:\n\nZone1 = Tier1,Tier2,Tier3\nZone2 = Tier4,Tier5,Tier6\nZone3 = Tier7,Tier8,Tier9\nZone4 = Tier10,Tier11,Tier12\nZone5 = NOT AVAILABLE\nZone6 = Tier16,Tier17,Tier18\nZone7 = Tier19,Tier20,Tier21")
+v59:AddParagraph("REMEMBER","Zone1 = Tier1,Tier2,Tier3","Zone2 = Tier4,Tier5,Tier6","Zone3 = Tier7,Tier8,Tier9","Zone4 = Tier10,Tier11,Tier12","Zone5 = NO Barbels Found","Zone6 = Tier16,Tier17,Tier18","Zone7 = Tier19,Tier20,Tier21")
 v59:AddDropdown({
    Name = "Zone",
    Default = "1",
