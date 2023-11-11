@@ -466,7 +466,7 @@ PremiumOnly=false});
 local workspace = game:GetService("Workspace")
 local RunService = game:GetService("RunService")
 local npc = {}
-local zone = {}
+local Zones = {}
 local egg = {}
 local VSPLAYER = {}
 local petIndex = {}
@@ -477,14 +477,9 @@ for _,v in pairs(Table_V:GetChildren()) do
 end
 end
 
-AddTable(workspace.Zones,zone)
+AddTable(Workspace.Zones.1.Map.Index)
 
-	
-
-
-
-	
-	
+		
 --Toogle
 event:AddDropdown({
    Name = "Number of previous hatches on eggs",
@@ -1083,6 +1078,7 @@ end
 			end
 });
 
+local PetDetect = #petIndex	
 v59:AddToggle({
   Name = "Auto Gold",
   Default = false,
@@ -1090,7 +1086,8 @@ v59:AddToggle({
   _G.GoldPet = Value
     while wait() do
       if _G.GoldPet == false then break end
-        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("goldify"):InvokeServer("petIndex[math.random(1, PetDetect)]","petIndex[math.random(1, PetDetect)]","petIndex[math.random(1, PetDetect)]","petIndex[math.random(1, PetDetect)]","petIndex[math.random(1, PetDetect)]")
+		local PatchGold = petIndex[math.random(1, #petIndex)]			
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("goldify"):InvokeServer("petIld("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("goldify"):InvokeServer("PatchGold","PatchGold","PatchGold","PatchGold","PatchGold")
      end
   end    
 })
@@ -1105,7 +1102,8 @@ v59:AddToggle({
   _G.Crafter = Value
     while wait() do
       if _G.Crafter == false then break end
-        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("craft"):InvokeServer("petIndex[math.random(1, PetDetect)]",true)
+		local MasterCraft = petIndex[math.random(1, #petIndex)]			
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("craft"):InvokeServer("MasterCraft",true)
       end
   end    
 })
