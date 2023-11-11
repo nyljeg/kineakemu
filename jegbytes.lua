@@ -1080,13 +1080,12 @@ v59:AddToggle({
   _G.Crafter = Value
     while wait() do
       if _G.Crafter == false then break end
-        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("craft"):InvokeServer("petIndex[math.random(1, PetDetect)]",true)
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("craft"):InvokeServer("petIndex[math.random(1, PetDetect)]",false,true)
       end
   end    
 })
 
-
-								
+						
 	
 end 
 OrionLib:Init();
