@@ -459,6 +459,31 @@ Name = "Potions",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
+
+
+
+------------
+local workspace = game:GetService("Workspace")
+local RunService = game:GetService("RunService")
+local npc = {}
+local zone = {}
+local egg = {}
+local VSPLAYER = {}
+local petIndex = {}
+local locationIndex = {}
+function AddTable(Table_V,LocalName)
+for _,v in pairs(Table_V:GetChildren()) do
+    table.insert(LocalName,v.Name)
+end
+end
+
+AddTable(workspace.Zones,zone)
+
+	
+
+
+
+	
 	
 --Toogle
 event:AddDropdown({
