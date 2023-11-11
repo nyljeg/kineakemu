@@ -1172,7 +1172,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 
 
 	
-
+--[[
 local PetDetect = #petIndex
 v59:AddToggle({
   Name = "Auto Gold",
@@ -1201,7 +1201,7 @@ v59:AddToggle({
       end
   end    
 })
-
+]]--
 						
 	
 end 
