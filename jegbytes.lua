@@ -470,16 +470,14 @@ local Zones = {}
 local egg = {}
 local VSPLAYER = {}
 local petIndex = {}
-local locationIndex = {}
+local locationIndex = {}	
 function AddTable(Table_V,LocalName)
 for _,v in pairs(Table_V:GetChildren()) do
     table.insert(LocalName,v.Name)
 end
 end
 
-AddTable(Workspace.Zones.1.Map.Index)
-
-		
+AddTable(workspace.Zones,zone)		
 --Toogle
 event:AddDropdown({
    Name = "Number of previous hatches on eggs",
@@ -971,7 +969,6 @@ Callback=function(value)
 w7NPC5=value;
 end});
 
-teleport:AddLabel("TELEPORT");
 teleport:AddButton({
 Name="World 1",
 Default=false,
@@ -1078,7 +1075,7 @@ end
 			end
 });
 
-local PetDetect = #petIndex	
+local PetDetect = #petIndex
 v59:AddToggle({
   Name = "Auto Gold",
   Default = false,
@@ -1087,11 +1084,10 @@ v59:AddToggle({
     while wait() do
       if _G.GoldPet == false then break end
 		local PatchGold = petIndex[math.random(1, #petIndex)]			
-        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("goldify"):InvokeServer("petIld("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("goldify"):InvokeServer("PatchGold","PatchGold","PatchGold","PatchGold","PatchGold")
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("goldify"):InvokeServer({"PatchGold","PatchGold","PatchGold","PatchGold","PatchGold"})
      end
   end    
 })
-
 
 
 	
