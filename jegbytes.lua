@@ -1090,7 +1090,7 @@ v59:AddToggle({
   _G.GoldPet = Value
     while wait() do
       if _G.GoldPet == false then break end
-        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("goldify"):InvokeServer(petIndex[math.random(1, PetDetect)],petIndex[math.random(1, PetDetect)],petIndex[math.random(1, PetDetect)],petIndex[math.random(1, PetDetect)],petIndex[math.random(1, PetDetect)])
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("goldify"):InvokeServer("petIndex[math.random(1, PetDetect)]","petIndex[math.random(1, PetDetect)]","petIndex[math.random(1, PetDetect)]","petIndex[math.random(1, PetDetect)]","petIndex[math.random(1, PetDetect)]")
      end
   end    
 })
@@ -1105,7 +1105,7 @@ v59:AddToggle({
   _G.Crafter = Value
     while wait() do
       if _G.Crafter == false then break end
-        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("craft"):InvokeServer(petIndex[math.random(1, PetDetect)],true)
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("craft"):InvokeServer("petIndex[math.random(1, PetDetect)]",true)
       end
   end    
 })
