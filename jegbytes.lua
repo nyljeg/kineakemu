@@ -50,7 +50,7 @@ local w7NPC2=false;
 local w7NPC3=false;
 local w7NPC4=false;
 local w7NPC5=false;
-
+local PetDetect = #petIndex
 
 
 
@@ -1058,40 +1058,34 @@ end
 			end
 });
 
-v59:AddDropdown({
-   Name = "Grips Weights",
-   Default = "1Kg",
-   Options = {"1Kg","2Kg","3Kg","4Kg","5Kg","10Kg","15Kg","20Kg","25Kg","50Kg","100Kg","250Kg","300Kg","350Kg","400Kg","450Kg","500Kg","600Kg","700Kg","800Kg","900Kg","1000Kg","1250Kg","1500Kg","5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg","50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg","350000Kg","375000Kg","400000Kg","425000Kg","450000Kg","475000Kg","500000Kg","525000Kg","550000Kg","575000Kg","600000Kg","625000Kg","650000Kg","675000Kg","700000Kg","725000Kg","750000Kg","775000Kg","800000Kg","825000Kg","850000Kg","875000Kg","900000Kg","925000Kg","875000Kg","900000Kg","925000Kg","950000Kg","975000Kg","1000000Kg","1025000Kg","1050000Kg","1075000Kg","1100000","1125000Kg","1150000Kg"},
-   Callback = function(Value)
-     _G.weights1 = Value
-     _G.weights2 = Value
-     _G.weights3 = Value
-     _G.weights4 = Value
-     _G.weights5 = Value
-     _G.weights6 = Value
-     _G.weights7 = Value			
-   end    
-});
-
 v59:AddToggle({
-   Name = "Equip Grips",
-   Default = false,
-   Callback = function(value)
-  bibibi = value			
-while wait() do
-if bibibi == false then break end
- game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer(unpack("1","Grips",_G.weights1));
- game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer(unpack("2","Grips",_G.weights2));
- game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer(unpack("3","Grips",_G.weights3));
- game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer(unpack("4","Grips",_G.weights4));
- game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer(unpack("5","Grips",_G.weights5));
- game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer(unpack("6","Grips",_G.weights6));
- game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer(unpack("7","Grips",_G.weights7)); 
- end    
-end
-});
+  Name = "Auto Gold",
+  Default = false,
+  Callback = function(Value)
+  _G.GoldPet = Value
+    while wait() do
+      if _G.GoldPet == false then break end
+        local PatchGold = petIndex[math.random(1, #petIndex)]
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("goldify"):InvokeServer({PatchGold,PatchGold,PatchGold,PatchGold,PatchGold})
+     end
+  end    
+})
 
 
+
+	
+v59:AddToggle({
+  Name = "Auto Craft",
+  Default = false,
+  Callback = function(Value)
+  _G.Crafter = Value
+    while wait() do
+      if _G.Crafter == false then break end
+        local MasterCraft = petIndex[math.random(1, #petIndex)]
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("craft"):InvokeServer(MasterCraft,true)
+      end
+  end    
+})
 
 
 								
