@@ -1029,61 +1029,38 @@ pot:AddButton({
 end
 })
 
-v59:AddDropdown({
-   Name = "Zone",
-   Default = "1",
-   Options = {1,2,3,4,5,6,7},
-   Callback = function(Value)
-     _G.barbellzone = Value
-	_G.gripzone = Value		
-   end    
-});
-
-v59:AddParagraph("RMEMBER","•ZONE 1 = Tier1|Tier2|Tier3\n•ZONE 2 = Tier4|Tier5|Tier6\n•ZONE 3 = Tier7|Tier8|Tier9\n•ZONE 4 = Tier10|Tier11|Tier12\n•ZONE 5 = NO Barbels Found\n•ZONE 6 = Tier16|Tier17|Tier18\n•ZONE 7 = Tier19|Tier20|Tier21")	
-v59:AddDropdown({
-   Name = "Tier",
-   Default = "Tier1",
-   Options = {"Tier1","Tier2","Tier3","Tier4","Tier5","Tier6","Tier7","Tier8","Tier9","Tier10","Tier11","Tier12","Tier16","Tier17","Tier18","Tier19","Tier20","Tier21"},
-   Callback = function(Value)
-     _G.barbelltier = Value
-   end    
-});
-
-v59:AddButton({
+v59:AddToggle({
    Name = "Equip Barbell",
    Default = false,
-   Callback = function()
-     game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(_G.barbellzone,"Barbells",_G.barbelltier);
-  end    
+   Callback = function(value)
+ _G._Barbels = value
+while wait() do
+if _G._Barbels == false then break end
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(1,"Barbells","Tier1");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(1,"Barbells","Tier2");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(1,"Barbells","Tier3");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(2,"Barbells","Tier4");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(2,"Barbells","Tier5");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(2,"Barbells","Tier6");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(3,"Barbells","Tier7");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(3,"Barbells","Tier8");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(3,"Barbells","Tier9");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(4,"Barbells","Tier10");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(4,"Barbells","Tier11");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(4,"Barbells","Tier12");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(6,"Barbells","Tier13");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(6,"Barbells","Tier14");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(6,"Barbells","Tier15");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(7,"Barbells","Tier19");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(7,"Barbells","Tier20");
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onEquipRequest"):FireServer(7,"Barbells","Tier21");		
+end    
+end
 });
 
-v59:AddDropdown({
-   Name = "Zone",
-   Default = "1",
-   Options = {1,2,3,4,5,6,7},
-   Callback = function(Value)
-	_G.gripzone = Value		
-   end    
-});	
 
-v59:AddParagraph("REMEMBER","•ZONE 1 = 1Kg|2Kg|3Kg|4Kg|5Kg|10Kg|15Kg|20Kg|25Kg|50Kg|100Kg|250Kg\n•ZONE 2 = 300Kg|350Kg|400Kg|450Kg|500Kg|600Kg|700Kg|800Kg|900Kg|1000Kg|1250Kg|1500Kg\n•ZONE 3 = 5000kg|6000Kg|7500Kg|10000Kg|12500Kg|15000Kg|20000Kg|25000Kg|30000Kg|35000Kg|40000Kg|45000Kg\n•ZONE 4 = 50000Kg|60000Kg|70000Kg|80000Kg|90000Kg|100000Kg|125000Kg|150000Kg|175000Kg|200000Kg|250000Kg|300000Kg\n•ZONE 5 = 350000Kg|375000Kg|400000Kg|425000Kg|450000Kg|475000Kg|500000Kg|525000Kg|550000Kg|575000Kg|600000Kg|625000Kg\n•ZONE 6 = 650000Kg|675000Kg|700000Kg|725000Kg|750000Kg|775000Kg|800000Kg|825000Kg|850000Kg|875000Kg|900000Kg|925000Kg\n•ZONE 7 = 875000Kg|900000Kg|925000Kg|950000Kg|975000Kg|1000000Kg|1025000Kg|1050000Kg|1075000Kg|1100000Kg|1125000Kg|1150000Kg")
-v59:AddDropdown({
-   Name = "Weights",
-   Default = "1Kg",
-   Options = {"1Kg","2Kg","3Kg","4Kg","5Kg","10Kg","15Kg","20Kg","25Kg","50Kg","100Kg","250Kg","300Kg","350Kg","400Kg","450Kg","500Kg","600Kg","700Kg","800Kg","900Kg","1000Kg","1250Kg","1500Kg","5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg","50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg","350000Kg","375000Kg","400000Kg","425000Kg","450000Kg","475000Kg","500000Kg","525000Kg","550000Kg","575000Kg","600000Kg","625000Kg","650000Kg","675000Kg","700000Kg","725000Kg","750000Kg","775000Kg","800000Kg","825000Kg","850000Kg","875000Kg","900000Kg","925000Kg","875000Kg","900000Kg","925000Kg","950000Kg","975000Kg","1000000Kg","1025000Kg","1050000Kg","1075000Kg","1100000","1125000Kg","1150000Kg"},
-   Callback = function(Value)
-     _G.griptier = Value
-   end    
-});
 
-v59:AddToggle({
-   Name = "Equip Grips",
-   Default = false,
-   Callback = function()
-	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer(unpack(_G.gripzone,"Grips",_G.griptier)
-      end
-});
+
 	
- 
 end 
 OrionLib:Init();
