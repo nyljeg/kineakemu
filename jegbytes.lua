@@ -479,18 +479,13 @@ end
 end
 
 AddTable(workspace.Zones,zone)	]]--	
-local gago = {
-		["Isa"] = 1
-		["Tatlo"] = 3
-		["Walo"] = 8
-	}
 --Toogle
 event:AddDropdown({
    Name = "Number of previous hatches on eggs",
-   Default = "Isa",
-   Options = {"Isa","Tatlo","Walo"}
+   Default = "1",
+   Options = {"1","3","8"}
    Callback = function(Value)
-     gago = Value
+     _G._LetsGo = Value
    end    
 });
 
@@ -501,7 +496,7 @@ event:AddToggle({
   _G.Event_AV3 = Value
     while wait() do
       if _G.Event_AV3 == false then break end       
- game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EventService"):WaitForChild("RF"):WaitForChild("ClaimEgg"):InvokeServer(tonumber(gago),false)
+ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EventService"):WaitForChild("RF"):WaitForChild("ClaimEgg"):InvokeServer(tonumber(_G._LetsGo),false)
       end
   end    
 });
@@ -513,7 +508,7 @@ event:AddToggle({
   _G.PrevEgg = Value
     while wait() do
       if _G.PrevEgg == false then break end
-	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EventService"):WaitForChild("RF"):WaitForChild("ClaimEgg"):InvokeServer(tonumber(_G.AmountPrevEggs),true)
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EventService"):WaitForChild("RF"):WaitForChild("ClaimEgg"):InvokeServer(tonumber(_G._LetsGo),true)
     end
 end
 });
