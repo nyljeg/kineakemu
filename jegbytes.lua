@@ -843,15 +843,6 @@ v58:AddToggle({
 	["Starborn"] = true
 }
 }
-	
-v59:AddLabel("Go to the egg and Click the pet you want to auto delete while hatching");
-v59:AddToggle({
-Name = "Auto Delete Pet While Hatching",
-Default = false,
-Options = deleted,
-Callback = function(value)
-_G._deleted = value
-end});
 
 local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket"}
 v59:AddDropdown({
@@ -874,6 +865,16 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end 
 end
 });
+
+v59:AddLabel("Go to the egg and Click the pet you want to auto delete while hatching");
+v59:AddToggle({
+Name = "Auto Delete Pet While Hatching",
+Default = false,
+Options = deleted,
+Callback = function(value)
+_G._deleted = value
+end});
+	
 
 v60:AddLabel("WORLD 1 NPC");
 v60:AddToggle({
