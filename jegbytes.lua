@@ -714,7 +714,7 @@ local delete = {
 v59:AddToggle({
 Name = "Delete Pet While Hatching",
 Default = false,
-Options = delete
+Options = delete,
 Callback = function(value)
 _G._delete = value
 end});
