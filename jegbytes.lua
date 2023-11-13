@@ -844,8 +844,9 @@ v58:AddToggle({
 }
 }
 	
+v59:AddLabel("Go to the egg and Click the pet you want to auto delete while hatching");
 v59:AddToggle({
-Name = "Delete Pet While Hatching",
+Name = "Auto Delete Pet While Hatching",
 Default = false,
 Options = deleted,
 Callback = function(value)
