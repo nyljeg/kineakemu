@@ -52,8 +52,7 @@ local w7NPC4=false;
 local w7NPC5=false;
 
 
-
-
+		
 
  
 --Function
@@ -697,6 +696,28 @@ v58:AddToggle({
   end    
 })
 
+	
+
+	
+local delete = {
+["Cat"] = true
+["Dog"] = true 
+["Cow"] = true
+["Mouse"] = true
+["Fox"] = true, 
+["Slime"] = true, 
+["Bear"] = true, 
+["Deer"] = true, 
+["Squirrel"] = true
+}
+	
+v59:AddToggle({
+Name = "Delete Pet While Hatching",
+Default = false,
+Options = delete
+Callback = function(value)
+_G._delete = value
+end});
 
 local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket"}
 v59:AddDropdown({
@@ -715,7 +736,7 @@ v59:AddToggle({
      _G.hegg = Value
 	while wait(0) do		
              if _G.hegg == false then break end
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(_G.EggName,{},false);
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(_G.EggName,{_G._delete},false);
 end 
 end
 });
