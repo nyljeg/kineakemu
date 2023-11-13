@@ -19,6 +19,15 @@ OrionLib:MakeNotification({
 })
 end
 
+function WrongKey()
+OrionLib:MakeNotification({
+	Name = "Key!",
+	Content = "You have entered the incorrect key!",
+	Image = "",
+	Time = 4
+})
+end
+
 --window for key system
 -- Creating Window
 local Window = OrionLib:MakeWindow({Name = "Key System", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = false})
@@ -51,7 +60,7 @@ tab1:AddButton({
 	Callback = function()
             if _G.KeyInput == _G.Key then                
                 wait(0.5)
-                CorrectKey()
+                CorrectKey() else WrongKey()
             end
   	end    
 })
