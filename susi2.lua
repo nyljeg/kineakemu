@@ -22,7 +22,7 @@ end
 function WrongKey()
 OrionLib:MakeNotification({
 	Name = "Key!",
-	Content = "You have entered the incorrect key!",
+	Content = "Your Key is InCorrect! Please Try Again!",
 	Image = "",
 	Time = 4
 })
