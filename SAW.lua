@@ -87,23 +87,35 @@ Callback=function(value)
 _G._autotcx = value
 while wait(0.08) do
 if _G._autotcx == false then break end
-game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer("1")
-game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer("2")
-game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer("3")
-game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer("4")
-game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer("5")
-game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer("6")
-game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer("7")
-game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer("8")
-game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer("9")
-game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer("10")
-game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer("11")
-game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer("12")
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer(1)
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer(2)
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer(3)
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer(4)
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer(5)
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer(6)
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer(7)
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer(8)
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer(9)
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer(10)
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer(11)
+game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("PlaytimeReward"):InvokeServer(12)
 end
 end
 });
 
+auto:AddToggle({
+Name="Auto Rebirth",
+Default=false,
+Callback=function(value)
+_G._autotcxz = value
+while wait(0.08) do
+if _G._autotcxz == false then break end
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rebirth"):FireServer()    
+end
+end
+});
 
+  
 auto:AddToggle({
 Name="Auto Spin",
 Default=false,
@@ -116,6 +128,8 @@ end
 end
 });
 
+
+  
 
 egg:AddDropdown({
 Name = "Amount Of Egg",
