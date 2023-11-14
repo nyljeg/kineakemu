@@ -945,7 +945,6 @@ Callback=function(value)
 w7NPC5=value;
 end});
 
-teleport:AddLabel("TELEPORT");
 teleport:AddButton({
 Name="World 1",
 Default=false,
