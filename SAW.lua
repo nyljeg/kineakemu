@@ -9,7 +9,7 @@ Name="Elmer Hub | Skibidi Arm Wrestle",
 HidePremium=false,
 IntroText="Elmer Library",
 SaveConfig=true,
-ConfigFolder="nyljegLib"});
+ConfigFolder=""});
 
 
 local auto=v1:MakeTab({
