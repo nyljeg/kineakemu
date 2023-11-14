@@ -17,7 +17,7 @@ Name="Farm",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
-local auto=v1:MakeTab({
+local egg=v1:MakeTab({
 Name="Farm",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
