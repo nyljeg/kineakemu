@@ -9,7 +9,7 @@ Name="Elmer Hub | Skibidi Arm Wrestle",
 HidePremium=false,
 IntroText="Elmer Library",
 SaveConfig=true,
-ConfigFolder=""});
+ConfigFolder="elmerLib"});
 
 
 local auto=v1:MakeTab({
@@ -33,7 +33,7 @@ Default=false,
 Callback=function(value)
 _G._auto = value
 while wait(0.08) do
-while _G._auto == false then break end
+if _G._auto == false then break end
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("TrainBicep"):FireServer()
 end
 end});
