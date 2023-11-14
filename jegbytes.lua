@@ -676,7 +676,7 @@ v58:AddToggle({
   end    
 })
  
-
+--[[
 local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket"}
 v59:AddDropdown({
    Name = "Choose your Egg",
@@ -844,7 +844,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end 
 end
 });
-
+]]--
 	
 v60:AddLabel("WORLD 1 NPC");
 v60:AddToggle({
