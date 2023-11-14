@@ -121,7 +121,7 @@ egg:AddDropdown({
 Name = "Amount Of Egg",
 Default = "Single",
 Options = {"Single","Triple"},
-Callbabk = function(value)
+Callback = function(value)
 _G._amount = value
 end
 });
@@ -130,7 +130,7 @@ egg:AddDropdown({
 Name = "Pick Egg",
 Default = "Default",
 Options = {"Default","Speakerman","Titan Speakerman","Cameraman","TV","Titan"},
-Callbabk = function(value)
+Callback = function(value)
 _G._eggname = value
 end
 });
