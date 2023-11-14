@@ -55,7 +55,7 @@ local w7NPC5=false;
 		
 
  
---Function
+--Function & Remotes
 
 spawn(function()
 while task.wait() do 
@@ -458,7 +458,7 @@ Name = "Potions",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
---Toogle
+--Toogle & Dropdown
 event:AddDropdown({
    Name = "Number of previous hatches on eggs",
    Default = "1",
