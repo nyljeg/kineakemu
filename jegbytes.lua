@@ -848,8 +848,8 @@ v59:AddDropdown({
    Default = "Earth",
    Options = egglist,
    Callback = function(value) 
-_G._AllEgg = value or _G._Egg1 = value or _G._Egg2 = value or _G._Egg3 = value or _G._Egg4 = value or _G._Egg5 = value or _G._Egg6 = value or _G._Egg7 = value or _G._Egg8 = value or _G._Egg9 = value
-   end    
+_G._AllEgg = value 
+end    
 });
 
 v59:AddLabel("REMEMBER!!! USE ONLY 1 TOGGLE FOR HATCHING");
@@ -873,12 +873,7 @@ Callback = function(value)
 _G._ebun1 = value
 while wait (0.08) do
 if _G._ebun1 = = false then break end
-local common = {
-[1] = _G._Egg1
-[2] = {["Cat"] = true,["Squirrel"] = true},
-[4] = false
-}
-
+local common = {[1] = _G._AllEgg,[2] = {["Cat"] = true,["Squirrel"] = true},[4] = false}
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(common));
 end
 end
@@ -892,16 +887,12 @@ Callback = function(value)
 _G._ebun2 = value
 while wait (0.08) do
 if _G._ebun2 == false then break end
-local uncommon = {
-[1] = _G._Egg2
-[2] = {["Dog"] = true,["Deer"] = true,["Cow"]	= true,["Parrot"] = true},
-[4] = false
-}
+local uncommon = {[1] = _G._AllEgg,[2] = {["Dog"] = true,["Deer"] = true,["Cow"] = true,["Parrot"] = true},[4] = false}
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(uncommon));
 end
 end
 });
-
+--[[
 v59:AddParagraph("Hatch And Delete","•Rare");
 v59:AddDropdown({
 Name = "Hatch HERE",
@@ -1027,7 +1018,7 @@ end
 end
 });
 
-	
+]]--	
 
 v60:AddLabel("WORLD 1 NPC");
 v60:AddToggle({
