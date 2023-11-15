@@ -670,51 +670,22 @@ v58:AddToggle({
   end
   end    
 })
-
-v59:AddToggle({
-   Name = "Delete Common",
-   Default = false,
-   Options = {["Cat"] = true,["Squirrel"] = true},
+local delete = {
+ ["Common"] = ["Cat"] = true,["Squirrel"] = true,
+ ["Uncommon"] = ["Dog"] = true,["Deer"] = true,["Cow"] = true,["Parrot"] = true,
+ ["Rare"] = ["Fox"] = true,["Wolf"] = true,["Penguin"] = true,["Brutus"] = true,["CoCo"] = true,["Pearl"] = true,["Spike"] = true,["T-Rex"] = true,["WhiteTRex"] = true,["SpikedTRex"] = true,["StarDog"] = true,["AstroChameleon"] = true,["CyberpunkPaw"] = true,
+ ["Epic"] = ["Mouse"] = true,["Bear"] = true,["Slime"] = true,["Monkey"] = true,["Tiger"] = true,["GrassMage"] = true,["Unicorn"] = true,["SunRabbit"] = true,["Drifter"] = true,["Dermite"] = true,["Pinky"] = true,["Fang"] = true,["Coin"] = true,["Tide"] = true,["Welder"] = true,["CowRaider"] = true,["Proto"] = true,["LumoDog"] = true,["LumoCat"] = true,["LumoSheep"] = true,["LumoBoxer"] = true,["ArmoredTRex"] = true,["Parasaurolophus"] = true,["Brachiosaurus"] = true,["Stegosaurus"] = true,["Pterodactyl"] = true,["TerrorPterodactyl"] = true,["Singularity"] = true,["Graviton"] = true,["Darkstar"] = true,["Nebulite"] = true,["Vortexia"] = true,["BlazingPenguin"] = true,["DarknessOwl"] = true,["ByteBot"] = true,["Neon Miner"] = true,["DarkOrca"] = true},
+ ["Legendary"] = ["Elephant"] = true,["Water Mage"] = true,["ArcticFox"] = true,["Shark"] = true,["Astra"] = true,["SolarDog"] = true,["MoonSpider"] = true,["Scaler"] = true,["Vanguard"] = true,["Sour"] = true,["Calypso"] = true,["Kelp"] = true,["Hooky"] = true,["Pheonix"] = true,["Rustie"] = true,["E1"] = true,["Alpha"] = true,["Alto"] = true,["Shirma"] = true,["Veltro"] = true,["Expa"] = true,["Squeek"] = true,["Sneak"] = true,["Grime"] = true,["Blaze"] = true,["Spark"] = true,["Triceratops"] = true,["SpikeyPterodactyl"] = true,["TwilightPterodactyl"] = true,["MysticRaptor"] = true,["WizardStegosaurus"] = true,["SkeletonRaptor"] = true,["SkeletonStegosaurus"] = true,["GemRaptor"] = true,["GemStegosaurus"] = true,["Voidflare"] = true,["Astral"] = true,["NovaRock"] = true,["Starborn"] = true,["LunarStar"] = true,["AstralVine"] = true,["Solstice"] = true,["GinormousMeteor"] true,["CogWhirl"]["DataDrifter"] = true,["GroundedCrab"] = true["PirateShark"] = true,["ThrusterWolf"] = true,["GalaxyAlien"] = true,
+}
+	
+v59:AddDropdown({
+   Name = "Delete Pet",
+   Default = "Common",
+   Options = {Common,Uncommon,Rare,Epic, Legendary},
    Callback = function(Value)
-     _G._common = Value
-  end    
-})
-
-v59:AddToggle({
-   Name = "Delete Uncommon",
-   Default = false,
-   Options = {["Dog"] = true,["Deer"] = true,["Cow"] = true,["Parrot"] = true},
-   Callback = function(Value)
-     _G._uncommon = Value
-  end    
-})
-
-v59:AddToggle({
-   Name = "Delete Rare",
-   Default = false,
-   Options = {["Fox"] = true,["Wolf"] = true,["Penguin"] = true,["Brutus"] = true,["CoCo"] = true,["Pearl"] = true,["Spike"] = true,["T-Rex"] = true,["WhiteTRex"] = true,["SpikedTRex"] = true,["StarDog"] = true,["AstroChameleon"] = true,["CyberpunkPaw"] = true},
-   Callback = function(Value)
-     _G._rare = Value
-  end    
-})
-
-v59:AddToggle({
-   Name = "Delete Epic",
-   Default = false,
-   Options = {["Mouse"] = true,["Bear"] = true,["Slime"] = true,["Monkey"] = true,["Tiger"] = true,["GrassMage"] = true,["Unicorn"] = true,["SunRabbit"] = true,["Drifter"] = true,["Dermite"] = true,["Pinky"] = true,["Fang"] = true,["Coin"] = true,["Tide"] = true,["Welder"] = true,["CowRaider"] = true,["Proto"] = true,["LumoDog"] = true,["LumoCat"] = true,["LumoSheep"] = true,["LumoBoxer"] = true,["ArmoredTRex"] = true,["Parasaurolophus"] = true,["Brachiosaurus"] = true,["Stegosaurus"] = true,["Pterodactyl"] = true,["TerrorPterodactyl"] = true,["Singularity"] = true,["Graviton"] = true,["Darkstar"] = true,["Nebulite"] = true,["Vortexia"] = true,["BlazingPenguin"] = true,["DarknessOwl"] = true,["ByteBot"] = true,["Neon Miner"] = true,["DarkOrca"] = true},
-   Callback = function(Value)
-     _G._epic = Value
-  end    
-})
-
-v59:AddToggle({
-   Name = "Delete Legendary",
-   Default = false,
-   Options = {["Elephant"] = true,["Water Mage"] = true,["ArcticFox"] = true,["Shark"] = true,["Astra"] = true,["SolarDog"] = true,["MoonSpider"] = true,["Scaler"] = true,["Vanguard"] = true,["Sour"] = true,["Calypso"] = true,["Kelp"] = true,["Hooky"] = true,["Pheonix"] = true,["Rustie"] = true,["E1"] = true,["Alpha"] = true,["Alto"] = true,["Shirma"] = true,["Veltro"] = true,["Expa"] = true,["Squeek"] = true,["Sneak"] = true,["Grime"] = true,["Blaze"] = true,["Spark"] = true,["Triceratops"] = true,["SpikeyPterodactyl"] = true,["TwilightPterodactyl"] = true,["MysticRaptor"] = true,["WizardStegosaurus"] = true,["SkeletonRaptor"] = true,["SkeletonStegosaurus"] = true,["GemRaptor"] = true,["GemStegosaurus"] = true,["Voidflare"] = true,["Astral"] = true,["NovaRock"] = true,["Starborn"] = true,["LunarStar"] = true,["AstralVine"] = true,["Solstice"] = true,["GinormousMeteor"] true,["CogWhirl"]["DataDrifter"] = true,["GroundedCrab"] = true,["PirateShark"] = true,["ThrusterWolf"] = true,["GalaxyAlien"] = true},
-   Callback = function(Value)
-     _G._legendary = Value
-  end    
-})	
+     _G._dellist = Value
+   end    
+});
 
 local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket"}
 v59:AddDropdown({
@@ -735,7 +706,7 @@ v59:AddToggle({
              if _G.hegg == false then break end
 	local args = {			 
       [1] = _G.EggName,
-      [2] = {_G._common,_G._uncommon,_G._rare,_G._epic,_G._legendary},
+      [2] = {_G._dellist},
        [4] = false
 	}			
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
