@@ -670,20 +670,54 @@ v58:AddToggle({
   end
   end    
 })
-local delete = {
- ["Common"] = ["Cat"] = true,["Squirrel"] = true,
- ["Uncommon"] = ["Dog"] = true,["Deer"] = true,["Cow"] = true,["Parrot"] = true,
- ["Rare"] = ["Fox"] = true,["Wolf"] = true,["Penguin"] = true,["Brutus"] = true,["CoCo"] = true,["Pearl"] = true,["Spike"] = true,["T-Rex"] = true,["WhiteTRex"] = true,["SpikedTRex"] = true,["StarDog"] = true,["AstroChameleon"] = true,["CyberpunkPaw"] = true,
- ["Epic"] = ["Mouse"] = true,["Bear"] = true,["Slime"] = true,["Monkey"] = true,["Tiger"] = true,["GrassMage"] = true,["Unicorn"] = true,["SunRabbit"] = true,["Drifter"] = true,["Dermite"] = true,["Pinky"] = true,["Fang"] = true,["Coin"] = true,["Tide"] = true,["Welder"] = true,["CowRaider"] = true,["Proto"] = true,["LumoDog"] = true,["LumoCat"] = true,["LumoSheep"] = true,["LumoBoxer"] = true,["ArmoredTRex"] = true,["Parasaurolophus"] = true,["Brachiosaurus"] = true,["Stegosaurus"] = true,["Pterodactyl"] = true,["TerrorPterodactyl"] = true,["Singularity"] = true,["Graviton"] = true,["Darkstar"] = true,["Nebulite"] = true,["Vortexia"] = true,["BlazingPenguin"] = true,["DarknessOwl"] = true,["ByteBot"] = true,["Neon Miner"] = true,["DarkOrca"] = true},
- ["Legendary"] = ["Elephant"] = true,["Water Mage"] = true,["ArcticFox"] = true,["Shark"] = true,["Astra"] = true,["SolarDog"] = true,["MoonSpider"] = true,["Scaler"] = true,["Vanguard"] = true,["Sour"] = true,["Calypso"] = true,["Kelp"] = true,["Hooky"] = true,["Pheonix"] = true,["Rustie"] = true,["E1"] = true,["Alpha"] = true,["Alto"] = true,["Shirma"] = true,["Veltro"] = true,["Expa"] = true,["Squeek"] = true,["Sneak"] = true,["Grime"] = true,["Blaze"] = true,["Spark"] = true,["Triceratops"] = true,["SpikeyPterodactyl"] = true,["TwilightPterodactyl"] = true,["MysticRaptor"] = true,["WizardStegosaurus"] = true,["SkeletonRaptor"] = true,["SkeletonStegosaurus"] = true,["GemRaptor"] = true,["GemStegosaurus"] = true,["Voidflare"] = true,["Astral"] = true,["NovaRock"] = true,["Starborn"] = true,["LunarStar"] = true,["AstralVine"] = true,["Solstice"] = true,["GinormousMeteor"] true,["CogWhirl"]["DataDrifter"] = true,["GroundedCrab"] = true["PirateShark"] = true,["ThrusterWolf"] = true,["GalaxyAlien"] = true,
-}
-	
-v59:AddDropdown({
-   Name = "Delete Pet",
-   Default = "Common",
-   Options = {Common,Uncommon,Rare,Epic, Legendary},
+
+local common = {["Cat"] = true,["Squirrel"] = true,}
+v59:AddToggle({
+   Name = "Delete Common Pet",
+   Default = false,
+   Options = common,
    Callback = function(Value)
-     _G._dellist = Value
+     _G._common = Value
+   end    
+});
+
+local uncommon = {["Dog"] = true,["Deer"] = true,["Cow"] = true,["Parrot"] = true,}
+v59:AddToggle({
+   Name = "Delete Uncommon Pet",
+   Default = false,
+   Options = uncommon,
+   Callback = function(Value)
+     _G._uncommon = Value
+   end    
+});
+
+local rare = {["Fox"] = true,["Wolf"] = true,["Penguin"] = true,["Brutus"] = true,["CoCo"] = true,["Pearl"] = true,["Spike"] = true,["T-Rex"] = true,["WhiteTRex"] = true,["SpikedTRex"] = true,["StarDog"] = true,["AstroChameleon"] = true,["CyberpunkPaw"] = true,}
+v59:AddToggle({
+   Name = "Delete Rare Pet",
+   Default = false,
+   Options = rare,
+   Callback = function(Value)
+     _G._rare = Value
+   end    
+});
+
+local epic = {["Mouse"] = true,["Bear"] = true,["Slime"] = true,["Monkey"] = true,["Tiger"] = true,["GrassMage"] = true,["Unicorn"] = true,["SunRabbit"] = true,["Drifter"] = true,["Dermite"] = true,["Pinky"] = true,["Fang"] = true,["Coin"] = true,["Tide"] = true,["Welder"] = true,["CowRaider"] = true,["Proto"] = true,["LumoDog"] = true,["LumoCat"] = true,["LumoSheep"] = true,["LumoBoxer"] = true,["ArmoredTRex"] = true,["Parasaurolophus"] = true,["Brachiosaurus"] = true,["Stegosaurus"] = true,["Pterodactyl"] = true,["TerrorPterodactyl"] = true,["Singularity"] = true,["Graviton"] = true,["Darkstar"] = true,["Nebulite"] = true,["Vortexia"] = true,["BlazingPenguin"] = true,["DarknessOwl"] = true,["ByteBot"] = true,["Neon Miner"] = true,["DarkOrca"] = true,}
+v59:AddToggle({
+   Name = "Delete Epic Pet",
+   Default = false,
+   Options = epic,
+   Callback = function(Value)
+     _G._epic = Value
+   end    
+});
+
+local legendary = {["Elephant"] = true,["Water Mage"] = true,["ArcticFox"] = true,["Shark"] = true,["Astra"] = true,["SolarDog"] = true,["MoonSpider"] = true,["Scaler"] = true,["Vanguard"] = true,["Sour"] = true,["Calypso"] = true,["Kelp"] = true,["Hooky"] = true,["Pheonix"] = true,["Rustie"] = true,["E1"] = true,["Alpha"] = true,["Alto"] = true,["Shirma"] = true,["Veltro"] = true,["Expa"] = true,["Squeek"] = true,["Sneak"] = true,["Grime"] = true,["Blaze"] = true,["Spark"] = true,["Triceratops"] = true,["SpikeyPterodactyl"] = true,["TwilightPterodactyl"] = true,["MysticRaptor"] = true,["WizardStegosaurus"] = true,["SkeletonRaptor"] = true,["SkeletonStegosaurus"] = true,["GemRaptor"] = true,["GemStegosaurus"] = true,["Voidflare"] = true,["Astral"] = true,["NovaRock"] = true,["Starborn"] = true,["LunarStar"] = true,["AstralVine"] = true,["Solstice"] = true,["GinormousMeteor"] true,["CogWhirl"]["DataDrifter"] = true,["GroundedCrab"] = true["PirateShark"] = true,["ThrusterWolf"] = true,["GalaxyAlien"] = true,}
+v59:AddToggle({
+   Name = "Delete Legendary Pet",
+   Default = false,
+   Options = legendary,
+   Callback = function(Value)
+     _G._legendary = Value
    end    
 });
 
@@ -706,192 +740,49 @@ v59:AddToggle({
              if _G.hegg == false then break end
 	local args = {			 
       [1] = _G.EggName,
-      [2] = {_G._dellist},
+      [2] = {},
        [4] = false
 	}			
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
+else
+	local args = {			 
+      [1] = _G.EggName,
+      [2] = {_G._common},
+      [4] = false
+	}		
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
+elseif
+	local args = {			 
+      [1] = _G.EggName,
+      [2] = {_G._uncommon},
+      [4] = false
+	}		
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
+elseif
+       local args = {			 
+      [1] = _G.EggName,
+      [2] = {_G._rare},
+      [4] = false
+	}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
+elseif
+       local args = {			 
+      [1] = _G.EggName,
+      [2] = {_G._epic},
+      [4] = false
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
+elseif
+	local args = {			 
+      [1] = _G.EggName,
+      [2] = {_G._legendary},
+      [4] = false
+}		
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
 end 
 end
 });
---[[
-local egglist =
-{"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket"}
-v59:AddDropdown({
-   Name = "Choose your Egg",
-   Default = "Earth",
-   Options = egglist,
-   Callback = function(value) 
-_G._AllEgg = value 
-end    
-});
-
-v59:AddLabel("REMEMBER!!! USE ONLY 1 TOGGLE FOR HATCHING");
-v59:AddDropdown({
-Name = "Normal Hatch",
-Default = false,
-Callback = function(value)
-_G._ebun1 = value
-while wait (0.08) do
-if _G._ebun1 = = false then break end
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(_G._AllEgg,{},false);
-end
-end
-});
-
-v59:AddParagraph("Hatch And Delete","•Common");
-v59:AddDropdown({
-Name = "Hatch HERE",
-Default = false,
-Callback = function(value)
-_G._ebun1 = value
-while wait (0.08) do
-if _G._ebun1 = = false then break end
-local common = {[1] = _G._AllEgg,[2] = {["Cat"] = true,["Squirrel"] = true},[4] = false}
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(common));
-end
-end
-});
-
-v59:AddParagraph("Hatch And Delete","•Uncommon");
-v59:AddDropdown({
-Name = "Hatch HERE",
-Default = false,
-Callback = function(value)
-_G._ebun2 = value
-while wait (0.08) do
-if _G._ebun2 == false then break end
-local uncommon = {[1] = _G._AllEgg,[2] = {["Dog"] = true,["Deer"] = true,["Cow"] = true,["Parrot"] = true},[4] = false}
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(uncommon));
-end
-end
-});
---[[
-v59:AddParagraph("Hatch And Delete","•Rare");
-v59:AddDropdown({
-Name = "Hatch HERE",
-Default = false,
-Callback = function(value)
-_G._ebun3 = value
-while wait (0.08) do
-if _G._ebun3 == false then break end
-local rare = {
-[1] = _G._Egg3
-[2] = {["Fox"] = true,["Wolf"] = true,["Penguin"] = true,["Brutus"] = true,["CoCo"] = true,["Pearl"] = true,["Spike"] = true,["T-Rex"] = true,["WhiteTRex"] = true,["SpikedTRex"] = true,["StarDog"] = true,["AstroChameleon"] = true,["CyberpunkPaw"] = true},
-[4] = false
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(rare));
-end
-end
-});
-
-v59:AddParagraph("Hatch And Delete","•Epic");
-v59:AddDropdown({
-Name = "Hatch HERE",
-Default = false,
-Callback = function(value)
-_G._ebun4 = value
-while wait (0.08) do
-if _G._ebun4 == false then break end
-local epic = {
-[1] = _G._Egg4
-[2] = {["Mouse"] = true,["Bear"] = true,["Slime"] = true,["Monkey"] = true,["Tiger"] = true,["GrassMage"] = true,["Unicorn"] = true,["SunRabbit"] = true,["Drifter"] = true,["Dermite"] = true,["Pinky"] = true,["Fang"] = true,["Coin"] = true,["Tide"] = true,["Welder"] = true,["CowRaider"] = true,["Proto"] = true,["LumoDog"] = true,["LumoCat"] = true,["LumoSheep"] = true,["LumoBoxer"] = true,["ArmoredTRex"] = true,["Parasaurolophus"] = true,["Brachiosaurus"] = true,["Stegosaurus"] = true,["Pterodactyl"] = true,["TerrorPterodactyl"] = true,["Singularity"] = true,["Graviton"] = true,["Darkstar"] = true,["Nebulite"] = true,["Vortexia"] = true,["BlazingPenguin"] = true,["DarknessOwl"] = true,["ByteBot"] = true,["Neon Miner"] = true,["DarkOrca"] = true},
-[4] = false
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(epic));
-});
-
-v59:AddParagraph("Hatch And Delete","•Legendary");
-v59:AddDropdown({
-Name = "Hatch HERE",
-Default = false,
-Callback = function(value)
-_G._ebun5 = value
-while wait (0.08) do
-if _G._ebun5 == false then break end
-local legendary = {
-[1] = _G._Egg5
-[2] = {["Elephant"] = true,["Water Mage"] = true,["ArcticFox"] = true,["Shark"] = true,["Astra"] = true,["SolarDog"] = true,["MoonSpider"] = true,["Scaler"] = true,["Vanguard"] = true,["Sour"] = true,["Calypso"] = true,["Kelp"] = true,["Hooky"] = true,["Pheonix"] = true,["Rustie"] = true,["E1"] = true,["Alpha"] = true,["Alto"] = true,["Shirma"] = true,["Veltro"] = true,["Expa"] = true,["Squeek"] = true,["Sneak"] = true,["Grime"] = true,["Blaze"] = true,["Spark"] = true,["Triceratops"] = true,["SpikeyPterodactyl"] = true,["TwilightPterodactyl"] = true,["MysticRaptor"] = true,["WizardStegosaurus"] = true,["SkeletonRaptor"] = true,["SkeletonStegosaurus"] = true,	["GemRaptor"] = true,["GemStegosaurus"] = true,["Voidflare"] = true,["Astral"] = true,["NovaRock"] = true,["Starborn"] = true,["LunarStar"] = true,["AstralVine"] = true,["Solstice"] = true,["GinormousMeteor"] true,["CogWhirl"]["DataDrifter"] = true,["GroundedCrab"] = true,["PirateShark"] = true,["ThrusterWolf"] = true,["GalaxyAlien"] = true},
-[4] = false
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(legendary));
-end
-end
-});
-
-v59:AddParagraph("Hatch And Delete","•Common\n•Uncommon");
-v59:AddDropdown({
-Name = "Hatch HERE",
-Default = false,
-Callback = function(value)
-_G._ebun6 = value
-while wait (0.08) do
-if _G._ebun6 == false then break end
-local args = {
-[1] = _G._Egg6
-[2] = {["Cat"] = true,["Squirrel"] = true,["Dog"] = true,["Deer"] = true,["Cow"] = true,["Parrot"] = true},
-[4] = false
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
-end
-end
-});
-
-v59:AddParagraph("Hatch And Delete","•Common\n•Uncommon\n•Rare");
-v59:AddDropdown({
-Name = "Hatch HERE",
-Default = false,
-Callback = function(value)
-_G._ebun7 = value
-while wait (0.08) do
-if _G._ebun7 == false then break end
-local args = {
-[1] = _G._Egg7
-[2] = {["Cat"] = true,["Squirrel"] = true,["Dog"] = true,["Deer"] = true,["Cow"] = true,["Parrot"] = true,["Fox"] = true,["Wolf"] = true,["Penguin"] = true,["Brutus"] = true,["CoCo"] = true,["Pearl"] = true,["Spike"] = true,["T-Rex"] = true,["WhiteTRex"] = true,["SpikedTRex"] = true,["StarDog"] = true,["AstroChameleon"] = true,["CyberpunkPaw"] = true},
-[4] = false
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
-end
-end
-});
-
-v59:AddParagraph("Hatch And Delete","•Common\n•Uncommon\n•Rare\n•Epic");
-v59:AddDropdown({
-Name = "Hatch HERE",
-Default = false,
-Callback = function(value)
-_G._ebun8 = value
-while wait (0.08) do
-if _G._ebun8 == false then break end
-local args = {
-[1] = _G._Egg8
-[2] = {["Cat"] = true,["Squirrel"] = true,["Dog"] = true,["Deer"] = true,["Cow"] = true,["Parrot"] = true,["Fox"] = true,["Wolf"] = true,["Penguin"] = true,["Brutus"] = true,["CoCo"] = true,["Pearl"] = true,["Spike"] = true,["T-Rex"] = true,["WhiteTRex"] = true,["SpikedTRex"] = true,["StarDog"] = true,["AstroChameleon"] = true,["CyberpunkPaw"] = true,["Mouse"] = true,["Bear"] = true,["Slime"] = true,["Monkey"] = true,["Tiger"] = true,["GrassMage"] = true,["Unicorn"] = true,["SunRabbit"] = true,["Drifter"] = true,["Dermite"] = true,["Pinky"] = true,["Fang"] = true,["Coin"] = true,["Tide"] = true,["Welder"] = true,["CowRaider"] = true,["Proto"] = true,["LumoDog"] = true,["LumoCat"] = true,["LumoSheep"] = true,["LumoBoxer"] = true,["ArmoredTRex"] = true,["Parasaurolophus"] = true,["Brachiosaurus"] = true,["Stegosaurus"] = true,["Pterodactyl"] = true,["TerrorPterodactyl"] = true,["Singularity"] = true,["Graviton"] = true,["Darkstar"] = true,["Nebulite"] = true,["Vortexia"] = true,["BlazingPenguin"] = true,["DarknessOwl"] = true,["ByteBot"] = true,["Neon Miner"] = true,["DarkOrca"] = true},
-[4] = false
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
-end
-end
-});
-
-v59:AddParagraph("Hatch And Delete","•Common\n•Uncommon\n•Rare\n•Epic\n•Legendary");
-v59:AddDropdown({
-Name = "Hatch HERE",
-Default = false,
-Callback = function(value)
-_G._ebun9 = value
-while wait (0.08) do
-if _G._ebun9 == false then break end
-local args = {
-[1] = _G._Egg9
-[2] = {
-["Cat"] = true,["Squirrel"] = true,["Dog"] = true,["Deer"] = true,["Cow"] = true,["Parrot"] = true,["Fox"] = true,["Wolf"] = true,["Penguin"] = true,["Brutus"] = true,["CoCo"] = true,["Pearl"] = true,["Spike"] = true,["T-Rex"] = true,["WhiteTRex"] = true,["SpikedTRex"] = true,["StarDog"] = true,["AstroChameleon"]	= true,["CyberpunkPaw"] = true,["Mouse"] = true,["Bear"] = true,["Slime"] = true,["Monkey"] = true,["Tiger"] = true,["GrassMage"] = true,["Unicorn"] = true,["SunRabbit"] = true,["Drifter"] = true,["Dermite"] = true,["Pinky"] = true,["Fang"] = true,["Coin"] = true,["Tide"] = true,["Welder"] = true,["CowRaider"] = true,["Proto"] = true,["LumoDog"] = true,["LumoCat"] = true,["LumoSheep"] = true,["LumoBoxer"] = true,["ArmoredTRex"] = true,["Parasaurolophus"] = true,["Brachiosaurus"] = true,["Stegosaurus"] = true,["Pterodactyl"] = true,["TerrorPterodactyl"] = true,["Singularity"] = true,["Graviton"] = true,["Darkstar"] = true,["Nebulite"] = true,["Vortexia"] = true,["BlazingPenguin"] = true,["DarknessOwl"] = true,["ByteBot"] = true,["Neon Miner"] = true,["DarkOrca"] = true,["Elephant"] = true,["Water Mage"] = true,["ArcticFox"] = true,["Shark"] = true,["Astra"] = true,["SolarDog"] = true,["MoonSpider"] = true,["Scaler"] = true,["Vanguard"] = true,["Sour"] = true,["Calypso"] = true,["Kelp"] = true,["Hooky"] = true,["Pheonix"] = true,["Rustie"] = true,["E1"] = true,["Alpha"] = true,["Alto"] = true,["Shirma"] = true,["Veltro"] = true,["Expa"] = true,["Squeek"] = true,["Sneak"] = true,["Grime"] = true,["Blaze"] = true,	["Spark"] = true,["Triceratops"] = true,["SpikeyPterodactyl"] = true,["TwilightPterodactyl"] = true,["MysticRaptor"] = true,["WizardStegosaurus"] = true,["SkeletonRaptor"] = true,["SkeletonStegosaurus"] = true,["GemRaptor"] = true,["GemStegosaurus"] = true,["Voidflare"] = true,["Astral"] = true,["NovaRock"] = true,["Starborn"] = true,["LunarStar"] = true,["AstralVine"] = true,["Solstice"] = true,["GinormousMeteor"] true,["CogWhirl"]["DataDrifter"] = true,["GroundedCrab"] = true,["PirateShark"] = true,["ThrusterWolf"] = true,["GalaxyAlien"] = true},
-[4] = false
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
-end
-end
-});
-
-]]--	
+	
 
 v60:AddLabel("WORLD 1 NPC");
 v60:AddToggle({
