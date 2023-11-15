@@ -847,17 +847,8 @@ v59:AddDropdown({
    Name = "Choose your Egg",
    Default = "Earth",
    Options = egglist,
-   Callback = function(value)
-_G._AllEgg = value
-_G._Egg1 = value
-_G._Egg2 = value
-_G._Egg3 = value
-_G._Egg4 = value
-_G._Egg5 = value
-_G._Egg6 = value
-_G._Egg7 = value
-_G._Egg8 = value
-_G._Egg9 = value
+   Callback = function(value) 
+_G._AllEgg = value or _G._Egg1 = value or _G._Egg2 = value or _G._Egg3 = value or _G._Egg4 = value or _G._Egg5 = value or _G._Egg6 = value or _G._Egg7 = value or _G._Egg8 = value or _G._Egg9 = value
    end    
 });
 
@@ -973,7 +964,7 @@ while wait (0.08) do
 if _G._ebun6 == false then break end
 local args = {
 [1] = _G._Egg6
-[2] = {["Cat"] = true,["Squirrel"] = true,["Dog"] = true,["Deer"] = true,["Cow"]	= true,["Parrot"] = true},
+[2] = {["Cat"] = true,["Squirrel"] = true,["Dog"] = true,["Deer"] = true,["Cow"] = true,["Parrot"] = true},
 [4] = false
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
