@@ -861,7 +861,7 @@ _G._Egg9 = value
    end    
 });
 
-v59:AddLabel("REMEMBER!!! USE ONLY 1 TOGGLE FOR HATCHING")"
+v59:AddLabel("REMEMBER!!! USE ONLY 1 TOGGLE FOR HATCHING");
 v59:AddDropdown({
 Name = "Normal Hatch",
 Default = false,
