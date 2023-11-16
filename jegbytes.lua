@@ -699,6 +699,7 @@ end
 end
 });
 
+v59:AddParagraph("REMEMBER HOW IT WORKS","==BARBELLS==\n•Zone1 = Tier1 - Tier3\n•Zone2 = Tier4 - Tier6\n•Zone3 = Tier7 - Tier9\n•Zone4 = Tier10 - Tier12\n•Zone5 = NO BARBELS FOUND\n•Zone6 = Tier16 - Tier18\n•Zone7 = Tier19 - Tier21\n\n==Dumbells==\n•Zone1 = 1Kg - 250Kg\nZone2 = 300Kg - 4000Kg\n•Zone3 = 5000Kg - 45000Kg\n•Zone4 = 50000Kg - 300000Kg\n•Zone5 = NO DUMBELLS FOUND\n•Zone6 = 350000Kg - 625000Kg\n•Zone7 = 650000Kg - 925000Kg")
 local dumbellslist = {"1Kg","2Kg","3Kg","4Kg","5Kg","10Kg","15Kg","20Kg","25Kg","50Kg","100Kg","250Kg","300Kg","400Kg","500Kg","650Kg","800Kg","1000Kg","1500Kg","2000Kg","2500kg","300Kg","3500Kg","4000Kg","5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg","50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg","350000Kg","375000Kg","400000Kg","425000Kg","450000Kg","475000Kg","500000Kg","525000Kg","550000Kg","575000Kg","600000Kg","625000Kg","650000Kg","675000Kg","700000Kg","725000Kg","750000Kg","775000Kg","800000Kg","825000Kg","850000Kg","875000Kg","900000Kg","925000Kg"}
 v59:AddDropdown({
    Name = "Zone",
@@ -713,7 +714,7 @@ v59:AddDropdown({
 v59:AddDropdown({
    Name = "Choose your Tier",
    Default = "Tier1",
-   Options = {"Tier1","Tier2","Tier3","Tier4","Tier5","Tier6","Tier7"},
+   Options = {"Tier1","Tier2","Tier3","Tier4","Tier5","Tier6","Tier7","Tier8","Tier9","Tier10","Tier11","tier12","Tier16","Tier17","Tier18","Tier19","Tier20","Tier21"},
    Callback = function(Value)
      _G.barbtier = Value
    end    
