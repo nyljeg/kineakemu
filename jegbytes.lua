@@ -709,8 +709,9 @@ v59:AddDropdown({
    end    
 });
 
+
 v59:AddDropdown({
-   Name = "Grips",
+   Name = "Choose your Tier",
    Default = "Tier1",
    Options = {"Tier1","Tier2","Tier3","Tier4","Tier5","Tier6","Tier7"},
    Callback = function(Value)
