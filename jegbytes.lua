@@ -1222,12 +1222,6 @@ pot:AddButton({
 end
 })
 
-local T13 = Window:MakeTab({
-Name = "Lucky Block",
-Icon = "rbxassetid://0",
-PremiumOnly = false
-})
-
 local BlockInfo = T13:AddParagraph("Lucky Block Detector","#CONTENT_ERROR")
 
 local function SnipeLuckyBlock()
