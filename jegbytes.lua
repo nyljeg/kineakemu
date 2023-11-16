@@ -671,55 +671,6 @@ v58:AddToggle({
   end    
 })
 
-local common = {["Cat"] = true,["Squirrel"] = true,}
-v59:AddToggle({
-   Name = "Delete Common Pet",
-   Default = false,
-   Options = common,
-   Callback = function(Value)
-     _G._common = Value
-   end    
-});
-
-local uncommon = {["Dog"] = true,["Deer"] = true,["Cow"] = true,["Parrot"] = true,}
-v59:AddToggle({
-   Name = "Delete Uncommon Pet",
-   Default = false,
-   Options = uncommon,
-   Callback = function(Value)
-     _G._uncommon = Value
-   end    
-});
-
-local rare = {["Fox"] = true,["Wolf"] = true,["Penguin"] = true,["Brutus"] = true,["CoCo"] = true,["Pearl"] = true,["Spike"] = true,["T-Rex"] = true,["WhiteTRex"] = true,["SpikedTRex"] = true,["StarDog"] = true,["AstroChameleon"] = true,["CyberpunkPaw"] = true,}
-v59:AddToggle({
-   Name = "Delete Rare Pet",
-   Default = false,
-   Options = rare,
-   Callback = function(Value)
-     _G._rare = Value
-   end    
-});
-
-local epic = {["Mouse"] = true,["Bear"] = true,["Slime"] = true,["Monkey"] = true,["Tiger"] = true,["GrassMage"] = true,["Unicorn"] = true,["SunRabbit"] = true,["Drifter"] = true,["Dermite"] = true,["Pinky"] = true,["Fang"] = true,["Coin"] = true,["Tide"] = true,["Welder"] = true,["CowRaider"] = true,["Proto"] = true,["LumoDog"] = true,["LumoCat"] = true,["LumoSheep"] = true,["LumoBoxer"] = true,["ArmoredTRex"] = true,["Parasaurolophus"] = true,["Brachiosaurus"] = true,["Stegosaurus"] = true,["Pterodactyl"] = true,["TerrorPterodactyl"] = true,["Singularity"] = true,["Graviton"] = true,["Darkstar"] = true,["Nebulite"] = true,["Vortexia"] = true,["BlazingPenguin"] = true,["DarknessOwl"] = true,["ByteBot"] = true,["Neon Miner"] = true,["DarkOrca"] = true,}
-v59:AddToggle({
-   Name = "Delete Epic Pet",
-   Default = false,
-   Options = epic,
-   Callback = function(Value)
-     _G._epic = Value
-   end    
-});
-
-local legendary = {["Elephant"] = true,["Water Mage"] = true,["ArcticFox"] = true,["Shark"] = true,["Astra"] = true,["SolarDog"] = true,["MoonSpider"] = true,["Scaler"] = true,["Vanguard"] = true,["Sour"] = true,["Calypso"] = true,["Kelp"] = true,["Hooky"] = true,["Pheonix"] = true,["Rustie"] = true,["E1"] = true,["Alpha"] = true,["Alto"] = true,["Shirma"] = true,["Veltro"] = true,["Expa"] = true,["Squeek"] = true,["Sneak"] = true,["Grime"] = true,["Blaze"] = true,["Spark"] = true,["Triceratops"] = true,["SpikeyPterodactyl"] = true,["TwilightPterodactyl"] = true,["MysticRaptor"] = true,["WizardStegosaurus"] = true,["SkeletonRaptor"] = true,["SkeletonStegosaurus"] = true,["GemRaptor"] = true,["GemStegosaurus"] = true,["Voidflare"] = true,["Astral"] = true,["NovaRock"] = true,["Starborn"] = true,["LunarStar"] = true,["AstralVine"] = true,["Solstice"] = true,["GinormousMeteor"] true,["CogWhirl"]["DataDrifter"] = true,["GroundedCrab"] = true["PirateShark"] = true,["ThrusterWolf"] = true,["GalaxyAlien"] = true,}
-v59:AddToggle({
-   Name = "Delete Legendary Pet",
-   Default = false,
-   Options = legendary,
-   Callback = function(Value)
-     _G._legendary = Value
-   end    
-});
 
 local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket"}
 v59:AddDropdown({
@@ -744,46 +695,117 @@ v59:AddToggle({
        [4] = false
 	}			
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
-else
-	local args = {			 
-      [1] = _G.EggName,
-      [2] = {_G._common},
-      [4] = false
-	}		
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
-elseif
-	local args = {			 
-      [1] = _G.EggName,
-      [2] = {_G._uncommon},
-      [4] = false
-	}		
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
-elseif
-       local args = {			 
-      [1] = _G.EggName,
-      [2] = {_G._rare},
-      [4] = false
-	}
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
-elseif
-       local args = {			 
-      [1] = _G.EggName,
-      [2] = {_G._epic},
-      [4] = false
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
-elseif
-	local args = {			 
-      [1] = _G.EggName,
-      [2] = {_G._legendary},
-      [4] = false
-}		
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
 end 
 end
 });
 	
+v59:AddDropdown({
+Name = "Weights",
+Default = "1Kg",
+Options = {"1Kg","2Kg","3Kg","4Kg","5Kg","10Kg","15Kg","20Kg","25Kg","50Kg","100Kg","250Kg"},
+Callback = function(value)
+_G._zone1 = value
+end});
 
+v59:AddButton({
+   Name = "Auto Grips Zone1",
+   Default = false,
+   Callback = function()
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("1","Grips",_G._zone1);
+end});
+
+v59:AddDropdown({
+Name = "Weights",
+Default = "300Kg",
+Options = {"300Kg","350Kg","400Kg","450Kg","500Kg","600Kg","700Kg","800Kg","900Kg","1000Kg","1250Kg","1500Kg"},
+Callback = function(value)
+_G._zone2 = value
+end});
+ 
+ v59:AddButton({
+ Name = "Auto Grips Zone2",
+ Default = false,
+ Callback = function()
+ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("2","Grips",_G._zone2);
+ end});
+
+ v59:AddDropdown({
+Name = "Weights",
+Default = "5000Kg","
+Options = {"5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg"},
+Callback = function(value)
+_G._zone3 = value
+end});
+
+v59:AddButton({
+ Name = "Auto Grips Zone3",
+ Default = false,
+ Callback = function()
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("3","Grips",_G._zone3);
+end});
+
+v59:AddDropdown({
+Name = "Weights",
+Default = "50000Kg","
+Options = {"50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg"},
+Callback = function(value)
+_G._zone4 = value
+end});
+
+v59:AddButton({
+ Name = "Auto Grips Zone4",
+ Default = false,
+ Callback = function()
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("4","Grips",_G._zone4);
+end});
+
+v59:AddDropdown({
+Name = "Weights",
+Default = "350000Kg",
+Options = {"350000Kg","375000Kg","400000Kg","425000Kg","450000Kg","475000Kg","500000Kg","525000Kg","550000Kg","575000Kg","600000Kg","625000Kg"},
+Callback = function(value)
+_G._zone5 = value
+end});
+
+v59:AddButton({
+ Name = "Auto Grips Zone5",
+ Default = false,
+ Callback = function()
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("5","Grips",_G._zone5);
+end});
+
+v59:AddDropdown({
+Name = "Weights",
+Default = "650000Kg",
+Options = {"650000Kg","675000Kg","700000Kg","725000Kg","750000Kg","775000Kg","800000Kg","825000Kg","850000Kg","875000Kg","900000Kg","925000Kg"},
+Callback = function(value)
+_G._zone6 = value
+end});
+
+v59:AddButton({
+ Name = "Auto Grips Zone6",
+ Default = false,
+ Callback = function()
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("6","Grips",_G._zone6);
+end});
+
+v59:AddDropdown({
+Name = "Weights",
+Default = "875000Kg",
+Options = {"875000Kg","900000Kg","925000Kg","950000Kg","975000Kg","1000000Kg","1025000Kg","1050000Kg","1075000Kg","1100000Kg","1125000Kg","1150000Kg"},
+Callback = function(value)
+_G._zone7 = value
+end});
+
+v59:AddButton({
+ Name = "Auto Grips Zone7",
+ Default = false,
+ Callback = function()
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("7","Grips",_G._zone7);
+  end    
+});
+
+	
 v60:AddLabel("WORLD 1 NPC");
 v60:AddToggle({
 Name="Auto Bully",
