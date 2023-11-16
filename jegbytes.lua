@@ -780,10 +780,8 @@ end
 });
 ]]--
 
-	
-
 v59:AddDropdown({
-   Name = "Zone",
+   Name = "Your Zone",
    Default = "1",
    Options = {"1","2","3","4","5","6","7"},
    Callback = function(Value)
@@ -791,7 +789,7 @@ v59:AddDropdown({
    end    
 });
 
-v59:AddParagraph("BARBELLS","•Zone1 = Tier1 - Tier3\n•Zone2 = Tier4 - Tier6\n•Zone3 = Tier7 - Tier9\n•Zone4 = Tier10 - Tier12\n•Zone5 = NO BARBELS FOUND\n•Zone6 = Tier16 - Tier18\n•Zone7 = Tier19 - Tier21")
+v59:AddParagraph("BARBELLS","|🌏|ZONE 1 = Tier1 - Tier3\n|🌏|ZONE 2 = Tier4 - Tier6\n|🌏|ZONE 3 = Tier7 - Tier9\n|🌏|ZONE 4 = Tier10 - Tier12\n|🌏|ZONE 5 = NO BARBELS FOUND\n|🌏|ZONE 6 = Tier16 - Tier18\n|🌏|ZONE 7 = Tier19 - Tier21")
 v59:AddDropdown({
    Name = "Choose your Tier",
    Default = "Tier1",
@@ -814,7 +812,7 @@ v59:AddToggle({
 });	
 
 local dumbellslist = {"1Kg","2Kg","3Kg","4Kg","5Kg","10Kg","15Kg","20Kg","25Kg","50Kg","100Kg","250Kg","300Kg","400Kg","500Kg","650Kg","800Kg","1000Kg","1500Kg","2000Kg","2500kg","300Kg","3500Kg","4000Kg","5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg","50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg","350000Kg","375000Kg","400000Kg","425000Kg","450000Kg","475000Kg","500000Kg","525000Kg","550000Kg","575000Kg","600000Kg","625000Kg","650000Kg","675000Kg","700000Kg","725000Kg","750000Kg","775000Kg","800000Kg","825000Kg","850000Kg","875000Kg","900000Kg","925000Kg"}	
-v59:AddParagraph("DUMBELLS","•Zone1 = 1Kg - 250Kg\n•Zone2 = 300Kg - 4000Kg\n•Zone3 = 5000Kg - 45000Kg\n•Zone4 = 50000Kg - 300000Kg\n•Zone5 = NO DUMBELLS FOUND\n•Zone6 = 350000Kg - 625000Kg\n•Zone7 = 650000Kg - 925000Kg")	
+v59:AddParagraph("DUMBELLS","|🌏|ZONE 1 = 1Kg - 250Kg\n|🌏|ZONE 2 = 300Kg - 4000Kg\n|🌏|ZONE 3 = 5000Kg - 45000Kg\n|🌏|ZONE 4 = 50000Kg - 300000Kg\n|🌏|ZONE 5 = NO DUMBELLS FOUND\n|🌏|ZONE 6 = 350000Kg - 625000Kg\n|🌏|ZONE 7 = 650000Kg - 925000Kg")	
 v59:AddDropdown({
    Name = "Weights",
    Default = "1Kg",
@@ -835,145 +833,31 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 	end
   end    
 });
-	
+
+local gripslist = {"1Kg","2Kg","3Kg","4Kg","5Kg","10Kg","15Kg","20Kg","25Kg","50Kg","100Kg","250Kg","300Kg","350Kg","400Kg","450Kg","500Kg","600Kg","700Kg","800Kg","900Kg","1000Kg","1250Kg","1500Kg","5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg","50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg","350000Kg","375000Kg","400000Kg","425000Kg","450000Kg","475000Kg","500000Kg","525000Kg","550000Kg","575000Kg","600000Kg","625000Kg","650000Kg","675000Kg","700000Kg","725000Kg","750000Kg","775000Kg","800000Kg","825000Kg","850000Kg","875000Kg","900000Kg","925000Kg","950000Kg","975000Kg","1000000Kg","1025000Kg","1050000Kg","1075000Kg","1100000Kg","1125000Kg","1150000Kg"}
+v59:AddParagraph("GRIPS","|🌏|ZONE 1 = 1Kg - 250Kg\n|🌏|ZONE 2 = 300Kg - 1500Kg\n|🌏|ZONE 3 = 5000Kg - 45000Kg\n|🌏|ZONE 4 = 50000Kg - 300000Kg\n|🌏|ZONE 5 = 350000Kg - 625000Kg\n|🌏|ZONE 6 = 650000Kg - 925000Kg\n|🌏|ZONE 7 = 950000Kg - 1150000Kg");
 v59:AddDropdown({
 Name = "Weights",
 Default = "1Kg",
-Options = {"1Kg","2Kg","3Kg","4Kg","5Kg","10Kg","15Kg","20Kg","25Kg","50Kg","100Kg","250Kg"},
+Options = gripslist,
 Callback = function(value)
-_G._zone1 = value
+_G._griptier = value
 end});
 
 v59:AddToggle({
-   Name = "Auto Grips Zone1",
+   Name = "Auto Grips",
    Default = false,
    Callback = function(value)
 _G._1 = value
 while wait() do
 if _G._1 == false then break end
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("1","Grips",_G._zone1);
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer(_G.dumbzone,"Grips",_G._griptier);
 end
 end});
+--------------------
 
-v59:AddDropdown({
-Name = "Weights",
-Default = "300Kg",
-Options = {"300Kg","350Kg","400Kg","450Kg","500Kg","600Kg","700Kg","800Kg","900Kg","1000Kg","1250Kg","1500Kg"},
-Callback = function(value)
-_G._zone2 = value
-end});
- 
- v59:AddToggle({
- Name = "Auto Grips Zone2",
- Default = false,
- Callback = function(value)
-_G._2 = value
-while wait() do
-if _G._2 == false then break end
- game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("2","Grips",_G._zone2);
- end
-end
-});
 
- v59:AddDropdown({
-Name = "Weights",
-Default = "5000Kg",
-Options = {"5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg"},
-Callback = function(value)
-_G._zone3 = value
-end});
 
-v59:AddToggle({
- Name = "Auto Grips Zone3",
- Default = false,
- Callback = function(value)
-_G._3 = value
-while wait() do
-if _G._3 == false then break end
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("3","Grips",_G._zone3);
-end
-end});
-
-v59:AddDropdown({
-Name = "Weights",
-Default = "50000Kg",
-Options = {"50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg"},
-Callback = function(value)
-_G._zone4 = value
-end});
-
-v59:AddToggle({
- Name = "Auto Grips Zone4",
- Default = false,
- Callback = function(value)
-_G._4 = value
-while wait() do
-if _G._4 == false then break end
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("4","Grips",_G._zone4);
-end
-end});
-
-v59:AddDropdown({
-Name = "Weights",
-Default = "350000Kg",
-Options = {"350000Kg","375000Kg","400000Kg","425000Kg","450000Kg","475000Kg","500000Kg","525000Kg","550000Kg","575000Kg","600000Kg","625000Kg"},
-Callback = function(value)
-_G._zone5 = value
-end});
-
-v59:AddToggle({
- Name = "Auto Grips Zone5",
- Default = false,
- Callback = function(value)
-_G._5 = value
-while wait() do
-if _G._5 == false then break end
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("5","Grips",_G._zone5);
-end
-end
-});
-
-v59:AddDropdown({
-Name = "Weights",
-Default = "650000Kg",
-Options = {"650000Kg","675000Kg","700000Kg","725000Kg","750000Kg","775000Kg","800000Kg","825000Kg","850000Kg","875000Kg","900000Kg","925000Kg"},
-Callback = function(value)
-_G._zone6 = value
-end});
-
-v59:AddToggle({
- Name = "Auto Grips Zone6",
- Default = false,
- Callback = function(value)
-_G._6 = value
-while wait() do
-if _G._6 == false then break end
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("6","Grips",_G._zone6);
-end
-end
-});
-
-v59:AddDropdown({
-Name = "Weights",
-Default = "875000Kg",
-Options = {"875000Kg","900000Kg","925000Kg","950000Kg","975000Kg","1000000Kg","1025000Kg","1050000Kg","1075000Kg","1100000Kg","1125000Kg","1150000Kg"},
-Callback = function(value)
-_G._zone7 = value
-end});
-
-v59:AddToggle({
- Name = "Auto Grips Zone7",
- Default = false,
- Callback = function(value)
-_G._7 = value
-while wait() do
-if _G._7 == false then break end
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("7","Grips",_G._zone7);
-end 
-end
-});
-
-	
 v60:AddLabel("WORLD 1 NPC");
 v60:AddToggle({
 Name="Auto Bully",
