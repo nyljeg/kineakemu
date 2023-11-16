@@ -703,6 +703,89 @@ end
 end
 });
 
+local grips = {}
+local dumbells = {}
+local barbells = {}
+OrionLib:AddTable(ReplicatedStorage.Tools.Grips,grips)
+OrionLib:AddTable(ReplicatedStorage.Tools.Dumbells,dumbells)
+OrionLib:AddTable(ReplicatedStorage.Tools.Barbells,barbells)
+
+local zone = {"1","2","3","4","5","6","7"}
+v59:AddDropdown({
+Name = "Select Zone",
+Default = "1",
+Options = zone,
+Callback = function(value)
+_G._zone = value
+end});
+
+
+v59:AddDropdown({
+   Name = "Select Weights",
+   Default = "1Kg",
+   Options = grips,
+   Callback = function(Value)
+     _G._grips = Value
+  end    
+})
+
+v59:AddToggle({
+Name = "Equip Grips",
+Default = false,
+Callback = function(value)
+gripss = value
+while wait() do
+if gripss == false then break end
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer(_G._zone,"Grips",_G._grips)
+end
+end
+});
+
+v59:AddDropdown({
+   Name = "Select Weights",
+   Default = "1Kg",
+   Options = dumbells,
+   Callback = function(Value)
+     _G._dumbells = Value
+  end    
+})
+
+v59:AddToggle({
+Name = "Equip Dumbells",
+Default = false,
+Callback = function(value)
+dumbellss = value
+while wait() do
+if dumbellss == false then break end
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer(_G._zone,"Dumbells",_G._dumbells)
+end
+end
+});
+
+v59:AddDropdown({
+   Name = "Select Tier",
+   Default = "Tier1",
+   Options = barbells,
+   Callback = function(Value)
+     _G._barbells = Value
+  end    
+})
+
+v59:AddToggle({
+Name = "Equip Barbels",
+Default = false,
+Callback = function(value)
+_G._barbellss = value
+while wait() do
+if barbellss == false then break end
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer(tonumber(_G._zone),"Barbels",_G._barbells)
+end
+end
+});
+
+
+	
+--[[
 v59:AddDropdown({
    Name = "Zone",
    Default = "1",
@@ -893,7 +976,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end 
 end
 });
-
+]]--
 	
 v60:AddLabel("WORLD 1 NPC");
 v60:AddToggle({
