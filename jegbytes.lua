@@ -459,6 +459,10 @@ Name = "Potions",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
+local T13=v1:MakeTab({
+Name = "Farm Blocks",
+Icon="rbxassetid://4483345998",
+PremiumOnly=false});
 	
 --Toogle
 event:AddDropdown({
@@ -1218,7 +1222,48 @@ pot:AddButton({
 end
 })
 
+local T13 = Window:MakeTab({
+Name = "Lucky Block",
+Icon = "rbxassetid://0",
+PremiumOnly = false
+})
 
+local BlockInfo = T13:AddParagraph("Lucky Block Detector","#CONTENT_ERROR")
+
+local function SnipeLuckyBlock()
+	if workspace:FindFirstChild("LuckyBlock") then
+		return true
+	end
+	return false
+end
+
+T13:AddToggle({
+   Name = "Auto Teleport",
+   Default = false,
+   Callback = function(Value)
+     _G._TP_Sniping = Value
+	while wait() do
+		if _G._TP_Sniping == false then break end
+		  if SnipeLuckyBlock() then
+			OrionLib:Teleport(workspace:FindFirstChild("LuckyBlock"))
+		end
+	end
+  end    
+})
+
+RunService.RenderStepped:Connect(function()
+if game.Players.LocalPlayer.PlayerGui.GameUI.Menus:FindFirstChild("Event") then
+Event_A3:Set(tostring(game.Players.LocalPlayer.PlayerGui.GameUI.Menus.Event.Amount.Text),"Event Eggs available")
+end
+end)
+
+RunService.RenderStepped:Connect(function()
+if workspace:FindFirstChild("LuckyBlock") then
+   BlockInfo:Set(string.format("%s\n%s\n%s",GetText(workspace.LuckyBlock.BillboardGui.Frame.Title),GetText(workspace.LuckyBlock.BillboardGui.Frame.Timer),GetText(workspace.LuckyBlock.BillboardGui.Frame.GainX)),"")
+else
+   BlockInfo:Set("#SNIPING \nwe are looking for lucky block","")
+end
+end)
 	
  
 end 
