@@ -707,11 +707,15 @@ Callback = function(value)
 _G._zone1 = value
 end});
 
-v59:AddButton({
+v59:AddToggle({
    Name = "Auto Grips Zone1",
    Default = false,
-   Callback = function()
+   Callback = function(value)
+_G._1 = value
+while wait() do
+if _G._1 == false then break end
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("1","Grips",_G._zone1);
+end
 end});
 
 v59:AddDropdown({
@@ -722,41 +726,54 @@ Callback = function(value)
 _G._zone2 = value
 end});
  
- v59:AddButton({
+ v59:AddToggle({
  Name = "Auto Grips Zone2",
  Default = false,
- Callback = function()
+ Callback = function(value)
+_G._2 = value
+while wait() do
+if _G._2 == false then break end
  game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("2","Grips",_G._zone2);
- end});
+ end
+end
+});
 
  v59:AddDropdown({
 Name = "Weights",
-Default = "5000Kg","
+Default = "5000Kg",
 Options = {"5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg"},
 Callback = function(value)
 _G._zone3 = value
 end});
 
-v59:AddButton({
+v59:AddToggle({
  Name = "Auto Grips Zone3",
  Default = false,
- Callback = function()
+ Callback = function(value)
+_G._3 = value
+while wait() do
+if _G._3 == false then break end
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("3","Grips",_G._zone3);
+end
 end});
 
 v59:AddDropdown({
 Name = "Weights",
-Default = "50000Kg","
+Default = "50000Kg",
 Options = {"50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg"},
 Callback = function(value)
 _G._zone4 = value
 end});
 
-v59:AddButton({
+v59:AddToggle({
  Name = "Auto Grips Zone4",
  Default = false,
- Callback = function()
+ Callback = function(value)
+_G._4 = value
+while wait() do
+if _G._4 == false then break end
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("4","Grips",_G._zone4);
+end
 end});
 
 v59:AddDropdown({
@@ -767,12 +784,17 @@ Callback = function(value)
 _G._zone5 = value
 end});
 
-v59:AddButton({
+v59:AddToggle({
  Name = "Auto Grips Zone5",
  Default = false,
- Callback = function()
+ Callback = function(value)
+_G._5 = value
+while wait() do
+if _G._5 == false then break end
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("5","Grips",_G._zone5);
-end});
+end
+end
+});
 
 v59:AddDropdown({
 Name = "Weights",
@@ -782,12 +804,17 @@ Callback = function(value)
 _G._zone6 = value
 end});
 
-v59:AddButton({
+v59:AddToggle({
  Name = "Auto Grips Zone6",
  Default = false,
- Callback = function()
+ Callback = function(value)
+_G._6 = value
+while wait() do
+if _G._6 == false then break end
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("6","Grips",_G._zone6);
-end});
+end
+end
+});
 
 v59:AddDropdown({
 Name = "Weights",
@@ -797,12 +824,16 @@ Callback = function(value)
 _G._zone7 = value
 end});
 
-v59:AddButton({
+v59:AddToggle({
  Name = "Auto Grips Zone7",
  Default = false,
- Callback = function()
+ Callback = function(value)
+_G._7 = value
+while wait() do
+if _G._7 == false then break end
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onGuiEquipRequest"):FireServer("7","Grips",_G._zone7);
-  end    
+end 
+end
 });
 
 	
