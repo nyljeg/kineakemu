@@ -100,7 +100,7 @@ GetKeyButton.Parent = frame
 --------------------------------------------------------------------------
 SubmitButton.MouseButton1Click:Connect(function()
     local KeySystem = KeySystem.Text
-    if KeySystem == "ElmerSobrangGwapo" then   
+    if KeySystem == "Lb789KghahkZzaml" then   
 screenGui:Destroy()
 
 --Your Script
@@ -111,5 +111,5 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/nyljeg/kineakemu/main
 end)
 
 GetKeyButton.MouseButton1Click:Connect(function()
- setclipboard("https://link-center.net/1003806/download-elmerhub-key1") 
+ setclipboard("https://link-hub.net/1003806/get-new-aws-key") 
 end) 
