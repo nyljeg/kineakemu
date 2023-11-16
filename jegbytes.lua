@@ -702,14 +702,10 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end 
 end
 });
-
+--[[
 local grips = {}
 local dumbells = {}
 local barbells = {}
-OrionLib:AddTable(ReplicatedStorage.Tools.Grips,grips)
-OrionLib:AddTable(ReplicatedStorage.Tools.Dumbells,dumbells)
-OrionLib:AddTable(ReplicatedStorage.Tools.Barbells,barbells)
-
 local zone = {"1","2","3","4","5","6","7"}
 v59:AddDropdown({
 Name = "Select Zone",
@@ -782,10 +778,10 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end
 });
-
+]]--
 
 	
---[[
+
 v59:AddDropdown({
    Name = "Zone",
    Default = "1",
@@ -976,7 +972,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end 
 end
 });
-]]--
+
 	
 v60:AddLabel("WORLD 1 NPC");
 v60:AddToggle({
