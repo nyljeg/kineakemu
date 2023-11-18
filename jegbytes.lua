@@ -1036,7 +1036,7 @@ Default=false,
 Callback=function(value)
 w7NPC5=value;
 end});
-	
+	--[[
 teleport:AddButton({
 Name="World 1",
 Default=false,
@@ -1085,8 +1085,8 @@ Default=false,
 Callback=function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-9760.46875,48.07291793823242,580.4580078125)					
 end});
-	
--[[
+	]]--
+
 teleport:AddButton({
 Name="World 1",
 Default=false,
@@ -1135,7 +1135,7 @@ Default=false,
 Callback=function()
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("7"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("SpaceCenter"))
 end});
-	]]--
+
 	
 pot:AddDropdown({
    Name = "Select Boost",
