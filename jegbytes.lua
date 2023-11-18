@@ -1036,57 +1036,71 @@ Default=false,
 Callback=function(value)
 w7NPC5=value;
 end});
-	--[[
+	
 teleport:AddButton({
 Name="World 1",
 Default=false,
 Callback=function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-10323.130859375,1.3235297203063965,33.70964813232422)				
+local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
+Character:PivotTo(CFrame.new(-10323.130859375,1.3235297203063965,33.70964813232422))
+print(Character:GetPivot())					
 end});
 
 teleport:AddButton({
 Name="World 2",
 Default=false,
 Callback=function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-10324.130859375,0.8240296840667725,637.7939453125)					
+local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
+Character:PivotTo(CFrame.new(-10324.130859375,0.8240296840667725,637.7939453125))
+print(Character:GetPivot())						
 end});
 
 teleport:AddButton({
 Name="World 3",
 Default=false,
 Callback=function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-11620.255859375,6.0537261962890625,25.494232177734375)					
+local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
+Character:PivotTo(CFrame.new(-11620.255859375,6.0537261962890625,25.494232177734375))
+print(Character:GetPivot())						
 end});
 
 teleport:AddButton({
 Name="World 4",
 Default=false,
 Callback=function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-10309.3984375,3.0494022369384766,-849.5071411132812)					
+local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
+Character:PivotTo(CFrame.new(-10309.3984375,3.0494022369384766,-849.5071411132812))
+print(Character:GetPivot())						
 end});
 
 teleport:AddButton({
 Name="World 5",
 Default=false,
 Callback=function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-10294.3984375,1.2994022369384766,-1417.257080078125)					
+local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
+Character:PivotTo(CFrame.new(-10294.3984375,1.2994022369384766,-1417.257080078125))
+print(Character:GetPivot())						
 end});
 
 teleport:AddButton({
 Name="World 6",
 Default=false,
 Callback=function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-9709.2978515625,-10.275848388671875,-4620.21435546875)					
+	local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
+Character:PivotTo(CFrame.new(-9709.2978515625,-10.275848388671875,-4620.21435546875))
+print(Character:GetPivot())					
 end});
 
 teleport:AddButton({
 Name="World 7",
 Default=false,
 Callback=function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(-9760.46875,48.07291793823242,580.4580078125)					
+local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
+Character:PivotTo(CFrame.new(-9760.46875,48.07291793823242,580.4580078125))
+print(Character:GetPivot())
 end});
-	]]--
-
+	
+--[[
 teleport:AddButton({
 Name="World 1",
 Default=false,
@@ -1135,7 +1149,7 @@ Default=false,
 Callback=function()
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("7"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("SpaceCenter"))
 end});
-
+]]--
 	
 pot:AddDropdown({
    Name = "Select Boost",
