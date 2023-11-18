@@ -1036,106 +1036,54 @@ Default=false,
 Callback=function(value)
 w7NPC5=value;
 end});
-
-local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
---[[
-teleport:AddDropdown({
-   Name = "Select Zone",
-   Default = "1",
-   Options = {"1","2","3","4","5","6","7"},
-   Callback = function(Value)
-     _G.zone_TP = Value
-  end    
-})
 	
-teleport:AddButton({
-  Name = "Teleport",
-  Callback = function()
-     if _G.zone_TP == "1" then
-        Character:PivotTo(CFrame.new(-10323.130859375,1.3235297203063965,33.70964813232422))
-        print(Character:GetPivot())
-	end
-     if _G.zone_TP == "2" then
-        Character:PivotTo(CFrame.new(-10324.130859375,0.8240296840667725,637.7939453125))
-        print(Character:GetPivot())
-     end
-     if _G.zone_TP == "3" then
-        Character:PivotTo(CFrame.new(-11620.255859375,6.0537261962890625,25.494232177734375))
-        print(Character:GetPivot())
-    end
-     if _G.zone_TP == "4" then
-        Character:PivotTo(CFrame.new(-10309.3984375,3.0494022369384766,-849.5071411132812))
-        print(Character:GetPivot())
-     end
-     if _G.zone_TP == "5" then
-        Character:PivotTo(CFrame.new(-10294.3984375,1.2994022369384766,-1417.257080078125))
-        print(Character:GetPivot())
-      end
-     if _G.zone_TP == "6" then
-        Character:PivotTo(CFrame.new(-9709.2978515625,-10.275848388671875,-4620.21435546875))
-        print(Character:GetPivot())
-     end
-     if _G.zone_TP == "7" then
-        Character:PivotTo(CFrame.new(-9760.46875,48.07291793823242,580.4580078125))
-        print(Character:GetPivot())
-     end
-  end    
-})
-]]-
 teleport:AddButton({
 Name="World 1",
 Default=false,
 Callback=function()
-Character:PivotTo(CFrame.new(-10323.130859375,1.3235297203063965,33.70964813232422))
- print(Character:GetPivot())
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10323.130859375,1.3235297203063965,33.70964813232422)				
 end});
 
 teleport:AddButton({
 Name="World 2",
 Default=false,
 Callback=function()
-Character:PivotTo(CFrame.new(-10324.130859375,0.8240296840667725,637.7939453125))
-print(Character:GetPivot())
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10324.130859375,0.8240296840667725,637.7939453125)					
 end});
 
 teleport:AddButton({
 Name="World 3",
 Default=false,
 Callback=function()
-Character:PivotTo(CFrame.new(-11620.255859375,6.0537261962890625,25.494232177734375))
-print(Character:GetPivot())
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11620.255859375,6.0537261962890625,25.494232177734375)					
 end});
 
 teleport:AddButton({
 Name="World 4",
 Default=false,
 Callback=function()
-Character:PivotTo(CFrame.new(-10309.3984375,3.0494022369384766,-849.5071411132812))
-print(Character:GetPivot())
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10309.3984375,3.0494022369384766,-849.5071411132812)					
 end});
 
 teleport:AddButton({
 Name="World 5",
 Default=false,
 Callback=function()
-Character:PivotTo(CFrame.new(-10294.3984375,1.2994022369384766,-1417.257080078125))
-print(Character:GetPivot())
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10294.3984375,1.2994022369384766,-1417.257080078125)					
 end});
 
 teleport:AddButton({
 Name="World 6",
 Default=false,
 Callback=function()
-Character:PivotTo(CFrame.new(-9709.2978515625,-10.275848388671875,-4620.21435546875))
-print(Character:GetPivot())
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9709.2978515625,-10.275848388671875,-4620.21435546875)					
 end});
 
 teleport:AddButton({
 Name="World 7",
 Default=false,
 Callback=function()
-Character:PivotTo(CFrame.new(-9760.46875,48.07291793823242,580.4580078125))
-print(Character:GetPivot())
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9760.46875,48.07291793823242,580.4580078125)					
 end});
 	
 -[[
