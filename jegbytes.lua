@@ -1042,7 +1042,7 @@ Name="World 1",
 Default=false,
 Callback=function()
 local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
-Character:PivotTo(CFrame.new(-10323.130859375,1.3235297203063965,33.70964813232422))
+Character:PivotTo(CFrame.new(-10326,4,34))
 print(Character:GetPivot())					
 end});
 
@@ -1060,7 +1060,7 @@ Name="World 3",
 Default=false,
 Callback=function()
 local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
-Character:PivotTo(CFrame.new(-11620.255859375,6.0537261962890625,25.494232177734375))
+Character:PivotTo(CFrame.new(11599,10,-19))
 print(Character:GetPivot())						
 end});
 
