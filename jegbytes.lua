@@ -559,12 +559,32 @@ v4=v65;
 end});
 
 v58:AddToggle({
-Name="Auto Crates",
+Name="Auto All Crates",
 Default=false,
 Callback=function(v66)
 v5=v66;
 end});
 
+v58:AddDropdown({
+   Name = "Select Crate",
+   Default = "RustCrate",
+   Options = {"RustCrate","SilverCrate","GoldCrate","DiamondCrate","EmeraldCrate","PlatinumCrate"},
+   Callback = function(Value)
+     _G.crateAll = Value
+  end    
+})
+	
+v58:AddToggle({
+Name="Roll Specific Crate",
+Default=false,
+Callback=function(value)
+hehehe = value
+while wait() do
+if hehehe == false then break end
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmsService"):WaitForChild("RF"):WaitForChild("RollAllSpecificCratesForPlayer"):InvokeServer(_G.crateAll)
+end
+end});
+	
 v58:AddLabel("Buy Crate");
 v58:AddDropdown({
    Name = "Select Crate",
@@ -602,6 +622,7 @@ v58:AddToggle({
   _G.Gift = Value
     while wait() do
       if _G.Gift == false then break end
+game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("PAK U ALL","All")					
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("1")
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("2")
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("3")
