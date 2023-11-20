@@ -1058,6 +1058,7 @@ Callback=function(value)
 w7NPC5=value;
 end});
 
+local selectWorld = nil
 local zonetp = {
 		[World 1] = -10326,4,34,
 		[World 2] = -10324.130859375,0.8240296840667725,637.7939453125,
