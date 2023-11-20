@@ -1067,7 +1067,7 @@ local zonetp = {
 		[World 6] = CFrame.new(-9709.2978515625,-10.275848388671875,-4620.21435546875)
 		[World 7] = CFrame.new(-9760.46875,48.07291793823242,580.4580078125)
 	}
-teleports:AddDropdown({
+teleport:AddDropdown({
 Name = "Select World",
 Default = "World 1",
 Options = {World 1,World 2,World 3,World 4,World 5,World 6,World 7},
