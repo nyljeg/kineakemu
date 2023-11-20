@@ -1058,6 +1058,7 @@ Callback=function(value)
 w7NPC5=value;
 end});
 
+	--[[
 local selectWorld = nil
 local zonetp = {
 		[World 1] = -10326,4,34,
@@ -1085,8 +1086,8 @@ local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(g
 Character:PivotTo(CFrame.new(tostring(selectWorld)))
 print(Character:GetPivot())					
 end});			
-			
---[[			
+	]]--		
+		
 teleport:AddButton({
 Name="World 1",
 Default=false,
@@ -1158,7 +1159,7 @@ local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(g
 Character:PivotTo(CFrame.new(-9554.43, 42.7513, 682.634))
 print(Character:GetPivot())
 end});			
-]]--	
+
 --[[
 teleport:AddButton({
 Name="World 1",
