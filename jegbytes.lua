@@ -1059,20 +1059,20 @@ w7NPC5=value;
 end});
 
 local zonetp = {
-		[World 1] = CFrame.new(-10326,4,34)
-		[World 2] = CFrame.new(-10324.130859375,0.8240296840667725,637.7939453125),
-		[World 3] = CFrame.new(11599,10,-19),
-		[World 4] = CFrame.new(-10309.3984375,3.0494022369384766,-849.5071411132812),
-		[World 5] = CFrame.new(-10294.3984375,1.2994022369384766,-1417.257080078125),
-		[World 6] = CFrame.new(-9709.2978515625,-10.275848388671875,-4620.21435546875),
-		[World 7] = CFrame.new(-9760.46875,48.07291793823242,580.4580078125)
+		[World 1] = -10326,4,34,
+		[World 2] = -10324.130859375,0.8240296840667725,637.7939453125,
+		[World 3] = 11599,10,-19,
+		[World 4] = -10309.3984375,3.0494022369384766,-849.5071411132812,
+		[World 5] = -10294.3984375,1.2994022369384766,-1417.257080078125,
+		[World 6] = -9709.2978515625,-10.275848388671875,-4620.21435546875,
+		[World 7] = -9760.46875,48.07291793823242,580.4580078125,
+		[Slime Machine] = -9554.43,42.7513,682.634
 	}
 teleport:AddDropdown({
 Name = "Select World",
-Default = "World 1",
-Options = {World 1,World 2,World 3,World 4,World 5,World 6,World 7},
+Options = {World 1,World 2,World 3,World 4,World 5,World 6,World 7,Slime Machine},
 Callback = function(GetOne)
-sellectWorld = zonetp[GetOne]
+selectWorld = zonetp[GetOne]
 end
 
 teleport:AddButton({
@@ -1080,7 +1080,7 @@ Name="Teleport",
 Default=nil,
 Callback=function()
 local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
-Character:PivotTo(tostring[selectWorld])
+Character:PivotTo(CFrame.new(tostring(selectWorld)))
 print(Character:GetPivot())					
 end});			
 			
