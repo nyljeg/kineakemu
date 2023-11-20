@@ -425,53 +425,53 @@ end);
 --Main Tab
 
 local v58=v1:MakeTab({
-Name="Farm",
+Name="𝔸𝕦𝕥𝕠",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v59=v1:MakeTab({
-Name="Egg List",
+Name="𝔼𝕘𝕘 𝕃𝕚𝕤𝕥",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v60=v1:MakeTab({
-Name="Auto NPC",
+Name="𝔸𝕦𝕥𝕠 ℕℙℂ",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local teleport=v1:MakeTab({
-Name="Teleport",
+Name="𝕋𝕖𝕝𝕖𝕡𝕠𝕣𝕥",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local food=v1:MakeTab({
-Name="Foods",
+Name="𝔽𝕠𝕠𝕕𝕤",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
 local event=v1:MakeTab({
-Name = "Event Eggs",
+Name = "𝔼𝕧𝕖𝕟𝕥 𝔼𝕘𝕘𝕤",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local pot=v1:MakeTab({
-Name = "Potions",
+Name = "ℙ𝕠𝕥𝕚𝕠𝕟𝕤",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local tools=v1:MakeTab({
-Name = "Tools",
+Name = "𝕋𝕠𝕠𝕝𝕤",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});	
 	
 local T13=v1:MakeTab({
-Name = "Farm Blocks",
+Name = "𝔸𝕦𝕥𝕠 𝔹𝕝𝕠𝕔𝕜𝕤",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
 --Toogle
 event:AddDropdown({
-   Name = "Number of previous hatches on eggs",
+   Name = "𝕊𝕖𝕝𝕖𝕔𝕥 𝔸𝕞𝕠𝕦𝕟𝕥 𝕆𝕗 𝔼𝕘𝕘𝕤",
    Default = "1",
    Options = {"1","3","8"},
    Callback = function(Value)
@@ -480,7 +480,7 @@ event:AddDropdown({
 });
 
 event:AddToggle({
-  Name = "Auto Claim Event Egg",
+  Name = "𝔸𝕦𝕥𝕠 ℂ𝕝𝕒𝕚𝕞 𝔼𝕧𝕖𝕟𝕥 𝔼𝕘𝕘𝕤",
   Default = false,
   Callback = function(Value)
   _G.Event_AV3 = Value
@@ -492,7 +492,7 @@ event:AddToggle({
 });
 
 event:AddToggle({
-  Name = "Auto Hatch Previous Eggs",
+  Name = "𝔸𝕦𝕥𝕠 ℂ𝕝𝕒𝕚𝕞 ℙ𝕣𝕖𝕧𝕚𝕠𝕦𝕤 𝔼𝕧𝕖𝕟𝕥 𝔼𝕘𝕘𝕤",
   Default = false,
   Callback = function(Value)
   _G.PrevEgg = Value
@@ -504,7 +504,7 @@ end
 });
 
 food:AddDropdown({
-   Name = "Pick A food",
+   Name = "𝕊𝕖𝕝𝕖𝕔𝕥 𝔸 𝔽𝕠𝕠𝕕",
    Default = "GreenApple",
    Options = {"GreenApple","Mushroom","GodlyBones"},
    Callback = function(Value)
@@ -513,7 +513,7 @@ food:AddDropdown({
 });
 	
 food:AddSlider({
-Name = "Food Amount",
+Name = "𝔽𝕠𝕠𝕕 𝔸𝕞𝕠𝕦𝕟𝕥",
 Min = 0,
 Max = 1000,
 Default = 1,
@@ -526,7 +526,7 @@ Callback = function(Value)
 });
 
 food:AddToggle({
-   Name = "Use Mushroom",
+   Name = "𝕌𝕤𝕖 𝕋𝕙𝕖 𝕊𝕖𝕝𝕖𝕔𝕥𝕖𝕕 𝔽𝕠𝕠𝕕",
    Default = false,
    Callback = function(Value)
      foods = Value
@@ -538,35 +538,35 @@ food:AddToggle({
 });
 
 v58:AddToggle({
-Name="Auto Click",
+Name="𝔸𝕦𝕥𝕠 ℂ𝕝𝕚𝕔𝕜",
 Default=false,
 Callback=function(v63)
 v2=v63;
 end});
 
 v58:AddToggle({
-Name="Auto Click Battle",
+Name="𝔸𝕦𝕥𝕠 ℂ𝕝𝕚𝕔𝕜 [𝔹𝕒𝕥𝕥𝕝𝕖]",
 Default=false,
 Callback=function(v64)
 v3=v64;
 end});
 
 v58:AddToggle({
-Name="Auto Spin",
+Name="𝔸𝕦𝕥𝕠 𝕊𝕡𝕚𝕟",
 Default=false,
 Callback=function(v65)
 v4=v65;
 end});
 
 v58:AddToggle({
-Name="Auto All Crates",
+Name="𝔸𝕦𝕥𝕠 ℝ𝕠𝕝𝕝 𝔸𝕝𝕝 ℂ𝕣𝕒𝕥𝕖𝕤",
 Default=false,
 Callback=function(v66)
 v5=v66;
 end});
 
 v58:AddDropdown({
-   Name = "Select Crate",
+   Name = "𝕊𝕖𝕝𝕖𝕔𝕥 ℂ𝕣𝕒𝕥𝕖",
    Default = "RustCrate",
    Options = {"RustCrate","SilverCrate","GoldCrate","DiamondCrate","EmeraldCrate","PlatinumCrate"},
    Callback = function(Value)
@@ -575,7 +575,7 @@ v58:AddDropdown({
 })
 	
 v58:AddToggle({
-Name="Roll Specific Crate",
+Name="𝔸𝕦𝕥𝕠 ℝ𝕠𝕝𝕝 𝕊𝕡𝕖𝕔𝕚𝕗𝕚𝕔 ℂ𝕣𝕒𝕥𝕖",
 Default=false,
 Callback=function(value)
 hehehe = value
@@ -585,9 +585,9 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end});
 	
-v58:AddLabel("Buy Crate");
+v58:AddLabel("𝔸𝕌𝕋𝕆 𝔹𝕌𝕐 ℂℝ𝔸𝕋𝔼");
 v58:AddDropdown({
-   Name = "Select Crate",
+   Name = "𝕊𝕖𝕝𝕖𝕔𝕥 ℂ𝕣𝕒𝕥𝕖",
    Default = "Rust",
    Options = {"Rust","Silver","Gold","Diamond","Emerald","Platinum"},
    Callback = function(Value)
@@ -596,7 +596,7 @@ v58:AddDropdown({
 })
 
 v58:AddDropdown({
-   Name = "Select Amount",
+   Name = "𝕊𝕖𝕝𝕖𝕔𝕥 𝔸𝕞𝕠𝕦𝕟𝕥",
    Default = "1",
    Options = {"1","10","100"},
    Callback = function(Value)
@@ -605,7 +605,7 @@ v58:AddDropdown({
 })
 
 v58:AddToggle({
-  Name = "Buy Crate",
+  Name = "𝔸𝕦𝕥𝕠 𝔹𝕦𝕪 ℂ𝕣𝕒𝕥𝕖",
   Callback = function(value)
 _G.crates = value
   while wait() do
@@ -616,7 +616,7 @@ end
 });
 	
 v58:AddToggle({
-  Name = "Auto Claim Gift",
+  Name = "𝔸𝕦𝕥𝕠 ℂ𝕝𝕒𝕚𝕞 𝔾𝕚𝕗𝕥",
   Default = false,
   Callback = function(Value)
   _G.Gift = Value
@@ -642,7 +642,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 })
 
 v58:AddToggle({
-  Name = "Auto spin lucky draw [Blueprint]",
+  Name = "𝔸𝕦𝕥𝕠 𝕤𝕡𝕚𝕟 𝕝𝕦𝕔𝕜𝕪 𝕕𝕣𝕒𝕨 [𝔹𝕝𝕦𝕖𝕡𝕣𝕚𝕟𝕥]",
   Default = false,
   Callback = function(Value)
   _G.blueprint = Value
@@ -654,7 +654,7 @@ v58:AddToggle({
 })
 
 v58:AddToggle({
-  Name = "Auto spin daily lucky draw [Blueprint]",
+  Name = "𝔸𝕦𝕥𝕠 𝕤𝕡𝕚𝕟 𝕕𝕒𝕚𝕝𝕪 𝕝𝕦𝕔𝕜𝕪 𝕕𝕣𝕒𝕨 [𝔹𝕝𝕦𝕖𝕡𝕣𝕚𝕟𝕥]",
   Default = false,
   Callback = function(Value)
   _G.dailyblueprint = Value
@@ -666,7 +666,7 @@ v58:AddToggle({
 })
 
 v58:AddToggle({
-  Name = "Auto Claim Daily Login",
+  Name = "𝔸𝕦𝕥𝕠 ℂ𝕝𝕒𝕚𝕞 𝔻𝕒𝕚𝕝𝕪 𝕃𝕠𝕘𝕚𝕟",
   Default = false,
   Callback = function(Value)
   _G.dailylogin = Value
@@ -678,7 +678,7 @@ v58:AddToggle({
 })
 
 v58:AddToggle({
-  Name = "Auto Rebirth",
+  Name = "𝔸𝕦𝕥𝕠 ℝ𝕖𝕓𝕚𝕣𝕥𝕙",
   Default = false,
   Callback = function(Value)
   _G.Rbr = Value
@@ -690,7 +690,7 @@ v58:AddToggle({
 })
 
 v58:AddToggle({
-  Name = "Auto Super Rebirth",
+  Name = "𝔸𝕦𝕥𝕠 𝕊𝕦𝕡𝕖𝕣 ℝ𝕖𝕓𝕚𝕣𝕥𝕙",
   Default = false,
   Callback = function(Value)
   _G.Rbr = Value
