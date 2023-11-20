@@ -729,7 +729,7 @@ end
 end
 });
 
-tools:AddLabel("Pick Your Zone first")
+tools:AddLabel("Select Zone")
 tools:AddDropdown({
    Name = "Your Zone",
    Default = "1",
@@ -1071,6 +1071,7 @@ local zonetp = {
 	}
 teleport:AddDropdown({
 Name = "Select World",
+Default = World 1,
 Options = {World 1,World 2,World 3,World 4,World 5,World 6,World 7,Slime Machine},
 Callback = function(GetOne)
 selectWorld = zonetp[GetOne]
