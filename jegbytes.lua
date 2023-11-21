@@ -1153,7 +1153,7 @@ AddTable(workspace.Zones[i].Interactables.ArmWrestling.NPC,npc)
 AddTable(workspace.Zones[i].Interactables.ArmWrestling.PVP,VSPLAYER)		
 end
 v60:AddDropdown({
-   Name = "Select Zone For NPC",
+   Name = "Select Zone",
    Default = "1",
    Options = zone,
    Callback = function(Value)
