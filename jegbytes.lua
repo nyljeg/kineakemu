@@ -435,7 +435,7 @@ Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v60=v1:MakeTab({
-Name="Auto NPC",
+Name="Auto NPC/PLAYER",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
@@ -806,7 +806,7 @@ end
 end});
 --------------------
 
-
+--[[
 
 v60:AddLabel("WORLD 1 NPC");
 v60:AddToggle({
@@ -1057,10 +1057,11 @@ Default=false,
 Callback=function(value)
 w7NPC5=value;
 end});
-
+]]--
 local workspace = game:GetService("Workspace")
 local RunService = game:GetService("RunService")
 local zone = {}
+local VSPLAYER = {}
 local npc = {}
 function AddTable(Table_V,LocalName)
 for _,v in pairs(Table_V:GetChildren()) do
@@ -1148,9 +1149,10 @@ teleport:AddButton({
 })
 	
 for i = 1, 7 do  
-AddTable(workspace.Zones[i].Interactables.ArmWrestling.NPC,npc) 
+AddTable(workspace.Zones[i].Interactables.ArmWrestling.NPC,npc)
+AddTable(workspace.Zones[i].Interactables.ArmWrestling.PVP,VSPLAYER)		
 end
-teleport:AddDropdown({
+v60:AddDropdown({
    Name = "Select Zone For NPC",
    Default = "1",
    Options = zone,
@@ -1159,7 +1161,7 @@ teleport:AddDropdown({
    end    
 })
 
-teleport:AddDropdown({
+v60:AddDropdown({
    Name = "Select NPC",
    Default = "Bully",
    Options = npc,
@@ -1168,7 +1170,7 @@ teleport:AddDropdown({
    end    
 })
 
-teleport:AddToggle({
+v60:AddToggle({
   Name = "Auto Wrestle",
   Default = false,
   Callback = function(Value)
@@ -1179,7 +1181,28 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end});
 
-teleport:AddToggle({
+v60:AddDropdown({
+   Name = "Select Table",
+   Default = "ArmWrestleTable1",
+   Options = VSPLAYER,
+   Callback = function(Value)
+     _G.TABLE_VSPLAYER = Value
+   end    
+})
+
+v60:AddToggle({
+  Name = "Auto Enter Table",
+  Default = false,
+  Callback = function(Value)
+  _G.ENTERTABLE = Value
+    while wait() do
+      if _G.ENTERTABLE == false then break end
+         game:GetService("ReplicatedStorage").Packages.knit.Services.ArmWrestleService.RE.onEnterTable:FireServer(workspace.Zones[_G.zone_npc].Interactables.ArmWrestling.PVP[_G.TABLE_VSPLAYER])
+      end
+  end    
+})	
+	
+v60:AddToggle({
 Name="Auto Click Battle",
 Default=false,
 Callback=function(v64)
