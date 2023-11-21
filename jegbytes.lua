@@ -426,47 +426,39 @@ end);
 
 local v58=v1:MakeTab({
 Name="Auto",
-Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v59=v1:MakeTab({
 Name="Egg List",
-Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v60=v1:MakeTab({
-Name="Auto NPC/PLAYER",
+Name="NPC/PLAYER",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local teleport=v1:MakeTab({
 Name="Teleport",
-Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local food=v1:MakeTab({
 Name="Foods",
-Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
 local event=v1:MakeTab({
 Name = "Event Eggs",
-Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local pot=v1:MakeTab({
 Name = "Potions",
-Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local tools=v1:MakeTab({
 Name = "Tools",
-Icon="rbxassetid://4483345998",
 PremiumOnly=false});	
 	
 local T13=v1:MakeTab({
 Name = "Auto Blocks [PATCHED]",
-Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
 --Toogle
@@ -1197,7 +1189,8 @@ v60:AddToggle({
   _G.ENTERTABLE = Value
     while wait() do
       if _G.ENTERTABLE == false then break end
-         game:GetService("ReplicatedStorage").Packages.knit.Services.ArmWrestleService.RE.onEnterTable:FireServer(workspace.Zones[_G.zone_npc].Interactables.ArmWrestling.PVP[_G.TABLE_VSPLAYER])
+         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterTable"):FireServer(workspace:WaitForChild("Zones"):WaitForChild(_G.zone_npc):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("PVP"):WaitForChild(_G.TABLE_VSPLAYER))
+					
       end
   end    
 })	
