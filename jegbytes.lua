@@ -1058,6 +1058,58 @@ Callback=function(value)
 w7NPC5=value;
 end});
 
+local workspace = game:GetService("Workspace")
+local RunService = game:GetService("RunService")
+local zone = {}
+function AddTable(Table_V,LocalName)
+for _,v in pairs(Table_V:GetChildren()) do
+    table.insert(LocalName,v.Name)
+end
+end
+AddTable(workspace.Zones,zone)
+function TPType(type,pos)
+  if type == "teleport" then      
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+     end
+end
+
+teleport:AddDropdown({
+   Name = "Select Zone",
+   Default = "1",
+   Options = zone,
+   Callback = function(Value)
+     _G.zone_TP = Value
+  end    
+})
+
+teleport:AddButton({
+  Name = "Teleport Dropdown",
+  Callback = function()
+     if _G.zone_TP == "1" then
+        TPType(_G.TP_TYPE,CFrame.new(-10326,4,34))
+    end
+     if _G.zone_TP == "2" then
+        TPType("teleport",CFrame.new(-10324.130859375,0.8240296840667725,637.7939453125))
+     end
+     if _G.zone_TP == "3" then
+        TPType("teleport",CFrame.new(11599,10,-19))
+    end
+     if _G.zone_TP == "4" then   
+	TPType("teleport",CFrame.new(-10309.3984375,3.0494022369384766,-849.5071411132812))
+     end
+     if _G.zone_TP == "5" then    
+	TPType("teleport",CFrame.new(-10294.3984375,1.2994022369384766,-1417.257080078125))
+      end
+     if _G.zone_TP == "6" then    
+	TPType("teleport",CFrame.new(9709.2978515625,-10.275848388671875,-4620.21435546875))
+     end
+    if _G.zone_TP == "7" then
+	TPType("teleport",CFrame.new(9760.46875,48.07291793823242,580.4580078125))
+     end
+  end    
+})
+
+	
 	--[[
 local selectWorld = nil
 local zonetp = {
