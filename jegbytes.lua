@@ -1083,37 +1083,7 @@ teleport:AddDropdown({
 })
 
 teleport:AddButton({
-  Name = "Teleport V1",
-  Callback = function()
-     if _G.zone_TP == "1" then
-        TPType(_G.TP_TYPE,CFrame.new(-10326,4,34))
-    end
-     if _G.zone_TP == "2" then
-        TPType("teleport",CFrame.new(-10324,4,637))
-     end
-     if _G.zone_TP == "3" then
-        TPType("teleport",CFrame.new(11599,10,-19))
-    end
-     if _G.zone_TP == "4" then   
-	TPType("teleport",CFrame.new(-10274,4,-817))
-     end
-     if _G.zone_TP == "5" then    
-	TPType("teleport",CFrame.new(-10305,-4,-1417))
-      end
-     if _G.zone_TP == "6" then    
-	TPType("teleport",CFrame.new(9709,4,-4620))
-     end
-    if _G.zone_TP == "7" then
-	TPType("teleport",CFrame.new(9761,10,580))
-     end
-	if _G.zone_TP == "GreekEvent" then
-        TPType(_G.TP_TYPE,CFrame.new(9500, 12, 125))
-     end
-  end    
-})
-
-teleport:AddButton({
-  Name = "Teleport V2",
+  Name = "Teleport V1 [Need To Unlock Zone]",
   Callback = function()
      if _G.zone_TP == "1" then
         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("BackToSchool"))
@@ -1138,6 +1108,38 @@ teleport:AddButton({
       end
   end    
 })
+
+teleport:AddButton({
+  Name = "Teleport V2 [Working For Any Zones]",
+  Callback = function()
+     if _G.zone_TP == "1" then
+        TPType(_G.TP_TYPE,CFrame.new(-10326,4,34))
+    end
+     if _G.zone_TP == "2" then
+        TPType("teleport",CFrame.new(-10324,4,637))
+     end
+     if _G.zone_TP == "3" then
+        TPType("teleport",CFrame.new(11599,10,-19))
+    end
+     if _G.zone_TP == "4" then   
+	TPType("teleport",CFrame.new(-10274,4,-817))
+     end
+     if _G.zone_TP == "5" then    
+	TPType("teleport",CFrame.new(-10305,-4,-1417))
+      end
+     if _G.zone_TP == "6" then    
+	TPType("teleport",CFrame.new(-9709.87695, -5.80758238, -4633.05664, 1, 0, 0, 0, 1, 0, 0, 0, 1))
+     end
+    if _G.zone_TP == "7" then
+	TPType("teleport",CFrame.new(-9760.76855, 52.899971, 555.893982, 1, 0, 0, 0, 1, 0, 0, 0, 1))
+     end
+	if _G.zone_TP == "GreekEvent" then
+        TPType(_G.TP_TYPE,CFrame.new(9500, 12, 125))
+     end
+  end    
+})
+
+
 
 	
 	--[[
