@@ -425,53 +425,53 @@ end);
 --Main Tab
 
 local v58=v1:MakeTab({
-Name="𝔸𝕦𝕥𝕠",
+Name="Auto",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v59=v1:MakeTab({
-Name="𝔼𝕘𝕘 𝕃𝕚𝕤𝕥",
+Name="Egg List",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local v60=v1:MakeTab({
-Name="𝔸𝕦𝕥𝕠 ℕℙℂ",
+Name="Auto NPC",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local teleport=v1:MakeTab({
-Name="𝕋𝕖𝕝𝕖𝕡𝕠𝕣𝕥",
+Name="Teleport",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local food=v1:MakeTab({
-Name="𝔽𝕠𝕠𝕕𝕤",
+Name="Foods",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
 local event=v1:MakeTab({
-Name = "𝔼𝕧𝕖𝕟𝕥 𝔼𝕘𝕘𝕤",
+Name = "Event Eggs",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local pot=v1:MakeTab({
-Name = "ℙ𝕠𝕥𝕚𝕠𝕟𝕤",
+Name = "Potions",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local tools=v1:MakeTab({
-Name = "𝕋𝕠𝕠𝕝𝕤",
+Name = "Tools",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});	
 	
 local T13=v1:MakeTab({
-Name = "𝔸𝕦𝕥𝕠 𝔹𝕝𝕠𝕔𝕜𝕤",
+Name = "Auto Blocks [PATCHED]",
 Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 	
 --Toogle
 event:AddDropdown({
-   Name = "𝕊𝕖𝕝𝕖𝕔𝕥 𝔸𝕞𝕠𝕦𝕟𝕥 𝕆𝕗 𝔼𝕘𝕘𝕤",
+   Name = "Select Amount Of Eggs",
    Default = "1",
    Options = {"1","3","8"},
    Callback = function(Value)
@@ -480,7 +480,7 @@ event:AddDropdown({
 });
 
 event:AddToggle({
-  Name = "𝔸𝕦𝕥𝕠 ℂ𝕝𝕒𝕚𝕞 𝔼𝕧𝕖𝕟𝕥 𝔼𝕘𝕘𝕤",
+  Name = "Auto Claim Event Eggs",
   Default = false,
   Callback = function(Value)
   _G.Event_AV3 = Value
@@ -492,7 +492,7 @@ event:AddToggle({
 });
 
 event:AddToggle({
-  Name = "𝔸𝕦𝕥𝕠 ℂ𝕝𝕒𝕚𝕞 ℙ𝕣𝕖𝕧𝕚𝕠𝕦𝕤 𝔼𝕧𝕖𝕟𝕥 𝔼𝕘𝕘𝕤",
+  Name = "Auto Claim Previous Event Eggs",
   Default = false,
   Callback = function(Value)
   _G.PrevEgg = Value
@@ -504,7 +504,7 @@ end
 });
 
 food:AddDropdown({
-   Name = "𝕊𝕖𝕝𝕖𝕔𝕥 𝔸 𝔽𝕠𝕠𝕕",
+   Name = "Select Food",
    Default = "GreenApple",
    Options = {"GreenApple","Mushroom","GodlyBones"},
    Callback = function(Value)
@@ -513,7 +513,7 @@ food:AddDropdown({
 });
 	
 food:AddSlider({
-Name = "𝔽𝕠𝕠𝕕 𝔸𝕞𝕠𝕦𝕟𝕥",
+Name = "Food Amount",
 Min = 0,
 Max = 1000,
 Default = 1,
@@ -526,7 +526,7 @@ Callback = function(Value)
 });
 
 food:AddToggle({
-   Name = "𝕌𝕤𝕖 𝕋𝕙𝕖 𝕊𝕖𝕝𝕖𝕔𝕥𝕖𝕕 𝔽𝕠𝕠𝕕",
+   Name = "Use Selected Food",
    Default = false,
    Callback = function(Value)
      foods = Value
@@ -538,35 +538,35 @@ food:AddToggle({
 });
 
 v58:AddToggle({
-Name="𝔸𝕦𝕥𝕠 ℂ𝕝𝕚𝕔𝕜",
+Name="Auto Click",
 Default=false,
 Callback=function(v63)
 v2=v63;
 end});
 
 v58:AddToggle({
-Name="𝔸𝕦𝕥𝕠 ℂ𝕝𝕚𝕔𝕜 [𝔹𝕒𝕥𝕥𝕝𝕖]",
+Name="Auto Click Battle",
 Default=false,
 Callback=function(v64)
 v3=v64;
 end});
 
 v58:AddToggle({
-Name="𝔸𝕦𝕥𝕠 𝕊𝕡𝕚𝕟",
+Name="Auto Spin",
 Default=false,
 Callback=function(v65)
 v4=v65;
 end});
 
 v58:AddToggle({
-Name="𝔸𝕦𝕥𝕠 ℝ𝕠𝕝𝕝 𝔸𝕝𝕝 ℂ𝕣𝕒𝕥𝕖𝕤",
+Name="Auto Roll All Crates",
 Default=false,
 Callback=function(v66)
 v5=v66;
 end});
 
 v58:AddDropdown({
-   Name = "𝕊𝕖𝕝𝕖𝕔𝕥 ℂ𝕣𝕒𝕥𝕖",
+   Name = "Select Crate",
    Default = "RustCrate",
    Options = {"RustCrate","SilverCrate","GoldCrate","DiamondCrate","EmeraldCrate","PlatinumCrate"},
    Callback = function(Value)
@@ -575,7 +575,7 @@ v58:AddDropdown({
 })
 	
 v58:AddToggle({
-Name="𝔸𝕦𝕥𝕠 ℝ𝕠𝕝𝕝 𝕊𝕡𝕖𝕔𝕚𝕗𝕚𝕔 ℂ𝕣𝕒𝕥𝕖",
+Name="Auto Roll Specific Crate",
 Default=false,
 Callback=function(value)
 hehehe = value
@@ -585,9 +585,9 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end});
 	
-v58:AddLabel("𝔸𝕌𝕋𝕆 𝔹𝕌𝕐 ℂℝ𝔸𝕋𝔼");
+v58:AddLabel("AUTO BUY CRATE");
 v58:AddDropdown({
-   Name = "𝕊𝕖𝕝𝕖𝕔𝕥 ℂ𝕣𝕒𝕥𝕖",
+   Name = "Select Crate",
    Default = "Rust",
    Options = {"Rust","Silver","Gold","Diamond","Emerald","Platinum"},
    Callback = function(Value)
@@ -596,7 +596,7 @@ v58:AddDropdown({
 })
 
 v58:AddDropdown({
-   Name = "𝕊𝕖𝕝𝕖𝕔𝕥 𝔸𝕞𝕠𝕦𝕟𝕥",
+   Name = "Select Amount",
    Default = "1",
    Options = {"1","10","100"},
    Callback = function(Value)
@@ -605,7 +605,7 @@ v58:AddDropdown({
 })
 
 v58:AddToggle({
-  Name = "𝔸𝕦𝕥𝕠 𝔹𝕦𝕪 ℂ𝕣𝕒𝕥𝕖",
+  Name = "Auto Buy Crate",
   Callback = function(value)
 _G.crates = value
   while wait() do
@@ -616,7 +616,7 @@ end
 });
 	
 v58:AddToggle({
-  Name = "𝔸𝕦𝕥𝕠 ℂ𝕝𝕒𝕚𝕞 𝔾𝕚𝕗𝕥",
+  Name = "Auto Claim Gift",
   Default = false,
   Callback = function(Value)
   _G.Gift = Value
@@ -642,7 +642,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 })
 
 v58:AddToggle({
-  Name = "𝔸𝕦𝕥𝕠 𝕤𝕡𝕚𝕟 𝕝𝕦𝕔𝕜𝕪 𝕕𝕣𝕒𝕨 [𝔹𝕝𝕦𝕖𝕡𝕣𝕚𝕟𝕥]",
+  Name = "Auto Spin Lucky Draw [Blueprint]",
   Default = false,
   Callback = function(Value)
   _G.blueprint = Value
@@ -654,7 +654,7 @@ v58:AddToggle({
 })
 
 v58:AddToggle({
-  Name = "𝔸𝕦𝕥𝕠 𝕤𝕡𝕚𝕟 𝕕𝕒𝕚𝕝𝕪 𝕝𝕦𝕔𝕜𝕪 𝕕𝕣𝕒𝕨 [𝔹𝕝𝕦𝕖𝕡𝕣𝕚𝕟𝕥]",
+  Name = "Auto Spin Daily Lucky Draw [Blueprint]",
   Default = false,
   Callback = function(Value)
   _G.dailyblueprint = Value
@@ -666,7 +666,7 @@ v58:AddToggle({
 })
 
 v58:AddToggle({
-  Name = "𝔸𝕦𝕥𝕠 ℂ𝕝𝕒𝕚𝕞 𝔻𝕒𝕚𝕝𝕪 𝕃𝕠𝕘𝕚𝕟",
+  Name = "Auto Claim Daily Log-in",
   Default = false,
   Callback = function(Value)
   _G.dailylogin = Value
@@ -678,7 +678,7 @@ v58:AddToggle({
 })
 
 v58:AddToggle({
-  Name = "𝔸𝕦𝕥𝕠 ℝ𝕖𝕓𝕚𝕣𝕥𝕙",
+  Name = "Auto Rebirth",
   Default = false,
   Callback = function(Value)
   _G.Rbr = Value
@@ -690,7 +690,7 @@ v58:AddToggle({
 })
 
 v58:AddToggle({
-  Name = "𝔸𝕦𝕥𝕠 𝕊𝕦𝕡𝕖𝕣 ℝ𝕖𝕓𝕚𝕣𝕥𝕙",
+  Name = "Auto Super Rebirth",
   Default = false,
   Callback = function(Value)
   _G.Rbr = Value
@@ -1083,29 +1083,59 @@ teleport:AddDropdown({
 })
 
 teleport:AddButton({
-  Name = "Teleport Dropdown",
+  Name = "Teleport V1",
   Callback = function()
      if _G.zone_TP == "1" then
         TPType(_G.TP_TYPE,CFrame.new(-10326,4,34))
     end
      if _G.zone_TP == "2" then
-        TPType("teleport",CFrame.new(-10324.130859375,0.8240296840667725,637.7939453125))
+        TPType("teleport",CFrame.new(-10324,4,637))
      end
      if _G.zone_TP == "3" then
         TPType("teleport",CFrame.new(11599,10,-19))
     end
      if _G.zone_TP == "4" then   
-	TPType("teleport",CFrame.new(-10309.3984375,3.0494022369384766,-849.5071411132812))
+	TPType("teleport",CFrame.new(-10274,4,-817))
      end
      if _G.zone_TP == "5" then    
-	TPType("teleport",CFrame.new(-10294.3984375,1.2994022369384766,-1417.257080078125))
+	TPType("teleport",CFrame.new(-10305,-4,-1417))
       end
      if _G.zone_TP == "6" then    
-	TPType("teleport",CFrame.new(9709.2978515625,-10.275848388671875,-4620.21435546875))
+	TPType("teleport",CFrame.new(9709,4,-4620))
      end
     if _G.zone_TP == "7" then
-	TPType("teleport",CFrame.new(9760.46875,48.07291793823242,580.4580078125))
+	TPType("teleport",CFrame.new(9761,10,580))
      end
+	if _G.zone_TP == "GreekEvent" then
+        TPType(_G.TP_TYPE,CFrame.new(9500, 12, 125))
+     end
+  end    
+})
+
+teleport:AddButton({
+  Name = "Teleport V2",
+  Callback = function()
+     if _G.zone_TP == "1" then
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("BackToSchool"))
+    end
+     if _G.zone_TP == "2" then
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("2"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("Futuristic"))
+     end
+     if _G.zone_TP == "3" then
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("3"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("Beach"))
+    end
+     if _G.zone_TP == "4" then   
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("4"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("NuclearBunker"))
+     end
+     if _G.zone_TP == "5" then    
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("5"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("DinoWorld"))
+      end
+     if _G.zone_TP == "6" then    
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("6"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("VoidWorld"))
+     end
+    if _G.zone_TP == "7" then
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("7"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("SpaceCenter"))
+      end
   end    
 })
 
@@ -1114,7 +1144,7 @@ teleport:AddButton({
 local selectWorld = nil
 local zonetp = {
 		[World 1] = -10326,4,34,
-		[World 2] = -10324.130859375,0.8240296840667725,637.7939453125,
+		[World 2] = -10324,4,637,
 		[World 3] = 11599,10,-19,
 		[World 4] = -10309.3984375,3.0494022369384766,-849.5071411132812,
 		[World 5] = -10294.3984375,1.2994022369384766,-1417.257080078125,
@@ -1139,7 +1169,7 @@ Character:PivotTo(CFrame.new(tostring(selectWorld)))
 print(Character:GetPivot())					
 end});			
 	]]--		
-		
+--[[		
 teleport:AddButton({
 Name="World 1",
 Default=false,
@@ -1211,7 +1241,7 @@ local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(g
 Character:PivotTo(CFrame.new(-9554.43, 42.7513, 682.634))
 print(Character:GetPivot())
 end});			
-
+]]--
 --[[
 teleport:AddButton({
 Name="World 1",
