@@ -434,7 +434,6 @@ PremiumOnly=false});
 
 local v60=v1:MakeTab({
 Name="NPC/PLAYER",
-Icon="rbxassetid://4483345998",
 PremiumOnly=false});
 
 local teleport=v1:MakeTab({
@@ -1135,7 +1134,7 @@ teleport:AddButton({
      game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("7"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("SpaceCenter"))
       end
 	if _G.zone_TP == "GreekEvent" then
-        TPType(_G.TP_TYPE,CFrame.new(-10114,48,-2362))
+        TPType("teleport",CFrame.new(-10114,48,-2362))
      end
   end    
 })
