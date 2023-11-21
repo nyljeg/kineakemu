@@ -1061,6 +1061,7 @@ end});
 local workspace = game:GetService("Workspace")
 local RunService = game:GetService("RunService")
 local zone = {}
+local npc = {}
 function AddTable(Table_V,LocalName)
 for _,v in pairs(Table_V:GetChildren()) do
     table.insert(LocalName,v.Name)
@@ -1145,9 +1146,45 @@ teleport:AddButton({
      end
   end    
 })
+	
+for i = 1, 7 do  
+AddTable(workspace.Zones[i].Interactables.ArmWrestling.NPC,npc) 
+end
+teleport:AddDropdown({
+   Name = "Select Zone For NPC",
+   Default = "1",
+   Options = zone,
+   Callback = function(Value)
+     _G.zone_npc = Value
+   end    
+})
 
+teleport:AddDropdown({
+   Name = "Select NPC",
+   Default = "Bully",
+   Options = npc,
+   Callback = function(Value)
+     _G.AI = Value
+   end    
+})
 
+teleport:AddToggle({
+  Name = "Auto Wrestle",
+  Default = false,
+  Callback = function(Value)
+  _G.JoinW = Value
+    while wait() do
+      if _G.JoinW == false then break end
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer(_G.AI,workspace:WaitForChild("Zones"):WaitForChild(_G.zone_npc):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild(_G.AI):WaitForChild("Table"),_G.zone_npc)
+end
+end});
 
+teleport:AddToggle({
+Name="Auto Click Battle",
+Default=false,
+Callback=function(v64)
+v3=v64;
+end});
 	
 	--[[
 local selectWorld = nil
