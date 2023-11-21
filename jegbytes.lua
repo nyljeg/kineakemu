@@ -1113,26 +1113,33 @@ teleport:AddButton({
   Name = "Teleport V2 [Working For Any Zones]",
   Callback = function()
      if _G.zone_TP == "1" then
-        TPType(_G.TP_TYPE,CFrame.new(-10326,4,34))
-    end
+        TPType(_G.TP_TYPE,CFrame.new(-10323.709, 5.79754305, 42.2389755, 1, 0, 0, 0, 1, 0, 0, 0, 1))
+        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("BackToSchool"))
+     end
      if _G.zone_TP == "2" then
         TPType("teleport",CFrame.new(-10324,4,637))
+     game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("2"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("Futuristic"))
      end
      if _G.zone_TP == "3" then
         TPType("teleport",CFrame.new(11599,10,-19))
-    end
+    game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("3"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("Beach"))
+   end
      if _G.zone_TP == "4" then   
 	TPType("teleport",CFrame.new(-10274,4,-817))
+     game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("4"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("NuclearBunker"))
      end
      if _G.zone_TP == "5" then    
 	TPType("teleport",CFrame.new(-10305,-4,-1417))
+      game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("5"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("DinoWorld"))
       end
      if _G.zone_TP == "6" then    
 	TPType("teleport",CFrame.new(-9709.87695, -5.80758238, -4633.05664, 1, 0, 0, 0, 1, 0, 0, 0, 1))
+     game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("6"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("VoidWorld"))
      end
     if _G.zone_TP == "7" then
 	TPType("teleport",CFrame.new(-9760.76855, 52.899971, 555.893982, 1, 0, 0, 0, 1, 0, 0, 0, 1))
-     end
+     game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("7"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("SpaceCenter"))
+      end
 	if _G.zone_TP == "GreekEvent" then
         TPType(_G.TP_TYPE,CFrame.new(9500, 12, 125))
      end
