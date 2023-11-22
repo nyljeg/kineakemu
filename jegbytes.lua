@@ -461,6 +461,8 @@ Name = "Auto Blocks [PATCHED]",
 PremiumOnly=false});
 	
 --Toogle
+local Event_A3 = event:AddParagraph("Event Eggs available","#EGG_ERROR")
+	
 event:AddDropdown({
    Name = "Select Amount Of Eggs",
    Default = "1",
@@ -1389,6 +1391,14 @@ else
    BlockInfo:Set("#SNIPING \nwe are looking for lucky block","")
 end
 end)
+
+RunService.RenderStepped:Connect(function()
+if game.Players.LocalPlayer.PlayerGui.GameUI.Menus:FindFirstChild("Event") then
+Event_A3:Set(tostring(game.Players.LocalPlayer.PlayerGui.GameUI.Menus.Event.Amount.Text),"Event Eggs available")
+end
+end)
+
+	
 	
  
 end 
