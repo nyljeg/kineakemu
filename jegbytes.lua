@@ -52,7 +52,63 @@ local w7NPC4=false;
 local w7NPC5=false;
 
 
+_G.AutoDeleteWithTable = {
+   Earth = nil,
+   Icy = nil,
+   Blackhole = nil,
+   Lava = nil,
+   Molten = nil,
+   Crystal = nil,
+   Solar = nil,
+   Ice = nil,
+   Burning = nil,
+   Moon = nil,
+   Coconut = nil,
+   Palm = nil,
+   Treasure = nil,
+   Poseidon = nil,
+   KingFish = nil,
+   Clam = nil,
+   Rust = nil,
+   Widget = nil,
+   Atom = nil,
+   Nuclear = nil,
+   Mutant = nil,
+   Iridescent = nil,
+   TRex = nil,
+   Herbivore = nil,
+   Pterodactyl = nil,
+   Gem = nil,
+   DinoFossil = nil,
+   Mystic = nil,
+   Void = nil,
+   Nebula = nil,
+   Wormhole = nil,
+   Star = nil,
+   Meteor = nil,
+   Cyberpunk = nil,
+   Deepsea = nil,
+   Rocket = nil,
+   Shark = nil,
+   Crab = nil,
+   Jellyfish = nil,
+   Limited = nil
+}
 
+local DeleteFuckingPet = nil
+local mt = getrawmetatable(game);
+setreadonly(mt,false)
+local namecall = mt.__namecall
+
+mt.__namecall = newcclosure(function(self, ...)
+	local Method = getnamecallmethod()
+	local Args = {...}
+
+	if Method == 'InvokeServer' and self.Name == 'purchaseEgg' then
+        DeleteFuckingPet = Args[2]
+end
+	return namecall(self, ...) 
+end)
 
 
  
@@ -693,7 +749,35 @@ v58:AddToggle({
   end    
 })
 
+local dislist = {"=[ Zone 1 ]=","Earth","Icy","Blackhole","Lava","=[ Zone 2 ]=","Molten","Crystal","Solar","Ice","Burning","Moon","=[ Zone 3 ]=","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","=[ Zone 4 ]=","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","=[ Zone 5 ]=","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","=[ Zone 6 ]=","Void","Nebula","Wormhole","Star","=[ ZONE 7 ]=","Meteor","Cyberpunk","Deepsea","Rocket","=[ Aqua Event ]=","Shark","Crab","Jellyfish","=[ Limited Egg ]=","[ Has Ended ]"}
+v59:AddDropdown({
+   Name = "Select EGG",
+   Default = "Earth",
+   Options = dislist,
+   Callback = function(Value)
+     _G.Egg = Value
+   end    
+})
 
+v59:AddToggle({
+  Name = "Auto Hatch",
+  Default = false,
+  Callback = function(Value)
+  _G.Balls = Value
+    while wait() do
+      if _G.Balls == false then break end
+	  if _G.AutoDeleteWithTable[_G.Egg] == nil then     
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(_G.Egg,DeleteFuckingPet)
+	 _G.AutoDeleteWithTable[_G.Egg] = DeleteFuckingPet
+	else     
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(_G.Egg,_G.AutoDeleteWithTable[_G.Egg])
+	end
+      end
+  end    
+})
+	
+
+	--[[
 local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket"}
 v59:AddDropdown({
    Name = "Choose your Egg",
@@ -720,7 +804,8 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end 
 end
 });
-
+]]--
+	
 tools:AddDropdown({
    Name = "Your Zone",
    Default = "1",
@@ -1053,6 +1138,7 @@ local workspace = game:GetService("Workspace")
 local RunService = game:GetService("RunService")
 local zone = {}
 local VSPLAYER = {}
+local egg = {}
 local npc = {}
 function AddTable(Table_V,LocalName)
 for _,v in pairs(Table_V:GetChildren()) do
