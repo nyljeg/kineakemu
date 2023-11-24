@@ -10,46 +10,7 @@ HidePremium=false,
 IntroText="Elmer Library",
 SaveConfig=true,
 ConfigFolder="nyljegLib"});
-local v2=false;
-local v3=false;
-local v4=false;
-local v5=false;
-local v7=false;
-local v28=false;
-local v29=false;
-local v30=false;
-local v31=false;
-local v32=false;
-local v33=false;
-local v34=false;
-local v35=false;
-local v36=false;
-local v37=false;
-local v38=false;
-local v39=false;
-local v40=false;
-local v41=false;
-local v42=false;
-local v43=false;
-local v44=false;
-local v45=false;
-local v46=false;
-local v47=false;
-local w5NPC1=false;
-local w5NPC2=false;
-local w5NPC3=false;
-local w5NPC4=false;
-local w5NPC5=false;
-local w6NPC1=false;
-local w6NPC2=false;
-local w6NPC3=false;
-local w6NPC4=false;
-local w6NPC5=false;
-local w7NPC1=false;
-local w7NPC2=false;
-local w7NPC3=false;
-local w7NPC4=false;
-local w7NPC5=false;
+
 
 
 _G.AutoDeleteWithTable = {
@@ -109,372 +70,6 @@ mt.__namecall = newcclosure(function(self, ...)
 end
 	return namecall(self, ...) 
 end)
-
-
- 
---Function
-
-spawn(function()
-while task.wait() do 
-if v47 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("MutantKing",workspace:WaitForChild("Zones"):WaitForChild("4"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("MutantKing"):WaitForChild("Table"),"4")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v46 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Bulk",workspace:WaitForChild("Zones"):WaitForChild("4"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Bulk"):WaitForChild("Table"),"4")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v45 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Enforcer",workspace:WaitForChild("Zones"):WaitForChild("4"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Enforcer"):WaitForChild("Table"),"4")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v44 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Hazmat",workspace:WaitForChild("Zones"):WaitForChild("4"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Hazmat"):WaitForChild("Table"),"4")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v43 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Barbarian",workspace:WaitForChild("Zones"):WaitForChild("4"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Barbarian"):WaitForChild("Table"),"4")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v5 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmsService"):WaitForChild("RF"):WaitForChild("RollAllCratesForPlayer"):InvokeServer()
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v4 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("getOwned"):InvokeServer(game:GetService("Players").LocalPlayer);
-else 
-end 
-end 
-end);	
-
-spawn(function()
-while task.wait() do 
-if v42 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("KrakenBoss",workspace:WaitForChild("Zones"):WaitForChild("3"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("KrakenBoss"):WaitForChild("Table"),"3")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v41 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("FriendlyShark",workspace:WaitForChild("Zones"):WaitForChild("3"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("FriendlyShark"):WaitForChild("Table"),"3")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v40 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("MermaidKing",workspace:WaitForChild("Zones"):WaitForChild("3"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("MermaidKing"):WaitForChild("Table"),"3")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v39 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("FatPirate",workspace:WaitForChild("Zones"):WaitForChild("3"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("FatPirate"):WaitForChild("Table"),"3")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v38 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("CocoNut",workspace:WaitForChild("Zones"):WaitForChild("3"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("CocoNut"):WaitForChild("Table"),"3")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v37 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("RogueAi",workspace:WaitForChild("Zones"):WaitForChild("2"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("RogueAi"):WaitForChild("Table"),"2")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v36 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("RipperDoc",workspace:WaitForChild("Zones"):WaitForChild("2"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("RipperDoc"):WaitForChild("Table"),"2")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v35 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("SlicerAssassin",workspace:WaitForChild("Zones"):WaitForChild("2"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("SlicerAssassin"):WaitForChild("Table"),"2")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v34 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("CyberCop",workspace:WaitForChild("Zones"):WaitForChild("2"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("CyberCop"):WaitForChild("Table"),"2")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v33 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("ScrapTrader",workspace:WaitForChild("Zones"):WaitForChild("2"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("ScrapTrader"):WaitForChild("Table"),"2")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v32 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Champion",workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Champion"):WaitForChild("Table"),"1")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v31 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("MafiaBoss",workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("MafiaBoss"):WaitForChild("Table"),"1")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v30 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("GymRat",workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("GymRat"):WaitForChild("Table"),"1")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v29 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Teacher",workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Teacher"):WaitForChild("Table"),"1")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v28 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Bully",workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Bully"):WaitForChild("Table"),"1")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v2 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onClick"):FireServer();
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if v3 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onClickRequest"):FireServer();
-else 
-end 
-end 
-end);
-
- spawn(function()
-while task.wait() do 
-if w5NPC1 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Primal",workspace:WaitForChild("Zones"):WaitForChild("5"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Primal"):WaitForChild("Table"),"5")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w5NPC2 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Dino",workspace:WaitForChild("Zones"):WaitForChild("5"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Dino"):WaitForChild("Table"),"5")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w5NPC3 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Archeologist",workspace:WaitForChild("Zones"):WaitForChild("5"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Archeologist"):WaitForChild("Table"),"5")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w5NPC4 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("TribeLeader",workspace:WaitForChild("Zones"):WaitForChild("5"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("TribeLeader"):WaitForChild("Table"),"5")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w5NPC5 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Mammoth",workspace:WaitForChild("Zones"):WaitForChild("5"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Mammoth"):WaitForChild("Table"),"5")
-else 
-end 
-end 
-end);
-
- spawn(function()
-while task.wait() do 
-if w6NPC1 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Orinthian",workspace:WaitForChild("Zones"):WaitForChild("6"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Orinthian"):WaitForChild("Table"),"6")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w6NPC2 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Spaceboy",workspace:WaitForChild("Zones"):WaitForChild("6"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Spaceboy"):WaitForChild("Table"),"6")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w6NPC3 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("DemonSlayer",workspace:WaitForChild("Zones"):WaitForChild("6"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("DemonSlayer"):WaitForChild("Table"),"6")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w6NPC4 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Udzal",workspace:WaitForChild("Zones"):WaitForChild("6"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Udzal"):WaitForChild("Table"),"6")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w6NPC5 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("Cybernetic",workspace:WaitForChild("Zones"):WaitForChild("6"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("Cybernetic"):WaitForChild("Table"),"6")
-else 
-end 
-end 
-end);
-	
-spawn(function()
-while task.wait() do 
-if w7NPC1 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("RocketRider",workspace:WaitForChild("Zones"):WaitForChild("7"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("RocketRider"):WaitForChild("Table"),"7")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w7NPC2 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("MissileMaven",workspace:WaitForChild("Zones"):WaitForChild("7"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("MissileMaven"):WaitForChild("Table"),"7")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w7NPC3 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("LairGuardian",workspace:WaitForChild("Zones"):WaitForChild("7"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("LairGuardian"):WaitForChild("Table"),"7")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w7NPC4 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("NovaNomad",workspace:WaitForChild("Zones"):WaitForChild("7"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("NovaNomad"):WaitForChild("Table"),"7")
-else 
-end 
-end 
-end);
-
-spawn(function()
-while task.wait() do 
-if w7NPC5 then 
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer("DrPropulsion",workspace:WaitForChild("Zones"):WaitForChild("7"):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild("DrPropulsion"):WaitForChild("Table"),"7")
-else 
-end 
-end 
-end);
-
-
-
-	
-
-
-
-
-
-
-
 	
 ------------------
 
@@ -512,7 +107,7 @@ local tools=v1:MakeTab({
 Name = "Tools",
 PremiumOnly=false});	
 	
-local T13=v1:MakeTab({
+local crate=v1:MakeTab({
 Name = "Auto Blocks [PATCHED]",
 PremiumOnly=false});
 	
@@ -589,15 +184,12 @@ food:AddToggle({
 v58:AddToggle({
 Name="Auto Click",
 Default=false,
-Callback=function(v63)
-v2=v63;
-end});
-
-v58:AddToggle({
-Name="Auto Click Battle",
-Default=false,
-Callback=function(v64)
-v3=v64;
+Callback=function(value)
+v2=value
+while wait() do
+if v2 == false then break end
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onClick"):FireServer();
+end					
 end});
 
 v58:AddToggle({
@@ -605,16 +197,24 @@ Name="Auto Spin",
 Default=false,
 Callback=function(v65)
 v4=v65;
+while wait() do
+if v4 == false then break end
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PetService"):WaitForChild("RF"):WaitForChild("getOwned"):InvokeServer(game:GetService("Players").LocalPlayer);
+end					
 end});
 
-v58:AddToggle({
+crate:AddToggle({
 Name="Auto Roll All Crates",
 Default=false,
 Callback=function(v66)
 v5=v66;
+while wait() do
+if v5 == false then break end
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmsService"):WaitForChild("RF"):WaitForChild("RollAllCratesForPlayer"):InvokeServer()
+end					
 end});
 
-v58:AddDropdown({
+crate:AddDropdown({
    Name = "Select Crate",
    Default = "RustCrate",
    Options = {"RustCrate","SilverCrate","GoldCrate","DiamondCrate","EmeraldCrate","PlatinumCrate"},
@@ -623,7 +223,7 @@ v58:AddDropdown({
   end    
 })
 	
-v58:AddToggle({
+crate:AddToggle({
 Name="Auto Roll Specific Crate",
 Default=false,
 Callback=function(value)
@@ -634,8 +234,8 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end});
 	
-v58:AddLabel("AUTO BUY CRATE");
-v58:AddDropdown({
+crate:AddLabel("AUTO BUY CRATE");
+crate:AddDropdown({
    Name = "Select Crate",
    Default = "Rust",
    Options = {"Rust","Silver","Gold","Diamond","Emerald","Platinum"},
@@ -644,7 +244,7 @@ v58:AddDropdown({
   end    
 })
 
-v58:AddDropdown({
+crate:AddDropdown({
    Name = "Select Amount",
    Default = "1",
    Options = {"1","10","100"},
@@ -653,7 +253,7 @@ v58:AddDropdown({
   end    
 })
 
-v58:AddToggle({
+crate:AddToggle({
   Name = "Auto Buy Crate",
   Callback = function(value)
 _G.crates = value
@@ -882,258 +482,6 @@ end
 end});
 --------------------
 
---[[
-
-v60:AddLabel("WORLD 1 NPC");
-v60:AddToggle({
-Name="Auto Bully",
-Default=false,
-Callback=function(v72)
-v28=v72;
-end});
-
-v60:AddToggle({
-Name="Auto Teacher",
-Default=false,
-Callback=function(v73)
-v29=v73;
-end});
-
-v60:AddToggle({
-Name="Auto GymRat",
-Default=false,
-Callback=function(v74)
-v30=v74;
-end});
-
-v60:AddToggle({
-Name="Auto MafiaBoss",
-Default=false,
-Callback=function(v75)
-v31=v75;
-end});
-
-v60:AddToggle({
-Name="Auto Champion",
-Default=false,
-Callback=function(v76)
-v32=v76;
-end});
-
-v60:AddLabel("WORLD 2 NPC");
-v60:AddToggle({Name="Auto ScrapTrader",
-Default=false,
-Callback=function(v82)
-v33=v82;
-end});
-
-v60:AddToggle({
-Name="Auto CyberCop",
-Default=false,
-Callback=function(v83)
-v34=v83;
-end});
-
-v60:AddToggle({
-Name="Auto CyberAssassin",
-Default=false,
-Callback=function(v84)
-v35=v84;
-end});
-
-v60:AddToggle({
-Name="Auto RipperDoc",
-Default=false,
-Callback=function(v85)
-v36=v85;
-end});
-
-v60:AddToggle({
-Name="Auto RogueAi",
-Default=false,
-Callback=function(v86)
-v37=v86;
-end});
-
-v60:AddLabel("WORLD 3 NPC");
-v60:AddToggle({
-Name="Auto CocoNut",
-Default=false,
-Callback=function(v87)
-v38=v87;
-end});
-
-v60:AddToggle({
-Name="Auto FatPirate",
-Default=false,
-Callback=function(v88)
-v39=v88;
-end});
-
-v60:AddToggle({
-Name="Auto MermaidKing",
-Default=false,
-Callback=function(v89)
-v40=v89;
-end});
-
-v60:AddToggle({
-Name="Auto FriendlyShark",
-Default=false,
-Callback=function(v90)
-v41=v90;
-end});
-
-v60:AddToggle({
-Name="Auto KrakenBoss",
-Default=false,
-Callback=function(v91)
-v42=v91;
-end});
-
-v60:AddLabel("WORLD 4 NPC");
-v60:AddToggle({
-Name="Auto Barbarian",
-Default=false,
-Callback=function(v92)
-v43=v92;end});
-
-v60:AddToggle({
-Name="Auto Hazmat",
-Default=false,
-Callback=function(v93)
-v44=v93;
-end});
-
-v60:AddToggle({
-Name="Auto Enforcer",
-Default=false,
-Callback=function(v94)
-v45=v94;
-end});
-
-v60:AddToggle({
-Name="Auto Bulk",
-Default=false,
-Callback=function(v95)
-v46=v95;
-end});
-
-v60:AddToggle({
-Name="Auto MutantKing",
-Default=false,
-Callback=function(v96)
-v47=v96;
-end});
-
-v60:AddLabel("WORLD 5 NPC");
-v60:AddToggle({
-Name="Primal",
-Default=false,
-Callback=function(value)
-w5NPC1=value;
-end});
-
-v60:AddToggle({
-Name="Dino",
-Default=false,
-Callback=function(value)
-w5NPC2=value;
-end});
-
-v60:AddToggle({
-Name="Archeologist",
-Default=false,
-Callback=function(value)
-w5NPC3=value;
-end});
-
-v60:AddToggle({
-Name="Tribe Leader",
-Default=false,
-Callback=function(value)
-w5NPC4=value;
-end});
-
-v60:AddToggle({
-Name="Mammoth",
-Default=false,
-Callback=function(value)
-w5NPC5=value;
-end});
-
-v60:AddLabel("WORLD 6 NPC");
-v60:AddToggle({
-Name="Orinthian",
-Default=false,
-Callback=function(value)
-w6NPC1=value;
-end});
-
-v60:AddToggle({
-Name="Spaceboy",
-Default=false,
-Callback=function(value)
-w6NPC2=value;
-end});
-
-v60:AddToggle({
-Name="Demon Slayer",
-Default=false,
-Callback=function(value)
-w6NPC3=value;
-end});
-
-v60:AddToggle({
-Name="Ud'zan",
-Default=false,
-Callback=function(value)
-w6NPC4=value;
-end});
-
-v60:AddToggle({
-Name="Cybernetic",
-Default=false,
-Callback=function(value)
-w6NPC5=value;
-end});
-
-v60:AddLabel("WORLD 7 NPC");
-v60:AddToggle({
-Name="Rocket Rider",
-Default=false,
-Callback=function(value)
-w7NPC1=value;
-end});
-
-v60:AddToggle({
-Name="Missile Maven",
-Default=false,
-Callback=function(value)
-w7NPC2=value;
-end});
-
-v60:AddToggle({
-Name="Nova Nomad",
-Default=false,
-Callback=function(value)
-w7NPC3=value;
-end});
-
-v60:AddToggle({
-Name="Lair Guardian",
-Default=false,
-Callback=function(value)
-w7NPC4=value;
-end});
-
-v60:AddToggle({
-Name="Dr Propulsion",
-Default=false,
-Callback=function(value)
-w7NPC5=value;
-end});
-]]--
 local workspace = game:GetService("Workspace")
 local RunService = game:GetService("RunService")
 local zone = {}
@@ -1228,6 +576,7 @@ v60:AddToggle({
     while wait() do
       if _G.JoinW == false then break end
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterNPCTable"):FireServer(_G.AI,workspace:WaitForChild("Zones"):WaitForChild(_G.zone_npc):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("NPC"):WaitForChild(_G.AI):WaitForChild("Table"),_G.zone_npc)
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onClickRequest"):FireServer();
 end
 end});
 
@@ -1248,110 +597,12 @@ v60:AddToggle({
     while wait() do
       if _G.ENTERTABLE == false then break end
          game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onEnterTable"):FireServer(workspace:WaitForChild("Zones"):WaitForChild(_G.zone_npc):WaitForChild("Interactables"):WaitForChild("ArmWrestling"):WaitForChild("PVP"):WaitForChild(_G.TABLE_VSPLAYER))
-					
+	game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onClickRequest"):FireServer();					
       end
   end    
 })	
 	
-v60:AddToggle({
-Name="Auto Click Battle",
-Default=false,
-Callback=function(v64)
-v3=v64;
-end});
-	
 	--[[
-local selectWorld = nil
-local zonetp = {
-		[World 1] = -10326,4,34,
-		[World 2] = -10324,4,637,
-		[World 3] = 11599,10,-19,
-		[World 4] = -10309.3984375,3.0494022369384766,-849.5071411132812,
-		[World 5] = -10294.3984375,1.2994022369384766,-1417.257080078125,
-		[World 6] = -9709.2978515625,-10.275848388671875,-4620.21435546875,
-		[World 7] = -9760.46875,48.07291793823242,580.4580078125,
-		[Slime Machine] = -9554.43,42.7513,682.634
-	}
-teleport:AddDropdown({
-Name = "Select World",
-Default = World 1,
-Options = {World 1,World 2,World 3,World 4,World 5,World 6,World 7,Slime Machine},
-Callback = function(GetOne)
-selectWorld = zonetp[GetOne]
-end
-
-teleport:AddButton({
-Name="Teleport",
-Default=nil,
-Callback=function()
-local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
-Character:PivotTo(CFrame.new(tostring(selectWorld)))
-print(Character:GetPivot())					
-end});			
-	]]--		
---[[		
-teleport:AddButton({
-Name="World 1",
-Default=false,
-Callback=function()
-local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
-Character:PivotTo(CFrame.new(-10326,4,34))
-print(Character:GetPivot())					
-end});
-
-teleport:AddButton({
-Name="World 2",
-Default=false,
-Callback=function()
-local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
-Character:PivotTo(CFrame.new(-10324.130859375,0.8240296840667725,637.7939453125))
-print(Character:GetPivot())						
-end});
-
-teleport:AddButton({
-Name="World 3",
-Default=false,
-Callback=function()
-local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
-Character:PivotTo(CFrame.new(11599,10,-19))
-print(Character:GetPivot())						
-end});
-
-teleport:AddButton({
-Name="World 4",
-Default=false,
-Callback=function()
-local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
-Character:PivotTo(CFrame.new(-10309.3984375,3.0494022369384766,-849.5071411132812))
-print(Character:GetPivot())						
-end});
-
-teleport:AddButton({
-Name="World 5",
-Default=false,
-Callback=function()
-local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
-Character:PivotTo(CFrame.new(-10294.3984375,1.2994022369384766,-1417.257080078125))
-print(Character:GetPivot())						
-end});
-
-teleport:AddButton({
-Name="World 6",
-Default=false,
-Callback=function()
-	local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
-Character:PivotTo(CFrame.new(-9709.2978515625,-10.275848388671875,-4620.21435546875))
-print(Character:GetPivot())					
-end});
-
-teleport:AddButton({
-Name="World 7",
-Default=false,
-Callback=function()
-local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
-Character:PivotTo(CFrame.new(-9760.46875,48.07291793823242,580.4580078125))
-print(Character:GetPivot())
-end});
 
 teleport:AddButton({
 Name="Slime Machine",
@@ -1361,56 +612,6 @@ local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(g
 Character:PivotTo(CFrame.new(-9554.43, 42.7513, 682.634))
 print(Character:GetPivot())
 end});			
-]]--
---[[
-teleport:AddButton({
-Name="World 1",
-Default=false,
-Callback=function()
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("1"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("BackToSchool"))
-end});
-
-teleport:AddButton({
-Name="World 2",
-Default=false,
-Callback=function()
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("2"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("Futuristic"))
-end});
-
-teleport:AddButton({
-Name="World 3",
-Default=false,
-Callback=function()
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("3"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("Beach"))
-end});
-
-teleport:AddButton({
-Name="World 4",
-Default=false,
-Callback=function()
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("4"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("NuclearBunker"))
-end});
-
-teleport:AddButton({
-Name="World 5",
-Default=false,
-Callback=function()
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("5"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("DinoWorld"))
-end});
-
-teleport:AddButton({
-Name="World 6",
-Default=false,
-Callback=function()
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("6"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("VoidWorld"))
-end});
-
-teleport:AddButton({
-Name="World 7",
-Default=false,
-Callback=function()
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("7"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("SpaceCenter"))
-end});
 ]]--
 	
 pot:AddDropdown({
@@ -1441,43 +642,8 @@ pot:AddButton({
 end
 })
 
-local BlockInfo = T13:AddParagraph("Lucky Block Detector","#CONTENT_ERROR")
 
-local function SnipeLuckyBlock()
-	if workspace:FindFirstChild("LuckyBlock") then
-		return true
-	end
-	return false
-end
-
-T13:AddToggle({
-   Name = "Auto Teleport",
-   Default = false,
-   Callback = function(Value)
-     _G._TP_Sniping = Value
-	while wait() do
-		if _G._TP_Sniping == false then break end
-		  if SnipeLuckyBlock() then
-			OrionLib:Teleport(workspace:FindFirstChild("LuckyBlock"))
-		end
-	end
-  end    
-})
-
-RunService.RenderStepped:Connect(function()
-if game.Players.LocalPlayer.PlayerGui.GameUI.Menus:FindFirstChild("Event") then
-Event_A3:Set(tostring(game.Players.LocalPlayer.PlayerGui.GameUI.Menus.Event.Amount.Text),"Event Eggs available")
-end
-end)
-
-RunService.RenderStepped:Connect(function()
-if workspace:FindFirstChild("LuckyBlock") then
-   BlockInfo:Set(string.format("%s\n%s\n%s",GetText(workspace.LuckyBlock.BillboardGui.Frame.Title),GetText(workspace.LuckyBlock.BillboardGui.Frame.Timer),GetText(workspace.LuckyBlock.BillboardGui.Frame.GainX)),"")
-else
-   BlockInfo:Set("#SNIPING \nwe are looking for lucky block","")
-end
-end)
-
+--EVENT EGG
 RunService.RenderStepped:Connect(function()
 if game.Players.LocalPlayer.PlayerGui.GameUI.Menus:FindFirstChild("Event") then
 Event_A3:Set(tostring(game.Players.LocalPlayer.PlayerGui.GameUI.Menus.Event.Amount.Text),"Event Eggs available")
