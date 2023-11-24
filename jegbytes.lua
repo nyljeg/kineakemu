@@ -108,7 +108,7 @@ Name = "Tools",
 PremiumOnly=false});	
 	
 local crate=v1:MakeTab({
-Name = "Auto Blocks [PATCHED]",
+Name = "Crates",
 PremiumOnly=false});
 	
 --Toogle
