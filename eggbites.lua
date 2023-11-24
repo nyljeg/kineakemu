@@ -756,7 +756,9 @@ v59:AddToggle({
      _G.hegg = Value
 	while wait() do		
              if _G.hegg == false then break end
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(_G.EggName,{["Mouse"] = _G._epic,{
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(_G.EggName,
+       {
+        ["Mouse"] = _G._epic,
 	["Dog"] = _G._uncommon, 
 	["Cat"] = _G._common,
 	["Cow"] = _G._uncommon,
@@ -785,7 +787,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 	["Kelp"] = _G._legendary, 
 	["Coin"] = _G._epic, 
 	["Ruby"] = _G._mythic,
-    ["Fox"] = _G._rare, 
+        ["Fox"] = _G._rare, 
 	["Slime"] = _G._epic, 
 	["Bear"] = _G._epic, 
 	["Deer"] = _G._uncommon, 
