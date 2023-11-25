@@ -675,7 +675,7 @@ v58:AddToggle({
 
 local values = {true,false}
 
-egg:AddToogle({
+egg:AddDropdown({
 Name = "Black List Common Pets",
 Default = false,
 Options = values,
@@ -684,7 +684,7 @@ _G._common = value
 end
 })
 
-egg:AddToogle({
+egg:AddDropdown({
 Name = "Black List Uncommon Pets",
 Default = "false",
 Options = values,
@@ -693,7 +693,7 @@ _G._uncommon = value
 end
 })
 
-egg:AddToogle({
+egg:AddDropdown({
 Name = "Black List Rare Pets",
 Default = "false",
 Options = values,
@@ -702,7 +702,7 @@ _G._rare = value
 end
 })
 
-egg:AddToogle({
+egg:AddDropdown({
 Name = "Black List Epic Pets",
 Default = "false",
 Options = values,
@@ -711,7 +711,7 @@ _G._epic = value
 end
 })
 
-egg:AddToogle({
+egg:AddDropdown({
 Name = "Black List Legendary Pets",
 Default = "false",
 Options = values,
@@ -720,7 +720,7 @@ _G._legendary = value
 end
 })
 
-egg:AddToogle({
+egg:AddDropdown({
 Name = "Black List Mythic Pets",
 Default = "false",
 Options = values,
@@ -729,9 +729,9 @@ _G._mythic = value
 end
 })
 
-egg:AddToogle({
+egg:AddDropdown({
 Name = "Black List Omega Pets",
-Default = false,
+Default = "false",
 Options = values,
 Callback = fuunction(value)
 _G._omega = value
