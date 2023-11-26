@@ -349,7 +349,7 @@ v58:AddToggle({
   end    
 })
 
-local dislist = {"=[ Zone 1 ]=","Earth","Icy","Blackhole","Lava","=[ Zone 2 ]=","Molten","Crystal","Solar","Ice","Burning","Moon","=[ Zone 3 ]=","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","=[ Zone 4 ]=","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","=[ Zone 5 ]=","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","=[ Zone 6 ]=","Void","Nebula","Wormhole","Star","=[ ZONE 7 ]=","Meteor","Cyberpunk","Deepsea","Rocket","=[ Aqua Event ]=","Shark","Crab","Jellyfish","=[ Limited Egg ]=","Limited","limited"}
+local dislist = {"=[ Zone 1 ]=","Earth","Icy","Blackhole","Lava","=[ Zone 2 ]=","Molten","Crystal","Solar","Ice","Burning","Moon","=[ Zone 3 ]=","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","=[ Zone 4 ]=","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","=[ Zone 5 ]=","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","=[ Zone 6 ]=","Void","Nebula","Wormhole","Star","=[ ZONE 7 ]=","Meteor","Cyberpunk","Deepsea","Rocket","=[ Aqua Event ]=","Shark","Crab","Jellyfish","=[ Limited Egg ]=","Candy"}
 v59:AddDropdown({
    Name = "Select EGG",
    Default = "Earth",
