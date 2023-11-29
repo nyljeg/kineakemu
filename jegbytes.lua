@@ -415,11 +415,10 @@ tools:AddDropdown({
    end    
 });
 
-tools:AddParagraph("BARBELLS","|🌏|ZONE 1 = Tier1 - Tier3\n|🌏|ZONE 2 = Tier4 - Tier6\n|🌏|ZONE 3 = Tier7 - Tier9\n|🌏|ZONE 4 = Tier10 - Tier12\n|🌏|ZONE 5 = NO BARBELS FOUND\n|🌏|ZONE 6 = Tier16 - Tier18\n|🌏|ZONE 7 = Tier19 - Tier21")
 tools:AddDropdown({
    Name = "Choose your Tier",
    Default = "Tier1",
-   Options = {"Tier1","Tier2","Tier3","Tier4","Tier5","Tier6","Tier7","Tier8","Tier9","Tier10","Tier11","tier12","Tier16","Tier17","Tier18","Tier19","Tier20","Tier21"},
+   Options =  {"=[ ZONE 1 ]=","Tier1","Tier2","Tier3","=[ ZONE 2 ]=","Tier4","Tier5","Tier6","=[ ZONE 3 ]=","Tier7","Tier8","Tier9","=[ ZONE 4 ]=","Tier10","Tier11","tier12","=[ ZONE 6 ]=","Tier16","Tier17","Tier18","=[ ZONE 7 ]=","Tier19","Tier20","Tier21"},
    Callback = function(Value)
      _G.barbtier = Value
    end    
@@ -437,9 +436,8 @@ tools:AddToggle({
   end    
 });	
 
-local dumbellslist = {"1Kg","2Kg","3Kg","4Kg","5Kg","10Kg","15Kg","20Kg","25Kg","50Kg","100Kg","250Kg","300Kg","400Kg","500Kg","650Kg","800Kg","1000Kg","1500Kg","2000Kg","2500kg","300Kg","3500Kg","4000Kg","5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg","50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg","350000Kg","375000Kg","400000Kg","425000Kg","450000Kg","475000Kg","500000Kg","525000Kg","550000Kg","575000Kg","600000Kg","625000Kg","650000Kg","675000Kg","700000Kg","725000Kg","750000Kg","775000Kg","800000Kg","825000Kg","850000Kg","875000Kg","900000Kg","925000Kg"}	
-tools:AddParagraph("DUMBELLS","|🌏|ZONE 1 = 1Kg - 250Kg\n|🌏|ZONE 2 = 300Kg - 4000Kg\n|🌏|ZONE 3 = 5000Kg - 45000Kg\n|🌏|ZONE 4 = 50000Kg - 300000Kg\n|🌏|ZONE 5 = NO DUMBELLS FOUND\n|🌏|ZONE 6 = 350000Kg - 625000Kg\n|🌏|ZONE 7 = 650000Kg - 925000Kg")	
-tools:AddDropdown({
+local dumbellslist = {"=[ ZONE 1 ]=","1Kg","2Kg","3Kg","4Kg","5Kg","10Kg","15Kg","20Kg","25Kg","50Kg","100Kg","250Kg","=[ ZONE 2 ]=","300Kg","400Kg","500Kg","650Kg","800Kg","1000Kg","1500Kg","2000Kg","2500kg","300Kg","3500Kg","4000Kg","=[ ZONE 3 ]=","5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg","=[ ZONE 4 ]=","50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg","=[ ZONE 6 ]=","350000Kg","375000Kg","400000Kg","425000Kg","450000Kg","475000Kg","500000Kg","525000Kg","550000Kg","575000Kg","600000Kg","625000Kg","=[ ZONE 7 ]=","650000Kg","675000Kg","700000Kg","725000Kg","750000Kg","775000Kg","800000Kg","825000Kg","850000Kg","875000Kg","900000Kg","925000Kg"}
+   tools:AddDropdown({
    Name = "Weights",
    Default = "1Kg",
    Options = dumbellslist,
@@ -460,8 +458,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
   end    
 });
 
-local gripslist = {"1Kg","2Kg","3Kg","4Kg","5Kg","10Kg","15Kg","20Kg","25Kg","50Kg","100Kg","250Kg","300Kg","350Kg","400Kg","450Kg","500Kg","600Kg","700Kg","800Kg","900Kg","1000Kg","1250Kg","1500Kg","5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg","50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg","350000Kg","375000Kg","400000Kg","425000Kg","450000Kg","475000Kg","500000Kg","525000Kg","550000Kg","575000Kg","600000Kg","625000Kg","650000Kg","675000Kg","700000Kg","725000Kg","750000Kg","775000Kg","800000Kg","825000Kg","850000Kg","875000Kg","900000Kg","925000Kg","950000Kg","975000Kg","1000000Kg","1025000Kg","1050000Kg","1075000Kg","1100000Kg","1125000Kg","1150000Kg"}
-tools:AddParagraph("GRIPS","|🌏|ZONE 1 = 1Kg - 250Kg\n|🌏|ZONE 2 = 300Kg - 1500Kg\n|🌏|ZONE 3 = 5000Kg - 45000Kg\n|🌏|ZONE 4 = 50000Kg - 300000Kg\n|🌏|ZONE 5 = 350000Kg - 625000Kg\n|🌏|ZONE 6 = 650000Kg - 925000Kg\n|🌏|ZONE 7 = 950000Kg - 1150000Kg");
+local gripslist = {"=[ ZONE 1 ]=","1Kg","2Kg","3Kg","4Kg","5Kg","10Kg","15Kg","20Kg","25Kg","50Kg","100Kg","250Kg","=[ ZONE 2 ]=","300Kg","350Kg","400Kg","450Kg","500Kg","600Kg","700Kg","800Kg","900Kg","1000Kg","1250Kg","1500Kg","=[ ZONE 3 ]=","5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg","=[ ZONE 4 ]=","50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg","=[ ZONE 5 ]=","350000Kg","375000Kg","400000Kg","425000Kg","450000Kg","475000Kg","500000Kg","525000Kg","550000Kg","575000Kg","600000Kg","625000Kg","=[ ZONE 6 ]=","650000Kg","675000Kg","700000Kg","725000Kg","750000Kg","775000Kg","800000Kg","825000Kg","850000Kg","875000Kg","900000Kg","925000Kg","=[ ZONE 7 ]=","950000Kg","975000Kg","1000000Kg","1025000Kg","1050000Kg","1075000Kg","1100000Kg","1125000Kg","1150000Kg"}
 tools:AddDropdown({
 Name = "Weights",
 Default = "1Kg",
