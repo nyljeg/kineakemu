@@ -482,6 +482,7 @@ end});
 
 local workspace = game:GetService("Workspace")
 local RunService = game:GetService("RunService")
+local ReplicateStorage = game:GetService("ReplicatedStorage")
 local zone = {}
 local VSPLAYER = {}
 local egg = {}
