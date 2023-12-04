@@ -12,7 +12,7 @@ SaveConfig=true,
 ConfigFolder="nyljegLib"});
 
 
-
+--[[
 _G.AutoDeleteWithTable = {
    Earth = nil,
    Icy = nil,
@@ -70,7 +70,7 @@ mt.__namecall = newcclosure(function(self, ...)
 end
 	return namecall(self, ...) 
 end)
-	
+	]]--
 ------------------
 
 --Main Tab
@@ -348,7 +348,7 @@ v58:AddToggle({
   end
   end    
 })
-
+--[[
 local dislist = {"=[ Zone 1 ]=","Earth","Icy","Blackhole","Lava","=[ Zone 2 ]=","Molten","Crystal","Solar","Ice","Burning","Moon","=[ Zone 3 ]=","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","=[ Zone 4 ]=","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","=[ Zone 5 ]=","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","=[ Zone 6 ]=","Void","Nebula","Wormhole","Star","=[ ZONE 7 ]=","Meteor","Cyberpunk","Deepsea","Rocket","=[ Aqua Event ]=","Shark","Crab","Jellyfish","=[ Limited Egg ]=","Candy"}
 v59:AddDropdown({
    Name = "Select EGG",
@@ -376,13 +376,14 @@ v59:AddToggle({
   end    
 })
 	
-
+]]--
 	--[[
 local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket"}
+]]-
 v59:AddDropdown({
    Name = "Choose your Egg",
    Default = "Earth",
-   Options = egglist,
+   Options = egg,
    Callback = function(Value)
      _G.EggName = Value
    end    
@@ -545,7 +546,8 @@ teleport:AddButton({
 	
 for i = 1, 7 do  
 AddTable(workspace.Zones[i].Interactables.ArmWrestling.NPC,npc)
-AddTable(workspace.Zones[i].Interactables.ArmWrestling.PVP,VSPLAYER)		
+AddTable(workspace.Zones[i].Interactables.ArmWrestling.PVP,VSPLAYER)	
+AddTable(ReplicateStorage.Eggs.egg)
 end
 v60:AddDropdown({
    Name = "Select Zone",
