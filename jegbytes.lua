@@ -490,6 +490,7 @@ for _,v in pairs(Table_V:GetChildren()) do
     table.insert(LocalName,v.Name)
 end
 end
+	
 AddTable(workspace.Zones,zone)
 function TPType(type,pos)
   if type == "teleport" then      
@@ -547,6 +548,7 @@ for i = 1, 7 do
 AddTable(workspace.Zones[i].Interactables.ArmWrestling.NPC,npc)
 AddTable(workspace.Zones[i].Interactables.ArmWrestling.PVP,VSPLAYER)	
 end
+	
 v60:AddDropdown({
    Name = "Select Zone",
    Default = "1",
