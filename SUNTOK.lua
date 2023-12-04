@@ -25,7 +25,7 @@ for i,v in pairs(wrkspc:GetDescendants()) do
 end
 
 local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/NMEHkVTb"))()
-local Window = OrionLib:MakeWindow({Name = "Elmer Hub V3", HidePremium = false, SaveConfig = false, ConfigFolder = "Elmerlib"})
+local Window = OrionLib:MakeWindow({Name = "Elmer Hub", HidePremium = false, SaveConfig = false, ConfigFolder = "Elmerlib"})
 local lp = game.Players.LocalPlayer
 local workspace = game:GetService("Workspace")
 
