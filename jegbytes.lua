@@ -379,7 +379,9 @@ v59:AddToggle({
 ]]--
 	--[[
 local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket"}
-]]-
+]]--
+	
+AddTable(ReplicatedStorage.Eggs,egg)
 v59:AddDropdown({
    Name = "Choose your Egg",
    Default = "Earth",
@@ -405,7 +407,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end 
 end
 });
-]]--
 	
 tools:AddDropdown({
    Name = "Your Zone",
@@ -482,7 +483,7 @@ end});
 
 local workspace = game:GetService("Workspace")
 local RunService = game:GetService("RunService")
-local ReplicateStorage = game:GetService("ReplicatedStorage")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local zone = {}
 local VSPLAYER = {}
 local egg = {}
@@ -548,7 +549,6 @@ teleport:AddButton({
 for i = 1, 7 do  
 AddTable(workspace.Zones[i].Interactables.ArmWrestling.NPC,npc)
 AddTable(workspace.Zones[i].Interactables.ArmWrestling.PVP,VSPLAYER)	
-AddTable(ReplicateStorage.Eggs.egg)
 end
 v60:AddDropdown({
    Name = "Select Zone",
