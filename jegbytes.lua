@@ -404,7 +404,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end 
 end
 });
-	]]--
+	]]
 	
 tools:AddDropdown({
    Name = "Your Zone",
@@ -490,7 +490,6 @@ for _,v in pairs(Table_V:GetChildren()) do
     table.insert(LocalName,v.Name)
 end
 end
-	
 AddTable(workspace.Zones,zone)
 function TPType(type,pos)
   if type == "teleport" then      
