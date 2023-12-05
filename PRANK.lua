@@ -13,11 +13,7 @@ _G.Key = "OMGitzAdan"
 _G.KeyInput = "string"
 
 function MakeScriptHub()
- local Window = local msg = Instance.new("Message",workspace)
-msg.Text = "IT'S A PRANK"
-wait(19999292992999)
-msg:Destroy()
-
+ print("IT'S A PRANK")
 end
 
 local Tab = Window:MakeTab({
