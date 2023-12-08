@@ -267,23 +267,20 @@ v58:AddToggle({
   _G.Gift = Value
     while wait() do
       if _G.Gift == false then break end
-for i = 1, 14 do
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("i")
-end
---game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("1")
---game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("2")
---game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("3")
---game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("4")
---game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("5")
---game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("6")
---game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("7")
---game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("8")
---game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("9")
---game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("10")
---game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("11")
---game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("12")
---game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("13")
---game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("14")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("1")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("2")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("3")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("4")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("5")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("6")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("7")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("8")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("9")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("10")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("11")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("12")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("13")
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("14")
       end
   end    
 })
@@ -436,11 +433,11 @@ tools:AddToggle({
   end    
 });	
 
-local dumbellslist = {"=[ ZONE 1 ]=","1Kg","2Kg","3Kg","4Kg","5Kg","10Kg","15Kg","20Kg","25Kg","50Kg","100Kg","250Kg","=[ ZONE 2 ]=","300Kg","400Kg","500Kg","650Kg","800Kg","1000Kg","1500Kg","2000Kg","2500kg","300Kg","3500Kg","4000Kg","=[ ZONE 3 ]=","5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg","=[ ZONE 4 ]=","50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg","=[ ZONE 6 ]=","350000Kg","375000Kg","400000Kg","425000Kg","450000Kg","475000Kg","500000Kg","525000Kg","550000Kg","575000Kg","600000Kg","625000Kg","=[ ZONE 7 ]=","650000Kg","675000Kg","700000Kg","725000Kg","750000Kg","775000Kg","800000Kg","825000Kg","850000Kg","875000Kg","900000Kg","925000Kg"}
+--local dumbellslist = {"=[ ZONE 1 ]=","1Kg","2Kg","3Kg","4Kg","5Kg","10Kg","15Kg","20Kg","25Kg","50Kg","100Kg","250Kg","=[ ZONE 2 ]=","300Kg","400Kg","500Kg","650Kg","800Kg","1000Kg","1500Kg","2000Kg","2500kg","300Kg","3500Kg","4000Kg","=[ ZONE 3 ]=","5000Kg","6000Kg","7500Kg","10000Kg","12500Kg","15000Kg","20000Kg","25000Kg","30000Kg","35000Kg","40000Kg","45000Kg","=[ ZONE 4 ]=","50000Kg","60000Kg","70000Kg","80000Kg","90000Kg","100000Kg","125000Kg","150000Kg","175000Kg","200000Kg","250000Kg","300000Kg","=[ ZONE 6 ]=","350000Kg","375000Kg","400000Kg","425000Kg","450000Kg","475000Kg","500000Kg","525000Kg","550000Kg","575000Kg","600000Kg","625000Kg","=[ ZONE 7 ]=","650000Kg","675000Kg","700000Kg","725000Kg","750000Kg","775000Kg","800000Kg","825000Kg","850000Kg","875000Kg","900000Kg","925000Kg"}
 tools:AddDropdown({
    Name = "Weights",
    Default = "1Kg",
-   Options = dumbellslist,
+   Options = punch,
    Callback = function(Value)
      _G.dumbtier = Value
    end    
@@ -485,6 +482,7 @@ local zone = {}
 local VSPLAYER = {}
 local egg = {}
 local npc = {}
+local punch = {}
 function AddTable(Table_V,LocalName)
 for _,v in pairs(Table_V:GetChildren()) do
     table.insert(LocalName,v.Name)
@@ -545,7 +543,8 @@ teleport:AddButton({
 	
 for i = 1, 7 do  
 AddTable(workspace.Zones[i].Interactables.ArmWrestling.NPC,npc)
-AddTable(workspace.Zones[i].Interactables.ArmWrestling.PVP,VSPLAYER)		
+AddTable(workspace.Zones[i].Interactables.ArmWrestling.PVP,VSPLAYER)
+AddTable(workspace.Zones[i].Interactables.PunchBags,punch)
 end
 v60:AddDropdown({
    Name = "Select Zone",
