@@ -184,6 +184,17 @@ food:AddToggle({
 });
 
 v58:AddToggle({
+Name="Auto Click [NPC]",
+Default=false,
+Callback=function(value)
+fight=value
+while wait() do
+if fight == false then break end
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ArmWrestleService"):WaitForChild("RE"):WaitForChild("onClickRequest"):FireServer()					
+end					
+end});
+	
+v58:AddToggle({
 Name="Auto Click",
 Default=false,
 Callback=function(value)
