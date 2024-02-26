@@ -551,6 +551,17 @@ teleport:AddButton({
 	TPType("teleport",CFrame.new(-9760.76855, 52.899971, 555.893982, 1, 0, 0, 0, 1, 0, 0, 0, 1))
      game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("7"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("SpaceCenter"))
       end
+	if _G.zone_TP == "8" then
+	TPType("teleport",CFrame.new(-1533.91821, 44.4587784, -51.1420135, 0, 0, -1, 0, 1, 0, 1, 0, 0))
+     game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("8"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("RomanEmpire"))
+      end
+	if _G.zone_TP == "9" then
+	TPType("teleport",CFrame.new(-12350.459, 68.7939835, 1435.89478, 0, 0, -1, 0, 1, 0, 1, 0, 0))
+     game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("9"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("Underworld"))
+      end
+	if _G.zone_TP == "Garden" then
+     game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ZoneService"):WaitForChild("RE"):WaitForChild("teleport"):FireServer(workspace:WaitForChild("Zones"):WaitForChild("Garden"):WaitForChild("Interactables"):WaitForChild("Teleports"):WaitForChild("Locations"):WaitForChild("BackToSchool"))					
+	end
 	if _G.zone_TP == "GreekEvent" then
         TPType("teleport",CFrame.new(-10114,48,-2362))
      end
