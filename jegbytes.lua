@@ -217,28 +217,6 @@ end
 end});	
 
 v58:AddToggle({
-Name="Hatch Only Omega Shark",
-Default=false,
-Callback=function(value)
-shark=value
-while wait() do
-if shark == false then break end
-local args = {
-[1] = "Shark",
-[2] = {
-["Basic Shark"] = true,
-["Cool Shark"] = true,
-["Super Shark"] = true,
-["Googly Shark"] = true,
-["Evil Shark"] = true
-    },
-[4] = false
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args))
-end
-end});	
-
-v58:AddToggle({
 Name="Auto Spin",
 Default=false,
 Callback=function(v65)
@@ -395,7 +373,7 @@ v58:AddToggle({
   end    
 })
 
-local dislist = {"=[ Zone 1 ]=","Earth","Icy","Blackhole","Lava","=[ Zone 2 ]=","Molten","Crystal","Solar","Ice","Burning","Moon","=[ Zone 3 ]=","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","=[ Zone 4 ]=","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","=[ Zone 5 ]=","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","=[ Zone 6 ]=","Void","Nebula","Wormhole","Star","=[ ZONE 7 ]=","Meteor","Cyberpunk","Deepsea","Rocket","=[ ZONE 8 ]=","Gladius","Arena","Lionheart","Praetorian","=[ ZONE 9 ]=","Ember","Inferno","Eternal","Heated","=[ Aqua Event ]=","Shark","Crab","Jellyfish","=[ Limited Egg ]=","Candy"}
+local dislist = {"=[ Zone 1 ]=","Earth","Icy","Blackhole","Lava","=[ Zone 2 ]=","Molten","Crystal","Solar","Ice","Burning","Moon","=[ Zone 3 ]=","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","=[ Zone 4 ]=","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","=[ Zone 5 ]=","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","=[ Zone 6 ]=","Void","Nebula","Wormhole","Star","=[ ZONE 7 ]=","Meteor","Cyberpunk","Deepsea","Rocket","=[ ZONE 8 ]=","Gladius","Arena","Lionheart","Praetorian","=[ ZONE 9 ]=","Ember","Inferno","Eternal","Heated","=[ Aqua Event ]=","Shark","Crab","Jellyfish","=[ Greek World ]=","Spartan","GreekMonster","RomanGod","GreekGod","=[ XMAS EGG ]=","Santa","Gingerbread","=[ Limited Egg ]=","Candy"}
 v59:AddDropdown({
    Name = "Select EGG",
    Default = "Earth",
