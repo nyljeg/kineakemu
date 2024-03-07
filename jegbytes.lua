@@ -217,6 +217,28 @@ end
 end});	
 
 v58:AddToggle({
+Name="Hatch Only Omega Shark",
+Default=false,
+Callback=function(value)
+shark=value
+while wait() do
+if shark == false then break end
+local args = {
+[1] = "Shark",
+[2] = {
+["Basic Shark"] = true,
+["Cool Shark"] = true,
+["Super Shark"] = true,
+["Googly Shark"] = true,
+["Evil Shark"] = true
+    },
+[4] = false
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args))
+end
+end});	
+
+v58:AddToggle({
 Name="Auto Spin",
 Default=false,
 Callback=function(v65)
