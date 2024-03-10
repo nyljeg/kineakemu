@@ -206,6 +206,37 @@ end
 end});
 
 v58:AddToggle({
+Name="Auto Start Fishing",
+Default=false,
+Callback=function(value)
+v2=value
+while wait() do
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("NetService"):WaitForChild("RF"):WaitForChild("StartCatching"):InvokeServer()
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("NetService"):WaitForChild("RF"):WaitForChild("VerifyCatch"):InvokeServer(96,111.83650879561901)					
+end
+end
+			
+v58:AddToggle({
+Name="Auto Open Legendary [Quest]",
+Default=false,
+Callback=function(value)
+v2=value
+while wait() do
+local args = {
+    [1] = "Iridescent",
+    [2] = {
+        ["Shirma"] = true,
+        ["Dimentro"] = true,
+        ["Veltro"] = true,
+        ["Expa"] = true
+    },
+    [4] = false
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args))							
+end
+end);
+
+v58:AddToggle({
 Name="Auto Roll Title",
 Default=false,
 Callback=function(value)
