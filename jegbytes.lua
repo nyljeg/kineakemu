@@ -232,6 +232,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end});	
 
+v58:AddLabel("•Roten Fish = 1\n•Fish = 2\n•Shark = 3")
 v58:AddDropdown({
    Name = "Select Fish Num",
    Default = "1",
