@@ -232,9 +232,9 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end});	
 
-v58:AddLabel("•Roten Fish = 1\n•Fish = 2\n•Shark = 3")
+v58:AddParagraph("Fish Number","•Roten Fish = 1\n•Fish = 2\n•Shark = 3")
 v58:AddDropdown({
-   Name = "Select Fish Num",
+   Name = "Select Fish Number",
    Default = "1",
    Options = {1,2,3},
    Callback = function(Value)
@@ -243,7 +243,7 @@ v58:AddDropdown({
 });
 
 v58:AddToggle({
-  Name = "Auto Hatch",
+  Name = "Auto Sell Fish",
   Default = false,
   Callback = function(Value)
   _G.Balls = Value
