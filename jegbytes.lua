@@ -232,6 +232,30 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end});	
 
+v58:AddDropdown({
+   Name = "Select Fish Num",
+   Default = "1",
+   Options = {1,2,3},
+   Callback = function(Value)
+     _G.fishnum = Value
+   end  
+});
+
+v58:AddToggle({
+  Name = "Auto Hatch",
+  Default = false,
+  Callback = function(Value)
+  _G.Balls = Value
+    while wait() do
+      if _G.Balls == false then break end
+local args = {
+    [1] = "Fisherman",
+    [2] = _G.fishnum
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MerchantService"):WaitForChild("RF"):WaitForChild("BuyItem"):InvokeServer(unpack(args))
+end
+end});	
+
 v58:AddToggle({
 Name="Auto Spin",
 Default=false,
