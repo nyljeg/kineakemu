@@ -213,31 +213,14 @@ fish=value
 while wait() do
 if fish == false then break end					
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("NetService"):WaitForChild("RF"):WaitForChild("StartCatching"):InvokeServer()
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("NetService"):WaitForChild("RF"):WaitForChild("VerifyCatch"):InvokeServer(96,111.83650879561901)					
-end
+local args = {
+    [1] = 96,
+    [2] = 111.83650879561901
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("NetService"):WaitForChild("RF"):WaitForChild("VerifyCatch"):InvokeServer(unpack(args))
+end					
 end});
 			
-v58:AddToggle({
-Name="Auto Open Legendary [Quest]",
-Default=false,
-Callback=function(value)
-legh=value
-while wait() do
-if legh == false then break end							
-local args = {
-    [1] = "Iridescent",
-    [2] = {
-        ["Shirma"] = true,
-        ["Dimentro"] = true,
-        ["Veltro"] = true,
-        ["Expa"] = true
-    },
-    [4] = false
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args))							
-end
-end);
-
 v58:AddToggle({
 Name="Auto Roll Title",
 Default=false,
