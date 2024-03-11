@@ -258,6 +258,47 @@ end
 end});	
 
 v58:AddToggle({
+  Name = "Auto Upgrade Snacks",
+  Default = false,
+  Callback = function(Value)
+  _G.Balls = Value
+    while wait() do
+      if _G.Balls == false then break end
+local args = {
+    [1] = {
+        ["Item"] = "Apple",
+        ["Tier"] = 1
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemCraftingService"):WaitForChild("RF"):WaitForChild("UpgradeSnack"):InvokeServer(unpack(args))
+local args2 = {
+    [1] = {
+        ["Item"] = "Apple",
+        ["Tier"] = 2
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemCraftingService"):WaitForChild("RF"):WaitForChild("UpgradeSnack"):InvokeServer(unpack(args2))
+local args3 = {
+    [1] = {
+        ["Item"] = "Banana",
+        ["Tier"] = 1
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemCraftingService"):WaitForChild("RF"):WaitForChild("UpgradeSnack"):InvokeServer(unpack(args3))
+local args4 = {
+    [1] = {
+        ["Item"] = "Banana",
+        ["Tier"] = 2
+    }
+	}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemCraftingService"):WaitForChild("RF"):WaitForChild("UpgradeSnack"):InvokeServer(unpack(args4))				
+end
+end});
+
+v58:AddToggle({
 Name="Auto Spin",
 Default=false,
 Callback=function(v65)
