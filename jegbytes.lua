@@ -299,6 +299,77 @@ end
 end});
 
 v58:AddToggle({
+Name="Auto Plant Snacks",
+Default=false,
+Callback=function(v65)
+v4=v65;
+while wait() do
+if v4 == false then break end
+local x = 1, 6 do
+local args = {
+    [1] = "Banana Seeds",
+    [2] = "1",
+    [3] = "x"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer(unpack(args))
+end				
+end
+end});
+
+v58:AddToggle({
+Name="Auto Plant Apple",
+Default=false,
+Callback=function(v65)
+v4=v65;
+while wait() do
+if v4 == false then break end
+for y = 1, 6 do
+local args = {
+    [1] = "Apple Seeds",
+    [2] = "1",
+    [3] = "y"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer(unpack(args))						
+end
+end
+end});
+
+v58:AddToggle({
+Name="Auto Plant Apple",
+Default=false,
+Callback=function(v65)
+v4=v65;
+while wait() do
+local args = {
+    [1] = "1"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Harvest"):InvokeServer(unpack(args))
+local args2 = {
+    [1] = "2"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Harvest"):InvokeServer(unpack(args2))
+local args3 = {
+    [1] = "3"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Harvest"):InvokeServer(unpack(args3))
+	local args4 = {
+    [1] = "4"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Harvest"):InvokeServer(unpack(args4))
+	local args5 = {
+    [1] = "5"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Harvest"):InvokeServer(unpack(args5))
+local args6 = {
+    [1] = "6"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Harvest"):InvokeServer(unpack(args6))
+end
+end});
+
+	
+v58:AddToggle({
 Name="Auto Spin",
 Default=false,
 Callback=function(v65)
