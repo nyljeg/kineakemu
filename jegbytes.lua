@@ -302,18 +302,15 @@ v58:AddToggle({
 Name="Auto Plant Snacks",
 Default=false,
 Callback=function(v65)
-v4=v65;
+vrs=v65;
 while wait() do
-if v4 == false then break end
-local x = 1, 6 do
-local args = {
-    [1] = "Banana Seeds",
-    [2] = "1",
-    [3] = "x"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer(unpack(args))
-end				
+if vrs == false then break end
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer("Banana Seeds","1","1")						
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer("Banana Seeds","1","2")						
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer("Banana Seeds","1","3")						
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer("Banana Seeds","1","4")						
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer("Banana Seeds","1","5")						
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer("Banana Seeds","1","6")									
 end
 end});
 
@@ -321,26 +318,25 @@ v58:AddToggle({
 Name="Auto Plant Apple",
 Default=false,
 Callback=function(v65)
-v4=v65;
+plnt=v65;
 while wait() do
-if v4 == false then break end
-for y = 1, 6 do
-local args = {
-    [1] = "Apple Seeds",
-    [2] = "1",
-    [3] = "y"
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer(unpack(args))						
-end
+if plnt == false then break end
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer("Apple Seeds","1","1")						
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer("Apple Seeds","1","2")						
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer("Apple Seeds","1","3")						
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer("Apple Seeds","1","4")						
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer("Apple Seeds","1","5")						
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemPlantingService"):WaitForChild("RF"):WaitForChild("Plant"):InvokeServer("Apple Seeds","1","6")					
 end
 end});
 
 v58:AddToggle({
-Name="Auto Plant Apple",
+Name="Auto Harvest",
 Default=false,
 Callback=function(v65)
-v4=v65;
+hrvst=v65;
 while wait() do
+if hrvst == false then break end
 local args = {
     [1] = "1"
 }
