@@ -93,6 +93,10 @@ local teleport=v1:MakeTab({
 Name="Teleport",
 PremiumOnly=false});
 
+local farm=v1:MakeTab({
+Name="Snacks & Tickets",
+PremiumOnly=false});
+	
 local food=v1:MakeTab({
 Name="Foods",
 PremiumOnly=false});
@@ -232,8 +236,8 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end});	
 
-v58:AddParagraph("Fish Number","•Roten Fish = 1\n•Fish = 2\n•Shark = 3")
-v58:AddDropdown({
+farm:AddParagraph("Fish Number","•Roten Fish = 1\n•Fish = 2\n•Shark = 3")
+farm:AddDropdown({
    Name = "Select Fish Number",
    Default = "1",
    Options = {1,2,3},
@@ -242,7 +246,7 @@ v58:AddDropdown({
    end  
 });
 
-v58:AddToggle({
+farm:AddToggle({
   Name = "Auto Sell Fish",
   Default = false,
   Callback = function(Value)
@@ -257,7 +261,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end});	
 
-v58:AddToggle({
+farm:AddToggle({
   Name = "Auto Upgrade Snacks",
   Default = false,
   Callback = function(Value)
@@ -298,8 +302,8 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end});
 
-v58:AddToggle({
-Name="Auto Plant Snacks",
+farm:AddToggle({
+Name="Auto Plant Banana",
 Default=false,
 Callback=function(v65)
 vrs=v65;
@@ -314,7 +318,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end});
 
-v58:AddToggle({
+farm:AddToggle({
 Name="Auto Plant Apple",
 Default=false,
 Callback=function(v65)
@@ -330,7 +334,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end});
 
-v58:AddToggle({
+farm:AddToggle({
 Name="Auto Harvest",
 Default=false,
 Callback=function(v65)
