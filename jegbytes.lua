@@ -84,11 +84,11 @@ PremiumOnly=false});
 local v59=v1:MakeTab({
 Name="Egg List",
 PremiumOnly=false});
-
+--[[
 local v60=v1:MakeTab({
 Name="NPC/PLAYER",
 PremiumOnly=false});
-
+]]
 local teleport=v1:MakeTab({
 Name="Teleport",
 PremiumOnly=false});
@@ -104,7 +104,7 @@ PremiumOnly=false});
 local event=v1:MakeTab({
 Name = "Event Eggs",
 PremiumOnly=false});
-
+--[[
 local pot=v1:MakeTab({
 Name = "Potions",
 PremiumOnly=false});
@@ -116,7 +116,7 @@ PremiumOnly=false});
 local crate=v1:MakeTab({
 Name = "Crates",
 PremiumOnly=false});
-	
+]]	
 --Toogle
 local Event_A3 = event:AddParagraph("Event Eggs available","#EGG_ERROR")
 	
