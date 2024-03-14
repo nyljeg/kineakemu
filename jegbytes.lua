@@ -84,11 +84,11 @@ PremiumOnly=false});
 local v59=v1:MakeTab({
 Name="Egg List",
 PremiumOnly=false});
---[[
+
 local v60=v1:MakeTab({
 Name="NPC/PLAYER",
 PremiumOnly=false});
-]]
+
 local teleport=v1:MakeTab({
 Name="Teleport",
 PremiumOnly=false});
@@ -104,7 +104,7 @@ PremiumOnly=false});
 local event=v1:MakeTab({
 Name = "Event Eggs",
 PremiumOnly=false});
---[[
+
 local pot=v1:MakeTab({
 Name = "Potions",
 PremiumOnly=false});
@@ -116,7 +116,7 @@ PremiumOnly=false});
 local crate=v1:MakeTab({
 Name = "Crates",
 PremiumOnly=false});
-]]	
+	
 --Toogle
 local Event_A3 = event:AddParagraph("Event Eggs available","#EGG_ERROR")
 	
@@ -460,9 +460,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("10")
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("11")
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("12")
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("13")
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TimedRewardService"):WaitForChild("RE"):WaitForChild("onClaim"):FireServer("14")
-      end
+end
   end    
 })
 
@@ -526,7 +524,7 @@ v58:AddToggle({
   end    
 })
 
-local dislist = {"=[ Zone 1 ]=","Earth","Icy","Blackhole","Lava","=[ Zone 2 ]=","Molten","Crystal","Solar","Ice","Burning","Moon","=[ Zone 3 ]=","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","=[ Zone 4 ]=","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","=[ Zone 5 ]=","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","=[ Zone 6 ]=","Void","Nebula","Wormhole","Star","=[ ZONE 7 ]=","Meteor","Cyberpunk","Deepsea","Rocket","=[ ZONE 8 ]=","Gladius","Arena","Lionheart","Praetorian","=[ ZONE 9 ]=","Ember","Inferno","Eternal","Heated","=[ Aqua Event ]=","Shark","Crab","Jellyfish","=[ Greek World ]=","Spartan","GreekMonster","RomanGod","GreekGod","=[ XMAS EGG ]=","Santa","Gingerbread","=[ Limited Egg ]=","Candy"}
+local dislist = {"=[ Zone 1 ]=","Earth","Icy","Blackhole","Lava","=[ Zone 2 ]=","Molten","Crystal","Solar","Ice","Burning","Moon","=[ Zone 3 ]=","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","=[ Zone 4 ]=","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","=[ Zone 5 ]=","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","=[ Zone 6 ]=","Void","Nebula","Wormhole","Star","=[ ZONE 7 ]=","Meteor","Cyberpunk","Deepsea","Rocket","=[ ZONE 8 ]=","Gladius","Arena","Lionheart","Praetorian","=[ ZONE 9 ]=","Ember","Inferno","Eternal","Heated","=[ Aqua Event ]=","Shark","Crab","Jellyfish"}
 v59:AddDropdown({
    Name = "Select EGG",
    Default = "Earth",
@@ -787,18 +785,6 @@ v60:AddToggle({
       end
   end    
 })	
-	
-	--[[
-
-teleport:AddButton({
-Name="Slime Machine",
-Default=false,
-Callback=function()
-local Character = game.Players.LocalPlayer.Character or workspace:WaitForChild(game.Players.LocalPlayer.Name)
-Character:PivotTo(CFrame.new(-9554.43, 42.7513, 682.634))
-print(Character:GetPivot())
-end});			
-]]--
 	
 pot:AddDropdown({
    Name = "Select Boost",
