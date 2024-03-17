@@ -240,8 +240,52 @@ while wait() do
 if roll == false then break end
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("TitleService"):WaitForChild("RF"):WaitForChild("Roll"):InvokeServer()
 end
+end});
+
+v58:AddToggle({
+Name="Auto Quest Omega",
+Default=false,
+Callback=function(value)
+megs=value
+while wait() do
+if megs == false then break end
+local args = {
+    [1] = "Moon",
+    [2] = {
+        ["MoonBat"] = true,
+        ["MoonOwl"] = true,
+        ["MoonSpider"] = true
+    },
+    [4] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args))
+end
+end});
+
+v58:AddToggle({
+Name="Auto Quest Legendary",
+Default=false,
+Callback=function(value)
+legs=value
+while wait() do
+if legs == false then break end
+while wait(0.1) do
+local args = {
+    [1] = "Iridescent",
+    [2] = {
+        ["Shirma"] = true,
+        ["Dimentro"] = true,
+        ["Veltro"] = true,
+        ["Expa"] = true
+    },
+    [4] = false
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args))
+end
 end});	
 
+	
 farm:AddParagraph("Fish Number","•Roten Fish = 1\n•Fish = 2\n•Shark = 3")
 farm:AddDropdown({
    Name = "Select Fish Number",
@@ -556,37 +600,7 @@ v59:AddToggle({
       end
   end    
 })
-	
-
-	--[[
-local egglist = {"Earth","Icy","Blackhole","Lava","Molten","Crystal","Solar","Ice","Burning","Moon","Coconut","Palm","Treasure","Poseidon","KingFish","Clam","Rust","Widget","Atom","Nuclear","Mutant","Iridescent","TRex","Herbivore","Pterodactyl","Gem","DinoFossil","Mystic","Void","Nebula","Wormhole","star","Meteor","Cyberpunk","Deepsea","Rocket"}
-v59:AddDropdown({
-   Name = "Choose your Egg",
-   Default = "Earth",
-   Options = egglist,
-   Callback = function(Value)
-     _G.EggName = Value
-   end    
-});
-
-v59:AddToggle({
-   Name = "Open Egg",
-   Default = false,
-   Callback = function(Value)
-     _G.hegg = Value
-	while wait(0) do		
-             if _G.hegg == false then break end
-	local args = {			 
-      [1] = _G.EggName,
-      [2] = {},
-       [4] = false
-	}			
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args));
-end 
-end
-});
-]]--
-	
+		
 tools:AddDropdown({
    Name = "Your Zone",
    Default = "1",
@@ -737,7 +751,7 @@ teleport:AddButton({
 })
 	
 for i = 1, 7 do  
-AddTable(workspace.Zones[i].Interactables.ArmWrestling.NPC,npc)
+AddTable(workspace.NPC,npc)
 AddTable(workspace.Zones[i].Interactables.ArmWrestling.PVP,VSPLAYER)		
 end
 v60:AddDropdown({
