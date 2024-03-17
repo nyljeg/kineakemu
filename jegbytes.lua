@@ -270,7 +270,6 @@ Callback=function(value)
 legs=value
 while wait() do
 if legs == false then break end
-while wait(0.1) do
 local args = {
     [1] = "Iridescent",
     [2] = {
