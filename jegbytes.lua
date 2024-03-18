@@ -81,6 +81,10 @@ local v58=v1:MakeTab({
 Name="Auto",
 PremiumOnly=false});
 
+local Quest=v1:MakeTab({
+Name="Auto Quest",
+PremiumOnly=false});	
+
 local v59=v1:MakeTab({
 Name="Egg List",
 PremiumOnly=false});
@@ -242,7 +246,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end});
 
-v58:AddToggle({
+Quest:AddToggle({
 Name="Auto Quest Omega",
 Default=false,
 Callback=function(value)
@@ -263,7 +267,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end});
 
-v58:AddToggle({
+Quest:AddToggle({
 Name="Auto Quest Legendary",
 Default=false,
 Callback=function(value)
@@ -284,6 +288,26 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 end});	
 
+Quest:AddToggle({
+Name="Auto Quest Rare",
+Default=false,
+Callback=function(value)
+rawr=value
+while wait() do
+if rawr == false then break end
+local args = {
+    [1] = "TRex",
+    [2] = {
+        ["TRex"] = true,
+        ["SpikedTRex"] = true,
+        ["ArmoredTRex"] = true,
+        ["WhiteTRex"] = true
+    },
+    [4] = false
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("purchaseEgg"):InvokeServer(unpack(args))
+end
+end});		
 	
 farm:AddParagraph("Fish Number","•Roten Fish = 1\n•Fish = 2\n•Shark = 3")
 farm:AddDropdown({
