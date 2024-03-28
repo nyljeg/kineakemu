@@ -210,13 +210,7 @@ v2=value
 while wait() do
 if v2 == false then break end
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ToolService"):WaitForChild("RE"):WaitForChild("onClick"):FireServer();
-local args = {
-    [1] = "Easter",
-    [2] = "Punch1"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchBagService"):WaitForChild("RE"):WaitForChild("onGiveStats"):FireServer(unpack(args))					
-end					
+end			
 end});
 
 v58:AddToggle({
@@ -234,7 +228,23 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("NetService"):WaitForChild("RF"):WaitForChild("VerifyCatch"):InvokeServer(unpack(args))
 end					
 end});
-			
+
+v58:AddToggle({
+Name="Auto Knuckles Easter W3 VIP",
+Default=false,
+Callback=function(value)
+v2=value
+while wait() do
+if v2 == false then break end
+local args = {
+    [1] = "Easter",
+    [2] = "VIP",
+    [3] = true
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchBagService"):WaitForChild("RE"):WaitForChild("onGiveStats"):FireServer(unpack(args))					
+end
+end
+					
 v58:AddToggle({
 Name="Auto Roll Title",
 Default=false,
