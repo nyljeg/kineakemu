@@ -233,9 +233,9 @@ v58:AddToggle({
 Name="Auto Knuckles Easter W3 VIP",
 Default=false,
 Callback=function(value)
-v2=value
+vipz=value
 while wait() do
-if v2 == false then break end
+if vipz == false then break end
 local args = {
     [1] = "Easter",
     [2] = "VIP",
@@ -243,7 +243,7 @@ local args = {
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("PunchBagService"):WaitForChild("RE"):WaitForChild("onGiveStats"):FireServer(unpack(args))					
 end
-end
+end});
 					
 v58:AddToggle({
 Name="Auto Roll Title",
