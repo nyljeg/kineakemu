@@ -214,6 +214,27 @@ end
 end});
 
 v58:AddToggle({
+Name="Auto Start Fishing Chocolate",
+Default=false,
+Callback=function(value)
+choco=value
+while wait() do
+if choco == false then break end					
+local args = {
+    [1] = "Chocolate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("NetService"):WaitForChild("RF"):WaitForChild("StartCatching"):InvokeServer(unpack(args))
+local args = {
+    [1] = 154,
+    [2] = 540.0025404319167
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("NetService"):WaitForChild("RF"):WaitForChild("VerifyCatch"):InvokeServer(unpack(args))
+end					
+end});
+				
+v58:AddToggle({
 Name="Auto Start Fishing",
 Default=false,
 Callback=function(value)
