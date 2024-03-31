@@ -241,10 +241,13 @@ Callback=function(value)
 fish=value
 while wait() do
 if fish == false then break end					
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("NetService"):WaitForChild("RF"):WaitForChild("StartCatching"):InvokeServer()
 local args = {
-    [1] = 96,
-    [2] = 111.83650879561901
+    [1] = "Regular"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("NetService"):WaitForChild("RF"):WaitForChild("StartCatching"):InvokeServer(unpack(args))
+local args = {
+    [1] = 93,
+    [2] = 64.45601104199886
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("NetService"):WaitForChild("RF"):WaitForChild("VerifyCatch"):InvokeServer(unpack(args))
 end					
@@ -403,6 +406,53 @@ local args4 = {
     }
 	}
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemCraftingService"):WaitForChild("RF"):WaitForChild("UpgradeSnack"):InvokeServer(unpack(args4))				
+local args5 = {
+    [1] = {
+        ["Item"] = "Chocolate",
+        ["Tier"] = 1
+    }
+	}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemCraftingService"):WaitForChild("RF"):WaitForChild("UpgradeSnack"):InvokeServer(unpack(args5))				
+
+	local args6 = {
+    [1] = {
+        ["Item"] = "Chocolate",
+        ["Tier"] = 2
+    }
+	}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemCraftingService"):WaitForChild("RF"):WaitForChild("UpgradeSnack"):InvokeServer(unpack(args6))				
+			
+	local args7 = {
+    [1] = {
+        ["Item"] = "DragonFruit",
+        ["Tier"] = 1
+    }
+	}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemCraftingService"):WaitForChild("RF"):WaitForChild("UpgradeSnack"):InvokeServer(unpack(args7))				
+			
+	local args8 = {
+    [1] = {
+        ["Item"] = "DragonFruit",
+        ["Tier"] = 2
+    }
+	}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemCraftingService"):WaitForChild("RF"):WaitForChild("UpgradeSnack"):InvokeServer(unpack(args8))				
+			
+	local args9 = {
+    [1] = {
+        ["Item"] = "StarFruit",
+        ["Tier"] = 1
+    }
+	}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemCraftingService"):WaitForChild("RF"):WaitForChild("UpgradeSnack"):InvokeServer(unpack(args9))				
+
+	local args10 = {
+    [1] = {
+        ["Item"] = "StarFruit",
+        ["Tier"] = 2
+    }
+	}
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ItemCraftingService"):WaitForChild("RF"):WaitForChild("UpgradeSnack"):InvokeServer(unpack(args10))				
 end
 end});
 
